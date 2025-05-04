@@ -1,0 +1,29 @@
+{
+  "id": "e27a9048-d873-405b-85f9-6bff9d1f2313",
+  "name": "Sunrise Coffee Roasters",
+  "slug": "sunrise-coffee-roasters",
+  "description": "Sunrise Coffee Roasters offers premium, sustainably sourced coffee while supporting community initiatives and giving back. Brew a better tomorrow with every cup",
+  "website_url": "https://sunrisecoffeeroasters.com",
+  "social_links": [
+    "https://www.instagram.com/sunrisecoffeeroastersaz/",
+    "https://www.instagram.com/reel/DFqrQm0yx4V/",
+    "https://www.instagram.com/p/DFn3b1JyazQ/",
+    "https://www.instagram.com/p/DFn3VreT04k/",
+    "https://www.instagram.com/reel/DFBaXqkTlHh/",
+    "https://www.instagram.com/sunrisecoffeeroastersaz/",
+    "https://www.facebook.com/sunrisecoffeeroastersaz",
+    "https://www.instagram.com/sunrisecoffeeroastersaz"
+  ],
+  "contact_email": "info@sunrisecoffeeroasters.com",
+  "contact_phone": "7463021000",
+  "city": "123 Coffee Street",
+  "state": "Karnataka",
+  "founded_year": 2018,
+  "instagram_handle": "sunrisecoffeeroastersaz",
+  "logo_url": "https://sunrisecoffeeroasters.com/wp-content/uploads/2024/11/cropped-0C89FE8C-207B-4785-83A5-0926C40F0BCA.jpeg",
+  "has_subscription": true,
+  "has_physical_store": false,
+  "is_featured": false,
+  "created_at": null,
+  "updated_at": null
+}

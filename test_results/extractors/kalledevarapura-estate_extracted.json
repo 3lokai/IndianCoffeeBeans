@@ -1,0 +1,18 @@
+{
+  "name": "Kalledevarapura Estate",
+  "slug": "kalledevarapura-estate",
+  "direct_buy_url": "https://www.corridorseven.coffee/collections/coffee/products/kalledevarapura-estate",
+  "platform": "generic",
+  "roaster_name": "Corridor Seven Coffee Roasters",
+  "roaster_slug": "corridor-seven-coffee-roasters",
+  "description": "Elegant and smooth coffee from Karnataka",
+  "price_250g": 0.0,
+  "bean_type": "BeanType.UNKNOWN",
+  "region_name": "",
+  "_extracted_data": {
+    "name": "Not Found",
+    "price_text": "\u20b9 0",
+    "origin_info": ""
+  },
+  "extracted_by": "json_css"
+}

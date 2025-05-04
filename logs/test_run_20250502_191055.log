@@ -1,0 +1,41 @@
+2025-05-02 19:10:55,868 - __main__ - INFO - Testing pipeline with Blue Tokai Coffee Roasters
+2025-05-02 19:10:55,869 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-02 19:10:55,869 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-02 19:10:57,127 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/about
+2025-05-02 19:10:57,317 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about
+2025-05-02 19:10:59,446 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about
+2025-05-02 19:11:03,562 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about
+2025-05-02 19:11:11,566 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/about
+2025-05-02 19:11:11,568 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/about-us
+2025-05-02 19:11:11,803 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-us
+2025-05-02 19:11:14,033 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-us
+2025-05-02 19:11:18,179 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-us
+2025-05-02 19:11:26,195 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/about-us
+2025-05-02 19:11:26,196 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/our-story
+2025-05-02 19:11:26,310 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/our-story
+2025-05-02 19:11:28,440 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/our-story
+2025-05-02 19:11:32,590 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/our-story
+2025-05-02 19:11:40,606 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/our-story
+2025-05-02 19:11:40,607 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/story
+2025-05-02 19:11:40,719 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/story
+2025-05-02 19:11:42,870 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/story
+2025-05-02 19:11:46,970 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/story
+2025-05-02 19:11:54,983 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/story
+2025-05-02 19:11:54,985 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/philosophy
+2025-05-02 19:11:55,222 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/philosophy
+2025-05-02 19:11:57,337 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/philosophy
+2025-05-02 19:12:01,446 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/philosophy
+2025-05-02 19:12:09,448 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/philosophy
+2025-05-02 19:12:09,449 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/values
+2025-05-02 19:12:09,656 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/values
+2025-05-02 19:12:11,787 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/values
+2025-05-02 19:12:15,917 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/values
+2025-05-02 19:12:23,928 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/values
+2025-05-02 19:12:23,929 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/mission
+2025-05-02 19:12:24,081 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/mission
+2025-05-02 19:12:26,348 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/mission
+2025-05-02 19:12:30,394 - scrapers.roaster_pipeline - ERROR - Error processing roaster Blue Tokai Coffee Roasters with Crawl4AI: Browser.close: Connection closed while reading from the driver
+2025-05-02 19:12:30,395 - scrapers.roaster_pipeline - INFO - Processing roaster with basic method: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-02 19:12:31,321 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/pages/about
+2025-05-02 19:12:31,435 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/about
+2025-05-02 19:12:33,548 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/about

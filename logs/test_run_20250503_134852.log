@@ -1,0 +1,29 @@
+2025-05-03 13:48:52,662 - __main__ - INFO - Starting comprehensive test run for component: discoverer, mode: real
+2025-05-03 13:48:52,663 - __main__ - INFO - Log file: logs/test_run_20250503_134852.log
+2025-05-03 13:48:52,664 - __main__ - INFO - === Running Product Discoverer Tests ===
+2025-05-03 13:48:52,664 - __main__ - ERROR - Error in discoverer tests: BrowserConfig.__init__() got an unexpected keyword argument 'max_concurrent_pages'
+Traceback (most recent call last):
+  File "C:\Users\abhthril\Downloads\IndianCoffeeBeans\tests\run_all_tests.py", line 158, in main
+    await run_discoverer_tests()
+  File "C:\Users\abhthril\Downloads\IndianCoffeeBeans\tests\test_real_discoverers.py", line 118, in run_tests
+    discovery_manager = DiscoveryManager(refresh_cache=True)
+  File "C:\Users\abhthril\Downloads\IndianCoffeeBeans\scrapers\discoverers\discovery_manager.py", line 32, in __init__
+    self.crawl4ai_discoverer = Crawl4AIDiscoverer()
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\abhthril\Downloads\IndianCoffeeBeans\scrapers\discoverers\crawl4ai_discoverer.py", line 41, in __init__
+    self.browser_config = BrowserConfig(
+                          ~~~~~~~~~~~~~^
+        headless=True,
+        ^^^^^^^^^^^^^^
+    ...<3 lines>...
+        max_concurrent_pages=2  # Limit concurrent pages to avoid overloading the browser
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: BrowserConfig.__init__() got an unexpected keyword argument 'max_concurrent_pages'
+2025-05-03 13:48:52,676 - __main__ - INFO - === Generating Comprehensive Test Report ===
+2025-05-03 13:48:52,678 - __main__ - INFO - Comprehensive test summary saved to test_results\comprehensive_test_summary.json
+2025-05-03 13:48:52,678 - __main__ - INFO - 
+===== OVERALL TEST RESULTS =====
+2025-05-03 13:48:52,679 - __main__ - INFO - Components tested: 
+2025-05-03 13:48:52,679 - __main__ - INFO - Test run completed

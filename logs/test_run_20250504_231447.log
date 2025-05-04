@@ -1,0 +1,26 @@
+2025-05-04 23:14:47,762 - __main__ - INFO - Log file: logs/test_run_20250504_231447.log
+2025-05-04 23:14:47,762 - db.supabase_client - INFO - Initializing Supabase client
+2025-05-04 23:14:48,228 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-04 23:14:48,230 - __main__ - INFO - Loaded 54 roasters from data/input/roasters_input.csv
+2025-05-04 23:14:48,230 - __main__ - INFO - Starting pipeline with 1 roasters
+2025-05-04 23:14:48,230 - scrapers.pipeline - INFO - Starting to process 1 roasters
+2025-05-04 23:14:48,231 - scrapers.pipeline - INFO - Processing roaster: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-04 23:14:48,237 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-04 23:14:48,240 - scrapers.roaster_pipeline - INFO - Found cached data for Blue Tokai Coffee Roasters
+2025-05-04 23:14:48,240 - scrapers.pipeline - INFO - Extracted metadata for Blue Tokai Coffee Roasters
+2025-05-04 23:14:48,241 - scrapers.pipeline - ERROR - Error processing roaster Blue Tokai Coffee Roasters: 'dict' object has no attribute 'dict'
+2025-05-04 23:14:48,241 - scrapers.pipeline - INFO - Completed processing 0 roasters
+2025-05-04 23:14:48,241 - scrapers.pipeline - INFO - Discovered 0 products
+2025-05-04 23:14:48,242 - scrapers.pipeline - INFO - Extracted 0 products
+2025-05-04 23:14:48,242 - scrapers.pipeline - INFO - Enriched 0 products with DeepSeek
+2025-05-04 23:14:48,242 - scrapers.pipeline - INFO - Uploaded 0 products to database
+2025-05-04 23:14:48,243 - scrapers.pipeline - INFO - Encountered 1 errors
+2025-05-04 23:14:48,243 - __main__ - INFO - 
+===== PIPELINE RESULTS =====
+2025-05-04 23:14:48,243 - __main__ - INFO - Roasters processed: 0/1
+2025-05-04 23:14:48,244 - __main__ - INFO - Products discovered: 0
+2025-05-04 23:14:48,244 - __main__ - INFO - Products extracted: 0
+2025-05-04 23:14:48,245 - __main__ - INFO - Products enriched with DeepSeek: 0
+2025-05-04 23:14:48,245 - __main__ - INFO - Products uploaded to database: 0
+2025-05-04 23:14:48,246 - __main__ - INFO - Errors encountered: 1
+2025-05-04 23:14:48,246 - __main__ - WARNING - No coffees to export

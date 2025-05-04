@@ -1,0 +1,40 @@
+{
+  "total_tested": 4,
+  "successful": 4,
+  "failed": 0,
+  "failed_roasters": [],
+  "results": {
+    "Blue Tokai Coffee Roasters": {
+      "platform": "shopify",
+      "products_count": 64,
+      "products_with_image": 59,
+      "discovery_methods": {
+        "unknown": 0
+      }
+    },
+    "Subko Coffee Roasters": {
+      "platform": "shopify",
+      "products_count": 31,
+      "products_with_image": 31,
+      "discovery_methods": {
+        "unknown": 0
+      }
+    },
+    "Corridor Seven Coffee Roasters": {
+      "platform": "shopify",
+      "products_count": 35,
+      "products_with_image": 35,
+      "discovery_methods": {
+        "unknown": 0
+      }
+    },
+    "KC Roasters": {
+      "platform": "shopify",
+      "products_count": 5,
+      "products_with_image": 5,
+      "discovery_methods": {
+        "unknown": 0
+      }
+    }
+  }
+}

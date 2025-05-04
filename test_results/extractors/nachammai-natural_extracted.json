@@ -1,0 +1,10 @@
+{
+  "name": "Nachammai Natural",
+  "slug": "nachammai-natural",
+  "direct_buy_url": "https://www.subko.coffee/product/nachammai-natural/",
+  "platform": "woocommerce",
+  "roaster_name": "Subko Coffee Roasters",
+  "roaster_slug": "subko-coffee-roasters",
+  "description": "Juicy and sweet coffee from Tamil Nadu",
+  "extracted_by": "json_css"
+}

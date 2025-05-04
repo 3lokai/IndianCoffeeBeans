@@ -1,0 +1,390 @@
+2025-05-04 23:46:30,359 - __main__ - INFO - Log file: logs/test_run_20250504_234630.log
+2025-05-04 23:46:30,360 - db.supabase_client - INFO - Initializing Supabase client
+2025-05-04 23:46:30,875 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-04 23:46:30,876 - __main__ - INFO - Loaded 54 roasters from data/input/roasters_input.csv
+2025-05-04 23:46:30,877 - __main__ - INFO - Starting pipeline with 1 roasters
+2025-05-04 23:46:30,877 - scrapers.pipeline - INFO - Starting to process 1 roasters
+2025-05-04 23:46:30,877 - scrapers.pipeline - INFO - Processing roaster: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-04 23:46:30,878 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-04 23:46:30,879 - scrapers.roaster_pipeline - INFO - Found cached data for Blue Tokai Coffee Roasters
+2025-05-04 23:46:30,880 - scrapers.pipeline - INFO - Extracted metadata for Blue Tokai Coffee Roasters
+2025-05-04 23:46:30,891 - scrapers.discoverers.discovery_manager - INFO - Found 64 cached products for Blue Tokai Coffee Roasters
+2025-05-04 23:46:30,891 - scrapers.pipeline - INFO - Discovered 64 products for Blue Tokai Coffee Roasters
+2025-05-04 23:46:30,893 - common.utils - ERROR - Error loading cache for product_are-you-tasting-your-coffee: Expecting value: line 19 column 17 (char 3009)
+2025-05-04 23:46:30,901 - common.utils - ERROR - Error loading cache for product_kerehaklu-estate-washed: Expecting value: line 19 column 17 (char 1396)
+2025-05-04 23:46:30,906 - common.utils - ERROR - Error loading cache for product_seethargundu-estate: Expecting value: line 19 column 17 (char 1595)
+2025-05-04 23:46:32,702 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/poabs-estate
+2025-05-04 23:46:32,898 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/cupping-kolkata
+2025-05-04 23:46:33,314 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/kerehaklu-estate-light
+2025-05-04 23:46:34,204 - scrapers.pipeline - INFO - Product Are you tasting your coffee? needs DeepSeek enrichment
+2025-05-04 23:46:34,241 - scrapers.pipeline - INFO - Product Seethargundu Estate needs DeepSeek enrichment
+2025-05-04 23:46:34,246 - scrapers.pipeline - INFO - Product Kerehaklu Estate - Washed needs DeepSeek enrichment
+2025-05-04 23:46:35,831 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/cupping-kolkata
+2025-05-04 23:46:36,044 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/kerehaklu-estate-light
+2025-05-04 23:46:36,094 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/poabs-estate
+2025-05-04 23:46:36,718 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/kerehaklu-estate-light
+2025-05-04 23:46:36,721 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/cupping-kolkata
+2025-05-04 23:46:36,784 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/poabs-estate
+2025-05-04 23:46:38,730 - common.utils - ERROR - Error loading cache for product_coffee-french-press: Expecting value: line 19 column 17 (char 709)
+2025-05-04 23:46:38,746 - common.utils - ERROR - Error loading cache for product_kerehaklu-estate-peaberries: Expecting value: line 19 column 17 (char 2734)
+2025-05-04 23:46:38,846 - common.utils - ERROR - Error loading cache for product_msp-micro-lot-blend: Expecting value: line 19 column 17 (char 2135)
+2025-05-04 23:46:40,432 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/kerehaklu-estate-peaberries
+2025-05-04 23:46:40,481 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/coffee-french-press
+2025-05-04 23:46:40,632 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/kerehaklu-estate-peaberries
+2025-05-04 23:46:41,141 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/msp-micro-lot-blend
+2025-05-04 23:46:41,348 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/msp-micro-lot-blend
+2025-05-04 23:46:41,681 - scrapers.pipeline - INFO - Product Kerehaklu Estate - Peaberries needs DeepSeek enrichment
+2025-05-04 23:46:41,759 - scrapers.pipeline - INFO - Product Coffee + French Press needs DeepSeek enrichment
+2025-05-04 23:46:41,791 - scrapers.pipeline - INFO - Product MSP Micro Lot Blend needs DeepSeek enrichment
+2025-05-04 23:46:43,417 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/kerehaklu-estate-peaberries
+2025-05-04 23:46:43,800 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/coffee-french-press
+2025-05-04 23:46:43,871 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/msp-micro-lot-blend
+2025-05-04 23:46:44,323 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/kerehaklu-estate-peaberries
+2025-05-04 23:46:44,392 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/coffee-french-press
+2025-05-04 23:46:46,338 - common.utils - ERROR - Error loading cache for product_attikan-estate: Expecting value: line 19 column 17 (char 1383)
+2025-05-04 23:46:46,398 - common.utils - ERROR - Error loading cache for product_kerehaklu-estate-peaberry-washed: Expecting value: line 19 column 17 (char 602)
+2025-05-04 23:46:47,359 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/msp-micro-lot-blend
+2025-05-04 23:46:47,618 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/attikan-estate-aluminium-coffee-capsules
+2025-05-04 23:46:47,728 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/attikan-estate-aluminium-coffee-capsules
+2025-05-04 23:46:47,892 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/kerehaklu-estate-peaberry-washed
+2025-05-04 23:46:47,963 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/kerehaklu-estate-peaberry-washed
+2025-05-04 23:46:48,247 - scrapers.pipeline - INFO - Product Attikan Estate needs DeepSeek enrichment
+2025-05-04 23:46:48,276 - scrapers.pipeline - INFO - Product Kerehaklu Estate Peaberry Washed needs DeepSeek enrichment
+2025-05-04 23:46:49,372 - common.utils - ERROR - Error loading cache for product_kerehaklu-estate-peaberry-natural: Expecting value: line 19 column 17 (char 605)
+2025-05-04 23:46:50,132 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/attikan-estate-aluminium-coffee-capsules
+2025-05-04 23:46:50,383 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/kerehaklu-estate-peaberry-washed
+2025-05-04 23:46:50,791 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/attikan-estate-aluminium-coffee-capsules
+2025-05-04 23:46:51,723 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/kerehaklu-estate-peaberry-natural
+2025-05-04 23:46:51,783 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/kerehaklu-estate-peaberry-natural
+2025-05-04 23:46:51,987 - scrapers.pipeline - INFO - Product Kerehaklu Estate Peaberry Natural needs DeepSeek enrichment
+2025-05-04 23:46:52,746 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/kerehaklu-estate-peaberry-washed
+2025-05-04 23:46:52,796 - common.utils - ERROR - Error loading cache for product_gowri-estate: Expecting value: line 19 column 17 (char 544)
+2025-05-04 23:46:53,723 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/kerehaklu-estate-peaberry-natural
+2025-05-04 23:46:54,109 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/kerehaklu-estate-peaberry-natural
+2025-05-04 23:46:54,754 - scrapers.pipeline - INFO - Using cached data for Attikan Estate
+2025-05-04 23:46:54,889 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/gowri-estate-1
+2025-05-04 23:46:54,962 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/gowri-estate-1
+2025-05-04 23:46:55,263 - scrapers.pipeline - INFO - Product Gowri Estate needs DeepSeek enrichment
+2025-05-04 23:46:56,120 - common.utils - ERROR - Error loading cache for product_riverdale-estate-white-rose: Expecting value: line 19 column 17 (char 1966)
+2025-05-04 23:46:56,764 - common.utils - ERROR - Error loading cache for product_raxidi-estate-natural: Expecting value: line 19 column 17 (char 1495)
+2025-05-04 23:46:57,048 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/gowri-estate-1
+2025-05-04 23:46:57,418 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/gowri-estate-1
+2025-05-04 23:46:58,447 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/riverdale-estate-white-rose
+2025-05-04 23:46:58,499 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/riverdale-estate-white-rose
+2025-05-04 23:46:58,877 - scrapers.pipeline - INFO - Product Riverdale Estate - White Rose needs DeepSeek enrichment
+2025-05-04 23:46:59,424 - common.utils - ERROR - Error loading cache for product_blue-tokai-coffee-roasters-gift-card: Expecting value: line 19 column 17 (char 4420)
+2025-05-04 23:46:59,733 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/raxidi-estate
+2025-05-04 23:46:59,789 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/raxidi-estate
+2025-05-04 23:47:00,379 - scrapers.pipeline - INFO - Product Raxidi Estate - Natural needs DeepSeek enrichment
+2025-05-04 23:47:01,911 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/riverdale-estate-white-rose
+2025-05-04 23:47:02,945 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/blue-tokai-coffee-roasters-gift-card
+2025-05-04 23:47:03,586 - scrapers.pipeline - INFO - Product Blue Tokai Coffee Roasters Gift Card needs DeepSeek enrichment
+2025-05-04 23:47:03,619 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/riverdale-estate-white-rose
+2025-05-04 23:47:04,072 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/raxidi-estate
+2025-05-04 23:47:04,755 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/raxidi-estate
+2025-05-04 23:47:05,633 - common.utils - ERROR - Error loading cache for product_salawara-estate-lot-1418: Expecting value: line 19 column 17 (char 1374)
+2025-05-04 23:47:05,966 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/blue-tokai-coffee-roasters-gift-card
+2025-05-04 23:47:06,376 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/blue-tokai-coffee-roasters-gift-card
+2025-05-04 23:47:06,775 - common.utils - ERROR - Error loading cache for product_12th-birthday-blend-100g: Expecting value: line 19 column 17 (char 578)
+2025-05-04 23:47:07,838 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/salawara-estate-lot-1418
+2025-05-04 23:47:07,896 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/salawara-estate-lot-1418
+2025-05-04 23:47:08,169 - scrapers.pipeline - INFO - Product Salawara Estate - Lot 1418 needs DeepSeek enrichment
+2025-05-04 23:47:08,384 - common.utils - ERROR - Error loading cache for product_wine-barrel-aged-coffee: Expecting value: line 19 column 17 (char 1867)
+2025-05-04 23:47:09,098 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/12th-birthday-blend-100g
+2025-05-04 23:47:09,216 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/12th-birthday-blend-100g
+2025-05-04 23:47:09,541 - scrapers.pipeline - INFO - Product 12th Birthday Blend 100g needs DeepSeek enrichment
+2025-05-04 23:47:10,590 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/salawara-estate-lot-1418
+2025-05-04 23:47:11,046 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/salawara-estate-lot-1418
+2025-05-04 23:47:11,329 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/wine-barrel-aged
+2025-05-04 23:47:11,719 - scrapers.pipeline - INFO - Product Wine Barrel Aged Coffee needs DeepSeek enrichment
+2025-05-04 23:47:12,328 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/12th-birthday-blend-100g
+2025-05-04 23:47:12,698 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/12th-birthday-blend-100g
+2025-05-04 23:47:13,060 - common.utils - ERROR - Error loading cache for product_climate-resilient-coffees: Expecting value: line 19 column 17 (char 559)
+2025-05-04 23:47:13,907 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/wine-barrel-aged
+2025-05-04 23:47:14,365 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/wine-barrel-aged
+2025-05-04 23:47:14,704 - common.utils - ERROR - Error loading cache for product_dhak-blend-250g-channi: Expecting value: line 19 column 17 (char 1932)
+2025-05-04 23:47:15,407 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/crc
+2025-05-04 23:47:15,761 - scrapers.pipeline - INFO - Product Climate Resilient Coffees needs DeepSeek enrichment
+2025-05-04 23:47:16,375 - common.utils - ERROR - Error loading cache for product_french-roast-250g-channi: Expecting value: line 19 column 17 (char 1863)
+2025-05-04 23:47:17,122 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/dhak-blend-250g-channi
+2025-05-04 23:47:17,247 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/dhak-blend-250g-channi
+2025-05-04 23:47:17,629 - scrapers.pipeline - INFO - Product Dhak Blend 250g + Channi needs DeepSeek enrichment
+2025-05-04 23:47:18,190 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/crc
+2025-05-04 23:47:18,871 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/crc
+2025-05-04 23:47:19,278 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/french-roast-250g-channi
+2025-05-04 23:47:19,399 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/french-roast-250g-channi
+2025-05-04 23:47:19,754 - scrapers.pipeline - INFO - Product French Roast 250g + Channi needs DeepSeek enrichment
+2025-05-04 23:47:20,482 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/dhak-blend-250g-channi
+2025-05-04 23:47:20,856 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/dhak-blend-250g-channi
+2025-05-04 23:47:21,815 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/french-roast-250g-channi
+2025-05-04 23:47:22,109 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/french-roast-250g-channi
+2025-05-04 23:47:26,136 - common.utils - ERROR - Error loading cache for product_silver-oak-250g-channi: Expecting value: line 19 column 17 (char 1951)
+2025-05-04 23:47:26,153 - common.utils - ERROR - Error loading cache for product_vienna-roast-250g-channi: Expecting value: line 19 column 17 (char 1889)
+2025-05-04 23:47:26,167 - common.utils - ERROR - Error loading cache for product_attikan-estate-250g-channi: Expecting value: line 19 column 17 (char 1976)
+2025-05-04 23:47:27,608 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/silver-oak-250g-channi
+2025-05-04 23:47:27,730 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/vienna-roast-250g-channi
+2025-05-04 23:47:27,789 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/silver-oak-250g-channi
+2025-05-04 23:47:27,836 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/vienna-roast-250g-channi
+2025-05-04 23:47:28,255 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/attikan-estate-250g-channi
+2025-05-04 23:47:28,367 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/attikan-estate-250g-channi
+2025-05-04 23:47:28,559 - scrapers.pipeline - INFO - Product Silver Oak 250g + Channi needs DeepSeek enrichment
+2025-05-04 23:47:28,623 - scrapers.pipeline - INFO - Product Vienna Roast 250g + Channi needs DeepSeek enrichment
+2025-05-04 23:47:28,804 - scrapers.pipeline - INFO - Product Attikan Estate 250g + Channi needs DeepSeek enrichment
+2025-05-04 23:47:30,598 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/vienna-roast-250g-channi
+2025-05-04 23:47:31,190 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/attikan-estate-250g-channi
+2025-05-04 23:47:31,407 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/silver-oak-250g-channi
+2025-05-04 23:47:31,937 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/vienna-roast-250g-channi
+2025-05-04 23:47:31,969 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/attikan-estate-250g-channi
+2025-05-04 23:47:31,999 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/silver-oak-250g-channi
+2025-05-04 23:47:33,953 - common.utils - ERROR - Error loading cache for product_riverdale-estate-gesha-natural: Expecting value: line 19 column 17 (char 3334)
+2025-05-04 23:47:34,009 - common.utils - ERROR - Error loading cache for product_silver-oak-blend: Expecting value: line 19 column 17 (char 1721)
+2025-05-04 23:47:34,017 - common.utils - ERROR - Error loading cache for product_5-in-1-explorer-pack: Expecting value: line 19 column 17 (char 2605)
+2025-05-04 23:47:35,462 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/5-in-1-explorer-pack
+2025-05-04 23:47:35,692 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/riverdale-estate-gesha-natural
+2025-05-04 23:47:35,886 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/riverdale-estate-gesha-natural
+2025-05-04 23:47:36,282 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/silver-oak-aluminium-coffee-capsules
+2025-05-04 23:47:36,388 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/silver-oak-aluminium-coffee-capsules
+2025-05-04 23:47:36,575 - scrapers.pipeline - INFO - Product 5-in-1 Explorer Pack needs DeepSeek enrichment
+2025-05-04 23:47:36,666 - scrapers.pipeline - INFO - Product Riverdale Estate – Gesha Natural needs DeepSeek enrichment
+2025-05-04 23:47:36,780 - scrapers.pipeline - INFO - Product Silver Oak Blend needs DeepSeek enrichment
+2025-05-04 23:47:38,730 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/5-in-1-explorer-pack
+2025-05-04 23:47:39,196 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/riverdale-estate-gesha-natural
+2025-05-04 23:47:39,468 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/silver-oak-aluminium-coffee-capsules
+2025-05-04 23:47:40,179 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/5-in-1-explorer-pack
+2025-05-04 23:47:40,186 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/riverdale-estate-gesha-natural
+2025-05-04 23:47:40,199 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/silver-oak-aluminium-coffee-capsules
+2025-05-04 23:47:42,194 - common.utils - ERROR - Error loading cache for product_amaltas-blend: Expecting value: line 19 column 17 (char 1350)
+2025-05-04 23:47:42,211 - common.utils - ERROR - Error loading cache for product_dhak-blend: Expecting value: line 19 column 17 (char 1704)
+2025-05-04 23:47:42,264 - common.utils - ERROR - Error loading cache for product_vienna-roast: Expecting value: line 19 column 17 (char 1222)
+2025-05-04 23:47:43,787 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/cold-brew-blend-light
+2025-05-04 23:47:44,040 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/vienna-roast-aluminium-coffee-capsules
+2025-05-04 23:47:44,170 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/dhak-blend
+2025-05-04 23:47:44,538 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/cold-brew-blend-light
+2025-05-04 23:47:44,599 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/vienna-roast-aluminium-coffee-capsules
+2025-05-04 23:47:44,652 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/dhak-blend
+2025-05-04 23:47:44,979 - scrapers.pipeline - INFO - Product Vienna Roast needs DeepSeek enrichment
+2025-05-04 23:47:45,014 - scrapers.pipeline - INFO - Product Amaltas Blend needs DeepSeek enrichment
+2025-05-04 23:47:45,048 - scrapers.pipeline - INFO - Product Dhak Blend needs DeepSeek enrichment
+2025-05-04 23:47:47,171 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/vienna-roast-aluminium-coffee-capsules
+2025-05-04 23:47:47,446 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/dhak-blend
+2025-05-04 23:47:47,812 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/cold-brew-blend-light
+2025-05-04 23:47:48,242 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/vienna-roast-aluminium-coffee-capsules
+2025-05-04 23:47:48,269 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/dhak-blend
+2025-05-04 23:47:48,371 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/cold-brew-blend-light
+2025-05-04 23:47:50,255 - scrapers.pipeline - INFO - Using cached data for Dhak Blend
+2025-05-04 23:47:50,282 - common.utils - ERROR - Error loading cache for product_cold-brew-bags-bold: Expecting value: line 19 column 17 (char 1005)
+2025-05-04 23:47:50,386 - common.utils - ERROR - Error loading cache for product_classic-cold-coffee: Expecting value: line 19 column 17 (char 994)
+2025-05-04 23:47:51,591 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/cold-brew-bag-bold
+2025-05-04 23:47:51,711 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/cold-brew-bag-bold
+2025-05-04 23:47:51,813 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/classic-cold-coffee
+2025-05-04 23:47:52,133 - scrapers.pipeline - INFO - Product Cold Brew Bags - Bold needs DeepSeek enrichment
+2025-05-04 23:47:52,261 - common.utils - ERROR - Error loading cache for product_mocha-cold-coffee: Expecting value: line 19 column 17 (char 1027)
+2025-05-04 23:47:53,906 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/cold-brew-bag-bold
+2025-05-04 23:47:54,212 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/mocha-cold-coffee
+2025-05-04 23:47:54,452 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/cold-brew-bag-bold
+2025-05-04 23:47:54,621 - scrapers.pipeline - INFO - Product Mocha Cold Coffee needs DeepSeek enrichment
+2025-05-04 23:47:55,965 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/mocha-cold-coffee
+2025-05-04 23:47:56,265 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/mocha-cold-coffee
+2025-05-04 23:47:56,472 - common.utils - ERROR - Error loading cache for product_basankhan-estate: Expecting value: line 19 column 17 (char 1560)
+2025-05-04 23:47:57,876 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/basankhan-estate
+2025-05-04 23:47:57,921 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/basankhan-estate
+2025-05-04 23:47:58,196 - scrapers.pipeline - INFO - Product Basankhan Estate needs DeepSeek enrichment
+2025-05-04 23:47:58,275 - common.utils - ERROR - Error loading cache for product_kalledevarapura-estate-pulp-sun-dried: Expecting value: line 19 column 17 (char 1071)
+2025-05-04 23:47:59,913 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/basankhan-estate
+2025-05-04 23:48:00,086 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/kalledevarapura-pulp-sun-dried
+2025-05-04 23:48:00,279 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/kalledevarapura-pulp-sun-dried
+2025-05-04 23:48:00,622 - scrapers.pipeline - INFO - Product Kalledevarapura Estate - Pulp Sun Dried needs DeepSeek enrichment
+2025-05-04 23:48:00,677 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/basankhan-estate
+2025-05-04 23:48:02,039 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/kalledevarapura-pulp-sun-dried
+2025-05-04 23:48:02,366 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/kalledevarapura-pulp-sun-dried
+2025-05-04 23:48:02,697 - common.utils - ERROR - Error loading cache for product_seethargundu-estate-light-roast-easy-pour: Expecting value: line 19 column 17 (char 1101)
+2025-05-04 23:48:04,073 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/seethargundu-estate-easy-pour-coffee-sachets
+2025-05-04 23:48:04,120 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/seethargundu-estate-easy-pour-coffee-sachets
+2025-05-04 23:48:04,358 - scrapers.pipeline - INFO - Product Seethargundu Estate | Light Roast - Easy Pour needs DeepSeek enrichment
+2025-05-04 23:48:04,378 - common.utils - ERROR - Error loading cache for product_kolli-berri-estate: Expecting value: line 19 column 17 (char 1257)
+2025-05-04 23:48:06,085 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/kolli-berri-estate
+2025-05-04 23:48:06,249 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/kolli-berri-estate
+2025-05-04 23:48:06,492 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/seethargundu-estate-easy-pour-coffee-sachets
+2025-05-04 23:48:07,009 - scrapers.pipeline - INFO - Product Kolli Berri Estate needs DeepSeek enrichment
+2025-05-04 23:48:07,040 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/seethargundu-estate-easy-pour-coffee-sachets
+2025-05-04 23:48:07,149 - scrapers.pipeline - INFO - Product Classic Cold Coffee needs DeepSeek enrichment
+2025-05-04 23:48:09,046 - common.utils - ERROR - Error loading cache for product_monsoon-malabar-medium-dark-roast-easy-pour: Expecting value: line 19 column 17 (char 1130)
+2025-05-04 23:48:09,336 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/kolli-berri-estate
+2025-05-04 23:48:09,787 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/classic-cold-coffee
+2025-05-04 23:48:10,159 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/kolli-berri-estate
+2025-05-04 23:48:10,214 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/classic-cold-coffee
+2025-05-04 23:48:11,578 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/monsoon-malabar-easy-pour-coffee-sachets
+2025-05-04 23:48:11,607 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/monsoon-malabar-easy-pour-coffee-sachets
+2025-05-04 23:48:11,831 - scrapers.pipeline - INFO - Product Monsoon Malabar | Medium-Dark Roast - Easy Pour needs DeepSeek enrichment
+2025-05-04 23:48:12,170 - common.utils - ERROR - Error loading cache for product_coffee-journal: Expecting value: line 19 column 17 (char 1388)
+2025-05-04 23:48:12,227 - common.utils - ERROR - Error loading cache for product_moka-pot-hoodie: Expecting value: line 19 column 17 (char 5429)
+2025-05-04 23:48:13,885 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/monsoon-malabar-easy-pour-coffee-sachets
+2025-05-04 23:48:14,381 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/coffee-journal
+2025-05-04 23:48:14,850 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/moka-pot-hoodie
+2025-05-04 23:48:15,034 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/monsoon-malabar-easy-pour-coffee-sachets
+2025-05-04 23:48:15,198 - scrapers.pipeline - INFO - Product Coffee Journal needs DeepSeek enrichment
+2025-05-04 23:48:15,301 - scrapers.pipeline - INFO - Product Moka Pot Hoodie needs DeepSeek enrichment
+2025-05-04 23:48:16,990 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/coffee-journal
+2025-05-04 23:48:17,356 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/moka-pot-hoodie
+2025-05-04 23:48:17,801 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/coffee-journal
+2025-05-04 23:48:17,851 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/moka-pot-hoodie
+2025-05-04 23:48:21,872 - common.utils - ERROR - Error loading cache for product_strong-black-coffee-brewer: Expecting value: line 19 column 17 (char 1113)
+2025-05-04 23:48:21,889 - common.utils - ERROR - Error loading cache for product_complex-black-coffee-brewer: Expecting value: line 19 column 17 (char 872)
+2025-05-04 23:48:21,920 - common.utils - ERROR - Error loading cache for product_milky-coffee: Expecting value: line 19 column 17 (char 1075)
+2025-05-04 23:48:23,485 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/strong-black-coffee-brewer
+2025-05-04 23:48:23,855 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/complex-black-coffee-brewer
+2025-05-04 23:48:24,115 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/milky-coffee-brewer
+2025-05-04 23:48:24,238 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/strong-black-coffee-brewer
+2025-05-04 23:48:24,376 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/milky-coffee-brewer
+2025-05-04 23:48:24,641 - scrapers.pipeline - INFO - Product Strong black coffee brewer needs DeepSeek enrichment
+2025-05-04 23:48:24,675 - scrapers.pipeline - INFO - Product Complex black coffee brewer needs DeepSeek enrichment
+2025-05-04 23:48:24,742 - scrapers.pipeline - INFO - Product Milky coffee needs DeepSeek enrichment
+2025-05-04 23:48:26,261 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/strong-black-coffee-brewer
+2025-05-04 23:48:26,570 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/milky-coffee-brewer
+2025-05-04 23:48:26,741 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/complex-black-coffee-brewer
+2025-05-04 23:48:27,634 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/milky-coffee-brewer
+2025-05-04 23:48:27,639 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/strong-black-coffee-brewer
+2025-05-04 23:48:27,647 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/complex-black-coffee-brewer
+2025-05-04 23:48:29,646 - common.utils - ERROR - Error loading cache for product_mixed-light-to-dark-roasts-easy-pour: Expecting value: line 19 column 17 (char 1316)
+2025-05-04 23:48:29,696 - common.utils - ERROR - Error loading cache for product_vienna-dark-roast-easy-pour: Expecting value: line 19 column 17 (char 1203)
+2025-05-04 23:48:29,704 - common.utils - ERROR - Error loading cache for product_customised-sampler-pack: Expecting value: line 19 column 17 (char 3316)
+2025-05-04 23:48:31,097 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/mixed-light-to-dark-roasts
+2025-05-04 23:48:31,421 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/vienna-dark-roast-easy-pour-coffee-sachets
+2025-05-04 23:48:31,622 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/customised-sampler-pack
+2025-05-04 23:48:31,933 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/mixed-light-to-dark-roasts
+2025-05-04 23:48:31,972 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/vienna-dark-roast-easy-pour-coffee-sachets
+2025-05-04 23:48:32,403 - scrapers.pipeline - INFO - Product Customised Sampler Pack needs DeepSeek enrichment
+2025-05-04 23:48:32,450 - scrapers.pipeline - INFO - Product Mixed | Light to Dark Roasts - Easy Pour needs DeepSeek enrichment
+2025-05-04 23:48:32,510 - scrapers.pipeline - INFO - Product Vienna | Dark Roast - Easy Pour needs DeepSeek enrichment
+2025-05-04 23:48:34,584 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/customised-sampler-pack
+2025-05-04 23:48:34,822 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/mixed-light-to-dark-roasts
+2025-05-04 23:48:35,312 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/vienna-dark-roast-easy-pour-coffee-sachets
+2025-05-04 23:48:35,888 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/mixed-light-to-dark-roasts
+2025-05-04 23:48:35,894 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/customised-sampler-pack
+2025-05-04 23:48:36,045 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/vienna-dark-roast-easy-pour-coffee-sachets
+2025-05-04 23:48:37,905 - common.utils - ERROR - Error loading cache for product_the-rich-bold-trio-pack-coffee-beans: Expecting value: line 19 column 17 (char 6214)
+2025-05-04 23:48:37,922 - common.utils - ERROR - Error loading cache for product_sandalwood-estate: Expecting value: line 19 column 17 (char 1389)
+2025-05-04 23:48:38,054 - common.utils - ERROR - Error loading cache for product_thogarihunkal-estate: Expecting value: line 19 column 17 (char 1285)
+2025-05-04 23:48:39,551 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/the-rich-bold-trio-pack
+2025-05-04 23:48:39,778 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/sandalwood-estate
+2025-05-04 23:48:39,955 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/thogarihunkal-estate
+2025-05-04 23:48:40,208 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/the-rich-bold-trio-pack
+2025-05-04 23:48:40,365 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/sandalwood-estate
+2025-05-04 23:48:40,469 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/thogarihunkal-estate
+2025-05-04 23:48:40,913 - scrapers.pipeline - INFO - Product Thogarihunkal Estate needs DeepSeek enrichment
+2025-05-04 23:48:40,940 - scrapers.pipeline - INFO - Product The Rich & Bold Trio Pack-Coffee beans needs DeepSeek enrichment
+2025-05-04 23:48:40,966 - scrapers.pipeline - INFO - Product Sandalwood Estate needs DeepSeek enrichment
+2025-05-04 23:48:43,149 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/thogarihunkal-estate
+2025-05-04 23:48:43,474 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/the-rich-bold-trio-pack
+2025-05-04 23:48:43,878 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/sandalwood-estate
+2025-05-04 23:48:44,521 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/the-rich-bold-trio-pack
+2025-05-04 23:48:44,534 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/thogarihunkal-estate
+2025-05-04 23:48:44,586 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/sandalwood-estate
+2025-05-04 23:48:46,530 - common.utils - ERROR - Error loading cache for product_cold-brew-blend-bold: Expecting value: line 19 column 17 (char 927)
+2025-05-04 23:48:46,590 - common.utils - ERROR - Error loading cache for product_french-roast: Expecting value: line 19 column 17 (char 1717)
+2025-05-04 23:48:46,651 - common.utils - ERROR - Error loading cache for product_silver-oak-cafe-blend: Expecting value: line 19 column 17 (char 1323)
+2025-05-04 23:48:48,251 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/silver-oak-cafe-blend
+2025-05-04 23:48:48,388 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/french-roast
+2025-05-04 23:48:48,517 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/cold-brew-blend-dark-roast
+2025-05-04 23:48:48,734 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/silver-oak-cafe-blend
+2025-05-04 23:48:48,971 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/cold-brew-blend-dark-roast
+2025-05-04 23:48:49,414 - scrapers.pipeline - INFO - Product Cold Brew Blend Bold needs DeepSeek enrichment
+2025-05-04 23:48:49,446 - scrapers.pipeline - INFO - Product French Roast needs DeepSeek enrichment
+2025-05-04 23:48:49,512 - scrapers.pipeline - INFO - Product Silver Oak Cafe Blend needs DeepSeek enrichment
+2025-05-04 23:48:51,596 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/cold-brew-blend-dark-roast
+2025-05-04 23:48:51,999 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/french-roast
+2025-05-04 23:48:52,174 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/silver-oak-cafe-blend
+2025-05-04 23:48:52,882 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/cold-brew-blend-dark-roast
+2025-05-04 23:48:52,895 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/french-roast
+2025-05-04 23:48:52,944 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/silver-oak-cafe-blend
+2025-05-04 23:48:54,901 - scrapers.pipeline - INFO - Using cached data for Vienna Roast
+2025-05-04 23:48:54,904 - common.utils - ERROR - Error loading cache for product_french-roast-very-dark-roast-easy-pour: Expecting value: line 19 column 17 (char 1021)
+2025-05-04 23:48:54,957 - common.utils - ERROR - Error loading cache for product_jacaranda-blend-medium-dark-roast-easy-pour: Expecting value: line 19 column 17 (char 1939)
+2025-05-04 23:48:56,219 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/french-roast-easy-pour-coffee-sachets
+2025-05-04 23:48:56,390 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/jacaranda-blend-easy-pour-coffee-sachets
+2025-05-04 23:48:56,471 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/jacaranda-blend-easy-pour-coffee-sachets
+2025-05-04 23:48:56,842 - scrapers.pipeline - INFO - Product French Roast | Very Dark Roast - Easy Pour needs DeepSeek enrichment
+2025-05-04 23:48:56,868 - scrapers.pipeline - INFO - Product Jacaranda Blend | Medium Dark Roast - Easy Pour needs DeepSeek enrichment
+2025-05-04 23:48:56,904 - common.utils - ERROR - Error loading cache for product_gift-hamper-pack-of-coffee-4x75g: Expecting value: line 19 column 17 (char 994)
+2025-05-04 23:48:58,876 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/french-roast-easy-pour-coffee-sachets
+2025-05-04 23:48:59,190 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/jacaranda-blend-easy-pour-coffee-sachets
+2025-05-04 23:48:59,457 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/gift-4-pack-of-coffee-75g-each
+2025-05-04 23:49:00,177 - scrapers.pipeline - INFO - Product Gift Hamper: Pack Of Coffee (4X75G) needs DeepSeek enrichment
+2025-05-04 23:49:00,250 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/french-roast-easy-pour-coffee-sachets
+2025-05-04 23:49:00,272 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/jacaranda-blend-easy-pour-coffee-sachets
+2025-05-04 23:49:01,735 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/gift-4-pack-of-coffee-75g-each
+2025-05-04 23:49:02,058 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/gift-4-pack-of-coffee-75g-each
+2025-05-04 23:49:02,258 - common.utils - ERROR - Error loading cache for product_gift-hamper-pack-of-coffee-6x75g: Expecting value: line 19 column 17 (char 983)
+2025-05-04 23:49:02,314 - common.utils - ERROR - Error loading cache for product_cold-brew-bags-light-blend: Expecting value: line 19 column 17 (char 976)
+2025-05-04 23:49:03,876 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/gift-6-pack-of-coffee-75g-each
+2025-05-04 23:49:04,164 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/light-blend
+2025-05-04 23:49:04,177 - common.utils - ERROR - Error loading cache for product_cold-brew-bags-kalledeverapura: Expecting value: line 19 column 17 (char 1040)
+2025-05-04 23:49:04,326 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/light-blend
+2025-05-04 23:49:04,598 - scrapers.pipeline - INFO - Product Gift Hamper: Pack Of Coffee (6X75G) needs DeepSeek enrichment
+2025-05-04 23:49:04,717 - scrapers.pipeline - INFO - Product Cold Brew Bags - Light Blend needs DeepSeek enrichment
+2025-05-04 23:49:06,482 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/kalledeverapura
+2025-05-04 23:49:06,529 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/kalledeverapura
+2025-05-04 23:49:07,008 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/light-blend
+2025-05-04 23:49:07,265 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/gift-6-pack-of-coffee-75g-each
+2025-05-04 23:49:07,766 - scrapers.pipeline - INFO - Product Cold Brew Bags - Kalledeverapura needs DeepSeek enrichment
+2025-05-04 23:49:07,873 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/light-blend
+2025-05-04 23:49:07,887 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/gift-6-pack-of-coffee-75g-each
+2025-05-04 23:49:09,223 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/kalledeverapura
+2025-05-04 23:49:09,587 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/kalledeverapura
+2025-05-04 23:49:09,881 - common.utils - ERROR - Error loading cache for product_thogarihunkal-estate-medium-roast-easy-pour: Expecting value: line 19 column 17 (char 1236)
+2025-05-04 23:49:11,429 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/thogarihunkal-estate-easy-pour-coffee-sachets
+2025-05-04 23:49:11,500 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/thogarihunkal-estate-easy-pour-coffee-sachets
+2025-05-04 23:49:11,742 - scrapers.pipeline - INFO - Product Thogarihunkal Estate | Medium Roast - Easy Pour needs DeepSeek enrichment
+2025-05-04 23:49:13,146 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/thogarihunkal-estate-easy-pour-coffee-sachets
+2025-05-04 23:49:13,451 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/thogarihunkal-estate-easy-pour-coffee-sachets
+2025-05-04 23:49:17,470 - common.utils - ERROR - Error loading cache for product_attikan-estate-medium-dark-roast-easy-pour: Expecting value: line 19 column 17 (char 1231)
+2025-05-04 23:49:17,475 - common.utils - ERROR - Error loading cache for product_tote-bag: Expecting value: line 19 column 17 (char 1012)
+2025-05-04 23:49:17,478 - common.utils - ERROR - Error loading cache for product_peacock-and-bull-screen-print: Expecting value: line 19 column 17 (char 2015)
+2025-05-04 23:49:18,969 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/attikan-estate-easy-pour-coffee-sachets
+2025-05-04 23:49:19,257 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/tote-bag
+2025-05-04 23:49:19,477 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/attikan-estate-easy-pour-coffee-sachets
+2025-05-04 23:49:19,798 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/peacock-and-bull-screen-print
+2025-05-04 23:49:20,164 - scrapers.pipeline - INFO - Product Attikan Estate | Medium-Dark Roast - Easy Pour needs DeepSeek enrichment
+2025-05-04 23:49:20,197 - scrapers.pipeline - INFO - Product Tote Bag needs DeepSeek enrichment
+2025-05-04 23:49:20,264 - scrapers.pipeline - INFO - Product Peacock and Bull Screen Print needs DeepSeek enrichment
+2025-05-04 23:49:22,442 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/tote-bag
+2025-05-04 23:49:22,825 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/attikan-estate-easy-pour-coffee-sachets
+2025-05-04 23:49:23,040 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/peacock-and-bull-screen-print
+2025-05-04 23:49:23,740 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/attikan-estate-easy-pour-coffee-sachets
+2025-05-04 23:49:23,775 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/peacock-and-bull-screen-print
+2025-05-04 23:49:23,910 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/tote-bag
+2025-05-04 23:49:25,756 - common.utils - ERROR - Error loading cache for product_elephant-and-boar-screen-print: Expecting value: line 19 column 17 (char 2029)
+2025-05-04 23:49:26,946 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/elephant-and-boar-screen-print
+2025-05-04 23:49:27,209 - scrapers.pipeline - INFO - Product Elephant and Boar Screen Print needs DeepSeek enrichment
+2025-05-04 23:49:28,766 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/elephant-and-boar-screen-print
+2025-05-04 23:49:29,167 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/elephant-and-boar-screen-print
+2025-05-04 23:49:33,199 - scrapers.pipeline - INFO - Extracted details for 64 products from Blue Tokai Coffee Roasters
+2025-05-04 23:49:33,200 - scrapers.pipeline - INFO - Uploading 64 products for Blue Tokai Coffee Roasters
+2025-05-04 23:49:34,611 - httpx - INFO - HTTP Request: POST https://xrgmpplicqnlyowbhhrj.supabase.co/rest/v1/coffees?on_conflict=slug&columns=%22name%22%2C%22slug%22%2C%22is_single_origin%22%2C%22id%22%2C%22created_at%22%2C%22flavor_profiles%22%2C%22region_id%22%2C%22region_name%22%2C%22image_url%22%2C%22direct_buy_url%22%2C%22tags%22%2C%22is_available%22%2C%22roast_level%22%2C%22deepseek_enriched%22%2C%22processing_method%22%2C%22external_links%22%2C%22description%22%2C%22is_seasonal%22%2C%22roaster_id%22%2C%22is_featured%22%2C%22updated_at%22%2C%22brew_methods%22%2C%22prices%22%2C%22bean_type%22 "HTTP/2 400 Bad Request"
+2025-05-04 23:49:34,615 - db.supabase_client - ERROR - Error upserting coffees: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'brew_methods' column of 'coffees' in the schema cache"}
+2025-05-04 23:49:34,616 - scrapers.pipeline - ERROR - Error uploading batch: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'brew_methods' column of 'coffees' in the schema cache"}
+2025-05-04 23:49:36,863 - httpx - INFO - HTTP Request: POST https://xrgmpplicqnlyowbhhrj.supabase.co/rest/v1/coffees?on_conflict=slug&columns=%22name%22%2C%22slug%22%2C%22is_single_origin%22%2C%22id%22%2C%22created_at%22%2C%22flavor_profiles%22%2C%22region_id%22%2C%22region_name%22%2C%22image_url%22%2C%22direct_buy_url%22%2C%22tags%22%2C%22is_available%22%2C%22roast_level%22%2C%22deepseek_enriched%22%2C%22processing_method%22%2C%22external_links%22%2C%22description%22%2C%22is_seasonal%22%2C%22roaster_id%22%2C%22is_featured%22%2C%22updated_at%22%2C%22brew_methods%22%2C%22prices%22%2C%22bean_type%22 "HTTP/2 400 Bad Request"
+2025-05-04 23:49:36,865 - db.supabase_client - ERROR - Error upserting coffees: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'brew_methods' column of 'coffees' in the schema cache"}
+2025-05-04 23:49:36,866 - scrapers.pipeline - ERROR - Error uploading batch: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'brew_methods' column of 'coffees' in the schema cache"}
+2025-05-04 23:49:38,958 - httpx - INFO - HTTP Request: POST https://xrgmpplicqnlyowbhhrj.supabase.co/rest/v1/coffees?on_conflict=slug&columns=%22name%22%2C%22slug%22%2C%22is_single_origin%22%2C%22id%22%2C%22created_at%22%2C%22flavor_profiles%22%2C%22region_id%22%2C%22region_name%22%2C%22image_url%22%2C%22direct_buy_url%22%2C%22tags%22%2C%22is_available%22%2C%22roast_level%22%2C%22deepseek_enriched%22%2C%22processing_method%22%2C%22external_links%22%2C%22description%22%2C%22is_seasonal%22%2C%22roaster_id%22%2C%22is_featured%22%2C%22updated_at%22%2C%22brew_methods%22%2C%22prices%22%2C%22bean_type%22 "HTTP/2 400 Bad Request"
+2025-05-04 23:49:38,962 - db.supabase_client - ERROR - Error upserting coffees: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'brew_methods' column of 'coffees' in the schema cache"}
+2025-05-04 23:49:38,963 - scrapers.pipeline - ERROR - Error uploading batch: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'brew_methods' column of 'coffees' in the schema cache"}
+2025-05-04 23:49:41,046 - httpx - INFO - HTTP Request: POST https://xrgmpplicqnlyowbhhrj.supabase.co/rest/v1/coffees?on_conflict=slug&columns=%22name%22%2C%22slug%22%2C%22is_single_origin%22%2C%22id%22%2C%22created_at%22%2C%22flavor_profiles%22%2C%22region_id%22%2C%22region_name%22%2C%22image_url%22%2C%22direct_buy_url%22%2C%22tags%22%2C%22is_available%22%2C%22roast_level%22%2C%22deepseek_enriched%22%2C%22processing_method%22%2C%22external_links%22%2C%22description%22%2C%22is_seasonal%22%2C%22roaster_id%22%2C%22is_featured%22%2C%22updated_at%22%2C%22brew_methods%22%2C%22prices%22%2C%22bean_type%22 "HTTP/2 400 Bad Request"
+2025-05-04 23:49:41,049 - db.supabase_client - ERROR - Error upserting coffees: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'brew_methods' column of 'coffees' in the schema cache"}
+2025-05-04 23:49:41,050 - scrapers.pipeline - ERROR - Error uploading batch: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'brew_methods' column of 'coffees' in the schema cache"}
+2025-05-04 23:49:43,065 - scrapers.pipeline - INFO - Uploaded 0 products from Blue Tokai Coffee Roasters to database
+2025-05-04 23:49:45,078 - scrapers.pipeline - INFO - Completed processing 1 roasters
+2025-05-04 23:49:45,079 - scrapers.pipeline - INFO - Discovered 64 products
+2025-05-04 23:49:45,079 - scrapers.pipeline - INFO - Extracted 64 products
+2025-05-04 23:49:45,079 - scrapers.pipeline - INFO - Enriched 0 products with DeepSeek
+2025-05-04 23:49:45,080 - scrapers.pipeline - INFO - Uploaded 0 products to database
+2025-05-04 23:49:45,081 - scrapers.pipeline - INFO - Encountered 0 errors
+2025-05-04 23:49:45,081 - __main__ - INFO - 
+===== PIPELINE RESULTS =====
+2025-05-04 23:49:45,082 - __main__ - INFO - Roasters processed: 1/1
+2025-05-04 23:49:45,082 - __main__ - INFO - Products discovered: 64
+2025-05-04 23:49:45,083 - __main__ - INFO - Products extracted: 64
+2025-05-04 23:49:45,083 - __main__ - INFO - Products enriched with DeepSeek: 0
+2025-05-04 23:49:45,084 - __main__ - INFO - Products uploaded to database: 0
+2025-05-04 23:49:45,084 - __main__ - INFO - Errors encountered: 0
+2025-05-04 23:49:45,085 - __main__ - WARNING - No coffees to export

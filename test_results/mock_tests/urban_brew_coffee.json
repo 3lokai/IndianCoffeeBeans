@@ -1,0 +1,27 @@
+{
+  "id": "208f7c49-3a37-4708-8c38-45f14f441373",
+  "name": "Urban Brew Coffee",
+  "slug": "urban-brew-coffee",
+  "description": "Bringing specialty coffee to urban dwellers with a focus on accessible brewing methods.",
+  "website_url": "https://urbanbrewcoffee.com",
+  "social_links": [
+    "https://www.facebook.com/profile.php?id=100093269367588",
+    "https://www.instagram.com/urbanbrewcoffee",
+    "https://www.facebook.com/profile.php?id=100093269367588",
+    "https://www.instagram.com/urbanbrewcoffee",
+    "https://www.facebook.com/profile.php?id=100093269367588",
+    "https://www.instagram.com/urbanbrewcoffee"
+  ],
+  "contact_email": "info@coffeecompany.com",
+  "contact_phone": "8251544750",
+  "city": "123 Coffee Street",
+  "state": "Delhi",
+  "founded_year": 2020,
+  "instagram_handle": "urbanbrewcoffee",
+  "logo_url": "https://urbanbrewcoffee.com/cdn/shop/files/logo.png?v=1704989187&width=600",
+  "has_subscription": true,
+  "has_physical_store": false,
+  "is_featured": false,
+  "created_at": null,
+  "updated_at": null
+}

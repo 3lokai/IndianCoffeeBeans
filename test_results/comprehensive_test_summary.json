@@ -1,0 +1,305 @@
+{
+  "timestamp": "2025-05-04T22:55:45.366872",
+  "components_tested": [
+    "setup",
+    "detector",
+    "roaster",
+    "discoverer",
+    "extractor",
+    "unit_tests"
+  ],
+  "test_mode": "both",
+  "setup": {
+    "success": true
+  },
+  "detector": {
+    "urls_tested": 4,
+    "results": {
+      "https://bluetokaicoffee.com": {
+        "platform": "shopify",
+        "api_endpoints": [
+          "/products.json",
+          "/collections/all/products.json",
+          "/collections/all.json"
+        ],
+        "structured_data_paths": [
+          "//script[@type='application/ld+json']",
+          "//meta[@property='og:type']"
+        ]
+      },
+      "https://www.subko.coffee": {
+        "platform": "shopify",
+        "api_endpoints": [
+          "/products.json",
+          "/collections/all/products.json",
+          "/collections/all.json"
+        ],
+        "structured_data_paths": [
+          "//script[@type='application/ld+json']",
+          "//meta[@property='og:type']"
+        ]
+      },
+      "https://kcroasters.com": {
+        "platform": "shopify",
+        "api_endpoints": [
+          "/products.json",
+          "/collections/all/products.json",
+          "/collections/all.json"
+        ],
+        "structured_data_paths": [
+          "//script[@type='application/ld+json']",
+          "//meta[@property='og:type']"
+        ]
+      },
+      "https://www.corridorseven.coffee": {
+        "platform": "shopify",
+        "api_endpoints": [
+          "/products.json",
+          "/collections/all/products.json",
+          "/collections/all.json"
+        ],
+        "structured_data_paths": [
+          "//script[@type='application/ld+json']",
+          "//meta[@property='og:type']"
+        ]
+      }
+    }
+  },
+  "roaster": {
+    "real": {
+      "total_tested": 8,
+      "successful": 8,
+      "failed": 0,
+      "failed_roasters": [],
+      "results": {
+        "Blue Tokai Coffee Roasters": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 6,
+          "has_instagram": true,
+          "has_location": true,
+          "has_founded_year": false,
+          "has_subscription": false,
+          "has_physical_store": false
+        },
+        "Third Wave Coffee Roasters": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 7,
+          "has_instagram": true,
+          "has_location": true,
+          "has_founded_year": false,
+          "has_subscription": true,
+          "has_physical_store": false
+        },
+        "Subko Coffee Roasters": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 0,
+          "has_instagram": false,
+          "has_location": true,
+          "has_founded_year": false,
+          "has_subscription": true,
+          "has_physical_store": false
+        },
+        "KC Roasters": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 6,
+          "has_instagram": true,
+          "has_location": true,
+          "has_founded_year": false,
+          "has_subscription": true,
+          "has_physical_store": false
+        },
+        "Roastery Coffee House": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 4,
+          "has_instagram": true,
+          "has_location": true,
+          "has_founded_year": true,
+          "has_subscription": true,
+          "has_physical_store": true
+        },
+        "Bombay Island Coffee": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 5,
+          "has_instagram": true,
+          "has_location": true,
+          "has_founded_year": false,
+          "has_subscription": true,
+          "has_physical_store": false
+        },
+        "Grey Soul Coffee Roasters": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 8,
+          "has_instagram": true,
+          "has_location": true,
+          "has_founded_year": false,
+          "has_subscription": false,
+          "has_physical_store": false
+        },
+        "Naivo Coffee Company": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 0,
+          "has_instagram": false,
+          "has_location": true,
+          "has_founded_year": false,
+          "has_subscription": false,
+          "has_physical_store": false
+        }
+      }
+    },
+    "mock": {
+      "total_tested": 3,
+      "successful": 3,
+      "failed": 0,
+      "results": {
+        "Sunrise Coffee Roasters": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 8,
+          "has_instagram": true,
+          "has_location": true,
+          "has_founded_year": true,
+          "has_subscription": true,
+          "has_physical_store": false
+        },
+        "Mountain Peak Coffee": {
+          "has_description": false,
+          "has_logo": false,
+          "social_links_count": 0,
+          "has_instagram": false,
+          "has_location": false,
+          "has_founded_year": false,
+          "has_subscription": false,
+          "has_physical_store": false
+        },
+        "Urban Brew Coffee": {
+          "has_description": true,
+          "has_logo": true,
+          "social_links_count": 6,
+          "has_instagram": true,
+          "has_location": true,
+          "has_founded_year": true,
+          "has_subscription": true,
+          "has_physical_store": false
+        }
+      }
+    }
+  },
+  "discoverer": {
+    "total_tested": 4,
+    "successful": 4,
+    "failed": 0,
+    "failed_roasters": [],
+    "results": {
+      "Blue Tokai Coffee Roasters": {
+        "platform": "shopify",
+        "products_count": 64,
+        "products_with_image": 59,
+        "discovery_methods": {
+          "unknown": 0
+        }
+      },
+      "Subko Coffee Roasters": {
+        "platform": "shopify",
+        "products_count": 31,
+        "products_with_image": 31,
+        "discovery_methods": {
+          "unknown": 0
+        }
+      },
+      "Corridor Seven Coffee Roasters": {
+        "platform": "shopify",
+        "products_count": 35,
+        "products_with_image": 35,
+        "discovery_methods": {
+          "unknown": 0
+        }
+      },
+      "KC Roasters": {
+        "platform": "shopify",
+        "products_count": 5,
+        "products_with_image": 5,
+        "discovery_methods": {
+          "unknown": 0
+        }
+      }
+    }
+  },
+  "extractor": {
+    "total_tested": 4,
+    "successful": 4,
+    "failed": 0,
+    "failed_products": [],
+    "results": {
+      "Attikan Estate | Medium Roast": {
+        "roaster": "Blue Tokai Coffee Roasters",
+        "platform": "shopify",
+        "extracted_by": "json_css",
+        "deepseek_enriched": false,
+        "has_roast_level": true,
+        "has_bean_type": true,
+        "has_processing": true,
+        "has_region": false,
+        "has_flavors": false,
+        "has_prices": false
+      },
+      "Nachammai Natural": {
+        "roaster": "Subko Coffee Roasters",
+        "platform": "woocommerce",
+        "extracted_by": "json_css",
+        "deepseek_enriched": false,
+        "has_roast_level": true,
+        "has_bean_type": true,
+        "has_processing": true,
+        "has_region": false,
+        "has_flavors": false,
+        "has_prices": false
+      },
+      "Ethiopia Kayon Mountain": {
+        "roaster": "KC Roasters",
+        "platform": "generic",
+        "extracted_by": "json_css",
+        "deepseek_enriched": false,
+        "has_roast_level": true,
+        "has_bean_type": false,
+        "has_processing": true,
+        "has_region": true,
+        "has_flavors": false,
+        "has_prices": true
+      },
+      "Kalledevarapura Estate": {
+        "roaster": "Corridor Seven Coffee Roasters",
+        "platform": "generic",
+        "extracted_by": "json_css",
+        "deepseek_enriched": false,
+        "has_roast_level": true,
+        "has_bean_type": false,
+        "has_processing": true,
+        "has_region": false,
+        "has_flavors": false,
+        "has_prices": true
+      }
+    },
+    "deepseek_usage": {
+      "count": 0,
+      "percentage": 0.0
+    }
+  },
+  "unit_tests": {
+    "result_code": 1,
+    "success": false
+  },
+  "success_rates": {
+    "roaster": "11/11 (100.0%)",
+    "discoverer": "4/4 (100.0%)",
+    "extractor": "4/4 (100.0%)",
+    "overall": "19/19 (100.0%)"
+  }
+}

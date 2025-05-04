@@ -1,0 +1,88 @@
+{
+  "total_tested": 8,
+  "successful": 8,
+  "failed": 0,
+  "failed_roasters": [],
+  "results": {
+    "Blue Tokai Coffee Roasters": {
+      "has_description": true,
+      "has_logo": true,
+      "social_links_count": 6,
+      "has_instagram": true,
+      "has_location": true,
+      "has_founded_year": false,
+      "has_subscription": false,
+      "has_physical_store": false
+    },
+    "Third Wave Coffee Roasters": {
+      "has_description": true,
+      "has_logo": true,
+      "social_links_count": 7,
+      "has_instagram": true,
+      "has_location": true,
+      "has_founded_year": false,
+      "has_subscription": true,
+      "has_physical_store": false
+    },
+    "Subko Coffee Roasters": {
+      "has_description": true,
+      "has_logo": true,
+      "social_links_count": 0,
+      "has_instagram": false,
+      "has_location": true,
+      "has_founded_year": false,
+      "has_subscription": true,
+      "has_physical_store": false
+    },
+    "KC Roasters": {
+      "has_description": true,
+      "has_logo": true,
+      "social_links_count": 6,
+      "has_instagram": true,
+      "has_location": true,
+      "has_founded_year": false,
+      "has_subscription": true,
+      "has_physical_store": false
+    },
+    "Roastery Coffee House": {
+      "has_description": true,
+      "has_logo": true,
+      "social_links_count": 4,
+      "has_instagram": true,
+      "has_location": true,
+      "has_founded_year": true,
+      "has_subscription": true,
+      "has_physical_store": true
+    },
+    "Bombay Island Coffee": {
+      "has_description": true,
+      "has_logo": true,
+      "social_links_count": 5,
+      "has_instagram": true,
+      "has_location": true,
+      "has_founded_year": false,
+      "has_subscription": true,
+      "has_physical_store": false
+    },
+    "Grey Soul Coffee Roasters": {
+      "has_description": true,
+      "has_logo": true,
+      "social_links_count": 8,
+      "has_instagram": true,
+      "has_location": true,
+      "has_founded_year": false,
+      "has_subscription": false,
+      "has_physical_store": false
+    },
+    "Naivo Coffee Company": {
+      "has_description": true,
+      "has_logo": true,
+      "social_links_count": 0,
+      "has_instagram": false,
+      "has_location": true,
+      "has_founded_year": false,
+      "has_subscription": false,
+      "has_physical_store": false
+    }
+  }
+}

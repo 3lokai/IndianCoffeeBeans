@@ -1,0 +1,291 @@
+2025-05-04 23:06:47,802 - __main__ - INFO - Log file: logs/test_run_20250504_230647.log
+2025-05-04 23:06:47,803 - db.supabase_client - INFO - Initializing Supabase client
+2025-05-04 23:06:48,221 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-04 23:06:48,222 - __main__ - INFO - Loaded 54 roasters from data/input/roasters_input.csv
+2025-05-04 23:06:48,222 - __main__ - INFO - Starting pipeline with 54 roasters
+2025-05-04 23:06:48,223 - scrapers.pipeline - INFO - Starting to process 54 roasters
+2025-05-04 23:06:48,223 - scrapers.pipeline - INFO - Processing roaster: Ainmane (https://ainmane.com)
+2025-05-04 23:06:48,229 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Ainmane', 'website_url': 'https://ainmane.com'}
+2025-05-04 23:06:48,229 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Ainmane', 'website_url': 'https://ainmane.com'}
+2025-05-04 23:06:48,230 - scrapers.pipeline - INFO - Extracted metadata for Ainmane
+2025-05-04 23:06:48,230 - scrapers.pipeline - ERROR - Error processing roaster Ainmane: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,230 - scrapers.pipeline - INFO - Processing roaster: Alchemist (https://alchemistroastery.com)
+2025-05-04 23:06:48,230 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Alchemist', 'website_url': 'https://alchemistroastery.com'}
+2025-05-04 23:06:48,231 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Alchemist', 'website_url': 'https://alchemistroastery.com'}
+2025-05-04 23:06:48,231 - scrapers.pipeline - INFO - Extracted metadata for Alchemist
+2025-05-04 23:06:48,231 - scrapers.pipeline - ERROR - Error processing roaster Alchemist: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,232 - scrapers.pipeline - INFO - Processing roaster: Araku Coffee (https://www.arakucoffee.in/)
+2025-05-04 23:06:48,232 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Araku Coffee', 'website_url': 'https://www.arakucoffee.in/'}
+2025-05-04 23:06:48,232 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Araku Coffee', 'website_url': 'https://www.arakucoffee.in/'}
+2025-05-04 23:06:48,233 - scrapers.pipeline - INFO - Extracted metadata for Araku Coffee
+2025-05-04 23:06:48,233 - scrapers.pipeline - ERROR - Error processing roaster Araku Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,233 - scrapers.pipeline - INFO - Processing roaster: BaarbaraBerry (https://baarbaracoffee.com/)
+2025-05-04 23:06:48,233 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'BaarbaraBerry', 'website_url': 'https://baarbaracoffee.com/'}
+2025-05-04 23:06:48,234 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'BaarbaraBerry', 'website_url': 'https://baarbaracoffee.com/'}
+2025-05-04 23:06:48,234 - scrapers.pipeline - INFO - Extracted metadata for BaarbaraBerry
+2025-05-04 23:06:48,235 - scrapers.pipeline - ERROR - Error processing roaster BaarbaraBerry: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,235 - scrapers.pipeline - INFO - Processing roaster: Baba's Beans (https://babasbeanscoffee.com/)
+2025-05-04 23:06:48,235 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': "Baba's Beans", 'website_url': 'https://babasbeanscoffee.com/'}
+2025-05-04 23:06:48,235 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': "Baba's Beans", 'website_url': 'https://babasbeanscoffee.com/'}
+2025-05-04 23:06:48,236 - scrapers.pipeline - INFO - Extracted metadata for Baba's Beans
+2025-05-04 23:06:48,236 - scrapers.pipeline - ERROR - Error processing roaster Baba's Beans: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,236 - scrapers.pipeline - INFO - Processing roaster: Beachville Coffee Roasters (https://beachvillecoffee.com/)
+2025-05-04 23:06:48,236 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Beachville Coffee Roasters', 'website_url': 'https://beachvillecoffee.com/'}
+2025-05-04 23:06:48,237 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Beachville Coffee Roasters', 'website_url': 'https://beachvillecoffee.com/'}
+2025-05-04 23:06:48,237 - scrapers.pipeline - INFO - Extracted metadata for Beachville Coffee Roasters
+2025-05-04 23:06:48,238 - scrapers.pipeline - ERROR - Error processing roaster Beachville Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,238 - scrapers.pipeline - INFO - Processing roaster: Beans n Brews (https://www.beansnbrews.in/)
+2025-05-04 23:06:48,238 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Beans n Brews', 'website_url': 'https://www.beansnbrews.in/'}
+2025-05-04 23:06:48,239 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Beans n Brews', 'website_url': 'https://www.beansnbrews.in/'}
+2025-05-04 23:06:48,239 - scrapers.pipeline - INFO - Extracted metadata for Beans n Brews
+2025-05-04 23:06:48,239 - scrapers.pipeline - ERROR - Error processing roaster Beans n Brews: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,240 - scrapers.pipeline - INFO - Processing roaster: Bili Hu (https://bilihu.in/)
+2025-05-04 23:06:48,240 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Bili Hu', 'website_url': 'https://bilihu.in/'}
+2025-05-04 23:06:48,240 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Bili Hu', 'website_url': 'https://bilihu.in/'}
+2025-05-04 23:06:48,241 - scrapers.pipeline - INFO - Extracted metadata for Bili Hu
+2025-05-04 23:06:48,241 - scrapers.pipeline - ERROR - Error processing roaster Bili Hu: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,241 - scrapers.pipeline - INFO - Processing roaster: BiziBean Coffee (https://www.bizibean.com)
+2025-05-04 23:06:48,242 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'BiziBean Coffee', 'website_url': 'https://www.bizibean.com'}
+2025-05-04 23:06:48,242 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'BiziBean Coffee', 'website_url': 'https://www.bizibean.com'}
+2025-05-04 23:06:48,242 - scrapers.pipeline - INFO - Extracted metadata for BiziBean Coffee
+2025-05-04 23:06:48,242 - scrapers.pipeline - ERROR - Error processing roaster BiziBean Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,243 - scrapers.pipeline - INFO - Processing roaster: Black Baza Coffee (https://store.blackbazacoffee.com/)
+2025-05-04 23:06:48,243 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Black Baza Coffee', 'website_url': 'https://store.blackbazacoffee.com/'}
+2025-05-04 23:06:48,243 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Black Baza Coffee', 'website_url': 'https://store.blackbazacoffee.com/'}
+2025-05-04 23:06:48,243 - scrapers.pipeline - INFO - Extracted metadata for Black Baza Coffee
+2025-05-04 23:06:48,243 - scrapers.pipeline - ERROR - Error processing roaster Black Baza Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,244 - scrapers.pipeline - INFO - Processing roaster: Bloom Coffee Roasters (https://bloomcoffeeroasters.in/)
+2025-05-04 23:06:48,244 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Bloom Coffee Roasters', 'website_url': 'https://bloomcoffeeroasters.in/'}
+2025-05-04 23:06:48,244 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Bloom Coffee Roasters', 'website_url': 'https://bloomcoffeeroasters.in/'}
+2025-05-04 23:06:48,244 - scrapers.pipeline - INFO - Extracted metadata for Bloom Coffee Roasters
+2025-05-04 23:06:48,244 - scrapers.pipeline - ERROR - Error processing roaster Bloom Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,245 - scrapers.pipeline - INFO - Processing roaster: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-04 23:06:48,245 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Blue Tokai Coffee Roasters', 'website_url': 'https://bluetokaicoffee.com'}
+2025-05-04 23:06:48,245 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Blue Tokai Coffee Roasters', 'website_url': 'https://bluetokaicoffee.com'}
+2025-05-04 23:06:48,245 - scrapers.pipeline - INFO - Extracted metadata for Blue Tokai Coffee Roasters
+2025-05-04 23:06:48,246 - scrapers.pipeline - ERROR - Error processing roaster Blue Tokai Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,246 - scrapers.pipeline - INFO - Processing roaster: Bombay Island Coffee Company (https://bombayisland.com/)
+2025-05-04 23:06:48,246 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Bombay Island Coffee Company', 'website_url': 'https://bombayisland.com/'}
+2025-05-04 23:06:48,246 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Bombay Island Coffee Company', 'website_url': 'https://bombayisland.com/'}
+2025-05-04 23:06:48,246 - scrapers.pipeline - INFO - Extracted metadata for Bombay Island Coffee Company
+2025-05-04 23:06:48,247 - scrapers.pipeline - ERROR - Error processing roaster Bombay Island Coffee Company: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,247 - scrapers.pipeline - INFO - Processing roaster: Classic Coffees (https://classiccoffees.in)
+2025-05-04 23:06:48,247 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Classic Coffees', 'website_url': 'https://classiccoffees.in'}
+2025-05-04 23:06:48,247 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Classic Coffees', 'website_url': 'https://classiccoffees.in'}
+2025-05-04 23:06:48,247 - scrapers.pipeline - INFO - Extracted metadata for Classic Coffees
+2025-05-04 23:06:48,248 - scrapers.pipeline - ERROR - Error processing roaster Classic Coffees: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,248 - scrapers.pipeline - INFO - Processing roaster: Coffee Mechanics (https://www.coffeemechanics.co.in/)
+2025-05-04 23:06:48,248 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Coffee Mechanics', 'website_url': 'https://www.coffeemechanics.co.in/'}
+2025-05-04 23:06:48,248 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Coffee Mechanics', 'website_url': 'https://www.coffeemechanics.co.in/'}
+2025-05-04 23:06:48,248 - scrapers.pipeline - INFO - Extracted metadata for Coffee Mechanics
+2025-05-04 23:06:48,248 - scrapers.pipeline - ERROR - Error processing roaster Coffee Mechanics: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,249 - scrapers.pipeline - INFO - Processing roaster: Coffee Nirvana (https://www.coffeenirvana.co.in)
+2025-05-04 23:06:48,249 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Coffee Nirvana', 'website_url': 'https://www.coffeenirvana.co.in'}
+2025-05-04 23:06:48,249 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Coffee Nirvana', 'website_url': 'https://www.coffeenirvana.co.in'}
+2025-05-04 23:06:48,249 - scrapers.pipeline - INFO - Extracted metadata for Coffee Nirvana
+2025-05-04 23:06:48,249 - scrapers.pipeline - ERROR - Error processing roaster Coffee Nirvana: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,249 - scrapers.pipeline - INFO - Processing roaster: Coffee Plus (https://www.coffee.plus)
+2025-05-04 23:06:48,249 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Coffee Plus', 'website_url': 'https://www.coffee.plus'}
+2025-05-04 23:06:48,250 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Coffee Plus', 'website_url': 'https://www.coffee.plus'}
+2025-05-04 23:06:48,250 - scrapers.pipeline - INFO - Extracted metadata for Coffee Plus
+2025-05-04 23:06:48,250 - scrapers.pipeline - ERROR - Error processing roaster Coffee Plus: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,250 - scrapers.pipeline - INFO - Processing roaster: Corridor Seven Coffee Roasters (https://corridorseven.coffee/)
+2025-05-04 23:06:48,250 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Corridor Seven Coffee Roasters', 'website_url': 'https://corridorseven.coffee/'}
+2025-05-04 23:06:48,251 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Corridor Seven Coffee Roasters', 'website_url': 'https://corridorseven.coffee/'}
+2025-05-04 23:06:48,251 - scrapers.pipeline - INFO - Extracted metadata for Corridor Seven Coffee Roasters
+2025-05-04 23:06:48,251 - scrapers.pipeline - ERROR - Error processing roaster Corridor Seven Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,251 - scrapers.pipeline - INFO - Processing roaster: Curious Life Coffee (https://www.curiouslifecoffee.com/)
+2025-05-04 23:06:48,251 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Curious Life Coffee', 'website_url': 'https://www.curiouslifecoffee.com/'}
+2025-05-04 23:06:48,252 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Curious Life Coffee', 'website_url': 'https://www.curiouslifecoffee.com/'}
+2025-05-04 23:06:48,252 - scrapers.pipeline - INFO - Extracted metadata for Curious Life Coffee
+2025-05-04 23:06:48,252 - scrapers.pipeline - ERROR - Error processing roaster Curious Life Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,252 - scrapers.pipeline - INFO - Processing roaster: Devan's (https://www.devans.in/)
+2025-05-04 23:06:48,252 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': "Devan's", 'website_url': 'https://www.devans.in/'}
+2025-05-04 23:06:48,252 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': "Devan's", 'website_url': 'https://www.devans.in/'}
+2025-05-04 23:06:48,253 - scrapers.pipeline - INFO - Extracted metadata for Devan's
+2025-05-04 23:06:48,253 - scrapers.pipeline - ERROR - Error processing roaster Devan's: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,253 - scrapers.pipeline - INFO - Processing roaster: Dope Coffee Roasters (https://dopecoffee.in/)
+2025-05-04 23:06:48,253 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Dope Coffee Roasters', 'website_url': 'https://dopecoffee.in/'}
+2025-05-04 23:06:48,253 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Dope Coffee Roasters', 'website_url': 'https://dopecoffee.in/'}
+2025-05-04 23:06:48,253 - scrapers.pipeline - INFO - Extracted metadata for Dope Coffee Roasters
+2025-05-04 23:06:48,254 - scrapers.pipeline - ERROR - Error processing roaster Dope Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,254 - scrapers.pipeline - INFO - Processing roaster: El Bueno Coffee (https://elbuenocoffee.com/)
+2025-05-04 23:06:48,254 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'El Bueno Coffee', 'website_url': 'https://elbuenocoffee.com/'}
+2025-05-04 23:06:48,254 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'El Bueno Coffee', 'website_url': 'https://elbuenocoffee.com/'}
+2025-05-04 23:06:48,255 - scrapers.pipeline - INFO - Extracted metadata for El Bueno Coffee
+2025-05-04 23:06:48,255 - scrapers.pipeline - ERROR - Error processing roaster El Bueno Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,256 - scrapers.pipeline - INFO - Processing roaster: Fraction 9 Coffee (https://www.fraction9coffee.com/)
+2025-05-04 23:06:48,256 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Fraction 9 Coffee', 'website_url': 'https://www.fraction9coffee.com/'}
+2025-05-04 23:06:48,256 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Fraction 9 Coffee', 'website_url': 'https://www.fraction9coffee.com/'}
+2025-05-04 23:06:48,257 - scrapers.pipeline - INFO - Extracted metadata for Fraction 9 Coffee
+2025-05-04 23:06:48,257 - scrapers.pipeline - ERROR - Error processing roaster Fraction 9 Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,257 - scrapers.pipeline - INFO - Processing roaster: G-Shot Coffee Roastery (https://www.gshotcoffeeroastery.com/)
+2025-05-04 23:06:48,258 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'G-Shot Coffee Roastery', 'website_url': 'https://www.gshotcoffeeroastery.com/'}
+2025-05-04 23:06:48,258 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'G-Shot Coffee Roastery', 'website_url': 'https://www.gshotcoffeeroastery.com/'}
+2025-05-04 23:06:48,258 - scrapers.pipeline - INFO - Extracted metadata for G-Shot Coffee Roastery
+2025-05-04 23:06:48,259 - scrapers.pipeline - ERROR - Error processing roaster G-Shot Coffee Roastery: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,259 - scrapers.pipeline - INFO - Processing roaster: Grey Soul Coffee Roasters (https://greysoul.coffee)
+2025-05-04 23:06:48,259 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Grey Soul Coffee Roasters', 'website_url': 'https://greysoul.coffee'}
+2025-05-04 23:06:48,259 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Grey Soul Coffee Roasters', 'website_url': 'https://greysoul.coffee'}
+2025-05-04 23:06:48,259 - scrapers.pipeline - INFO - Extracted metadata for Grey Soul Coffee Roasters
+2025-05-04 23:06:48,259 - scrapers.pipeline - ERROR - Error processing roaster Grey Soul Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,260 - scrapers.pipeline - INFO - Processing roaster: Half Light Coffee Roasters (http://halflightcoffee.com)
+2025-05-04 23:06:48,260 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Half Light Coffee Roasters', 'website_url': 'http://halflightcoffee.com'}
+2025-05-04 23:06:48,260 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Half Light Coffee Roasters', 'website_url': 'http://halflightcoffee.com'}
+2025-05-04 23:06:48,260 - scrapers.pipeline - INFO - Extracted metadata for Half Light Coffee Roasters
+2025-05-04 23:06:48,260 - scrapers.pipeline - ERROR - Error processing roaster Half Light Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,261 - scrapers.pipeline - INFO - Processing roaster: Hebbey Coffee (https://www.hebbey.com/)
+2025-05-04 23:06:48,261 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Hebbey Coffee', 'website_url': 'https://www.hebbey.com/'}
+2025-05-04 23:06:48,261 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Hebbey Coffee', 'website_url': 'https://www.hebbey.com/'}
+2025-05-04 23:06:48,261 - scrapers.pipeline - INFO - Extracted metadata for Hebbey Coffee
+2025-05-04 23:06:48,261 - scrapers.pipeline - ERROR - Error processing roaster Hebbey Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,261 - scrapers.pipeline - INFO - Processing roaster: Home Blend Coffee Roasters (https://homeblendcoffee.com/)
+2025-05-04 23:06:48,262 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Home Blend Coffee Roasters', 'website_url': 'https://homeblendcoffee.com/'}
+2025-05-04 23:06:48,262 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Home Blend Coffee Roasters', 'website_url': 'https://homeblendcoffee.com/'}
+2025-05-04 23:06:48,262 - scrapers.pipeline - INFO - Extracted metadata for Home Blend Coffee Roasters
+2025-05-04 23:06:48,262 - scrapers.pipeline - ERROR - Error processing roaster Home Blend Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,262 - scrapers.pipeline - INFO - Processing roaster: Ikkis Coffee Roasters (https://ikkis.coffee)
+2025-05-04 23:06:48,262 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Ikkis Coffee Roasters', 'website_url': 'https://ikkis.coffee'}
+2025-05-04 23:06:48,263 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Ikkis Coffee Roasters', 'website_url': 'https://ikkis.coffee'}
+2025-05-04 23:06:48,263 - scrapers.pipeline - INFO - Extracted metadata for Ikkis Coffee Roasters
+2025-05-04 23:06:48,263 - scrapers.pipeline - ERROR - Error processing roaster Ikkis Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,263 - scrapers.pipeline - INFO - Processing roaster: Kafeido (https://kafeido.com/)
+2025-05-04 23:06:48,263 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kafeido', 'website_url': 'https://kafeido.com/'}
+2025-05-04 23:06:48,264 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kafeido', 'website_url': 'https://kafeido.com/'}
+2025-05-04 23:06:48,264 - scrapers.pipeline - INFO - Extracted metadata for Kafeido
+2025-05-04 23:06:48,264 - scrapers.pipeline - ERROR - Error processing roaster Kafeido: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,264 - scrapers.pipeline - INFO - Processing roaster: KaffaCerrado (https://www.kaffacerrado.com/)
+2025-05-04 23:06:48,264 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'KaffaCerrado', 'website_url': 'https://www.kaffacerrado.com/'}
+2025-05-04 23:06:48,264 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'KaffaCerrado', 'website_url': 'https://www.kaffacerrado.com/'}
+2025-05-04 23:06:48,265 - scrapers.pipeline - INFO - Extracted metadata for KaffaCerrado
+2025-05-04 23:06:48,265 - scrapers.pipeline - ERROR - Error processing roaster KaffaCerrado: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,265 - scrapers.pipeline - INFO - Processing roaster: Kaffenum (https://www.kaffenumcoffee.com)
+2025-05-04 23:06:48,265 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kaffenum', 'website_url': 'https://www.kaffenumcoffee.com'}
+2025-05-04 23:06:48,266 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kaffenum', 'website_url': 'https://www.kaffenumcoffee.com'}
+2025-05-04 23:06:48,266 - scrapers.pipeline - INFO - Extracted metadata for Kaffenum
+2025-05-04 23:06:48,266 - scrapers.pipeline - ERROR - Error processing roaster Kaffenum: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,266 - scrapers.pipeline - INFO - Processing roaster: Kali (https://kali.coffee)
+2025-05-04 23:06:48,266 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kali', 'website_url': 'https://kali.coffee'}
+2025-05-04 23:06:48,266 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kali', 'website_url': 'https://kali.coffee'}
+2025-05-04 23:06:48,267 - scrapers.pipeline - INFO - Extracted metadata for Kali
+2025-05-04 23:06:48,267 - scrapers.pipeline - ERROR - Error processing roaster Kali: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,267 - scrapers.pipeline - INFO - Processing roaster: Kapi Kottai (https://kapikottai.coffee)
+2025-05-04 23:06:48,267 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kapi Kottai', 'website_url': 'https://kapikottai.coffee'}
+2025-05-04 23:06:48,267 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kapi Kottai', 'website_url': 'https://kapikottai.coffee'}
+2025-05-04 23:06:48,267 - scrapers.pipeline - INFO - Extracted metadata for Kapi Kottai
+2025-05-04 23:06:48,268 - scrapers.pipeline - ERROR - Error processing roaster Kapi Kottai: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,268 - scrapers.pipeline - INFO - Processing roaster: Karma Kaapi (https://karmakaapi.com/)
+2025-05-04 23:06:48,268 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Karma Kaapi', 'website_url': 'https://karmakaapi.com/'}
+2025-05-04 23:06:48,268 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Karma Kaapi', 'website_url': 'https://karmakaapi.com/'}
+2025-05-04 23:06:48,268 - scrapers.pipeline - INFO - Extracted metadata for Karma Kaapi
+2025-05-04 23:06:48,268 - scrapers.pipeline - ERROR - Error processing roaster Karma Kaapi: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,268 - scrapers.pipeline - INFO - Processing roaster: KCRoasters - By Koinonia (https://kcroasters.com/)
+2025-05-04 23:06:48,269 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'KCRoasters - By Koinonia', 'website_url': 'https://kcroasters.com/'}
+2025-05-04 23:06:48,269 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'KCRoasters - By Koinonia', 'website_url': 'https://kcroasters.com/'}
+2025-05-04 23:06:48,269 - scrapers.pipeline - INFO - Extracted metadata for KCRoasters - By Koinonia
+2025-05-04 23:06:48,269 - scrapers.pipeline - ERROR - Error processing roaster KCRoasters - By Koinonia: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,269 - scrapers.pipeline - INFO - Processing roaster: KOHI Roasters (https://kohiroasters.in/)
+2025-05-04 23:06:48,269 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'KOHI Roasters', 'website_url': 'https://kohiroasters.in/'}
+2025-05-04 23:06:48,270 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'KOHI Roasters', 'website_url': 'https://kohiroasters.in/'}
+2025-05-04 23:06:48,270 - scrapers.pipeline - INFO - Extracted metadata for KOHI Roasters
+2025-05-04 23:06:48,270 - scrapers.pipeline - ERROR - Error processing roaster KOHI Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,270 - scrapers.pipeline - INFO - Processing roaster: Kokoro Coffee (https://www.kokoro.in/)
+2025-05-04 23:06:48,271 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kokoro Coffee', 'website_url': 'https://www.kokoro.in/'}
+2025-05-04 23:06:48,271 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Kokoro Coffee', 'website_url': 'https://www.kokoro.in/'}
+2025-05-04 23:06:48,271 - scrapers.pipeline - INFO - Extracted metadata for Kokoro Coffee
+2025-05-04 23:06:48,271 - scrapers.pipeline - ERROR - Error processing roaster Kokoro Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,272 - scrapers.pipeline - INFO - Processing roaster: Korebi Coffee (https://korebi.coffee/)
+2025-05-04 23:06:48,272 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Korebi Coffee', 'website_url': 'https://korebi.coffee/'}
+2025-05-04 23:06:48,272 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Korebi Coffee', 'website_url': 'https://korebi.coffee/'}
+2025-05-04 23:06:48,273 - scrapers.pipeline - INFO - Extracted metadata for Korebi Coffee
+2025-05-04 23:06:48,273 - scrapers.pipeline - ERROR - Error processing roaster Korebi Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,273 - scrapers.pipeline - INFO - Processing roaster: Landour Coffee (https://www.landourcoffee.com/)
+2025-05-04 23:06:48,273 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Landour Coffee', 'website_url': 'https://www.landourcoffee.com/'}
+2025-05-04 23:06:48,274 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Landour Coffee', 'website_url': 'https://www.landourcoffee.com/'}
+2025-05-04 23:06:48,274 - scrapers.pipeline - INFO - Extracted metadata for Landour Coffee
+2025-05-04 23:06:48,274 - scrapers.pipeline - ERROR - Error processing roaster Landour Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,275 - scrapers.pipeline - INFO - Processing roaster: Marc's Coffee (https://www.marcscoffees.com/)
+2025-05-04 23:06:48,275 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': "Marc's Coffee", 'website_url': 'https://www.marcscoffees.com/'}
+2025-05-04 23:06:48,276 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': "Marc's Coffee", 'website_url': 'https://www.marcscoffees.com/'}
+2025-05-04 23:06:48,276 - scrapers.pipeline - INFO - Extracted metadata for Marc's Coffee
+2025-05-04 23:06:48,276 - scrapers.pipeline - ERROR - Error processing roaster Marc's Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,276 - scrapers.pipeline - INFO - Processing roaster: Maverick and Farmer Coffee (https://www.maverickandfarmer.com)
+2025-05-04 23:06:48,276 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Maverick and Farmer Coffee', 'website_url': 'https://www.maverickandfarmer.com'}
+2025-05-04 23:06:48,277 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Maverick and Farmer Coffee', 'website_url': 'https://www.maverickandfarmer.com'}
+2025-05-04 23:06:48,277 - scrapers.pipeline - INFO - Extracted metadata for Maverick and Farmer Coffee
+2025-05-04 23:06:48,277 - scrapers.pipeline - ERROR - Error processing roaster Maverick and Farmer Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,277 - scrapers.pipeline - INFO - Processing roaster: Naivo Coffee (https://naivo.in)
+2025-05-04 23:06:48,277 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Naivo Coffee', 'website_url': 'https://naivo.in'}
+2025-05-04 23:06:48,277 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Naivo Coffee', 'website_url': 'https://naivo.in'}
+2025-05-04 23:06:48,278 - scrapers.pipeline - INFO - Extracted metadata for Naivo Coffee
+2025-05-04 23:06:48,278 - scrapers.pipeline - ERROR - Error processing roaster Naivo Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,278 - scrapers.pipeline - INFO - Processing roaster: Nandan Coffee (https://www.nandancoffee.com/)
+2025-05-04 23:06:48,279 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Nandan Coffee', 'website_url': 'https://www.nandancoffee.com/'}
+2025-05-04 23:06:48,279 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Nandan Coffee', 'website_url': 'https://www.nandancoffee.com/'}
+2025-05-04 23:06:48,280 - scrapers.pipeline - INFO - Extracted metadata for Nandan Coffee
+2025-05-04 23:06:48,281 - scrapers.pipeline - ERROR - Error processing roaster Nandan Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,281 - scrapers.pipeline - INFO - Processing roaster: Quick Brown Fox Coffee Roasters (https://qbfcoffee.com)
+2025-05-04 23:06:48,282 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Quick Brown Fox Coffee Roasters', 'website_url': 'https://qbfcoffee.com'}
+2025-05-04 23:06:48,282 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Quick Brown Fox Coffee Roasters', 'website_url': 'https://qbfcoffee.com'}
+2025-05-04 23:06:48,282 - scrapers.pipeline - INFO - Extracted metadata for Quick Brown Fox Coffee Roasters
+2025-05-04 23:06:48,282 - scrapers.pipeline - ERROR - Error processing roaster Quick Brown Fox Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,283 - scrapers.pipeline - INFO - Processing roaster: Roastery Coffee (https://www.roasterycoffee.co.in/)
+2025-05-04 23:06:48,283 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Roastery Coffee', 'website_url': 'https://www.roasterycoffee.co.in/'}
+2025-05-04 23:06:48,283 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Roastery Coffee', 'website_url': 'https://www.roasterycoffee.co.in/'}
+2025-05-04 23:06:48,283 - scrapers.pipeline - INFO - Extracted metadata for Roastery Coffee
+2025-05-04 23:06:48,284 - scrapers.pipeline - ERROR - Error processing roaster Roastery Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,284 - scrapers.pipeline - INFO - Processing roaster: Red Sirocco (https://www.redsirocco.com)
+2025-05-04 23:06:48,284 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Red Sirocco', 'website_url': 'https://www.redsirocco.com'}
+2025-05-04 23:06:48,284 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Red Sirocco', 'website_url': 'https://www.redsirocco.com'}
+2025-05-04 23:06:48,285 - scrapers.pipeline - INFO - Extracted metadata for Red Sirocco
+2025-05-04 23:06:48,285 - scrapers.pipeline - ERROR - Error processing roaster Red Sirocco: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,285 - scrapers.pipeline - INFO - Processing roaster: Savorworks Coffee Roasters (https://www.savorworksroasters.com)
+2025-05-04 23:06:48,285 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Savorworks Coffee Roasters', 'website_url': 'https://www.savorworksroasters.com'}
+2025-05-04 23:06:48,286 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Savorworks Coffee Roasters', 'website_url': 'https://www.savorworksroasters.com'}
+2025-05-04 23:06:48,286 - scrapers.pipeline - INFO - Extracted metadata for Savorworks Coffee Roasters
+2025-05-04 23:06:48,286 - scrapers.pipeline - ERROR - Error processing roaster Savorworks Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,286 - scrapers.pipeline - INFO - Processing roaster: Seven Beans Coffee Company (https://sevenbeans.co/)
+2025-05-04 23:06:48,287 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Seven Beans Coffee Company', 'website_url': 'https://sevenbeans.co/'}
+2025-05-04 23:06:48,287 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Seven Beans Coffee Company', 'website_url': 'https://sevenbeans.co/'}
+2025-05-04 23:06:48,287 - scrapers.pipeline - INFO - Extracted metadata for Seven Beans Coffee Company
+2025-05-04 23:06:48,287 - scrapers.pipeline - ERROR - Error processing roaster Seven Beans Coffee Company: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,288 - scrapers.pipeline - INFO - Processing roaster: Soul Brew Coffee (https://soul-brew-coffee-llp.myshopify.com/)
+2025-05-04 23:06:48,288 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Soul Brew Coffee', 'website_url': 'https://soul-brew-coffee-llp.myshopify.com/'}
+2025-05-04 23:06:48,288 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Soul Brew Coffee', 'website_url': 'https://soul-brew-coffee-llp.myshopify.com/'}
+2025-05-04 23:06:48,289 - scrapers.pipeline - INFO - Extracted metadata for Soul Brew Coffee
+2025-05-04 23:06:48,289 - scrapers.pipeline - ERROR - Error processing roaster Soul Brew Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,289 - scrapers.pipeline - INFO - Processing roaster: Subko Specialty Coffee Roasters (https://www.subko.coffee/)
+2025-05-04 23:06:48,289 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Subko Specialty Coffee Roasters', 'website_url': 'https://www.subko.coffee/'}
+2025-05-04 23:06:48,290 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Subko Specialty Coffee Roasters', 'website_url': 'https://www.subko.coffee/'}
+2025-05-04 23:06:48,290 - scrapers.pipeline - INFO - Extracted metadata for Subko Specialty Coffee Roasters
+2025-05-04 23:06:48,291 - scrapers.pipeline - ERROR - Error processing roaster Subko Specialty Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,291 - scrapers.pipeline - INFO - Processing roaster: Tariero Artisan Roastery (https://www.tariero.com)
+2025-05-04 23:06:48,292 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Tariero Artisan Roastery', 'website_url': 'https://www.tariero.com'}
+2025-05-04 23:06:48,292 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Tariero Artisan Roastery', 'website_url': 'https://www.tariero.com'}
+2025-05-04 23:06:48,292 - scrapers.pipeline - INFO - Extracted metadata for Tariero Artisan Roastery
+2025-05-04 23:06:48,293 - scrapers.pipeline - ERROR - Error processing roaster Tariero Artisan Roastery: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,293 - scrapers.pipeline - INFO - Processing roaster: Third Wave Coffee Roasters (https://www.thirdwavecoffeeroasters.com/)
+2025-05-04 23:06:48,293 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Third Wave Coffee Roasters', 'website_url': 'https://www.thirdwavecoffeeroasters.com/'}
+2025-05-04 23:06:48,293 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Third Wave Coffee Roasters', 'website_url': 'https://www.thirdwavecoffeeroasters.com/'}
+2025-05-04 23:06:48,293 - scrapers.pipeline - INFO - Extracted metadata for Third Wave Coffee Roasters
+2025-05-04 23:06:48,294 - scrapers.pipeline - ERROR - Error processing roaster Third Wave Coffee Roasters: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,294 - scrapers.pipeline - INFO - Processing roaster: Tulum Coffee (https://www.tulum.coffee)
+2025-05-04 23:06:48,294 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Tulum Coffee', 'website_url': 'https://www.tulum.coffee'}
+2025-05-04 23:06:48,294 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Tulum Coffee', 'website_url': 'https://www.tulum.coffee'}
+2025-05-04 23:06:48,294 - scrapers.pipeline - INFO - Extracted metadata for Tulum Coffee
+2025-05-04 23:06:48,295 - scrapers.pipeline - ERROR - Error processing roaster Tulum Coffee: 'NoneType' object has no attribute 'dict'
+2025-05-04 23:06:48,295 - scrapers.pipeline - INFO - Completed processing 0 roasters
+2025-05-04 23:06:48,295 - scrapers.pipeline - INFO - Discovered 0 products
+2025-05-04 23:06:48,295 - scrapers.pipeline - INFO - Extracted 0 products
+2025-05-04 23:06:48,295 - scrapers.pipeline - INFO - Enriched 0 products with DeepSeek
+2025-05-04 23:06:48,295 - scrapers.pipeline - INFO - Uploaded 0 products to database
+2025-05-04 23:06:48,296 - scrapers.pipeline - INFO - Encountered 54 errors
+2025-05-04 23:06:48,296 - __main__ - INFO - 
+===== PIPELINE RESULTS =====
+2025-05-04 23:06:48,296 - __main__ - INFO - Roasters processed: 0/54
+2025-05-04 23:06:48,296 - __main__ - INFO - Products discovered: 0
+2025-05-04 23:06:48,296 - __main__ - INFO - Products extracted: 0
+2025-05-04 23:06:48,297 - __main__ - INFO - Products enriched with DeepSeek: 0
+2025-05-04 23:06:48,297 - __main__ - INFO - Products uploaded to database: 0
+2025-05-04 23:06:48,297 - __main__ - INFO - Errors encountered: 54
+2025-05-04 23:06:48,298 - __main__ - WARNING - No coffees to export

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Speciality Coffee",
+    "slug": "speciality-coffee",
+    "direct_buy_url": "https://www.ainmane.com/coffee/speciality-coffee.html",
+    "discovery_method": "crawl4ai_links",
+    "roaster_name": "Ainmane",
+    "roaster_slug": "ainmane",
+    "roaster_id": "66f08fac-87d1-4a2d-a858-83bd97dad861"
+  },
+  {
+    "name": "Single Origin Coffee",
+    "slug": "single-origin-coffee",
+    "direct_buy_url": "https://www.ainmane.com/coffee/single-origin-coffee.html",
+    "discovery_method": "crawl4ai_links",
+    "roaster_name": "Ainmane",
+    "roaster_slug": "ainmane",
+    "roaster_id": "66f08fac-87d1-4a2d-a858-83bd97dad861"
+  },
+  {
+    "name": "Micro lot Coffee",
+    "slug": "micro-lot-coffee",
+    "direct_buy_url": "https://www.ainmane.com/coffee/micro-lot-coffee.html",
+    "discovery_method": "crawl4ai_links",
+    "roaster_name": "Ainmane",
+    "roaster_slug": "ainmane",
+    "roaster_id": "66f08fac-87d1-4a2d-a858-83bd97dad861"
+  }
+]

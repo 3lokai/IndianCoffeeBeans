@@ -1,0 +1,60 @@
+{
+  "total_tested": 4,
+  "successful": 4,
+  "failed": 0,
+  "failed_products": [],
+  "results": {
+    "Attikan Estate | Medium Roast": {
+      "roaster": "Blue Tokai Coffee Roasters",
+      "platform": "shopify",
+      "extracted_by": "json_css",
+      "deepseek_enriched": false,
+      "has_roast_level": true,
+      "has_bean_type": true,
+      "has_processing": true,
+      "has_region": false,
+      "has_flavors": false,
+      "has_prices": false
+    },
+    "Nachammai Natural": {
+      "roaster": "Subko Coffee Roasters",
+      "platform": "woocommerce",
+      "extracted_by": "json_css",
+      "deepseek_enriched": false,
+      "has_roast_level": true,
+      "has_bean_type": true,
+      "has_processing": true,
+      "has_region": false,
+      "has_flavors": false,
+      "has_prices": false
+    },
+    "Ethiopia Kayon Mountain": {
+      "roaster": "KC Roasters",
+      "platform": "generic",
+      "extracted_by": "json_css",
+      "deepseek_enriched": false,
+      "has_roast_level": true,
+      "has_bean_type": false,
+      "has_processing": true,
+      "has_region": true,
+      "has_flavors": false,
+      "has_prices": true
+    },
+    "Kalledevarapura Estate": {
+      "roaster": "Corridor Seven Coffee Roasters",
+      "platform": "generic",
+      "extracted_by": "json_css",
+      "deepseek_enriched": false,
+      "has_roast_level": true,
+      "has_bean_type": false,
+      "has_processing": true,
+      "has_region": false,
+      "has_flavors": false,
+      "has_prices": true
+    }
+  },
+  "deepseek_usage": {
+    "count": 0,
+    "percentage": 0.0
+  }
+}

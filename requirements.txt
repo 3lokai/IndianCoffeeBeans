@@ -1,0 +1,12 @@
+aiohttp
+python-dotenv
+supabase
+pydantic
+tenacity
+python-json-logger
+crawl4ai
+openai
+
+# Testing tools
+flake8>=6.0.0
+pytest-cov>=4.1.0

@@ -1,0 +1,156 @@
+2025-05-03 15:58:38,375 - __main__ - INFO - Starting comprehensive test run for component: discoverer, mode: real
+2025-05-03 15:58:38,376 - __main__ - INFO - Log file: logs/test_run_20250503_155838.log
+2025-05-03 15:58:38,377 - __main__ - INFO - === Running Product Discoverer Tests ===
+2025-05-03 15:58:38,428 - test_real_discoverers - INFO - Testing discovery for Blue Tokai Coffee Roasters
+2025-05-03 15:58:38,589 - test_real_discoverers - INFO - Detected platform: shopify
+2025-05-03 15:58:38,590 - scrapers.discoverers.discovery_manager - INFO - Platform type for Blue Tokai Coffee Roasters: shopify
+2025-05-03 15:58:40,762 - scrapers.discoverers.discovery_manager - INFO - Discovered 64 products via Shopify API
+2025-05-03 15:58:40,807 - scrapers.discoverers.discovery_manager - INFO - Discovered 64 unique products for Blue Tokai Coffee Roasters
+2025-05-03 15:58:40,821 - test_real_discoverers - INFO - Sample of discovered products:
+2025-05-03 15:58:40,821 - test_real_discoverers - INFO -   1. Are you tasting your coffee?
+2025-05-03 15:58:40,821 - test_real_discoverers - INFO -      URL: https://bluetokaicoffee.com/products/cupping-kolkata
+2025-05-03 15:58:40,822 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-03 15:58:40,822 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0738/1409/files/...
+2025-05-03 15:58:40,822 - test_real_discoverers - INFO -   2. Kerehaklu Estate - Washed
+2025-05-03 15:58:40,823 - test_real_discoverers - INFO -      URL: https://bluetokaicoffee.com/products/kerehaklu-estate-light
+2025-05-03 15:58:40,823 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-03 15:58:40,824 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0738/1409/files/...
+2025-05-03 15:58:40,824 - test_real_discoverers - INFO -   3. Seethargundu Estate
+2025-05-03 15:58:40,824 - test_real_discoverers - INFO -      URL: https://bluetokaicoffee.com/products/poabs-estate
+2025-05-03 15:58:40,825 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-03 15:58:40,825 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0738/1409/files/...
+2025-05-03 15:58:40,892 - test_real_discoverers - INFO -   Products saved to test_results/discoverers\blue-tokai-coffee-roasters_products.json
+2025-05-03 15:58:40,893 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B4D9F767B0>
+2025-05-03 15:58:40,893 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001B4DAFC31D0>, 78304.2081765)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001B4D9F763C0>
+2025-05-03 15:58:40,894 - test_real_discoverers - INFO - Testing discovery for Subko Coffee Roasters
+2025-05-03 15:58:41,048 - test_real_discoverers - INFO - Detected platform: shopify
+2025-05-03 15:58:41,049 - scrapers.discoverers.discovery_manager - INFO - Platform type for Subko Coffee Roasters: shopify
+2025-05-03 15:58:43,196 - scrapers.discoverers.discovery_manager - INFO - Discovered 31 products via Shopify API
+2025-05-03 15:58:43,238 - scrapers.discoverers.discovery_manager - INFO - Discovered 31 unique products for Subko Coffee Roasters
+2025-05-03 15:58:43,244 - test_real_discoverers - INFO - Sample of discovered products:
+2025-05-03 15:58:43,245 - test_real_discoverers - INFO -   1. Salawara Estate : 1486, Karnataka (SCA 84+) : Naturals (Medium Roast)
+2025-05-03 15:58:43,245 - test_real_discoverers - INFO -      URL: https://www.subko.coffee/products/salawara-estate-1486-karnataka-sca-84-naturals-medium-roast
+2025-05-03 15:58:43,246 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-03 15:58:43,246 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0308/0857/1963/f...
+2025-05-03 15:58:43,247 - test_real_discoverers - INFO -   2. Specialty Excelsa (SCA 86+): Mooleh Manay Estate, Coorg, Karnataka, India: Lot #Kempu - Black Honey (Medium Roast)
+2025-05-03 15:58:43,247 - test_real_discoverers - INFO -      URL: https://www.subko.coffee/products/specialty-excelsa-mooleh-manay-estate-coorg-karnataka-black-honey-medium-roast
+2025-05-03 15:58:43,248 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-03 15:58:43,248 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0308/0857/1963/f...
+2025-05-03 15:58:43,249 - test_real_discoverers - INFO -   3. Project Pearl, Ratnagiri Estate, Karnataka (SCA 86+): Alchemy - Naturals (Medium-Light Roast)
+2025-05-03 15:58:43,249 - test_real_discoverers - INFO -      URL: https://www.subko.coffee/products/project-pearl-ratnagiri-estate-karnataka-sca-86-alchemy-naturals-medium-light-roast
+2025-05-03 15:58:43,250 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-03 15:58:43,250 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0308/0857/1963/f...
+2025-05-03 15:58:43,272 - test_real_discoverers - INFO -   Products saved to test_results/discoverers\subko-coffee-roasters_products.json
+2025-05-03 15:58:43,273 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B4DAF8EFD0>
+2025-05-03 15:58:43,274 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001B4DAFC31D0>, 78306.6675025)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001B4DAF8E710>
+2025-05-03 15:58:43,275 - test_real_discoverers - INFO - Testing discovery for Corridor Seven Coffee Roasters
+2025-05-03 15:58:43,544 - test_real_discoverers - INFO - Detected platform: static
+2025-05-03 15:58:43,545 - scrapers.discoverers.discovery_manager - INFO - Platform type for Corridor Seven Coffee Roasters: static
+2025-05-03 15:58:43,545 - scrapers.discoverers.discovery_manager - INFO - Trying Crawl4AI discovery for Corridor Seven Coffee Roasters
+2025-05-03 15:58:44,896 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI: https://www.corridorseven.com
+2025-05-03 15:58:44,908 - scrapers.discoverers.crawl4ai_discoverer - ERROR - Error processing https://www.corridorseven.com with Crawl4AI: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-03 15:58:46,918 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI: https://www.corridorseven.com/shop
+2025-05-03 15:58:46,918 - scrapers.discoverers.crawl4ai_discoverer - ERROR - Error processing https://www.corridorseven.com/shop with Crawl4AI: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-03 15:58:48,927 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI: https://www.corridorseven.com/products
+2025-05-03 15:58:48,929 - scrapers.discoverers.crawl4ai_discoverer - ERROR - Error processing https://www.corridorseven.com/products with Crawl4AI: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-03 15:58:50,932 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI: https://www.corridorseven.com/collections/coffee
+2025-05-03 15:58:50,933 - scrapers.discoverers.crawl4ai_discoverer - ERROR - Error processing https://www.corridorseven.com/collections/coffee with Crawl4AI: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-03 15:58:52,935 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI: https://www.corridorseven.com/collections/all
+2025-05-03 15:58:52,936 - scrapers.discoverers.crawl4ai_discoverer - ERROR - Error processing https://www.corridorseven.com/collections/all with Crawl4AI: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-03 15:58:54,945 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI: https://www.corridorseven.com/product-category/coffee
+2025-05-03 15:58:54,945 - scrapers.discoverers.crawl4ai_discoverer - ERROR - Error processing https://www.corridorseven.com/product-category/coffee with Crawl4AI: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-03 15:58:56,959 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI: https://www.corridorseven.com/coffee
+2025-05-03 15:58:56,960 - scrapers.discoverers.crawl4ai_discoverer - ERROR - Error processing https://www.corridorseven.com/coffee with Crawl4AI: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-03 15:58:58,966 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI: https://www.corridorseven.com/store
+2025-05-03 15:58:58,967 - scrapers.discoverers.crawl4ai_discoverer - ERROR - Error processing https://www.corridorseven.com/store with Crawl4AI: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-03 15:59:00,969 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI: https://www.corridorseven.com/beans
+2025-05-03 15:59:00,970 - scrapers.discoverers.crawl4ai_discoverer - ERROR - Error processing https://www.corridorseven.com/beans with Crawl4AI: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-03 15:59:03,203 - scrapers.discoverers.discovery_manager - INFO - Trying sitemap discovery for Corridor Seven Coffee Roasters
+2025-05-03 15:59:03,203 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://www.corridorseven.com/sitemap.xml
+2025-05-03 15:59:03,446 - scrapers.discoverers.sitemap_discoverer - INFO - Found sitemap index with 2 sitemaps
+2025-05-03 15:59:03,491 - scrapers.discoverers.sitemap_discoverer - INFO - Found 1 URLs in sitemap https://corridorseven.com/sitemap.website.xml
+2025-05-03 15:59:03,492 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://corridorseven.com/sitemap.website.xml
+2025-05-03 15:59:04,884 - scrapers.discoverers.sitemap_discoverer - INFO - Found 1 URLs in sitemap https://corridorseven.com/sitemap.ols.xml
+2025-05-03 15:59:04,885 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://corridorseven.com/sitemap.ols.xml
+2025-05-03 15:59:04,886 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://www.corridorseven.com/sitemap_index.xml
+2025-05-03 15:59:04,971 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://www.corridorseven.com/sitemap_index.xml: 404
+2025-05-03 15:59:04,973 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://www.corridorseven.com/sitemap_products_1.xml
+2025-05-03 15:59:05,166 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://www.corridorseven.com/sitemap_products_1.xml: 404
+2025-05-03 15:59:05,167 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://www.corridorseven.com/sitemap/sitemap.xml
+2025-05-03 15:59:05,256 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://www.corridorseven.com/sitemap/sitemap.xml: 404
+2025-05-03 15:59:05,257 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://www.corridorseven.com/product-sitemap.xml
+2025-05-03 15:59:05,341 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://www.corridorseven.com/product-sitemap.xml: 404
+2025-05-03 15:59:05,342 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://www.corridorseven.com/wp-sitemap.xml
+2025-05-03 15:59:05,431 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://www.corridorseven.com/wp-sitemap.xml: 404
+2025-05-03 15:59:05,432 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://www.corridorseven.com/post-sitemap.xml
+2025-05-03 15:59:05,516 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://www.corridorseven.com/post-sitemap.xml: 404
+2025-05-03 15:59:05,517 - scrapers.discoverers.sitemap_discoverer - INFO - Discovered 0 products from sitemaps
+2025-05-03 15:59:05,517 - scrapers.discoverers.discovery_manager - INFO - Trying structured data discovery for Corridor Seven Coffee Roasters
+2025-05-03 15:59:07,867 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/shop: 404
+2025-05-03 15:59:08,031 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/products: 404
+2025-05-03 15:59:08,106 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/collections/coffee: 404
+2025-05-03 15:59:08,179 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/collections/all: 404
+2025-05-03 15:59:08,258 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/product-category/coffee: 404
+2025-05-03 15:59:08,331 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/coffee: 404
+2025-05-03 15:59:08,410 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/store: 404
+2025-05-03 15:59:08,573 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/beans: 404
+2025-05-03 15:59:08,574 - scrapers.discoverers.structured_data_discoverer - INFO - Discovered 0 products from structured data
+2025-05-03 15:59:08,574 - scrapers.discoverers.discovery_manager - INFO - Trying HTML discovery for Corridor Seven Coffee Roasters
+2025-05-03 15:59:10,968 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/shop: 404
+2025-05-03 15:59:11,133 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/products: 404
+2025-05-03 15:59:11,210 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/collections/coffee: 404
+2025-05-03 15:59:11,290 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/collections/all: 404
+2025-05-03 15:59:11,370 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/product-category/coffee: 404
+2025-05-03 15:59:11,445 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/coffee: 404
+2025-05-03 15:59:11,524 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/store: 404
+2025-05-03 15:59:11,604 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://www.corridorseven.com/beans: 404
+2025-05-03 15:59:11,605 - scrapers.discoverers.html_discoverer - INFO - Discovered 0 products via HTML crawling
+2025-05-03 15:59:11,605 - scrapers.discoverers.discovery_manager - INFO - Discovered 0 unique products for Corridor Seven Coffee Roasters
+2025-05-03 15:59:11,615 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B4DAF8F110>
+2025-05-03 15:59:11,615 - test_real_discoverers - INFO - Testing discovery for KC Roasters
+2025-05-03 15:59:11,770 - test_real_discoverers - INFO - Detected platform: shopify
+2025-05-03 15:59:11,771 - scrapers.discoverers.discovery_manager - INFO - Platform type for KC Roasters: shopify
+2025-05-03 15:59:13,907 - scrapers.discoverers.discovery_manager - INFO - Discovered 5 products via Shopify API
+2025-05-03 15:59:13,923 - scrapers.discoverers.discovery_manager - INFO - Discovered 5 unique products for KC Roasters
+2025-05-03 15:59:13,931 - test_real_discoverers - INFO - Sample of discovered products:
+2025-05-03 15:59:13,931 - test_real_discoverers - INFO -   1. Winter Espresso Blend | Dark Roast Coffee | NEW HARVEST !
+2025-05-03 15:59:13,932 - test_real_discoverers - INFO -      URL: https://kcroasters.com/products/winter-espresso-blend-dark-roast-coffee
+2025-05-03 15:59:13,932 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-03 15:59:13,932 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/2552/7686/files/...
+2025-05-03 15:59:13,933 - test_real_discoverers - INFO -   2. Olive And Roasted Garlic Sourdough Bread
+2025-05-03 15:59:13,933 - test_real_discoverers - INFO -      URL: https://kcroasters.com/products/olive-garlic-sourdough-bread
+2025-05-03 15:59:13,934 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-03 15:59:13,934 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/2552/7686/produc...
+2025-05-03 15:59:13,934 - test_real_discoverers - INFO -   3. Gaggia Cadorna - Automatic Espresso Machine
+2025-05-03 15:59:13,934 - test_real_discoverers - INFO -      URL: https://kcroasters.com/products/gaggia-cadorna-automatic-espresso-machine
+2025-05-03 15:59:13,935 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-03 15:59:13,935 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/2552/7686/produc...
+2025-05-03 15:59:13,943 - test_real_discoverers - INFO -   Products saved to test_results/discoverers\kc-roasters_products.json
+2025-05-03 15:59:13,944 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B4DAF8F110>
+2025-05-03 15:59:13,945 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001B4DB408470>, 78337.3875064)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001B4DAFB1810>
+2025-05-03 15:59:13,946 - test_real_discoverers - INFO - 
+===== DISCOVERY TEST SUMMARY =====
+2025-05-03 15:59:13,946 - test_real_discoverers - INFO - Total roasters tested: 4
+2025-05-03 15:59:13,947 - test_real_discoverers - INFO - Successful: 3
+2025-05-03 15:59:13,948 - test_real_discoverers - INFO - Failed: 1
+2025-05-03 15:59:13,949 - test_real_discoverers - WARNING - Failed roasters: Corridor Seven Coffee Roasters
+2025-05-03 15:59:13,951 - test_real_discoverers - INFO - Summary saved to test_results/discoverers\discovery_summary.json
+2025-05-03 15:59:13,952 - __main__ - INFO - Discoverer tests completed
+2025-05-03 15:59:13,953 - __main__ - INFO - === Generating Comprehensive Test Report ===
+2025-05-03 15:59:13,955 - __main__ - INFO - Comprehensive test summary saved to test_results\comprehensive_test_summary.json
+2025-05-03 15:59:13,956 - __main__ - INFO - 
+===== OVERALL TEST RESULTS =====
+2025-05-03 15:59:13,956 - __main__ - INFO - Components tested: discoverer
+2025-05-03 15:59:13,957 - __main__ - INFO - Discoverer success rate: 3/4 (75.0%)
+2025-05-03 15:59:13,957 - __main__ - INFO - Overall success rate: 3/4 (75.0%)
+2025-05-03 15:59:13,958 - __main__ - INFO - Test run completed

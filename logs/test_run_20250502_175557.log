@@ -1,0 +1,74 @@
+2025-05-02 17:55:57,419 - __main__ - INFO - Testing pipeline with Blue Tokai Coffee Roasters
+2025-05-02 17:55:57,420 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-02 17:55:57,420 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-02 17:55:58,729 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/about
+2025-05-02 17:55:59,011 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about
+2025-05-02 17:56:01,247 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about
+2025-05-02 17:56:05,568 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about
+2025-05-02 17:56:13,582 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/about
+2025-05-02 17:56:13,583 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/pages/about
+2025-05-02 17:56:13,804 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/about
+2025-05-02 17:56:15,911 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/about
+2025-05-02 17:56:20,036 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/about
+2025-05-02 17:56:28,053 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/pages/about
+2025-05-02 17:56:28,055 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/about-us
+2025-05-02 17:56:28,177 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-us
+2025-05-02 17:56:30,328 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-us
+2025-05-02 17:56:34,497 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-us
+2025-05-02 17:56:42,510 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/about-us
+2025-05-02 17:56:42,511 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/pages/about-us
+2025-05-02 17:56:42,915 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/our-story
+2025-05-02 17:56:43,158 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/our-story
+2025-05-02 17:56:45,253 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/our-story
+2025-05-02 17:56:49,494 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/our-story
+2025-05-02 17:56:57,502 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/our-story
+2025-05-02 17:56:57,504 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/story
+2025-05-02 17:56:57,612 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/story
+2025-05-02 17:56:59,721 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/story
+2025-05-02 17:57:03,978 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/story
+2025-05-02 17:57:11,984 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/story
+2025-05-02 17:57:11,986 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/pages/story
+2025-05-02 17:57:12,335 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/story
+2025-05-02 17:57:14,586 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/story
+2025-05-02 17:57:18,703 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/story
+2025-05-02 17:57:26,715 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/pages/story
+2025-05-02 17:57:26,717 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/about-our-company
+2025-05-02 17:57:26,871 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-our-company
+2025-05-02 17:57:28,995 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-our-company
+2025-05-02 17:57:33,220 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-our-company
+2025-05-02 17:57:41,232 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/about-our-company
+2025-05-02 17:57:41,234 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:57:41,336 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:57:43,681 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:57:47,835 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:57:55,844 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:57:55,846 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/about-page
+2025-05-02 17:57:56,003 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-page
+2025-05-02 17:57:58,205 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-page
+2025-05-02 17:58:02,317 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-page
+2025-05-02 17:58:10,328 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/about-page
+2025-05-02 17:58:10,330 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/our-company
+2025-05-02 17:58:10,446 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/our-company
+2025-05-02 17:58:12,569 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/our-company
+2025-05-02 17:58:16,694 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/our-company
+2025-05-02 17:58:24,710 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/our-company
+2025-05-02 17:58:24,712 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:58:24,931 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:58:27,287 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:58:31,407 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:58:39,414 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/who-we-are
+2025-05-02 17:58:39,416 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/about-[company-name]
+2025-05-02 17:58:39,524 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-[company-name]
+2025-05-02 17:58:41,642 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-[company-name]
+2025-05-02 17:58:45,923 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/about-[company-name]
+2025-05-02 17:58:53,932 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/about-[company-name]
+2025-05-02 17:58:54,116 - __main__ - INFO - Successfully extracted data for Blue Tokai Coffee Roasters:
+2025-05-02 17:58:54,117 - __main__ - INFO - Description: We buy our great tasting coffees (100% Arabica) from Indian estates, roast the beans with care, and ship freshly roasted beans as quickly as possible.
+2025-05-02 17:58:54,117 - __main__ - INFO - Logo URL: https://bluetokaicoffee.com/favicon.ico
+2025-05-02 17:58:54,118 - __main__ - INFO - Social Links: ['https://twitter.com/bluetokaicoffee', 'https://www.facebook.com/bluetokaicoffee/', 'https://www.instagram.com/bluetokaicoffee/', 'https://twitter.com/bluetokaicoffee', 'https://www.facebook.com/bluetokaicoffee/', 'https://www.instagram.com/bluetokaicoffee/']
+2025-05-02 17:58:54,118 - __main__ - INFO - Instagram: bluetokaicoffee
+2025-05-02 17:58:54,118 - __main__ - INFO - Location: Bangalore, Karnataka
+2025-05-02 17:58:54,118 - __main__ - INFO - Founded: None
+2025-05-02 17:58:54,119 - __main__ - INFO - Has Subscription: False
+2025-05-02 17:58:54,119 - __main__ - INFO - Has Physical Store: False
+2025-05-02 17:58:54,121 - __main__ - INFO - Results saved to blue_tokai_result.json

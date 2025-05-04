@@ -1,0 +1,20 @@
+{
+  "id": "5033c5c5-77ae-48c3-92b0-cbfd5f340b75",
+  "name": "Alchemist",
+  "slug": "alchemist",
+  "description": "A specialty coffee roaster.",
+  "website_url": "https://alchemistroastery.com",
+  "social_links": [],
+  "contact_email": null,
+  "contact_phone": null,
+  "city": null,
+  "state": null,
+  "founded_year": null,
+  "instagram_handle": null,
+  "logo_url": "https://alchemistroastery.com/favicon.ico",
+  "has_subscription": false,
+  "has_physical_store": false,
+  "is_featured": false,
+  "created_at": null,
+  "updated_at": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": "098bf90e-3b1e-47eb-b29b-7d8dce797240",
+  "name": "KC Roasters",
+  "slug": "kc-roasters",
+  "description": "Order the most delicious freshly roasted 100% Arabica coffee beans online from KCROASTERS by Koinonia, sourced from award-winning Indian coffee farms! We roast our coffee beans daily and ship them within 24-48 hours of roasting.",
+  "website_url": "https://kcroasters.com",
+  "social_links": [
+    "https://facebook.com/kcroasters",
+    "https://instagram.com/kcroasters",
+    "https://in.linkedin.com/company/kc-roasters",
+    "https://facebook.com/kcroasters",
+    "https://instagram.com/kcroasters",
+    "https://in.linkedin.com/company/kc-roasters"
+  ],
+  "contact_email": "admin@kcroasters.com",
+  "contact_phone": "8423213957",
+  "city": "Mumbai",
+  "state": "Maharashtra",
+  "founded_year": null,
+  "instagram_handle": "kcroasters",
+  "logo_url": "https://kcroasters.com/cdn/shop/files/website_logo_410x.png?v=1613518911",
+  "has_subscription": true,
+  "has_physical_store": false,
+  "is_featured": false,
+  "created_at": null,
+  "updated_at": null
+}

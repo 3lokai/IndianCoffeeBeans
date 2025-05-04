@@ -1,0 +1,102 @@
+2025-05-04 01:23:51,895 - __main__ - INFO - Testing discovery for Blue Tokai Coffee Roasters
+2025-05-04 01:23:52,062 - __main__ - INFO - Detected platform: shopify
+2025-05-04 01:23:52,064 - scrapers.discoverers.discovery_manager - INFO - Platform type for Blue Tokai Coffee Roasters: shopify
+2025-05-04 01:23:54,519 - scrapers.discoverers.discovery_manager - INFO - Discovered 64 products via Shopify API
+2025-05-04 01:23:54,572 - scrapers.discoverers.discovery_manager - INFO - Discovered 64 unique products for Blue Tokai Coffee Roasters
+2025-05-04 01:23:54,580 - __main__ - INFO - Sample of discovered products:
+2025-05-04 01:23:54,586 - __main__ - INFO -   1. Are you tasting your coffee?
+2025-05-04 01:23:54,586 - __main__ - INFO -      URL: https://bluetokaicoffee.com/products/cupping-kolkata
+2025-05-04 01:23:54,587 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:23:54,587 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0738/1409/files/...
+2025-05-04 01:23:54,587 - __main__ - INFO -   2. Kerehaklu Estate - Washed
+2025-05-04 01:23:54,588 - __main__ - INFO -      URL: https://bluetokaicoffee.com/products/kerehaklu-estate-light
+2025-05-04 01:23:54,588 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:23:54,588 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0738/1409/files/...
+2025-05-04 01:23:54,589 - __main__ - INFO -   3. Seethargundu Estate
+2025-05-04 01:23:54,589 - __main__ - INFO -      URL: https://bluetokaicoffee.com/products/poabs-estate
+2025-05-04 01:23:54,589 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:23:54,590 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0738/1409/files/...
+2025-05-04 01:23:54,646 - __main__ - INFO -   Products saved to test_results/discoverers\blue-tokai-coffee-roasters_products.json
+2025-05-04 01:23:54,646 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002176EC55D30>
+2025-05-04 01:23:54,647 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000002176EBEE7B0>, 112224.5045704)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000002176EC55E80>
+2025-05-04 01:23:54,648 - __main__ - INFO - Testing discovery for Subko Coffee Roasters
+2025-05-04 01:23:54,787 - __main__ - INFO - Detected platform: shopify
+2025-05-04 01:23:54,788 - scrapers.discoverers.discovery_manager - INFO - Platform type for Subko Coffee Roasters: shopify
+2025-05-04 01:23:56,952 - scrapers.discoverers.discovery_manager - INFO - Discovered 31 products via Shopify API
+2025-05-04 01:23:56,976 - scrapers.discoverers.discovery_manager - INFO - Discovered 31 unique products for Subko Coffee Roasters
+2025-05-04 01:23:56,981 - __main__ - INFO - Sample of discovered products:
+2025-05-04 01:23:56,981 - __main__ - INFO -   1. Salawara Estate : 1486, Karnataka (SCA 84+) : Naturals (Medium Roast)
+2025-05-04 01:23:56,981 - __main__ - INFO -      URL: https://www.subko.coffee/products/salawara-estate-1486-karnataka-sca-84-naturals-medium-roast
+2025-05-04 01:23:56,981 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:23:56,982 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0308/0857/1963/f...
+2025-05-04 01:23:56,982 - __main__ - INFO -   2. Specialty Excelsa (SCA 86+): Mooleh Manay Estate, Coorg, Karnataka, India: Lot #Kempu - Black Honey (Medium Roast)
+2025-05-04 01:23:56,982 - __main__ - INFO -      URL: https://www.subko.coffee/products/specialty-excelsa-mooleh-manay-estate-coorg-karnataka-black-honey-medium-roast
+2025-05-04 01:23:56,983 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:23:56,983 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0308/0857/1963/f...
+2025-05-04 01:23:56,983 - __main__ - INFO -   3. Project Pearl, Ratnagiri Estate, Karnataka (SCA 86+): Alchemy - Naturals (Medium-Light Roast)
+2025-05-04 01:23:56,983 - __main__ - INFO -      URL: https://www.subko.coffee/products/project-pearl-ratnagiri-estate-karnataka-sca-86-alchemy-naturals-medium-light-roast
+2025-05-04 01:23:56,984 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:23:56,984 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0308/0857/1963/f...
+2025-05-04 01:23:57,017 - __main__ - INFO -   Products saved to test_results/discoverers\subko-coffee-roasters_products.json
+2025-05-04 01:23:57,018 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002176EC41BD0>
+2025-05-04 01:23:57,019 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000002175C37EB10>, 112227.2308832)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000002176EC41A90>
+2025-05-04 01:23:57,020 - __main__ - INFO - Testing discovery for Corridor Seven Coffee Roasters
+2025-05-04 01:23:57,371 - __main__ - INFO - Detected platform: shopify
+2025-05-04 01:23:57,371 - scrapers.discoverers.discovery_manager - INFO - Platform type for Corridor Seven Coffee Roasters: shopify
+2025-05-04 01:23:59,516 - scrapers.discoverers.discovery_manager - INFO - Discovered 35 products via Shopify API
+2025-05-04 01:23:59,581 - scrapers.discoverers.discovery_manager - INFO - Discovered 35 unique products for Corridor Seven Coffee Roasters
+2025-05-04 01:23:59,587 - __main__ - INFO - Sample of discovered products:
+2025-05-04 01:23:59,587 - __main__ - INFO -   1. Kudiraipanjan Estate Lactic Honey
+2025-05-04 01:23:59,587 - __main__ - INFO -      URL: https://www.corridorseven.coffee/products/kudiraipanjan-estate-lactic-honey
+2025-05-04 01:23:59,588 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:23:59,588 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0137/1714/3609/f...
+2025-05-04 01:23:59,588 - __main__ - INFO -   2. Anai Kadu Estate Aerobic Naturals
+2025-05-04 01:23:59,589 - __main__ - INFO -      URL: https://www.corridorseven.coffee/products/anai-kadu
+2025-05-04 01:23:59,589 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:23:59,589 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0137/1714/3609/f...
+2025-05-04 01:23:59,590 - __main__ - INFO -   3. Riverdale Estate Lactic Carbonic Maceration
+2025-05-04 01:23:59,590 - __main__ - INFO -      URL: https://www.corridorseven.coffee/products/riverdale-estate-lactic-carbonic-maceration
+2025-05-04 01:23:59,590 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:23:59,590 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0137/1714/3609/f...
+2025-05-04 01:23:59,675 - __main__ - INFO -   Products saved to test_results/discoverers\corridor-seven-coffee-roasters_products.json
+2025-05-04 01:23:59,676 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002176EC41450>
+2025-05-04 01:23:59,676 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000002175C37EB10>, 112229.6515472)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000002176F7F1850>, 112229.814061)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000002176E6AB950>
+2025-05-04 01:23:59,677 - __main__ - INFO - Testing discovery for KC Roasters
+2025-05-04 01:23:59,810 - __main__ - INFO - Detected platform: shopify
+2025-05-04 01:23:59,812 - scrapers.discoverers.discovery_manager - INFO - Platform type for KC Roasters: shopify
+2025-05-04 01:24:01,976 - scrapers.discoverers.discovery_manager - INFO - Discovered 5 products via Shopify API
+2025-05-04 01:24:01,988 - scrapers.discoverers.discovery_manager - INFO - Discovered 5 unique products for KC Roasters
+2025-05-04 01:24:01,998 - __main__ - INFO - Sample of discovered products:
+2025-05-04 01:24:01,998 - __main__ - INFO -   1. Winter Espresso Blend | Dark Roast Coffee | NEW HARVEST !
+2025-05-04 01:24:01,999 - __main__ - INFO -      URL: https://kcroasters.com/products/winter-espresso-blend-dark-roast-coffee
+2025-05-04 01:24:01,999 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:24:02,000 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/2552/7686/files/...
+2025-05-04 01:24:02,000 - __main__ - INFO -   2. Olive And Roasted Garlic Sourdough Bread
+2025-05-04 01:24:02,001 - __main__ - INFO -      URL: https://kcroasters.com/products/olive-garlic-sourdough-bread
+2025-05-04 01:24:02,001 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:24:02,001 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/2552/7686/produc...
+2025-05-04 01:24:02,002 - __main__ - INFO -   3. Gaggia Cadorna - Automatic Espresso Machine
+2025-05-04 01:24:02,002 - __main__ - INFO -      URL: https://kcroasters.com/products/gaggia-cadorna-automatic-espresso-machine
+2025-05-04 01:24:02,002 - __main__ - INFO -      Discovery method: N/A
+2025-05-04 01:24:02,003 - __main__ - INFO -      Image URL: https://cdn.shopify.com/s/files/1/2552/7686/produc...
+2025-05-04 01:24:02,013 - __main__ - INFO -   Products saved to test_results/discoverers\kc-roasters_products.json
+2025-05-04 01:24:02,013 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002176EC41450>
+2025-05-04 01:24:02,014 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000002175C37EB10>, 112232.2519321)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000002176E6ABA80>
+2025-05-04 01:24:02,015 - __main__ - INFO - 
+===== DISCOVERY TEST SUMMARY =====
+2025-05-04 01:24:02,016 - __main__ - INFO - Total roasters tested: 4
+2025-05-04 01:24:02,016 - __main__ - INFO - Successful: 4
+2025-05-04 01:24:02,016 - __main__ - INFO - Failed: 0
+2025-05-04 01:24:02,018 - __main__ - INFO - Summary saved to test_results/discoverers\discovery_summary.json

@@ -1,0 +1,20 @@
+{
+  "id": "5f60e002-3944-47ee-9be8-5bb7452c91ad",
+  "name": "Naivo Coffee Company",
+  "slug": "naivo-coffee-company",
+  "description": "A specialty coffee roaster.",
+  "website_url": "https://naivo.in",
+  "social_links": [],
+  "contact_email": null,
+  "contact_phone": "+91 6364145058",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "founded_year": null,
+  "instagram_handle": null,
+  "logo_url": "https://naivo.in/favicon.ico",
+  "has_subscription": false,
+  "has_physical_store": false,
+  "is_featured": false,
+  "created_at": null,
+  "updated_at": null
+}

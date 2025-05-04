@@ -1,0 +1,20 @@
+{
+  "name": "Ethiopia Kayon Mountain",
+  "slug": "ethiopia-kayon-mountain",
+  "direct_buy_url": "https://kcroasters.com/products/ethiopia-kayon-mountain",
+  "platform": "generic",
+  "roaster_name": "KC Roasters",
+  "roaster_slug": "kc-roasters",
+  "description": "Vibrant and fruity Ethiopian coffee",
+  "image_url": "//kcroasters.com/cdn/shop/files/Winter_Espresso_Blend_340g_100x.jpg?v=1731403770",
+  "price_250g": 300.0,
+  "bean_type": "BeanType.UNKNOWN",
+  "region_name": "CoffeesBrewing EquipmentCollectiveAbout usSign inNo results found.CoffeesDrip'd Kit - Portable Fresh Coffee BagsSingle Origin Indian CoffeesTaster PacksCoffee SubscriptionsInternational EstatesCOLDBREW\u00aeGiftingNo results found.Brewing EquipmentFilter PaperClever DripperHome Espresso MachinesBialetti Moka PotsHario V60 Drip KettleAeroPressCoffee GrinderNo results found.CollectiveEtherLa Folie Breads And ChocolatesBoombayMilklabTote BagsCOLDBREW\u00aeNaagin Hot SauceBrownsalt Granola & CookiesSvami Tonic Water & Ginger AleBon FictionNaviluna Artisanal ChocolateesNo results found.About usFAQ'SBrew GuidesCafesFarmsOur StoryOur BlogWholesaleGiftingNo results found.",
+  "_extracted_data": {
+    "name": "https://kcroasters.com/",
+    "image_url": "//kcroasters.com/cdn/shop/files/Winter_Espresso_Blend_340g_100x.jpg?v=1731403770",
+    "price_text": "from\u20b9 300",
+    "origin_info": "CoffeesBrewing EquipmentCollectiveAbout usSign inNo results found.CoffeesDrip'd Kit - Portable Fresh Coffee BagsSingle Origin Indian CoffeesTaster PacksCoffee SubscriptionsInternational EstatesCOLDBREW\u00aeGiftingNo results found.Brewing EquipmentFilter PaperClever DripperHome Espresso MachinesBialetti Moka PotsHario V60 Drip KettleAeroPressCoffee GrinderNo results found.CollectiveEtherLa Folie Breads And ChocolatesBoombayMilklabTote BagsCOLDBREW\u00aeNaagin Hot SauceBrownsalt Granola & CookiesSvami Tonic Water & Ginger AleBon FictionNaviluna Artisanal ChocolateesNo results found.About usFAQ'SBrew GuidesCafesFarmsOur StoryOur BlogWholesaleGiftingNo results found."
+  },
+  "extracted_by": "json_css"
+}

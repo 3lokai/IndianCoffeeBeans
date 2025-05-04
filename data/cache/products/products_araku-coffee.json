@@ -1,0 +1,4234 @@
+[
+  {
+    "name": "Coffee 101: Coffee Mocktails, Shaken or Stirred? (Mumbai)",
+    "slug": "coffee-101-coffee-mocktails-shaken-or-stirred-mumbai",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-101-coffee-mocktails-shaken-or-stirred-mumbai",
+    "description": "",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9732106649920,
+      "title": "Coffee 101: Coffee Mocktails, Shaken or Stirred? (Mumbai)",
+      "handle": "coffee-101-coffee-mocktails-shaken-or-stirred-mumbai",
+      "body_html": "",
+      "published_at": "2025-02-26T18:00:31+05:30",
+      "created_at": "2025-02-26T17:59:55+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50328215880000,
+          "title": "2000 + Taxes / March 29 | 4pm to 6pm",
+          "option1": "2000 + Taxes",
+          "option2": "March 29 | 4pm to 6pm",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "2360.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 9732106649920,
+          "created_at": "2025-02-26T17:59:55+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 43096892604736,
+          "created_at": "2023-11-01T17:16:09+05:30",
+          "position": 1,
+          "updated_at": "2023-11-01T17:16:11+05:30",
+          "product_id": 9732106649920,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/shaken-and-stirred.jpg?v=1698839171",
+          "width": 3889,
+          "height": 5186
+        }
+      ],
+      "options": [
+        {
+          "name": "Price",
+          "position": 1,
+          "values": [
+            "2000 + Taxes"
+          ]
+        },
+        {
+          "name": "Date & Time",
+          "position": 2,
+          "values": [
+            "March 29 | 4pm to 6pm"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/shaken-and-stirred.jpg?v=1698839171",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee 101: Nail That Brew (Mumbai)",
+    "slug": "coffee-101-nail-that-brew-mumbai",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-101-nail-that-brew-mumbai",
+    "description": "",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9732100882752,
+      "title": "Coffee 101: Nail That Brew (Mumbai)",
+      "handle": "coffee-101-nail-that-brew-mumbai",
+      "body_html": "",
+      "published_at": "2025-02-26T17:50:45+05:30",
+      "created_at": "2025-02-26T17:50:45+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50328184193344,
+          "title": "2000 + Taxes / May 10 | 4pm to 6pm",
+          "option1": "2000 + Taxes",
+          "option2": "May 10 | 4pm to 6pm",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "2360.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 9732100882752,
+          "created_at": "2025-02-26T17:50:45+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 43096881791296,
+          "created_at": "2023-11-01T17:12:26+05:30",
+          "position": 1,
+          "updated_at": "2023-11-01T17:12:29+05:30",
+          "product_id": 9732100882752,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/nail-in-brew.jpg?v=1698838949",
+          "width": 5334,
+          "height": 4000
+        }
+      ],
+      "options": [
+        {
+          "name": "Price",
+          "position": 1,
+          "values": [
+            "2000 + Taxes"
+          ]
+        },
+        {
+          "name": "Date & Time",
+          "position": 2,
+          "values": [
+            "May 10 | 4pm to 6pm"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/nail-in-brew.jpg?v=1698838949",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Pocket Brew - Selection",
+    "slug": "pocket-brew-selection",
+    "direct_buy_url": "https://www.arakucoffee.in/products/pocket-brew-selection",
+    "description": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\"></b>Our single-serve coffee packs combine the speed of an instant brew with the unrivalled quality of ARAKU's specialty coffee. As the name suggests, these drip bag sachets fit any pocket or purse and offer an extremely portable coffee. Each sachet is packaged individually and nitrogen-flushed to maintain the coffee's integrity and freshness. Suited for the airplane, the open road, hotels, offices, or even when you just need a quick fix at home. A sturdy cup and hot water does the trick.</p>\n<p data-mce-fragment=\"1\"><span>This pack contains 10 individual sachets.  </span></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380915351872,
+      "title": "Pocket Brew - Selection",
+      "handle": "pocket-brew-selection",
+      "body_html": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\"></b>Our single-serve coffee packs combine the speed of an instant brew with the unrivalled quality of ARAKU's specialty coffee. As the name suggests, these drip bag sachets fit any pocket or purse and offer an extremely portable coffee. Each sachet is packaged individually and nitrogen-flushed to maintain the coffee's integrity and freshness. Suited for the airplane, the open road, hotels, offices, or even when you just need a quick fix at home. A sturdy cup and hot water does the trick.</p>\n<p data-mce-fragment=\"1\"><span>This pack contains 10 individual sachets.  </span></p>",
+      "published_at": "2025-02-21T13:15:22+05:30",
+      "created_at": "2023-06-12T15:10:01+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Coffee",
+      "tags": [
+        "Category_Coffee",
+        "coffee",
+        "Pocket brew",
+        "pocket_brews",
+        "tag_caramel",
+        "tag_dark_chocolate",
+        "tag_honey",
+        "tag_sugarcane"
+      ],
+      "variants": [
+        {
+          "id": 45276024242496,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "COF0028",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "580.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380915351872,
+          "created_at": "2023-06-12T15:10:01+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 45598851367232,
+          "created_at": "2024-08-13T17:48:25+05:30",
+          "position": 1,
+          "updated_at": "2024-08-13T17:48:28+05:30",
+          "product_id": 8380915351872,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_2608_copy_1.jpg?v=1723551508",
+          "width": 3883,
+          "height": 3883
+        },
+        {
+          "id": 41707595170112,
+          "created_at": "2023-06-20T11:26:10+05:30",
+          "position": 2,
+          "updated_at": "2024-08-13T17:48:38+05:30",
+          "product_id": 8380915351872,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Post4.jpg?v=1723551518",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_2608_copy_1.jpg?v=1723551508",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee Masterclass: Barista Bootcamp; Coffee Crash Course",
+    "slug": "coffee-masterclass-barista-bootcamp-coffee-crash-course",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-masterclass-barista-bootcamp",
+    "description": "<p dir=\"ltr\"><span>Ready to kickstart your career in the coffee industry? Our <span class=\"il\">Barista</span> Bootcamp is designed for aspiring <span class=\"il\">baristas</span> and future café owners who want to master the skills needed to thrive in a professional coffee environment. This intensive, hands-on 30-day course covers everything from the origins of coffee to the technical expertise required to create perfect espresso-based drinks. Gain real-world experience and essential skills to kickstart your coffee career with expert guidance by SCA-certified instructors and WBC standard training.</span></p>\n<p dir=\"ltr\"><span>Here’s what you can expect:</span><span><br></span><span>• </span><span>Coffee 360</span><span>°</span><span>; dive deep into the \"Seed-to-Cup\" journey, understanding how factors like soil, terroir, processing and roast profiles affect the final flavour in your cup.</span></p>\n<p dir=\"ltr\"><span>• </span><span>Espresso Brewing</span><span>; gain practical experience with commercial-grade espresso machines, mastering the nuances of shot pulling, grind size optimisation and milk frothing. </span></p>\n<p dir=\"ltr\"><span>•</span><span> Brewing Techniques</span><span>; explore manual brewing methods, grinder calibration and brewing ratios to ensure consistency.</span></p>\n<p dir=\"ltr\"><span>• </span><span>Latte Art &amp; Milk Science; </span><span>learn the essential techniques of milk steaming, understand the basics of latte art and how to neatly position your designs. </span></p>\n<p dir=\"ltr\"><span>• </span><span>Real-World Café Training</span><span>; get hands-on experience at ARAKU cafés (Bangalore &amp; Mumbai) applying your skills in a live café setting and learning the ropes of café operations.</span></p>\n<p dir=\"ltr\"><span>• </span><span>Career-Ready Certification; </span><span>at the end, you’ll graduate with an honorary AWSCA certificate and be fully equipped to apply for <span class=\"il\">barista</span> positions or take the next step towards opening your own café.</span></p>\n<p dir=\"ltr\"><span>Designed for small groups of five to ensure personalised learning, the <span class=\"il\">Barista</span> Bootcamp is perfect for anyone serious about pursuing a career in coffee or starting their own café. Join us and brew like a pro!</span></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9716050559296,
+      "title": "Coffee Masterclass: Barista Bootcamp; Coffee Crash Course",
+      "handle": "coffee-masterclass-barista-bootcamp",
+      "body_html": "<p dir=\"ltr\"><span>Ready to kickstart your career in the coffee industry? Our <span class=\"il\">Barista</span> Bootcamp is designed for aspiring <span class=\"il\">baristas</span> and future café owners who want to master the skills needed to thrive in a professional coffee environment. This intensive, hands-on 30-day course covers everything from the origins of coffee to the technical expertise required to create perfect espresso-based drinks. Gain real-world experience and essential skills to kickstart your coffee career with expert guidance by SCA-certified instructors and WBC standard training.</span></p>\n<p dir=\"ltr\"><span>Here’s what you can expect:</span><span><br></span><span>• </span><span>Coffee 360</span><span>°</span><span>; dive deep into the \"Seed-to-Cup\" journey, understanding how factors like soil, terroir, processing and roast profiles affect the final flavour in your cup.</span></p>\n<p dir=\"ltr\"><span>• </span><span>Espresso Brewing</span><span>; gain practical experience with commercial-grade espresso machines, mastering the nuances of shot pulling, grind size optimisation and milk frothing. </span></p>\n<p dir=\"ltr\"><span>•</span><span> Brewing Techniques</span><span>; explore manual brewing methods, grinder calibration and brewing ratios to ensure consistency.</span></p>\n<p dir=\"ltr\"><span>• </span><span>Latte Art &amp; Milk Science; </span><span>learn the essential techniques of milk steaming, understand the basics of latte art and how to neatly position your designs. </span></p>\n<p dir=\"ltr\"><span>• </span><span>Real-World Café Training</span><span>; get hands-on experience at ARAKU cafés (Bangalore &amp; Mumbai) applying your skills in a live café setting and learning the ropes of café operations.</span></p>\n<p dir=\"ltr\"><span>• </span><span>Career-Ready Certification; </span><span>at the end, you’ll graduate with an honorary AWSCA certificate and be fully equipped to apply for <span class=\"il\">barista</span> positions or take the next step towards opening your own café.</span></p>\n<p dir=\"ltr\"><span>Designed for small groups of five to ensure personalised learning, the <span class=\"il\">Barista</span> Bootcamp is perfect for anyone serious about pursuing a career in coffee or starting their own café. Join us and brew like a pro!</span></p>",
+      "published_at": "2025-02-07T13:18:44+05:30",
+      "created_at": "2025-02-05T13:47:58+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50245107417408,
+          "title": "30000+ Taxes / March 1 - 31 | 9AM - 6PM",
+          "option1": "30000+ Taxes",
+          "option2": "March 1 - 31 | 9AM - 6PM",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "35400.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 9716050559296,
+          "created_at": "2025-02-05T13:47:58+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 50339078078784,
+          "title": "30000+ Taxes / April 1 - 31 | 9AM - 6PM",
+          "option1": "30000+ Taxes",
+          "option2": "April 1 - 31 | 9AM - 6PM",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "35400.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9716050559296,
+          "created_at": "2025-02-28T17:31:40+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 47511343989056,
+          "created_at": "2025-02-07T14:14:13+05:30",
+          "position": 1,
+          "updated_at": "2025-02-07T14:14:15+05:30",
+          "product_id": 9716050559296,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/0D3A5350_1.jpg?v=1738917855",
+          "width": 4480,
+          "height": 4480
+        },
+        {
+          "id": 47511351656768,
+          "created_at": "2025-02-07T14:16:04+05:30",
+          "position": 2,
+          "updated_at": "2025-02-07T14:16:06+05:30",
+          "product_id": 9716050559296,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/0D3A6236_1_1.jpg?v=1738917966",
+          "width": 4480,
+          "height": 4480
+        }
+      ],
+      "options": [
+        {
+          "name": "Price",
+          "position": 1,
+          "values": [
+            "30000+ Taxes"
+          ]
+        },
+        {
+          "name": "Date & Time",
+          "position": 2,
+          "values": [
+            "March 1 - 31 | 9AM - 6PM",
+            "April 1 - 31 | 9AM - 6PM"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/0D3A5350_1.jpg?v=1738917855",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "SCA Coffee Skills Program: Sensory Skills (Professional)",
+    "slug": "sca-coffee-skills-program-sensory-skills-professional",
+    "direct_buy_url": "https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills-professional",
+    "description": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Sensory Skills (Professional)- 25 Points </b></p>\n<p data-mce-fragment=\"1\">The Sensory Skills Professional course builds on the concepts and skills introduced in the Sensory Skills Intermediate course and prepares the learner for managerial job functions in the sensory evaluation of coffee and related products. A written exam confirms professional course knowledge while a practical exam tests the skills described above based on different working activities carried out during the course.</p>\n<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Duration: </b>24<span style=\"font-weight: 400;\" data-mce-fragment=\"1\" data-mce-style=\"font-weight: 400;\"> hours (3 days)</span></p>\n<p><b>About:</b></p>\n<p>Conducted by Sherri Johns our coffee mentor, barista trainer and Head Judge of the Gems of Araku competition. Sherri is an Authorised SCA Trainer (AST), former Cup of Excellence Head Judge, globally-recognised coffee expert who conducts certified SCA class offerings ensuring the highest quality of instruction for beginning Barista, Roasters, the serious and curious coffee connoisseur.</p>\n<p><span style=\"font-weight: 400;\">All the courses are hosted at Araku World Specialty Coffee Academy (AWSCA), located at our flagship in Bangalore, Indiranagar. The academy is equipped with top-of-the-line tools and an in-house roastery. ⁠The courses range from 1-5 days with an opportunity for practical and written online exams to receive SCA certification.</span></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9522372084032,
+      "title": "SCA Coffee Skills Program: Sensory Skills (Professional)",
+      "handle": "sca-coffee-skills-program-sensory-skills-professional",
+      "body_html": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Sensory Skills (Professional)- 25 Points </b></p>\n<p data-mce-fragment=\"1\">The Sensory Skills Professional course builds on the concepts and skills introduced in the Sensory Skills Intermediate course and prepares the learner for managerial job functions in the sensory evaluation of coffee and related products. A written exam confirms professional course knowledge while a practical exam tests the skills described above based on different working activities carried out during the course.</p>\n<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Duration: </b>24<span style=\"font-weight: 400;\" data-mce-fragment=\"1\" data-mce-style=\"font-weight: 400;\"> hours (3 days)</span></p>\n<p><b>About:</b></p>\n<p>Conducted by Sherri Johns our coffee mentor, barista trainer and Head Judge of the Gems of Araku competition. Sherri is an Authorised SCA Trainer (AST), former Cup of Excellence Head Judge, globally-recognised coffee expert who conducts certified SCA class offerings ensuring the highest quality of instruction for beginning Barista, Roasters, the serious and curious coffee connoisseur.</p>\n<p><span style=\"font-weight: 400;\">All the courses are hosted at Araku World Specialty Coffee Academy (AWSCA), located at our flagship in Bangalore, Indiranagar. The academy is equipped with top-of-the-line tools and an in-house roastery. ⁠The courses range from 1-5 days with an opportunity for practical and written online exams to receive SCA certification.</span></p>",
+      "published_at": "2025-01-23T14:21:47+05:30",
+      "created_at": "2024-08-06T13:16:18+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 49486066549056,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": false,
+          "price": "50000.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 9522372084032,
+          "created_at": "2024-08-06T13:16:18+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 45537224687936,
+          "created_at": "2024-08-08T17:19:02+05:30",
+          "position": 1,
+          "updated_at": "2024-08-22T18:06:40+05:30",
+          "product_id": 9522372084032,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/final.jpg?v=1724330200",
+          "width": 3000,
+          "height": 4500
+        },
+        {
+          "id": 42856558362944,
+          "created_at": "2023-10-05T11:46:02+05:30",
+          "position": 2,
+          "updated_at": "2023-10-05T11:46:19+05:30",
+          "product_id": 9522372084032,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/rmbizvjokh9y26gmvuzt.jpg?v=1696486579",
+          "width": 1000,
+          "height": 1500
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/final.jpg?v=1724330200",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Pocket Brew - Grand Reserve",
+    "slug": "pocket-brew-grand-reserve",
+    "direct_buy_url": "https://www.arakucoffee.in/products/pocket-brew-grand-reserve",
+    "description": "<p>Our single-serve coffee packs combine the speed of an instant brew with the unrivalled quality of ARAKU's specialty coffee. As the name suggests, these drip bag sachets fit any pocket or purse and offer an extremely portable coffee. Each sachet is packaged individually and nitrogen-flushed to maintain the coffee's integrity and freshness. Suited for the airplane, the open road, hotels, offices, or even when you just need a quick fix at home. A sturdy cup and hot water does the trick.  </p>\n<p>This pack contains 10 individual sachets.  </p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9613129908544,
+      "title": "Pocket Brew - Grand Reserve",
+      "handle": "pocket-brew-grand-reserve",
+      "body_html": "<p>Our single-serve coffee packs combine the speed of an instant brew with the unrivalled quality of ARAKU's specialty coffee. As the name suggests, these drip bag sachets fit any pocket or purse and offer an extremely portable coffee. Each sachet is packaged individually and nitrogen-flushed to maintain the coffee's integrity and freshness. Suited for the airplane, the open road, hotels, offices, or even when you just need a quick fix at home. A sturdy cup and hot water does the trick.  </p>\n<p>This pack contains 10 individual sachets.  </p>",
+      "published_at": "2024-10-23T16:39:27+05:30",
+      "created_at": "2024-10-10T13:15:42+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Coffee",
+      "tags": [
+        "Category_Coffee",
+        "coffee",
+        "Pocket brew",
+        "pocket_brews",
+        "tag_citrus",
+        "tag_dates",
+        "tag_floral",
+        "tag_tropical_fruits"
+      ],
+      "variants": [
+        {
+          "id": 49787705098560,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "COF0085",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "680.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 9613129908544,
+          "created_at": "2024-10-10T13:15:43+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 46519732699456,
+          "created_at": "2024-10-27T13:25:08+05:30",
+          "position": 1,
+          "updated_at": "2024-10-27T13:25:09+05:30",
+          "product_id": 9613129908544,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Grand_Reserve_pocket_brew_729b4271-7534-45d6-98be-dddd6e8c91ac.png?v=1730015709",
+          "width": 4000,
+          "height": 4000
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Grand_Reserve_pocket_brew_729b4271-7534-45d6-98be-dddd6e8c91ac.png?v=1730015709",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "The Bean to Bliss Kit",
+    "slug": "the-bean-to-bliss-kit",
+    "direct_buy_url": "https://www.arakucoffee.in/products/the-bean-to-bliss-kit",
+    "description": "<p dir=\"ltr\"><span>When your coffee goes the extra mile, you don’t toss it away! We’ve teamed up with zero-waste champions, at Bare Necessities, to transform our spent coffee grounds into a revitalising coffee body scrub and gently exfoliating soap bar, that moisturise and nourish the skin. Packed with clean, transparent ingredients, these skincare products not only shield your skin from free radicals but also elevate your everyday skincare routine.</span></p>\n<p dir=\"ltr\"><b id=\"docs-internal-guid-d4a89337-7fff-a95e-ec34-b9b911f81eeb\"></b>The hamper includes  a Coffee Spa Bar, Coffee Scrub, Lip Balm, ARAKU Leaf Mug, Four Pocket Brew Sachets, and an ARAKU badge.<br></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9613880590656,
+      "title": "The Bean to Bliss Kit",
+      "handle": "the-bean-to-bliss-kit",
+      "body_html": "<p dir=\"ltr\"><span>When your coffee goes the extra mile, you don’t toss it away! We’ve teamed up with zero-waste champions, at Bare Necessities, to transform our spent coffee grounds into a revitalising coffee body scrub and gently exfoliating soap bar, that moisturise and nourish the skin. Packed with clean, transparent ingredients, these skincare products not only shield your skin from free radicals but also elevate your everyday skincare routine.</span></p>\n<p dir=\"ltr\"><b id=\"docs-internal-guid-d4a89337-7fff-a95e-ec34-b9b911f81eeb\"></b>The hamper includes  a Coffee Spa Bar, Coffee Scrub, Lip Balm, ARAKU Leaf Mug, Four Pocket Brew Sachets, and an ARAKU badge.<br></p>",
+      "published_at": "2024-10-16T13:42:11+05:30",
+      "created_at": "2024-10-11T16:08:56+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Gifting",
+      "tags": [
+        "Category_Gifting",
+        "gifting"
+      ],
+      "variants": [
+        {
+          "id": 49791526928704,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "B2B0001",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "2500.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9613880590656,
+          "created_at": "2024-10-11T16:08:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 46420267139392,
+          "created_at": "2024-10-11T16:11:51+05:30",
+          "position": 1,
+          "updated_at": "2024-10-11T16:11:52+05:30",
+          "product_id": 9613880590656,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_0285_copy.jpg?v=1728643312",
+          "width": 4000,
+          "height": 4000
+        },
+        {
+          "id": 46372207067456,
+          "created_at": "2024-10-11T16:25:13+05:30",
+          "position": 2,
+          "updated_at": "2024-10-11T16:25:14+05:30",
+          "product_id": 9613880590656,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_0295_copy.jpg?v=1728644114",
+          "width": 4000,
+          "height": 4000
+        },
+        {
+          "id": 46372207100224,
+          "created_at": "2024-10-11T16:25:13+05:30",
+          "position": 3,
+          "updated_at": "2024-10-11T16:25:15+05:30",
+          "product_id": 9613880590656,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_0312_copy.jpg?v=1728644115",
+          "width": 4000,
+          "height": 4000
+        },
+        {
+          "id": 46372207132992,
+          "created_at": "2024-10-11T16:25:14+05:30",
+          "position": 4,
+          "updated_at": "2024-10-11T16:25:16+05:30",
+          "product_id": 9613880590656,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_0374_copy.jpg?v=1728644116",
+          "width": 4000,
+          "height": 4000
+        },
+        {
+          "id": 46372207165760,
+          "created_at": "2024-10-11T16:25:13+05:30",
+          "position": 5,
+          "updated_at": "2024-10-11T16:25:15+05:30",
+          "product_id": 9613880590656,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_0393_copy.jpg?v=1728644115",
+          "width": 3749,
+          "height": 3749
+        },
+        {
+          "id": 46372207198528,
+          "created_at": "2024-10-11T16:25:14+05:30",
+          "position": 6,
+          "updated_at": "2024-10-11T16:25:15+05:30",
+          "product_id": 9613880590656,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_0417_copy.jpg?v=1728644115",
+          "width": 4000,
+          "height": 4000
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_0285_copy.jpg?v=1728643312",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Paragon Espresso - set of four",
+    "slug": "paragon-espresso-set-of-four",
+    "direct_buy_url": "https://www.arakucoffee.in/products/paragon-espresso-set-of-four",
+    "description": "<p>Elevate your espresso experience with the Paragon Espresso set. Featuring a patented chilling rock, this innovative tool is crafted from food-grade stainless steel with a durable titanium coating. The spherical shape and large surface area ensure rapid and even chilling, while the high-density liquid gel core maintains colder temperatures for longer, freezing faster than traditional alternatives.</p>\n<p>Scientifically proven to capture and express up to 40% more aroma molecules, the Paragon Espresso enhances flavor preservation. The height-adjustable design accommodates various cups and coffee machines, and anti-slip grips ensure stability.</p>\n<p>The 30mm chilling rock, designed specifically for espresso, is smaller than the Paragon Filter rocks, with additional rocks available for order.</p>\n<p><strong>Specifications:</strong></p>\n<ul>\n<li>\n<strong>Espresso Mount:</strong> (W) 34mm x (L) 120mm, Electrophoresis powder-coated Aluminium</li>\n<li>\n<strong>Chilling Rock:</strong> (Diameter) 30mm, SUS304 Stainless Steel with Titanium Coating, liquid core of glycerin and water</li>\n<li>\n<strong>Mount Grips:</strong> Silicone</li>\n</ul>\n<p>All materials are food-safe, FDA approved, and waterproof.</p>\n<!---->",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9489274962240,
+      "title": "Paragon Espresso - set of four",
+      "handle": "paragon-espresso-set-of-four",
+      "body_html": "<p>Elevate your espresso experience with the Paragon Espresso set. Featuring a patented chilling rock, this innovative tool is crafted from food-grade stainless steel with a durable titanium coating. The spherical shape and large surface area ensure rapid and even chilling, while the high-density liquid gel core maintains colder temperatures for longer, freezing faster than traditional alternatives.</p>\n<p>Scientifically proven to capture and express up to 40% more aroma molecules, the Paragon Espresso enhances flavor preservation. The height-adjustable design accommodates various cups and coffee machines, and anti-slip grips ensure stability.</p>\n<p>The 30mm chilling rock, designed specifically for espresso, is smaller than the Paragon Filter rocks, with additional rocks available for order.</p>\n<p><strong>Specifications:</strong></p>\n<ul>\n<li>\n<strong>Espresso Mount:</strong> (W) 34mm x (L) 120mm, Electrophoresis powder-coated Aluminium</li>\n<li>\n<strong>Chilling Rock:</strong> (Diameter) 30mm, SUS304 Stainless Steel with Titanium Coating, liquid core of glycerin and water</li>\n<li>\n<strong>Mount Grips:</strong> Silicone</li>\n</ul>\n<p>All materials are food-safe, FDA approved, and waterproof.</p>\n<!---->",
+      "published_at": "2024-07-12T18:47:29+05:30",
+      "created_at": "2024-07-09T16:06:23+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [
+        "accessories",
+        "Category_Brewing Equipment",
+        "equipment"
+      ],
+      "variants": [
+        {
+          "id": 49388915720512,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "A-SKU072",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "6088.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9489274962240,
+          "created_at": "2024-07-09T16:06:25+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 45184098533696,
+          "created_at": "2024-07-09T15:20:49+05:30",
+          "position": 1,
+          "updated_at": "2024-07-09T15:20:51+05:30",
+          "product_id": 9489274962240,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Paragonespresso.jpg?v=1720518651",
+          "width": 3700,
+          "height": 3700
+        },
+        {
+          "id": 45184098566464,
+          "created_at": "2024-07-09T15:24:13+05:30",
+          "position": 2,
+          "updated_at": "2024-07-09T15:24:14+05:30",
+          "product_id": 9489274962240,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Paragon-Espresso-Hero-2.jpg?v=1720518854",
+          "width": 1786,
+          "height": 1786
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Paragonespresso.jpg?v=1720518651",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Kalita Wave Coffee Dripper 185",
+    "slug": "kalita-wave-coffee-dripper-185",
+    "direct_buy_url": "https://www.arakucoffee.in/products/kalita-pour-over-185",
+    "description": "<p>Introducing the Kalita Wave Coffee Dripper, designed with a flat bottom and three holes for smooth, consistent coffee extraction. The minimal contact between the dripper and the Wave filter ensures an even brew, making it easy to achieve a delicious cup of coffee regardless of your pouring technique.</p>\n<!---->",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9369548849472,
+      "title": "Kalita Wave Coffee Dripper 185",
+      "handle": "kalita-pour-over-185",
+      "body_html": "<p>Introducing the Kalita Wave Coffee Dripper, designed with a flat bottom and three holes for smooth, consistent coffee extraction. The minimal contact between the dripper and the Wave filter ensures an even brew, making it easy to achieve a delicious cup of coffee regardless of your pouring technique.</p>\n<!---->",
+      "published_at": "2024-07-06T14:37:15+05:30",
+      "created_at": "2024-06-05T13:27:01+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [
+        "equipment"
+      ],
+      "variants": [
+        {
+          "id": 48874058481984,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "A-SKU063",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": false,
+          "price": "4000.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9369548849472,
+          "created_at": "2024-06-05T13:27:02+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 45160613380416,
+          "created_at": "2024-07-06T13:34:47+05:30",
+          "position": 1,
+          "updated_at": "2024-07-06T13:34:49+05:30",
+          "product_id": 9369548849472,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Kalitaandkalitafilter.jpg?v=1720253089",
+          "width": 5000,
+          "height": 5000
+        },
+        {
+          "id": 45160836727104,
+          "created_at": "2024-07-06T14:35:33+05:30",
+          "position": 2,
+          "updated_at": "2024-07-06T14:35:35+05:30",
+          "product_id": 9369548849472,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/kalita_wave_185.jpg?v=1720256735",
+          "width": 4000,
+          "height": 4000
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Kalitaandkalitafilter.jpg?v=1720253089",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Melodrip Pour Over Coffee Tool",
+    "slug": "melodrip-pour-over-coffee-tool",
+    "direct_buy_url": "https://www.arakucoffee.in/products/melodrip-stainless-n-a-43",
+    "description": "<p>Experience better pour-over coffee with Melodrip—a tool for clearer flavor and less bitterness. It enhances your coffee's taste, ensuring a great brewing experience. Say goodbye to issues like clogged filters and uneven pours. Melodrip fits various pour-over drippers and is durable. Elevate your coffee brewing with Melodrip.</p>\n<!---->",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9369596657984,
+      "title": "Melodrip Pour Over Coffee Tool",
+      "handle": "melodrip-stainless-n-a-43",
+      "body_html": "<p>Experience better pour-over coffee with Melodrip—a tool for clearer flavor and less bitterness. It enhances your coffee's taste, ensuring a great brewing experience. Say goodbye to issues like clogged filters and uneven pours. Melodrip fits various pour-over drippers and is durable. Elevate your coffee brewing with Melodrip.</p>\n<!---->",
+      "published_at": "2024-07-06T12:32:04+05:30",
+      "created_at": "2024-06-05T13:52:21+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [
+        "accessories",
+        "Category_Brewing Equipment"
+      ],
+      "variants": [
+        {
+          "id": 48874420175168,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "A-SKU065",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "3100.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9369596657984,
+          "created_at": "2024-06-05T13:52:22+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 45160288584000,
+          "created_at": "2024-07-06T12:23:42+05:30",
+          "position": 1,
+          "updated_at": "2024-07-06T12:23:44+05:30",
+          "product_id": 9369596657984,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Melodrip.jpg?v=1720248824",
+          "width": 3700,
+          "height": 3754
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Melodrip.jpg?v=1720248824",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee Harmony",
+    "slug": "coffee-harmony",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-harmony",
+    "description": "<p>Discover the perfect harmony of flavour with ARAKU Green Moka Pot and Coffee set. Designed to elevate your coffee moments with rich and aromatic notes.</p>\n<p><span data-sheets-value='{\"1\":2,\"2\":\"Our orange (green/blue/yellow) Moka Pot Gift Box is the perfect gift for the coffee-lovers in your life. The signature ARAKU Moka Pot is a three-part coffee maker that is perfect for easily brewing a hot, highly intense cup. It’s crafted using insulated wood, enamel and food-grade stainless steel, avoiding the harmful effects of the more commonly used aluminium. The chic, tiered ARAKU Moka Pot is inspired by traditional Japanese teapots and makes two cups in four minutes. The gift box includes two ARAKU espresso cups; the stoneware cups have an elegant two-toned design with a white finish and a pop of colour on the inside. The cups are ideal for an espresso shot (50ml). The ARAKU Moka Pot and espresso cup set are exclusively designed for ARAKU by Norwegian design duo Anderssen &amp; Voll. Torbjørn Anderssen and Espen Voll have won several accolades including Wallpaper Award, Red Dot Award and the IF Award, and are renowned for their finesse in blending Scandinavian design sensibilities with various cultural influences, creating objects with a distinct voice. The ARAKU Moka Pot and espresso cup set echo the vibrant colours of the Araku region, and are a joyful addition to any home brewing station! Pick a colour for the ARAKU Moka Pot and espresso set and complete your bespoke gift box by choosing an ARAKU coffee from our range: Signature, Selection, Micro Climate and Grand Reserve. Signature is a coffee for everyone with its bold, exquisite character and, for the discerning palate, there is a resemblance to fine tea. Selection is a strong and full-bodied coffee that is created for espresso connoisseurs looking for a bold coffee experience. Micro Climate is distinctly different with its generous body and wholesome notes of candied fruit almost, with a hint of elegant bitterness in its finish. Grand Reserve is our most treasured offering yet; a highly complex and magnificent coffee defined by its silky, full-bodied mouthfeel.\"}' data-sheets-userformat='{\"2\":513,\"3\":{\"1\":0},\"12\":0}'>The signature ARAKU Moka Pot is a three-part coffee maker that is perfect for easily brewing a hot, highly intense cup. It’s crafted using insulated wood, enamel and food-grade stainless steel, avoiding the harmful effects of the more commonly used aluminium. </span><span> The chic, tiered ARAKU Moka Pot is inspired by traditional Japanese teapots and makes two cups in four minutes.</span></p>\n<p>This gift box includes an ARAKU Green Moka Pot and a Coffee Tin.<br><br><em>﻿You can add your gift note at once you have added the gift box to your cart!</em><br></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8552175665472,
+      "title": "Coffee Harmony",
+      "handle": "coffee-harmony",
+      "body_html": "<p>Discover the perfect harmony of flavour with ARAKU Green Moka Pot and Coffee set. Designed to elevate your coffee moments with rich and aromatic notes.</p>\n<p><span data-sheets-value='{\"1\":2,\"2\":\"Our orange (green/blue/yellow) Moka Pot Gift Box is the perfect gift for the coffee-lovers in your life. The signature ARAKU Moka Pot is a three-part coffee maker that is perfect for easily brewing a hot, highly intense cup. It’s crafted using insulated wood, enamel and food-grade stainless steel, avoiding the harmful effects of the more commonly used aluminium. The chic, tiered ARAKU Moka Pot is inspired by traditional Japanese teapots and makes two cups in four minutes. The gift box includes two ARAKU espresso cups; the stoneware cups have an elegant two-toned design with a white finish and a pop of colour on the inside. The cups are ideal for an espresso shot (50ml). The ARAKU Moka Pot and espresso cup set are exclusively designed for ARAKU by Norwegian design duo Anderssen &amp; Voll. Torbjørn Anderssen and Espen Voll have won several accolades including Wallpaper Award, Red Dot Award and the IF Award, and are renowned for their finesse in blending Scandinavian design sensibilities with various cultural influences, creating objects with a distinct voice. The ARAKU Moka Pot and espresso cup set echo the vibrant colours of the Araku region, and are a joyful addition to any home brewing station! Pick a colour for the ARAKU Moka Pot and espresso set and complete your bespoke gift box by choosing an ARAKU coffee from our range: Signature, Selection, Micro Climate and Grand Reserve. Signature is a coffee for everyone with its bold, exquisite character and, for the discerning palate, there is a resemblance to fine tea. Selection is a strong and full-bodied coffee that is created for espresso connoisseurs looking for a bold coffee experience. Micro Climate is distinctly different with its generous body and wholesome notes of candied fruit almost, with a hint of elegant bitterness in its finish. Grand Reserve is our most treasured offering yet; a highly complex and magnificent coffee defined by its silky, full-bodied mouthfeel.\"}' data-sheets-userformat='{\"2\":513,\"3\":{\"1\":0},\"12\":0}'>The signature ARAKU Moka Pot is a three-part coffee maker that is perfect for easily brewing a hot, highly intense cup. It’s crafted using insulated wood, enamel and food-grade stainless steel, avoiding the harmful effects of the more commonly used aluminium. </span><span> The chic, tiered ARAKU Moka Pot is inspired by traditional Japanese teapots and makes two cups in four minutes.</span></p>\n<p>This gift box includes an ARAKU Green Moka Pot and a Coffee Tin.<br><br><em>﻿You can add your gift note at once you have added the gift box to your cart!</em><br></p>",
+      "published_at": "2024-01-11T12:13:31+05:30",
+      "created_at": "2023-08-10T11:48:53+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Gifting",
+      "tags": [
+        "Category_Gifting",
+        "gifting"
+      ],
+      "variants": [
+        {
+          "id": 46067855032640,
+          "title": "Signature / Very Fine",
+          "option1": "Signature",
+          "option2": "Very Fine",
+          "option3": null,
+          "sku": "GC-SKU018",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 42318424572224,
+            "product_id": 8552175665472,
+            "position": 1,
+            "created_at": "2023-08-21T18:28:49+05:30",
+            "updated_at": "2023-08-21T18:28:50+05:30",
+            "alt": null,
+            "width": 2640,
+            "height": 2640,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotSignatureTin_1.jpg?v=1692622730",
+            "variant_ids": [
+              46067855032640,
+              46067855065408
+            ]
+          },
+          "available": false,
+          "price": "4500.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8552175665472,
+          "created_at": "2023-08-10T12:59:54+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 46067855065408,
+          "title": "Signature / Whole Beans",
+          "option1": "Signature",
+          "option2": "Whole Beans",
+          "option3": null,
+          "sku": "GC-SKU017",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 42318424572224,
+            "product_id": 8552175665472,
+            "position": 1,
+            "created_at": "2023-08-21T18:28:49+05:30",
+            "updated_at": "2023-08-21T18:28:50+05:30",
+            "alt": null,
+            "width": 2640,
+            "height": 2640,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotSignatureTin_1.jpg?v=1692622730",
+            "variant_ids": [
+              46067855032640,
+              46067855065408
+            ]
+          },
+          "available": false,
+          "price": "4500.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 8552175665472,
+          "created_at": "2023-08-10T12:59:54+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 46067855098176,
+          "title": "Selection / Very Fine",
+          "option1": "Selection",
+          "option2": "Very Fine",
+          "option3": null,
+          "sku": "GC-SKU020",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 42318424604992,
+            "product_id": 8552175665472,
+            "position": 2,
+            "created_at": "2023-08-21T18:28:49+05:30",
+            "updated_at": "2023-08-21T18:28:50+05:30",
+            "alt": null,
+            "width": 2640,
+            "height": 2640,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotSelectionTin.jpg?v=1692622730",
+            "variant_ids": [
+              46067855098176,
+              46067855130944
+            ]
+          },
+          "available": false,
+          "price": "4500.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 8552175665472,
+          "created_at": "2023-08-10T12:59:54+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 46067855130944,
+          "title": "Selection / Whole Beans",
+          "option1": "Selection",
+          "option2": "Whole Beans",
+          "option3": null,
+          "sku": "GC-SKU019",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 42318424604992,
+            "product_id": 8552175665472,
+            "position": 2,
+            "created_at": "2023-08-21T18:28:49+05:30",
+            "updated_at": "2023-08-21T18:28:50+05:30",
+            "alt": null,
+            "width": 2640,
+            "height": 2640,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotSelectionTin.jpg?v=1692622730",
+            "variant_ids": [
+              46067855098176,
+              46067855130944
+            ]
+          },
+          "available": false,
+          "price": "4500.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 4,
+          "product_id": 8552175665472,
+          "created_at": "2023-08-10T12:59:54+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 46067855163712,
+          "title": "Micro Climate / Very Fine",
+          "option1": "Micro Climate",
+          "option2": "Very Fine",
+          "option3": null,
+          "sku": "GC-SKU022",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 42318424670528,
+            "product_id": 8552175665472,
+            "position": 3,
+            "created_at": "2023-08-21T18:28:49+05:30",
+            "updated_at": "2023-08-21T18:28:50+05:30",
+            "alt": null,
+            "width": 2640,
+            "height": 2640,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotMicroclimateTin.jpg?v=1692622730",
+            "variant_ids": [
+              46067855163712,
+              46067855196480
+            ]
+          },
+          "available": false,
+          "price": "4500.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 5,
+          "product_id": 8552175665472,
+          "created_at": "2023-08-10T12:59:54+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 46067855196480,
+          "title": "Micro Climate / Whole Beans",
+          "option1": "Micro Climate",
+          "option2": "Whole Beans",
+          "option3": null,
+          "sku": "GC-SKU021",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 42318424670528,
+            "product_id": 8552175665472,
+            "position": 3,
+            "created_at": "2023-08-21T18:28:49+05:30",
+            "updated_at": "2023-08-21T18:28:50+05:30",
+            "alt": null,
+            "width": 2640,
+            "height": 2640,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotMicroclimateTin.jpg?v=1692622730",
+            "variant_ids": [
+              46067855163712,
+              46067855196480
+            ]
+          },
+          "available": false,
+          "price": "4500.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 6,
+          "product_id": 8552175665472,
+          "created_at": "2023-08-10T12:59:54+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 42318424572224,
+          "created_at": "2023-08-21T18:28:49+05:30",
+          "position": 1,
+          "updated_at": "2023-08-21T18:28:50+05:30",
+          "product_id": 8552175665472,
+          "variant_ids": [
+            46067855032640,
+            46067855065408
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotSignatureTin_1.jpg?v=1692622730",
+          "width": 2640,
+          "height": 2640
+        },
+        {
+          "id": 42318424604992,
+          "created_at": "2023-08-21T18:28:49+05:30",
+          "position": 2,
+          "updated_at": "2023-08-21T18:28:50+05:30",
+          "product_id": 8552175665472,
+          "variant_ids": [
+            46067855098176,
+            46067855130944
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotSelectionTin.jpg?v=1692622730",
+          "width": 2640,
+          "height": 2640
+        },
+        {
+          "id": 42318424670528,
+          "created_at": "2023-08-21T18:28:49+05:30",
+          "position": 3,
+          "updated_at": "2023-08-21T18:28:50+05:30",
+          "product_id": 8552175665472,
+          "variant_ids": [
+            46067855163712,
+            46067855196480
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotMicroclimateTin.jpg?v=1692622730",
+          "width": 2640,
+          "height": 2640
+        }
+      ],
+      "options": [
+        {
+          "name": "Coffee",
+          "position": 1,
+          "values": [
+            "Signature",
+            "Selection",
+            "Micro Climate"
+          ]
+        },
+        {
+          "name": "Grind Size",
+          "position": 2,
+          "values": [
+            "Very Fine",
+            "Whole Beans"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/1.GreenMokaPotSignatureTin_1.jpg?v=1692622730",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee Break",
+    "slug": "coffee-break",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-break",
+    "description": "<p>Set aside your to-do list &amp; make time to unwind with your loved ones over a fresh brew.</p>\n<p>Our Coffee Break Gift Box comes with a Signature Coffee tin and a set of striking blue cappuccino cups. ARAKU Signature Coffee has an exquisite, bold character and an aromatic balance, ready to be enjoyed with family and friends.</p>\n<div class=\"product-form__description rte body-large\">\n<p><em>You can specify your preferred grind size in the order note on the cart page</em></p>\n</div>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380911878464,
+      "title": "Coffee Break",
+      "handle": "coffee-break",
+      "body_html": "<p>Set aside your to-do list &amp; make time to unwind with your loved ones over a fresh brew.</p>\n<p>Our Coffee Break Gift Box comes with a Signature Coffee tin and a set of striking blue cappuccino cups. ARAKU Signature Coffee has an exquisite, bold character and an aromatic balance, ready to be enjoyed with family and friends.</p>\n<div class=\"product-form__description rte body-large\">\n<p><em>You can specify your preferred grind size in the order note on the cart page</em></p>\n</div>",
+      "published_at": "2023-10-10T16:49:37+05:30",
+      "created_at": "2023-06-12T15:07:39+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Gifting",
+      "tags": [
+        "Category_Gifting",
+        "Category_Others",
+        "gifting"
+      ],
+      "variants": [
+        {
+          "id": 45276019032384,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "GC-SKU005",
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": false,
+          "price": "2200.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380911878464,
+          "created_at": "2023-06-12T15:07:39+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 42913053704512,
+          "created_at": "2023-10-10T16:47:45+05:30",
+          "position": 1,
+          "updated_at": "2023-10-10T16:47:48+05:30",
+          "product_id": 8380911878464,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Arakuday23817-Edit-Edit_3.jpg?v=1696936668",
+          "width": 4675,
+          "height": 4675
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Arakuday23817-Edit-Edit_3.jpg?v=1696936668",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee Reflections",
+    "slug": "coffee-reflections",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-reflections",
+    "description": "<p>It is the season promising new beginnings. As you recall your fondest holiday memories, don't forget your festive coffee fix.</p>\n<p>An elegant set of green cappuccino cups are paired with our fruity yet strong Grand Reserve Coffee in the ARAKU Coffee Reflections Gift Box. Coming from our select coffee plots, Grand Reserve offers the ultimate balance between roundness and intensity, prized by coffee connoisseurs.<br><br><em>Please mention your preferred grind size for Grand Reserve in the order note. </em></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380911944000,
+      "title": "Coffee Reflections",
+      "handle": "coffee-reflections",
+      "body_html": "<p>It is the season promising new beginnings. As you recall your fondest holiday memories, don't forget your festive coffee fix.</p>\n<p>An elegant set of green cappuccino cups are paired with our fruity yet strong Grand Reserve Coffee in the ARAKU Coffee Reflections Gift Box. Coming from our select coffee plots, Grand Reserve offers the ultimate balance between roundness and intensity, prized by coffee connoisseurs.<br><br><em>Please mention your preferred grind size for Grand Reserve in the order note. </em></p>",
+      "published_at": "2023-10-05T13:12:27+05:30",
+      "created_at": "2023-06-12T15:07:41+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Gifting",
+      "tags": [
+        "Category_Brewing Equipment",
+        "Category_Gifting",
+        "Category_Others",
+        "gifting"
+      ],
+      "variants": [
+        {
+          "id": 45276019097920,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "GC-SKU006",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": false,
+          "price": "2500.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380911944000,
+          "created_at": "2023-06-12T15:07:41+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 41628535783744,
+          "created_at": "2023-06-12T15:08:15+05:30",
+          "position": 1,
+          "updated_at": "2023-10-06T11:43:20+05:30",
+          "product_id": 8380911944000,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/products/600x800_-_reflections_with_box.jpg?v=1696572800",
+          "width": 1227,
+          "height": 1227
+        },
+        {
+          "id": 41628535914816,
+          "created_at": "2023-06-12T15:08:15+05:30",
+          "position": 2,
+          "updated_at": "2023-10-06T11:43:49+05:30",
+          "product_id": 8380911944000,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/products/600x800_-_reflections_flat.jpg?v=1696572829",
+          "width": 1227,
+          "height": 1227
+        },
+        {
+          "id": 41628535947584,
+          "created_at": "2023-06-12T15:08:15+05:30",
+          "position": 3,
+          "updated_at": "2023-10-06T11:44:07+05:30",
+          "product_id": 8380911944000,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/products/600x800_-_box_3.jpg?v=1696572847",
+          "width": 1227,
+          "height": 1227
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/products/600x800_-_reflections_with_box.jpg?v=1696572800",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "SCA Coffee Skills Program: Sensory Skills (Intermediate)",
+    "slug": "sca-coffee-skills-program-sensory-skills-intermediate",
+    "direct_buy_url": "https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills-intermediate",
+    "description": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Sensory Skills (Intermediate)- 10 Points </b></p>\n<p data-mce-fragment=\"1\">In this two-day course, we further examine the use of Specialty Coffee Association's (SCA) Coffee Taster's Flavour Wheel and the World Coffee Research Sensory Lexicon for enhanced sensory recognition. This session includes acid profiling and multiple cupping sessions using the SCA Coffee Taster's Score Sheet to understand the nuances of coffee, followed by lively discussions. Proper protocol for arranging professional cupping sessions is reviewed, integrating SCA / Cup of Excellence (COE) standards.</p>\n<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Duration: </b><span style=\"font-weight: 400;\" data-mce-fragment=\"1\">16 hours (2 days)</span></p>\n<p><b>About:</b></p>\n<p>Conducted by Sherri Johns our coffee mentor, barista trainer and Head Judge of the Gems of Araku competition. Sherri is an Authorised SCA Trainer (AST), former Cup of Excellence Head Judge, globally-recognised coffee expert who conducts certified SCA class offerings ensuring the highest quality of instruction for beginning Barista, Roasters, the serious and curious coffee connoisseur.</p>\n<p><span style=\"font-weight: 400;\">All the courses are hosted at Araku World Specialty Coffee Academy (AWSCA), located at our flagship in Bangalore, Indiranagar. The academy is equipped with top-of-the-line tools and an in-house roastery. ⁠The Coffee Skills Program at AWSCA consists of three different modules: Introduction to Coffee for beginners and coffee-enthusiasts, and specialised courses such as Barista Skills and Sensory Skills in different levels. The courses range from 1-5 days with an opportunity for practical and written online exams to receive SCA certification.</span></p>\n<p data-mce-fragment=\"1\"> </p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8803917758784,
+      "title": "SCA Coffee Skills Program: Sensory Skills (Intermediate)",
+      "handle": "sca-coffee-skills-program-sensory-skills-intermediate",
+      "body_html": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Sensory Skills (Intermediate)- 10 Points </b></p>\n<p data-mce-fragment=\"1\">In this two-day course, we further examine the use of Specialty Coffee Association's (SCA) Coffee Taster's Flavour Wheel and the World Coffee Research Sensory Lexicon for enhanced sensory recognition. This session includes acid profiling and multiple cupping sessions using the SCA Coffee Taster's Score Sheet to understand the nuances of coffee, followed by lively discussions. Proper protocol for arranging professional cupping sessions is reviewed, integrating SCA / Cup of Excellence (COE) standards.</p>\n<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Duration: </b><span style=\"font-weight: 400;\" data-mce-fragment=\"1\">16 hours (2 days)</span></p>\n<p><b>About:</b></p>\n<p>Conducted by Sherri Johns our coffee mentor, barista trainer and Head Judge of the Gems of Araku competition. Sherri is an Authorised SCA Trainer (AST), former Cup of Excellence Head Judge, globally-recognised coffee expert who conducts certified SCA class offerings ensuring the highest quality of instruction for beginning Barista, Roasters, the serious and curious coffee connoisseur.</p>\n<p><span style=\"font-weight: 400;\">All the courses are hosted at Araku World Specialty Coffee Academy (AWSCA), located at our flagship in Bangalore, Indiranagar. The academy is equipped with top-of-the-line tools and an in-house roastery. ⁠The Coffee Skills Program at AWSCA consists of three different modules: Introduction to Coffee for beginners and coffee-enthusiasts, and specialised courses such as Barista Skills and Sensory Skills in different levels. The courses range from 1-5 days with an opportunity for practical and written online exams to receive SCA certification.</span></p>\n<p data-mce-fragment=\"1\"> </p>",
+      "published_at": "2023-10-05T11:47:40+05:30",
+      "created_at": "2023-10-05T11:43:24+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50327234347328,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "",
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": false,
+          "price": "38000.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8803917758784,
+          "created_at": "2025-02-26T12:26:07+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 42856556462400,
+          "created_at": "2023-10-05T11:45:49+05:30",
+          "position": 1,
+          "updated_at": "2024-08-22T18:05:56+05:30",
+          "product_id": 8803917758784,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Araku-SherriJohns-October2021_96of150_1__11zon.jpg?v=1724330156",
+          "width": 2666,
+          "height": 4000
+        },
+        {
+          "id": 42856558362944,
+          "created_at": "2023-10-05T11:46:02+05:30",
+          "position": 2,
+          "updated_at": "2023-10-05T11:46:19+05:30",
+          "product_id": 8803917758784,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/rmbizvjokh9y26gmvuzt.jpg?v=1696486579",
+          "width": 1000,
+          "height": 1500
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Araku-SherriJohns-October2021_96of150_1__11zon.jpg?v=1724330156",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "SCA Coffee Skills Program: Sensory Skills (Foundation)",
+    "slug": "sca-coffee-skills-program-sensory-skills-foundation",
+    "direct_buy_url": "https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills",
+    "description": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Sensory Skills (Foundation) - 05 Points</b></p>\n<p data-mce-fragment=\"1\"><span style=\"font-weight: 400;\" data-mce-fragment=\"1\">In this one-day course you will learn the fundamentals of sensory evaluation of roasted coffee, an essential skill for many positions across the food and beverage industry. The Authorised Specialty Coffee Association Trainer (AST) will take you through: how the human body perceives taste and flavour, how to communicate a sensory experience methodically, introduction to the SCA Coffee Taster's Flavour Wheel and the World Coffee Research Sensory Lexicon. This course includes multiple tastings and one cupping session with instructions for what cupping is and why we cup.<br><b data-mce-fragment=\"1\"></b></span></p>\n<p data-mce-fragment=\"1\"><span style=\"font-weight: 400;\" data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Duration: </b>8 hours (1 day)<br></span></p>\n<p data-mce-fragment=\"1\"><span><strong>About:</strong> </span></p>\n<p data-mce-fragment=\"1\"><span>Conducted by Sherri Johns our coffee mentor, barista trainer and Head Judge of the Gems of Araku competition. Sherri is an Authorised SCA Trainer (AST), former Cup of Excellence Head Judge, globally-recognised coffee expert who conducts certified SCA class offerings ensuring the highest quality of instruction for beginning Barista, Roasters, the serious and curious coffee connoisseur. </span></p>\n<p data-mce-fragment=\"1\">All the courses are hosted at Araku World Specialty Coffee Academy (AWSCA), located at our flagship in Bangalore, Indiranagar. The academy is equipped with top-of-the-line tools and an in-house roastery. ⁠The Coffee Skills Program at AWSCA consists of three different modules: Introduction to Coffee for beginners and coffee-enthusiasts, and specialised courses such as Barista Skills and Sensory Skills in different levels. The courses range from 1-5 days with an opportunity for practical and written online exams to receive SCA certification.</p>\n<p data-mce-fragment=\"1\"><span style=\"font-weight: 400;\" data-mce-fragment=\"1\"><br></span></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8803911172416,
+      "title": "SCA Coffee Skills Program: Sensory Skills (Foundation)",
+      "handle": "sca-coffee-skills-program-sensory-skills",
+      "body_html": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Sensory Skills (Foundation) - 05 Points</b></p>\n<p data-mce-fragment=\"1\"><span style=\"font-weight: 400;\" data-mce-fragment=\"1\">In this one-day course you will learn the fundamentals of sensory evaluation of roasted coffee, an essential skill for many positions across the food and beverage industry. The Authorised Specialty Coffee Association Trainer (AST) will take you through: how the human body perceives taste and flavour, how to communicate a sensory experience methodically, introduction to the SCA Coffee Taster's Flavour Wheel and the World Coffee Research Sensory Lexicon. This course includes multiple tastings and one cupping session with instructions for what cupping is and why we cup.<br><b data-mce-fragment=\"1\"></b></span></p>\n<p data-mce-fragment=\"1\"><span style=\"font-weight: 400;\" data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Duration: </b>8 hours (1 day)<br></span></p>\n<p data-mce-fragment=\"1\"><span><strong>About:</strong> </span></p>\n<p data-mce-fragment=\"1\"><span>Conducted by Sherri Johns our coffee mentor, barista trainer and Head Judge of the Gems of Araku competition. Sherri is an Authorised SCA Trainer (AST), former Cup of Excellence Head Judge, globally-recognised coffee expert who conducts certified SCA class offerings ensuring the highest quality of instruction for beginning Barista, Roasters, the serious and curious coffee connoisseur. </span></p>\n<p data-mce-fragment=\"1\">All the courses are hosted at Araku World Specialty Coffee Academy (AWSCA), located at our flagship in Bangalore, Indiranagar. The academy is equipped with top-of-the-line tools and an in-house roastery. ⁠The Coffee Skills Program at AWSCA consists of three different modules: Introduction to Coffee for beginners and coffee-enthusiasts, and specialised courses such as Barista Skills and Sensory Skills in different levels. The courses range from 1-5 days with an opportunity for practical and written online exams to receive SCA certification.</p>\n<p data-mce-fragment=\"1\"><span style=\"font-weight: 400;\" data-mce-fragment=\"1\"><br></span></p>",
+      "published_at": "2023-10-05T11:42:21+05:30",
+      "created_at": "2023-10-05T11:32:44+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 50327236772160,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "",
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "28000.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8803911172416,
+          "created_at": "2025-02-26T12:27:16+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 42856519762240,
+          "created_at": "2023-10-05T11:41:29+05:30",
+          "position": 1,
+          "updated_at": "2024-08-22T18:05:22+05:30",
+          "product_id": 8803911172416,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/v29wg2gj39h0zzqnxxej_1.jpg?v=1724330122",
+          "width": 500,
+          "height": 750
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/v29wg2gj39h0zzqnxxej_1.jpg?v=1724330122",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Pocket Brew - Micro Climate",
+    "slug": "pocket-brew-micro-climate",
+    "direct_buy_url": "https://www.arakucoffee.in/products/pocket-brew-micro-climate",
+    "description": "<p>Our single-serve coffee packs combine the speed of an instant brew with the unrivalled quality of ARAKU's specialty coffee. As the name suggests, these drip bag sachets fit any pocket or purse and offer an extremely portable coffee. Each sachet is packaged individually and nitrogen-flushed to maintain the coffee's integrity and freshness. Suited for the airplane, the open road, hotels, offices, or even when you just need a quick fix at home. A sturdy cup and hot water does the trick.  </p>\n<p>This pack contains 10 individual sachets.  </p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380915286336,
+      "title": "Pocket Brew - Micro Climate",
+      "handle": "pocket-brew-micro-climate",
+      "body_html": "<p>Our single-serve coffee packs combine the speed of an instant brew with the unrivalled quality of ARAKU's specialty coffee. As the name suggests, these drip bag sachets fit any pocket or purse and offer an extremely portable coffee. Each sachet is packaged individually and nitrogen-flushed to maintain the coffee's integrity and freshness. Suited for the airplane, the open road, hotels, offices, or even when you just need a quick fix at home. A sturdy cup and hot water does the trick.  </p>\n<p>This pack contains 10 individual sachets.  </p>",
+      "published_at": "2023-09-22T12:06:27+05:30",
+      "created_at": "2023-06-12T15:09:59+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Coffee",
+      "tags": [
+        "Category_Coffee",
+        "coffee",
+        "Pocket brew",
+        "pocket_brews",
+        "tag_dried_berry",
+        "tag_grapes",
+        "tag_honey",
+        "tag_olives"
+      ],
+      "variants": [
+        {
+          "id": 45276024176960,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "COF0027",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "580.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380915286336,
+          "created_at": "2023-06-12T15:09:59+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 45598868668736,
+          "created_at": "2024-08-13T17:50:55+05:30",
+          "position": 1,
+          "updated_at": "2024-08-13T17:50:57+05:30",
+          "product_id": 8380915286336,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_2667_copy_1.jpg?v=1723551657",
+          "width": 4000,
+          "height": 4000
+        },
+        {
+          "id": 41679380906304,
+          "created_at": "2023-06-16T19:17:02+05:30",
+          "position": 2,
+          "updated_at": "2024-08-13T17:51:05+05:30",
+          "product_id": 8380915286336,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Moodshots-40_1.jpg?v=1723551665",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/IMG_2667_copy_1.jpg?v=1723551657",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee 101: Nail That Brew",
+    "slug": "coffee-101-nail-that-brew",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-101-nail-that-brew",
+    "description": "",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8634077774144,
+      "title": "Coffee 101: Nail That Brew",
+      "handle": "coffee-101-nail-that-brew",
+      "body_html": "",
+      "published_at": "2023-08-30T12:58:39+05:30",
+      "created_at": "2023-08-30T12:58:39+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 48862077288768,
+          "title": "2000 + Taxes / April 12 | 4pm to 6pm",
+          "option1": "2000 + Taxes",
+          "option2": "April 12 | 4pm to 6pm",
+          "option3": null,
+          "sku": "",
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "2360.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8634077774144,
+          "created_at": "2024-06-04T18:15:52+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 43096881791296,
+          "created_at": "2023-11-01T17:12:26+05:30",
+          "position": 1,
+          "updated_at": "2023-11-01T17:12:29+05:30",
+          "product_id": 8634077774144,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/nail-in-brew.jpg?v=1698838949",
+          "width": 5334,
+          "height": 4000
+        }
+      ],
+      "options": [
+        {
+          "name": "Price",
+          "position": 1,
+          "values": [
+            "2000 + Taxes"
+          ]
+        },
+        {
+          "name": "Date & Time",
+          "position": 2,
+          "values": [
+            "April 12 | 4pm to 6pm"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/nail-in-brew.jpg?v=1698838949",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee 101: Whole Latte Love",
+    "slug": "coffee-101-whole-latte-love",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-101-whole-latte-love",
+    "description": "",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8633960825152,
+      "title": "Coffee 101: Whole Latte Love",
+      "handle": "coffee-101-whole-latte-love",
+      "body_html": "",
+      "published_at": "2023-08-30T12:19:31+05:30",
+      "created_at": "2023-08-30T12:19:31+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 48102100402496,
+          "title": "2000 + Taxes / May 03 | 4pm to 6pm",
+          "option1": "2000 + Taxes",
+          "option2": "May 03 | 4pm to 6pm",
+          "option3": null,
+          "sku": "",
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "2360.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8633960825152,
+          "created_at": "2024-03-26T19:21:54+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 43096886444352,
+          "created_at": "2023-11-01T17:14:15+05:30",
+          "position": 1,
+          "updated_at": "2023-11-01T17:14:17+05:30",
+          "product_id": 8633960825152,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/whole-latte-love.jpg?v=1698839057",
+          "width": 6000,
+          "height": 4000
+        }
+      ],
+      "options": [
+        {
+          "name": "Price",
+          "position": 1,
+          "values": [
+            "2000 + Taxes"
+          ]
+        },
+        {
+          "name": "Date & Time",
+          "position": 2,
+          "values": [
+            "May 03 | 4pm to 6pm"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/whole-latte-love.jpg?v=1698839057",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee 101: Sensory Essentials",
+    "slug": "coffee-101-sensory-essentials",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-101-sensory_essentials",
+    "description": "",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8587490132288,
+      "title": "Coffee 101: Sensory Essentials",
+      "handle": "coffee-101-sensory_essentials",
+      "body_html": "",
+      "published_at": "2023-08-19T12:10:18+05:30",
+      "created_at": "2023-08-19T03:21:04+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 49962068541760,
+          "title": "May 24 | 4PM to 6PM / 2200 + Taxes",
+          "option1": "May 24 | 4PM to 6PM",
+          "option2": "2200 + Taxes",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "2596.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8587490132288,
+          "created_at": "2024-11-19T17:48:22+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 43096901878080,
+          "created_at": "2023-11-01T17:18:37+05:30",
+          "position": 1,
+          "updated_at": "2024-08-22T18:04:33+05:30",
+          "product_id": 8587490132288,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/sniff-slurp-spit.jpg?v=1724330073",
+          "width": 3339,
+          "height": 5010
+        },
+        {
+          "id": 44300898140480,
+          "created_at": "2024-04-08T18:55:28+05:30",
+          "position": 2,
+          "updated_at": "2024-04-08T18:55:29+05:30",
+          "product_id": 8587490132288,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/ArakuAWSCATrainingPhotosOctober2023-154_11zon.jpg?v=1712582729",
+          "width": 4918,
+          "height": 3688
+        }
+      ],
+      "options": [
+        {
+          "name": "Date & Time",
+          "position": 1,
+          "values": [
+            "May 24 | 4PM to 6PM"
+          ]
+        },
+        {
+          "name": "Price",
+          "position": 2,
+          "values": [
+            "2200 + Taxes"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/sniff-slurp-spit.jpg?v=1724330073",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "SCA Coffee Skills Program: Introduction to Coffee",
+    "slug": "sca-coffee-skills-program-introduction-to-coffee",
+    "direct_buy_url": "https://www.arakucoffee.in/products/sca-coffee-skills-program-introduction-to-coffee",
+    "description": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Introduction to Coffee - 10 Points</b></p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\" style=\"font-weight: 400;\" data-mce-style=\"font-weight: 400;\">This comprehensive four-hour course is a perfect starting point to introduce you to all the key concepts of specialty coffee. You will learn the origins of coffee, the differences between Robusta and Arabica beans, how specialty coffee is grown, produced, harvested, roasted and how grind, brewing method and water affect quality in the cup. Additionally, the module provides you with introductory skills on how to taste and assess coffee, discover the SCA flavour wheel and cupping form as we complete the course with a cupping session. <br><b data-mce-fragment=\"1\"></b></span></p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\" style=\"font-weight: 400;\" data-mce-style=\"font-weight: 400;\"><b data-mce-fragment=\"1\">Duration: </b><span data-mce-fragment=\"1\" style=\"font-weight: 400;\" data-mce-style=\"font-weight: 400;\">4 hours</span><br></span></p>\n<p data-mce-fragment=\"1\"><span><strong>About:</strong> </span></p>\n<p data-mce-fragment=\"1\"><span>Attend SCA-certified courses conducted by</span> Sumanth Paranjape<span>, Assistant Food and Beverage Manager (ARAKU Coffee). Sumanth is also an Authorised SCA Trainer (AST) and offers the highest quality of instruction for beginning baristas, roasters, and the serious and curious coffee connoisseur. </span></p>\n<p data-mce-fragment=\"1\">All the courses are hosted at Araku World Specialty Coffee Academy (AWSCA), located at our flagship in Bangalore, Indiranagar. The academy is equipped with top-of-the-line tools and an in-house roastery. ⁠The Coffee Skills Program at AWSCA consists of three different modules: Introduction to Coffee for beginners and coffee-enthusiasts, and specialised courses such as Barista Skills and Sensory Skills in different levels. The courses range from 1-5 days with an opportunity for practical and written online exams to receive SCA certification.</p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\" style=\"font-weight: 400;\" data-mce-style=\"font-weight: 400;\"><br></span></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8498575212864,
+      "title": "SCA Coffee Skills Program: Introduction to Coffee",
+      "handle": "sca-coffee-skills-program-introduction-to-coffee",
+      "body_html": "<p data-mce-fragment=\"1\"><b data-mce-fragment=\"1\">Introduction to Coffee - 10 Points</b></p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\" style=\"font-weight: 400;\" data-mce-style=\"font-weight: 400;\">This comprehensive four-hour course is a perfect starting point to introduce you to all the key concepts of specialty coffee. You will learn the origins of coffee, the differences between Robusta and Arabica beans, how specialty coffee is grown, produced, harvested, roasted and how grind, brewing method and water affect quality in the cup. Additionally, the module provides you with introductory skills on how to taste and assess coffee, discover the SCA flavour wheel and cupping form as we complete the course with a cupping session. <br><b data-mce-fragment=\"1\"></b></span></p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\" style=\"font-weight: 400;\" data-mce-style=\"font-weight: 400;\"><b data-mce-fragment=\"1\">Duration: </b><span data-mce-fragment=\"1\" style=\"font-weight: 400;\" data-mce-style=\"font-weight: 400;\">4 hours</span><br></span></p>\n<p data-mce-fragment=\"1\"><span><strong>About:</strong> </span></p>\n<p data-mce-fragment=\"1\"><span>Attend SCA-certified courses conducted by</span> Sumanth Paranjape<span>, Assistant Food and Beverage Manager (ARAKU Coffee). Sumanth is also an Authorised SCA Trainer (AST) and offers the highest quality of instruction for beginning baristas, roasters, and the serious and curious coffee connoisseur. </span></p>\n<p data-mce-fragment=\"1\">All the courses are hosted at Araku World Specialty Coffee Academy (AWSCA), located at our flagship in Bangalore, Indiranagar. The academy is equipped with top-of-the-line tools and an in-house roastery. ⁠The Coffee Skills Program at AWSCA consists of three different modules: Introduction to Coffee for beginners and coffee-enthusiasts, and specialised courses such as Barista Skills and Sensory Skills in different levels. The courses range from 1-5 days with an opportunity for practical and written online exams to receive SCA certification.</p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\" style=\"font-weight: 400;\" data-mce-style=\"font-weight: 400;\"><br></span></p>",
+      "published_at": "2023-08-11T18:55:43+05:30",
+      "created_at": "2023-07-25T16:51:45+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 49820279701824,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "15",
+          "requires_shipping": false,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "17700.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 8498575212864,
+          "created_at": "2024-10-18T15:34:39+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 42160010461504,
+          "created_at": "2023-08-04T16:10:15+05:30",
+          "position": 1,
+          "updated_at": "2023-12-21T13:28:27+05:30",
+          "product_id": 8498575212864,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/trythis.jpg?v=1703145507",
+          "width": 2981,
+          "height": 4472
+        },
+        {
+          "id": 43322804339008,
+          "created_at": "2023-11-29T18:14:47+05:30",
+          "position": 2,
+          "updated_at": "2023-12-21T13:28:27+05:30",
+          "product_id": 8498575212864,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/h3hpgytxk1mmzswhzkqd.jpg?v=1703145507",
+          "width": 1000,
+          "height": 1500
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/trythis.jpg?v=1703145507",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Brewing with V60 - Event",
+    "slug": "brewing-with-v60-event",
+    "direct_buy_url": "https://www.arakucoffee.in/products/brewing-with-v60-event",
+    "description": "",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8484273914176,
+      "title": "Brewing with V60 - Event",
+      "handle": "brewing-with-v60-event",
+      "body_html": "",
+      "published_at": "2023-07-19T11:48:02+05:30",
+      "created_at": "2023-07-19T11:48:03+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 45672312013120,
+          "title": "July 24 | 10am - 3pm / Bangalore",
+          "option1": "July 24 | 10am - 3pm",
+          "option2": "Bangalore",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8484273914176,
+          "created_at": "2023-07-19T11:48:03+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45672312078656,
+          "title": "July 24 | 10am - 3pm / Mumbai",
+          "option1": "July 24 | 10am - 3pm",
+          "option2": "Mumbai",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 8484273914176,
+          "created_at": "2023-07-19T11:48:03+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45672312144192,
+          "title": "July 25 | 10am - 3pm / Bangalore",
+          "option1": "July 25 | 10am - 3pm",
+          "option2": "Bangalore",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 8484273914176,
+          "created_at": "2023-07-19T11:48:03+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45672312176960,
+          "title": "July 25 | 10am - 3pm / Mumbai",
+          "option1": "July 25 | 10am - 3pm",
+          "option2": "Mumbai",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 4,
+          "product_id": 8484273914176,
+          "created_at": "2023-07-19T11:48:03+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45672312242496,
+          "title": "July 26 | 10am - 3pm / Bangalore",
+          "option1": "July 26 | 10am - 3pm",
+          "option2": "Bangalore",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 5,
+          "product_id": 8484273914176,
+          "created_at": "2023-07-19T11:48:03+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45672312308032,
+          "title": "July 26 | 10am - 3pm / Mumbai",
+          "option1": "July 26 | 10am - 3pm",
+          "option2": "Mumbai",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 6,
+          "product_id": 8484273914176,
+          "created_at": "2023-07-19T11:48:03+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [],
+      "options": [
+        {
+          "name": "Date & Time",
+          "position": 1,
+          "values": [
+            "July 24 | 10am - 3pm",
+            "July 25 | 10am - 3pm",
+            "July 26 | 10am - 3pm"
+          ]
+        },
+        {
+          "name": "City",
+          "position": 2,
+          "values": [
+            "Bangalore",
+            "Mumbai"
+          ]
+        }
+      ]
+    },
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Brewing with V60",
+    "slug": "brewing-with-v60",
+    "direct_buy_url": "https://www.arakucoffee.in/products/brewing-with-v60",
+    "description": "",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8483397009728,
+      "title": "Brewing with V60",
+      "handle": "brewing-with-v60",
+      "body_html": "",
+      "published_at": "2023-07-19T08:36:44+05:30",
+      "created_at": "2023-07-19T08:35:30+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 45665469202752,
+          "title": "July 26 | 10am - 3pm / Bangalore",
+          "option1": "July 26 | 10am - 3pm",
+          "option2": "Bangalore",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8483397009728,
+          "created_at": "2023-07-19T08:35:30+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45665469235520,
+          "title": "July 26 | 10am - 3pm / Mumbai",
+          "option1": "July 26 | 10am - 3pm",
+          "option2": "Mumbai",
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 8483397009728,
+          "created_at": "2023-07-19T08:35:30+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45700417323328,
+          "title": "July 29 | 11am - 6pm / Bangalore",
+          "option1": "July 29 | 11am - 6pm",
+          "option2": "Bangalore",
+          "option3": null,
+          "sku": "",
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 8483397009728,
+          "created_at": "2023-07-20T16:37:26+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45700417356096,
+          "title": "July 29 | 11am - 6pm / Mumbai",
+          "option1": "July 29 | 11am - 6pm",
+          "option2": "Mumbai",
+          "option3": null,
+          "sku": "",
+          "requires_shipping": false,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "850.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 4,
+          "product_id": 8483397009728,
+          "created_at": "2023-07-20T16:37:26+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [],
+      "options": [
+        {
+          "name": "Date & Time",
+          "position": 1,
+          "values": [
+            "July 26 | 10am - 3pm",
+            "July 29 | 11am - 6pm"
+          ]
+        },
+        {
+          "name": "City",
+          "position": 2,
+          "values": [
+            "Bangalore",
+            "Mumbai"
+          ]
+        }
+      ]
+    },
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee Debates",
+    "slug": "coffee-debates",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-debates",
+    "description": "<p>Stir up the festive cheer with your favourite folks. For hearty conversations, treat your friends and family to a taste of premium single-origin, 100% Arabica.</p>\n<p>Our Coffee Debates Gift Box comes with two coffee variants, Signature and Grand Reserve. The two bold and distinct flavoured coffees, alongside a set of beautiful green latte mugs are a perfect combination.</p>\n<p>Please add the preferred grind size in the order note at cart page. </p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380912140608,
+      "title": "Coffee Debates",
+      "handle": "coffee-debates",
+      "body_html": "<p>Stir up the festive cheer with your favourite folks. For hearty conversations, treat your friends and family to a taste of premium single-origin, 100% Arabica.</p>\n<p>Our Coffee Debates Gift Box comes with two coffee variants, Signature and Grand Reserve. The two bold and distinct flavoured coffees, alongside a set of beautiful green latte mugs are a perfect combination.</p>\n<p>Please add the preferred grind size in the order note at cart page. </p>",
+      "published_at": "2023-07-03T11:12:22+05:30",
+      "created_at": "2023-06-12T15:07:49+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Gifting",
+      "tags": [
+        "Category_Gifting",
+        "Category_Others",
+        "gifting"
+      ],
+      "variants": [
+        {
+          "id": 45276019294528,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "GC-SKU007",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": false,
+          "price": "3000.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380912140608,
+          "created_at": "2023-06-12T15:07:49+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 41825326039360,
+          "created_at": "2023-07-03T11:11:51+05:30",
+          "position": 1,
+          "updated_at": "2023-07-03T11:11:53+05:30",
+          "product_id": 8380912140608,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/ARAKUDebatesGiftBoxPlain.jpg?v=1688362913",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41825336000832,
+          "created_at": "2023-07-03T11:13:54+05:30",
+          "position": 2,
+          "updated_at": "2023-07-03T11:13:55+05:30",
+          "product_id": 8380912140608,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/ARAKUGiftboxplain.jpg?v=1688363035",
+          "width": 1251,
+          "height": 1668
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/ARAKUDebatesGiftBoxPlain.jpg?v=1688362913",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Micro Climate",
+    "slug": "micro-climate",
+    "direct_buy_url": "https://www.arakucoffee.in/products/micro-climate",
+    "description": "<p><span data-mce-fragment=\"1\">Grown in a rare terroir, like the riverine island of Baankubedda, distinguished by gentle slopes, diversely shaded highland microplots. This coffee is a natural process.</span></p>\n<p><br></p>\n<p><span data-mce-fragment=\"1\">Not sure which grind to order? Checkout our grind size chart below for a quick brew tip!</span></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380906176832,
+      "title": "Micro Climate",
+      "handle": "micro-climate",
+      "body_html": "<p><span data-mce-fragment=\"1\">Grown in a rare terroir, like the riverine island of Baankubedda, distinguished by gentle slopes, diversely shaded highland microplots. This coffee is a natural process.</span></p>\n<p><br></p>\n<p><span data-mce-fragment=\"1\">Not sure which grind to order? Checkout our grind size chart below for a quick brew tip!</span></p>",
+      "published_at": "2023-06-20T13:36:04+05:30",
+      "created_at": "2023-06-12T15:04:45+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Coffee",
+      "tags": [
+        "Category_Coffee",
+        "coffee",
+        "ground_coffee",
+        "tag_dried_berry",
+        "tag_grapes",
+        "tag_honey",
+        "tag_olives"
+      ],
+      "variants": [
+        {
+          "id": 45298582815040,
+          "title": "Pouch / 250 gms / Whole Beans",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Whole Beans",
+          "sku": "COF0021",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225491776,
+            "product_id": 8380906176832,
+            "position": 3,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23361_7548b78e-db8d-49ec-a388-76117244a975.jpg?v=1687248782",
+            "variant_ids": [
+              45298582815040,
+              45298582847808,
+              45298582880576,
+              45298582913344,
+              45298582946112
+            ]
+          },
+          "available": true,
+          "price": "630.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-14T16:51:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298582847808,
+          "title": "Pouch / 250 gms / Very Fine Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Very Fine Grind",
+          "sku": "COF0012",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225491776,
+            "product_id": 8380906176832,
+            "position": 3,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23361_7548b78e-db8d-49ec-a388-76117244a975.jpg?v=1687248782",
+            "variant_ids": [
+              45298582815040,
+              45298582847808,
+              45298582880576,
+              45298582913344,
+              45298582946112
+            ]
+          },
+          "available": true,
+          "price": "630.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-14T16:51:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298582880576,
+          "title": "Pouch / 250 gms / Fine Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Fine Grind",
+          "sku": "COF0046",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225491776,
+            "product_id": 8380906176832,
+            "position": 3,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23361_7548b78e-db8d-49ec-a388-76117244a975.jpg?v=1687248782",
+            "variant_ids": [
+              45298582815040,
+              45298582847808,
+              45298582880576,
+              45298582913344,
+              45298582946112
+            ]
+          },
+          "available": true,
+          "price": "630.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-14T16:51:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298582913344,
+          "title": "Pouch / 250 gms / Medium Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Medium Grind",
+          "sku": "COF0047",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225491776,
+            "product_id": 8380906176832,
+            "position": 3,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23361_7548b78e-db8d-49ec-a388-76117244a975.jpg?v=1687248782",
+            "variant_ids": [
+              45298582815040,
+              45298582847808,
+              45298582880576,
+              45298582913344,
+              45298582946112
+            ]
+          },
+          "available": true,
+          "price": "630.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 4,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-14T16:51:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298582946112,
+          "title": "Pouch / 250 gms / Coarse Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Coarse Grind",
+          "sku": "COF0048",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225491776,
+            "product_id": 8380906176832,
+            "position": 3,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23361_7548b78e-db8d-49ec-a388-76117244a975.jpg?v=1687248782",
+            "variant_ids": [
+              45298582815040,
+              45298582847808,
+              45298582880576,
+              45298582913344,
+              45298582946112
+            ]
+          },
+          "available": true,
+          "price": "630.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 5,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-14T16:51:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45276012085568,
+          "title": "Tin / 250 gms / Whole Beans",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Whole Beans",
+          "sku": "COF0009",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225459008,
+            "product_id": 8380906176832,
+            "position": 4,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23379_cfeb14e1-63e0-4978-a76a-e638032479be.jpg?v=1687248782",
+            "variant_ids": [
+              45276012085568,
+              45298582683968,
+              45298582716736,
+              45298582749504,
+              45298582782272
+            ]
+          },
+          "available": false,
+          "price": "730.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 6,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-12T15:04:46+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298582683968,
+          "title": "Tin / 250 gms / Very Fine Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Very Fine Grind",
+          "sku": "COF0010",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225459008,
+            "product_id": 8380906176832,
+            "position": 4,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23379_cfeb14e1-63e0-4978-a76a-e638032479be.jpg?v=1687248782",
+            "variant_ids": [
+              45276012085568,
+              45298582683968,
+              45298582716736,
+              45298582749504,
+              45298582782272
+            ]
+          },
+          "available": false,
+          "price": "730.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 7,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-14T16:51:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298582716736,
+          "title": "Tin / 250 gms / Fine Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Fine Grind",
+          "sku": "COF0067",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225459008,
+            "product_id": 8380906176832,
+            "position": 4,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23379_cfeb14e1-63e0-4978-a76a-e638032479be.jpg?v=1687248782",
+            "variant_ids": [
+              45276012085568,
+              45298582683968,
+              45298582716736,
+              45298582749504,
+              45298582782272
+            ]
+          },
+          "available": false,
+          "price": "730.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 8,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-14T16:51:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298582749504,
+          "title": "Tin / 250 gms / Medium Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Medium Grind",
+          "sku": "COF0068",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225459008,
+            "product_id": 8380906176832,
+            "position": 4,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23379_cfeb14e1-63e0-4978-a76a-e638032479be.jpg?v=1687248782",
+            "variant_ids": [
+              45276012085568,
+              45298582683968,
+              45298582716736,
+              45298582749504,
+              45298582782272
+            ]
+          },
+          "available": false,
+          "price": "730.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 9,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-14T16:51:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298582782272,
+          "title": "Tin / 250 gms / Coarse Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Coarse Grind",
+          "sku": "COF0069",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639225459008,
+            "product_id": 8380906176832,
+            "position": 4,
+            "created_at": "2023-06-13T15:54:18+05:30",
+            "updated_at": "2023-06-20T13:43:02+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23379_cfeb14e1-63e0-4978-a76a-e638032479be.jpg?v=1687248782",
+            "variant_ids": [
+              45276012085568,
+              45298582683968,
+              45298582716736,
+              45298582749504,
+              45298582782272
+            ]
+          },
+          "available": false,
+          "price": "730.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 10,
+          "product_id": 8380906176832,
+          "created_at": "2023-06-14T16:51:57+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 41639225426240,
+          "created_at": "2023-06-13T15:54:18+05:30",
+          "position": 1,
+          "updated_at": "2023-06-16T18:20:26+05:30",
+          "product_id": 8380906176832,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--16_d17075ac-25dd-475c-a742-b0e14c7f5ab2.jpg?v=1686919826",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41679647473984,
+          "created_at": "2023-06-16T19:27:08+05:30",
+          "position": 2,
+          "updated_at": "2023-06-16T19:27:10+05:30",
+          "product_id": 8380906176832,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Coffee-Microclimate1.jpg?v=1686923830",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41639225491776,
+          "created_at": "2023-06-13T15:54:18+05:30",
+          "position": 3,
+          "updated_at": "2023-06-20T13:43:02+05:30",
+          "product_id": 8380906176832,
+          "variant_ids": [
+            45298582815040,
+            45298582847808,
+            45298582880576,
+            45298582913344,
+            45298582946112
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23361_7548b78e-db8d-49ec-a388-76117244a975.jpg?v=1687248782",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41639225459008,
+          "created_at": "2023-06-13T15:54:18+05:30",
+          "position": 4,
+          "updated_at": "2023-06-20T13:43:02+05:30",
+          "product_id": 8380906176832,
+          "variant_ids": [
+            45276012085568,
+            45298582683968,
+            45298582716736,
+            45298582749504,
+            45298582782272
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23379_cfeb14e1-63e0-4978-a76a-e638032479be.jpg?v=1687248782",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "options": [
+        {
+          "name": "Pack Type",
+          "position": 1,
+          "values": [
+            "Pouch",
+            "Tin"
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            "250 gms"
+          ]
+        },
+        {
+          "name": "Grind size",
+          "position": 3,
+          "values": [
+            "Whole Beans",
+            "Very Fine Grind",
+            "Fine Grind",
+            "Medium Grind",
+            "Coarse Grind"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--16_d17075ac-25dd-475c-a742-b0e14c7f5ab2.jpg?v=1686919826",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Coffee Party",
+    "slug": "coffee-party",
+    "direct_buy_url": "https://www.arakucoffee.in/products/coffee-party",
+    "description": "<p>Throw a virtual party this festive season &amp; create new coffee rituals. Dress up and match your outfit with a vibrant mug as you sip on your ARAKU cuppa.</p>\n<p>Designed by Norwegian designer duo Anderssen &amp; Voll, our aesthetic set of four stunning mugs make a perfect gift for the coffee-lovers around you.</p>\n<div class=\"product-form__description rte body-large\">\n<p>Please add the preferred grind size in the order note at cart page. </p>\n</div>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380912075072,
+      "title": "Coffee Party",
+      "handle": "coffee-party",
+      "body_html": "<p>Throw a virtual party this festive season &amp; create new coffee rituals. Dress up and match your outfit with a vibrant mug as you sip on your ARAKU cuppa.</p>\n<p>Designed by Norwegian designer duo Anderssen &amp; Voll, our aesthetic set of four stunning mugs make a perfect gift for the coffee-lovers around you.</p>\n<div class=\"product-form__description rte body-large\">\n<p>Please add the preferred grind size in the order note at cart page. </p>\n</div>",
+      "published_at": "2023-06-12T15:07:47+05:30",
+      "created_at": "2023-06-12T15:07:47+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Gifting",
+      "tags": [
+        "Category_Gifting",
+        "Category_Others",
+        "gifting"
+      ],
+      "variants": [
+        {
+          "id": 45276019228992,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "GC-SKU008",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "2800.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380912075072,
+          "created_at": "2023-06-12T15:07:47+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 41825313358144,
+          "created_at": "2023-07-03T11:09:43+05:30",
+          "position": 1,
+          "updated_at": "2024-10-07T10:57:23+05:30",
+          "product_id": 8380912075072,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/ARAKUParty_2.jpg?v=1728278843",
+          "width": 2048,
+          "height": 1509
+        },
+        {
+          "id": 41628536799552,
+          "created_at": "2023-06-12T15:08:25+05:30",
+          "position": 2,
+          "updated_at": "2023-07-03T11:13:29+05:30",
+          "product_id": 8380912075072,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/products/600x800_-_party_flat.jpg?v=1688363009",
+          "width": 1251,
+          "height": 1668
+        },
+        {
+          "id": 41628536668480,
+          "created_at": "2023-06-12T15:08:25+05:30",
+          "position": 3,
+          "updated_at": "2023-07-03T11:13:29+05:30",
+          "product_id": 8380912075072,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/products/600x800_-_party_with_box_1.jpg?v=1688363009",
+          "width": 1251,
+          "height": 1667
+        },
+        {
+          "id": 41628536832320,
+          "created_at": "2023-06-12T15:08:25+05:30",
+          "position": 4,
+          "updated_at": "2023-07-03T11:09:46+05:30",
+          "product_id": 8380912075072,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/products/600x800_-_box_2.jpg?v=1688362786",
+          "width": 1251,
+          "height": 1668
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/ARAKUParty_2.jpg?v=1728278843",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Selection",
+    "slug": "selection",
+    "direct_buy_url": "https://www.arakucoffee.in/products/selection",
+    "description": "<style type=\"text/css\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<p><span data-sheets-userformat='{\"2\":14717,\"3\":{\"1\":0,\"3\":1},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":13421772}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"9\":1,\"11\":4,\"14\":{\"1\":3,\"3\":1},\"15\":\"Arial\",\"16\":9}' data-sheets-value='{\"1\":2,\"2\":\"Comes from nutrient-rich coffee plots closest to the Araku habitations.\\nDiversified shade, with silver oak trees entwined with pepper vines.\\nA blend of washed, honey and natural processes.\"}'>Comes from nutrient-rich coffee plots closest to the Araku habitations. Diversified shade, with silver oak trees entwined with pepper vines. A blend of washed, honey and natural processes.</span></p>\n<p><span data-sheets-userformat='{\"2\":14717,\"3\":{\"1\":0,\"3\":1},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":13421772}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"9\":1,\"11\":4,\"14\":{\"1\":3,\"3\":1},\"15\":\"Arial\",\"16\":9}' data-sheets-value='{\"1\":2,\"2\":\"Comes from nutrient-rich coffee plots closest to the Araku habitations.\\nDiversified shade, with silver oak trees entwined with pepper vines.\\nA blend of washed, honey and natural processes.\"}'>Not sure which grind to order? Checkout our grind size chart below for a quick brew tip!</span></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380902572352,
+      "title": "Selection",
+      "handle": "selection",
+      "body_html": "<style type=\"text/css\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<p><span data-sheets-userformat='{\"2\":14717,\"3\":{\"1\":0,\"3\":1},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":13421772}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"9\":1,\"11\":4,\"14\":{\"1\":3,\"3\":1},\"15\":\"Arial\",\"16\":9}' data-sheets-value='{\"1\":2,\"2\":\"Comes from nutrient-rich coffee plots closest to the Araku habitations.\\nDiversified shade, with silver oak trees entwined with pepper vines.\\nA blend of washed, honey and natural processes.\"}'>Comes from nutrient-rich coffee plots closest to the Araku habitations. Diversified shade, with silver oak trees entwined with pepper vines. A blend of washed, honey and natural processes.</span></p>\n<p><span data-sheets-userformat='{\"2\":14717,\"3\":{\"1\":0,\"3\":1},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":13421772}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"9\":1,\"11\":4,\"14\":{\"1\":3,\"3\":1},\"15\":\"Arial\",\"16\":9}' data-sheets-value='{\"1\":2,\"2\":\"Comes from nutrient-rich coffee plots closest to the Araku habitations.\\nDiversified shade, with silver oak trees entwined with pepper vines.\\nA blend of washed, honey and natural processes.\"}'>Not sure which grind to order? Checkout our grind size chart below for a quick brew tip!</span></p>",
+      "published_at": "2023-06-12T15:02:23+05:30",
+      "created_at": "2023-06-12T15:02:23+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Coffee",
+      "tags": [
+        "coffee",
+        "ground_coffee",
+        "tag_caramel",
+        "tag_dark_chocolate",
+        "tag_honey",
+        "tag_sugarcane"
+      ],
+      "variants": [
+        {
+          "id": 45276007629120,
+          "title": "Pouch / 250 gms / Whole Beans",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Whole Beans",
+          "sku": "COF0007",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639182729536,
+            "product_id": 8380902572352,
+            "position": 3,
+            "created_at": "2023-06-13T15:48:18+05:30",
+            "updated_at": "2023-06-20T10:44:48+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23320_1.jpg?v=1687238088",
+            "variant_ids": [
+              45276007629120,
+              45276007727424,
+              45295188214080,
+              45295188246848,
+              45295188279616
+            ]
+          },
+          "available": true,
+          "price": "590.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-12T15:02:23+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45276007727424,
+          "title": "Pouch / 250 gms / Very Fine Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Very Fine Grind",
+          "sku": "COF0008",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639182729536,
+            "product_id": 8380902572352,
+            "position": 3,
+            "created_at": "2023-06-13T15:48:18+05:30",
+            "updated_at": "2023-06-20T10:44:48+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23320_1.jpg?v=1687238088",
+            "variant_ids": [
+              45276007629120,
+              45276007727424,
+              45295188214080,
+              45295188246848,
+              45295188279616
+            ]
+          },
+          "available": true,
+          "price": "590.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-12T15:02:23+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45295188214080,
+          "title": "Pouch / 250 gms / Fine Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Fine Grind",
+          "sku": "COF0049",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639182729536,
+            "product_id": 8380902572352,
+            "position": 3,
+            "created_at": "2023-06-13T15:48:18+05:30",
+            "updated_at": "2023-06-20T10:44:48+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23320_1.jpg?v=1687238088",
+            "variant_ids": [
+              45276007629120,
+              45276007727424,
+              45295188214080,
+              45295188246848,
+              45295188279616
+            ]
+          },
+          "available": true,
+          "price": "590.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-14T14:22:26+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45295188246848,
+          "title": "Pouch / 250 gms / Medium Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Medium Grind",
+          "sku": "COF0050",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639182729536,
+            "product_id": 8380902572352,
+            "position": 3,
+            "created_at": "2023-06-13T15:48:18+05:30",
+            "updated_at": "2023-06-20T10:44:48+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23320_1.jpg?v=1687238088",
+            "variant_ids": [
+              45276007629120,
+              45276007727424,
+              45295188214080,
+              45295188246848,
+              45295188279616
+            ]
+          },
+          "available": true,
+          "price": "590.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 4,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-14T14:22:26+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45295188279616,
+          "title": "Pouch / 250 gms / Coarse Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Coarse Grind",
+          "sku": "COF0051",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639182729536,
+            "product_id": 8380902572352,
+            "position": 3,
+            "created_at": "2023-06-13T15:48:18+05:30",
+            "updated_at": "2023-06-20T10:44:48+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23320_1.jpg?v=1687238088",
+            "variant_ids": [
+              45276007629120,
+              45276007727424,
+              45295188214080,
+              45295188246848,
+              45295188279616
+            ]
+          },
+          "available": true,
+          "price": "590.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 5,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-14T14:22:26+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45276007956800,
+          "title": "Tin / 250 gms / Whole Beans",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Whole Beans",
+          "sku": "COF0005",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639187284288,
+            "product_id": 8380902572352,
+            "position": 4,
+            "created_at": "2023-06-13T15:49:00+05:30",
+            "updated_at": "2023-06-16T19:26:39+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-_1.jpg?v=1686923799",
+            "variant_ids": [
+              45276007858496,
+              45276007956800,
+              45295188312384,
+              45295188345152,
+              45295188377920
+            ]
+          },
+          "available": false,
+          "price": "690.00",
+          "grams": 520,
+          "compare_at_price": null,
+          "position": 6,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-12T15:02:23+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45276007858496,
+          "title": "Tin / 250 gms / Very Fine Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Very Fine Grind",
+          "sku": "COF0006",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639187284288,
+            "product_id": 8380902572352,
+            "position": 4,
+            "created_at": "2023-06-13T15:49:00+05:30",
+            "updated_at": "2023-06-16T19:26:39+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-_1.jpg?v=1686923799",
+            "variant_ids": [
+              45276007858496,
+              45276007956800,
+              45295188312384,
+              45295188345152,
+              45295188377920
+            ]
+          },
+          "available": false,
+          "price": "690.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 7,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-12T15:02:23+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45295188312384,
+          "title": "Tin / 250 gms / Fine Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Fine Grind",
+          "sku": "COF0061",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639187284288,
+            "product_id": 8380902572352,
+            "position": 4,
+            "created_at": "2023-06-13T15:49:00+05:30",
+            "updated_at": "2023-06-16T19:26:39+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-_1.jpg?v=1686923799",
+            "variant_ids": [
+              45276007858496,
+              45276007956800,
+              45295188312384,
+              45295188345152,
+              45295188377920
+            ]
+          },
+          "available": false,
+          "price": "690.00",
+          "grams": 520,
+          "compare_at_price": null,
+          "position": 8,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-14T14:22:27+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45295188345152,
+          "title": "Tin / 250 gms / Medium Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Medium Grind",
+          "sku": "COF0062",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639187284288,
+            "product_id": 8380902572352,
+            "position": 4,
+            "created_at": "2023-06-13T15:49:00+05:30",
+            "updated_at": "2023-06-16T19:26:39+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-_1.jpg?v=1686923799",
+            "variant_ids": [
+              45276007858496,
+              45276007956800,
+              45295188312384,
+              45295188345152,
+              45295188377920
+            ]
+          },
+          "available": false,
+          "price": "690.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 9,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-14T14:22:27+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45295188377920,
+          "title": "Tin / 250 gms / Coarse Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Coarse Grind",
+          "sku": "COF0063",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639187284288,
+            "product_id": 8380902572352,
+            "position": 4,
+            "created_at": "2023-06-13T15:49:00+05:30",
+            "updated_at": "2023-06-16T19:26:39+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-_1.jpg?v=1686923799",
+            "variant_ids": [
+              45276007858496,
+              45276007956800,
+              45295188312384,
+              45295188345152,
+              45295188377920
+            ]
+          },
+          "available": false,
+          "price": "690.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 10,
+          "product_id": 8380902572352,
+          "created_at": "2023-06-14T14:22:27+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 41679384936768,
+          "created_at": "2023-06-16T19:17:10+05:30",
+          "position": 1,
+          "updated_at": "2023-06-16T19:17:12+05:30",
+          "product_id": 8380902572352,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-14.jpg?v=1686923232",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41679633547584,
+          "created_at": "2023-06-16T19:26:37+05:30",
+          "position": 2,
+          "updated_at": "2023-06-20T10:44:48+05:30",
+          "product_id": 8380902572352,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Coffee-Selection1.jpg?v=1687238088",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41639182729536,
+          "created_at": "2023-06-13T15:48:18+05:30",
+          "position": 3,
+          "updated_at": "2023-06-20T10:44:48+05:30",
+          "product_id": 8380902572352,
+          "variant_ids": [
+            45276007629120,
+            45276007727424,
+            45295188214080,
+            45295188246848,
+            45295188279616
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23320_1.jpg?v=1687238088",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41639187284288,
+          "created_at": "2023-06-13T15:49:00+05:30",
+          "position": 4,
+          "updated_at": "2023-06-16T19:26:39+05:30",
+          "product_id": 8380902572352,
+          "variant_ids": [
+            45276007858496,
+            45276007956800,
+            45295188312384,
+            45295188345152,
+            45295188377920
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-_1.jpg?v=1686923799",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "options": [
+        {
+          "name": "Pack",
+          "position": 1,
+          "values": [
+            "Pouch",
+            "Tin"
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            "250 gms"
+          ]
+        },
+        {
+          "name": "Grind Size",
+          "position": 3,
+          "values": [
+            "Whole Beans",
+            "Very Fine Grind",
+            "Fine Grind",
+            "Medium Grind",
+            "Coarse Grind"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-14.jpg?v=1686923232",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Signature",
+    "slug": "signature",
+    "direct_buy_url": "https://www.arakucoffee.in/products/signature",
+    "description": "<p><span>Harvested from coffee terroirs shaded by pepper entwined silver oak trees and nurtured by well aerated rocky soils. Terroir characterised by lots of rocks, and highest percentage of silver oak trees. A blend of washed and natural coffees.</span></p>\n<p> </p>\n<p><span>Not sure which grind to order? Checkout our grind size chart below for a quick brew tip!</span></p>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380902539584,
+      "title": "Signature",
+      "handle": "signature",
+      "body_html": "<p><span>Harvested from coffee terroirs shaded by pepper entwined silver oak trees and nurtured by well aerated rocky soils. Terroir characterised by lots of rocks, and highest percentage of silver oak trees. A blend of washed and natural coffees.</span></p>\n<p> </p>\n<p><span>Not sure which grind to order? Checkout our grind size chart below for a quick brew tip!</span></p>",
+      "published_at": "2023-06-12T15:02:23+05:30",
+      "created_at": "2023-06-12T15:02:23+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Coffee",
+      "tags": [
+        "Category_Coffee",
+        "coffee",
+        "ground_coffee",
+        "tag_cherry",
+        "tag_dark_chocolate",
+        "tag_green_pepper"
+      ],
+      "variants": [
+        {
+          "id": 45276007530816,
+          "title": "Pouch / 250 gms / Very Fine Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Very Fine Grind",
+          "sku": "COF0004",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299744064,
+            "product_id": 8380902539584,
+            "position": 3,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignaturePouch_56613a25-fa8a-4b32-a7cc-a523f1334a3a.jpg?v=1686925270",
+            "variant_ids": [
+              45276007530816,
+              45276007596352,
+              45298225480000,
+              45298225512768,
+              45298225545536
+            ]
+          },
+          "available": true,
+          "price": "540.00",
+          "grams": 1000,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-12T15:02:23+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45276007596352,
+          "title": "Pouch / 250 gms / Whole Beans",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Whole Beans",
+          "sku": "COF0003",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299744064,
+            "product_id": 8380902539584,
+            "position": 3,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignaturePouch_56613a25-fa8a-4b32-a7cc-a523f1334a3a.jpg?v=1686925270",
+            "variant_ids": [
+              45276007530816,
+              45276007596352,
+              45298225480000,
+              45298225512768,
+              45298225545536
+            ]
+          },
+          "available": true,
+          "price": "540.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-12T15:02:23+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298225480000,
+          "title": "Pouch / 250 gms / Fine Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Fine Grind",
+          "sku": "COF0052",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299744064,
+            "product_id": 8380902539584,
+            "position": 3,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignaturePouch_56613a25-fa8a-4b32-a7cc-a523f1334a3a.jpg?v=1686925270",
+            "variant_ids": [
+              45276007530816,
+              45276007596352,
+              45298225480000,
+              45298225512768,
+              45298225545536
+            ]
+          },
+          "available": true,
+          "price": "540.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-14T16:05:36+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298225512768,
+          "title": "Pouch / 250 gms / Medium Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Medium Grind",
+          "sku": "COF0053",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299744064,
+            "product_id": 8380902539584,
+            "position": 3,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignaturePouch_56613a25-fa8a-4b32-a7cc-a523f1334a3a.jpg?v=1686925270",
+            "variant_ids": [
+              45276007530816,
+              45276007596352,
+              45298225480000,
+              45298225512768,
+              45298225545536
+            ]
+          },
+          "available": true,
+          "price": "540.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 4,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-14T16:05:36+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298225545536,
+          "title": "Pouch / 250 gms / Coarse Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Coarse Grind",
+          "sku": "COF0054",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299744064,
+            "product_id": 8380902539584,
+            "position": 3,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignaturePouch_56613a25-fa8a-4b32-a7cc-a523f1334a3a.jpg?v=1686925270",
+            "variant_ids": [
+              45276007530816,
+              45276007596352,
+              45298225480000,
+              45298225512768,
+              45298225545536
+            ]
+          },
+          "available": true,
+          "price": "540.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 5,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-14T16:05:36+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45276007694656,
+          "title": "Tin / 250 gms / Very Fine Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Very Fine Grind",
+          "sku": "COF0002",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299678528,
+            "product_id": 8380902539584,
+            "position": 4,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignatureTin_df10a91a-5f9e-4451-b758-6c3ffff7e89f.jpg?v=1686925270",
+            "variant_ids": [
+              45276007694656,
+              45276007792960,
+              45298225578304,
+              45298225611072,
+              45298225643840
+            ]
+          },
+          "available": false,
+          "price": "630.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 6,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-12T15:02:23+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45276007792960,
+          "title": "Tin / 250 gms / Whole Beans",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Whole Beans",
+          "sku": "COF0001",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299678528,
+            "product_id": 8380902539584,
+            "position": 4,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignatureTin_df10a91a-5f9e-4451-b758-6c3ffff7e89f.jpg?v=1686925270",
+            "variant_ids": [
+              45276007694656,
+              45276007792960,
+              45298225578304,
+              45298225611072,
+              45298225643840
+            ]
+          },
+          "available": false,
+          "price": "630.00",
+          "grams": 420,
+          "compare_at_price": null,
+          "position": 7,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-12T15:02:23+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298225578304,
+          "title": "Tin / 250 gms / Fine Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Fine Grind",
+          "sku": "COF0064",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299678528,
+            "product_id": 8380902539584,
+            "position": 4,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignatureTin_df10a91a-5f9e-4451-b758-6c3ffff7e89f.jpg?v=1686925270",
+            "variant_ids": [
+              45276007694656,
+              45276007792960,
+              45298225578304,
+              45298225611072,
+              45298225643840
+            ]
+          },
+          "available": false,
+          "price": "630.00",
+          "grams": 520,
+          "compare_at_price": null,
+          "position": 8,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-14T16:05:36+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298225611072,
+          "title": "Tin / 250 gms / Medium Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Medium Grind",
+          "sku": "COF0065",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299678528,
+            "product_id": 8380902539584,
+            "position": 4,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignatureTin_df10a91a-5f9e-4451-b758-6c3ffff7e89f.jpg?v=1686925270",
+            "variant_ids": [
+              45276007694656,
+              45276007792960,
+              45298225578304,
+              45298225611072,
+              45298225643840
+            ]
+          },
+          "available": false,
+          "price": "630.00",
+          "grams": 520,
+          "compare_at_price": null,
+          "position": 9,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-14T16:05:36+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45298225643840,
+          "title": "Tin / 250 gms / Coarse Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Coarse Grind",
+          "sku": "COF0066",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 41639299678528,
+            "product_id": 8380902539584,
+            "position": 4,
+            "created_at": "2023-06-13T16:05:31+05:30",
+            "updated_at": "2023-06-16T19:51:10+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignatureTin_df10a91a-5f9e-4451-b758-6c3ffff7e89f.jpg?v=1686925270",
+            "variant_ids": [
+              45276007694656,
+              45276007792960,
+              45298225578304,
+              45298225611072,
+              45298225643840
+            ]
+          },
+          "available": false,
+          "price": "630.00",
+          "grams": 520,
+          "compare_at_price": null,
+          "position": 10,
+          "product_id": 8380902539584,
+          "created_at": "2023-06-14T16:05:36+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 41639299711296,
+          "created_at": "2023-06-13T16:05:31+05:30",
+          "position": 1,
+          "updated_at": "2023-06-16T18:06:32+05:30",
+          "product_id": 8380902539584,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--13.jpg?v=1686918992",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41679874621760,
+          "created_at": "2023-06-16T19:51:08+05:30",
+          "position": 2,
+          "updated_at": "2023-06-16T19:51:10+05:30",
+          "product_id": 8380902539584,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignatureTin-mood_1b184418-3c4f-4d34-b9ce-3b90cf279dd6.jpg?v=1686925270",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41639299744064,
+          "created_at": "2023-06-13T16:05:31+05:30",
+          "position": 3,
+          "updated_at": "2023-06-16T19:51:10+05:30",
+          "product_id": 8380902539584,
+          "variant_ids": [
+            45276007530816,
+            45276007596352,
+            45298225480000,
+            45298225512768,
+            45298225545536
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignaturePouch_56613a25-fa8a-4b32-a7cc-a523f1334a3a.jpg?v=1686925270",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41639299678528,
+          "created_at": "2023-06-13T16:05:31+05:30",
+          "position": 4,
+          "updated_at": "2023-06-16T19:51:10+05:30",
+          "product_id": 8380902539584,
+          "variant_ids": [
+            45276007694656,
+            45276007792960,
+            45298225578304,
+            45298225611072,
+            45298225643840
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/SignatureTin_df10a91a-5f9e-4451-b758-6c3ffff7e89f.jpg?v=1686925270",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "options": [
+        {
+          "name": "Pack",
+          "position": 1,
+          "values": [
+            "Pouch",
+            "Tin"
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            "250 gms"
+          ]
+        },
+        {
+          "name": "Grind Size",
+          "position": 3,
+          "values": [
+            "Very Fine Grind",
+            "Whole Beans",
+            "Fine Grind",
+            "Medium Grind",
+            "Coarse Grind"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--13.jpg?v=1686918992",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  },
+  {
+    "name": "Grand Reserve",
+    "slug": "grand-reserve",
+    "direct_buy_url": "https://www.arakucoffee.in/products/grande-reserve",
+    "description": "<p>Complex and artisanal, grown in high-altitude scree soils with bio-diverse conditions. <span data-sheets-userformat='{\"2\":14717,\"3\":{\"1\":0,\"3\":1},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":13421772}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"9\":1,\"11\":4,\"14\":{\"1\":3,\"3\":1},\"15\":\"Arial\",\"16\":9}' data-sheets-value='{\"1\":2,\"2\":\"Complex and artisanal, grown in high-altitude scree soils with bio-diverse conditions.\\nThis coffee consists of washed and natural process.\"}'>This coffee consists of washed and natural process.</span></p>\n<p> </p>\n<p><span data-sheets-userformat='{\"2\":14717,\"3\":{\"1\":0,\"3\":1},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":13421772}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"9\":1,\"11\":4,\"14\":{\"1\":3,\"3\":1},\"15\":\"Arial\",\"16\":9}' data-sheets-value='{\"1\":2,\"2\":\"Complex and artisanal, grown in high-altitude scree soils with bio-diverse conditions.\\nThis coffee consists of washed and natural process.\"}'>Not sure which grind to order? Checkout our grind size chart below for a quick brew tip!</span></p>\n<style type=\"text/css\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 8380902506816,
+      "title": "Grand Reserve",
+      "handle": "grande-reserve",
+      "body_html": "<p>Complex and artisanal, grown in high-altitude scree soils with bio-diverse conditions. <span data-sheets-userformat='{\"2\":14717,\"3\":{\"1\":0,\"3\":1},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":13421772}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"9\":1,\"11\":4,\"14\":{\"1\":3,\"3\":1},\"15\":\"Arial\",\"16\":9}' data-sheets-value='{\"1\":2,\"2\":\"Complex and artisanal, grown in high-altitude scree soils with bio-diverse conditions.\\nThis coffee consists of washed and natural process.\"}'>This coffee consists of washed and natural process.</span></p>\n<p> </p>\n<p><span data-sheets-userformat='{\"2\":14717,\"3\":{\"1\":0,\"3\":1},\"5\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":13421772}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"6\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"7\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"8\":{\"1\":[{\"1\":2,\"2\":0,\"5\":{\"1\":2,\"2\":0}},{\"1\":0,\"2\":0,\"3\":3},{\"1\":1,\"2\":0,\"4\":2}]},\"9\":1,\"11\":4,\"14\":{\"1\":3,\"3\":1},\"15\":\"Arial\",\"16\":9}' data-sheets-value='{\"1\":2,\"2\":\"Complex and artisanal, grown in high-altitude scree soils with bio-diverse conditions.\\nThis coffee consists of washed and natural process.\"}'>Not sure which grind to order? Checkout our grind size chart below for a quick brew tip!</span></p>\n<style type=\"text/css\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>",
+      "published_at": "2023-06-12T15:02:23+05:30",
+      "created_at": "2023-06-12T15:02:23+05:30",
+      "updated_at": "2025-05-05T00:17:26+05:30",
+      "vendor": "Araku Coffee India",
+      "product_type": "Coffee",
+      "tags": [
+        "Category_Coffee",
+        "coffee",
+        "ground_coffee",
+        "tag_citrus",
+        "tag_dates",
+        "tag_floral",
+        "tag_tropical_fruits"
+      ],
+      "variants": [
+        {
+          "id": 45285462344000,
+          "title": "Tin / 250 gms / Whole Beans",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Whole Beans",
+          "sku": "COF0013",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272055104,
+            "product_id": 8380902506816,
+            "position": 4,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--2_f0cd142c-c883-4f08-933c-400377cf62f7.jpg?v=1686923973",
+            "variant_ids": [
+              45285462344000,
+              45285462376768,
+              45285462409536,
+              45285462442304,
+              45381548376384
+            ]
+          },
+          "available": false,
+          "price": "980.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-13T13:40:26+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45381548376384,
+          "title": "Tin / 250 gms / Very Fine Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Very Fine Grind",
+          "sku": "COF0014",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272055104,
+            "product_id": 8380902506816,
+            "position": 4,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--2_f0cd142c-c883-4f08-933c-400377cf62f7.jpg?v=1686923973",
+            "variant_ids": [
+              45285462344000,
+              45285462376768,
+              45285462409536,
+              45285462442304,
+              45381548376384
+            ]
+          },
+          "available": false,
+          "price": "980.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-21T15:20:36+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45285462376768,
+          "title": "Tin / 250 gms / Fine Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Fine Grind",
+          "sku": "COF0070",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272055104,
+            "product_id": 8380902506816,
+            "position": 4,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--2_f0cd142c-c883-4f08-933c-400377cf62f7.jpg?v=1686923973",
+            "variant_ids": [
+              45285462344000,
+              45285462376768,
+              45285462409536,
+              45285462442304,
+              45381548376384
+            ]
+          },
+          "available": false,
+          "price": "980.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-13T13:40:26+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45285462409536,
+          "title": "Tin / 250 gms / Medium Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Medium Grind",
+          "sku": "COF0071",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272055104,
+            "product_id": 8380902506816,
+            "position": 4,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--2_f0cd142c-c883-4f08-933c-400377cf62f7.jpg?v=1686923973",
+            "variant_ids": [
+              45285462344000,
+              45285462376768,
+              45285462409536,
+              45285462442304,
+              45381548376384
+            ]
+          },
+          "available": false,
+          "price": "980.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 4,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-13T13:40:26+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45285462442304,
+          "title": "Tin / 250 gms / Coarse Grind",
+          "option1": "Tin",
+          "option2": "250 gms",
+          "option3": "Coarse Grind",
+          "sku": "COF0072",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272055104,
+            "product_id": 8380902506816,
+            "position": 4,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--2_f0cd142c-c883-4f08-933c-400377cf62f7.jpg?v=1686923973",
+            "variant_ids": [
+              45285462344000,
+              45285462376768,
+              45285462409536,
+              45285462442304,
+              45381548376384
+            ]
+          },
+          "available": false,
+          "price": "980.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 5,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-13T13:40:26+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45285599609152,
+          "title": "Pouch / 250 gms / Whole Beans",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Whole Beans",
+          "sku": "COF0023",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272022336,
+            "product_id": 8380902506816,
+            "position": 3,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23311.jpg?v=1686923973",
+            "variant_ids": [
+              45285599609152,
+              45285599641920,
+              45285599674688,
+              45285599707456,
+              45381548409152
+            ]
+          },
+          "available": true,
+          "price": "890.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 6,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-13T14:01:05+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45381548409152,
+          "title": "Pouch / 250 gms / Very Fine Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Very Fine Grind",
+          "sku": "COF0016",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272022336,
+            "product_id": 8380902506816,
+            "position": 3,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23311.jpg?v=1686923973",
+            "variant_ids": [
+              45285599609152,
+              45285599641920,
+              45285599674688,
+              45285599707456,
+              45381548409152
+            ]
+          },
+          "available": true,
+          "price": "890.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 7,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-21T15:20:36+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45285599641920,
+          "title": "Pouch / 250 gms / Fine Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Fine Grind",
+          "sku": "COF0043",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272022336,
+            "product_id": 8380902506816,
+            "position": 3,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23311.jpg?v=1686923973",
+            "variant_ids": [
+              45285599609152,
+              45285599641920,
+              45285599674688,
+              45285599707456,
+              45381548409152
+            ]
+          },
+          "available": true,
+          "price": "890.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 8,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-13T14:01:05+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45285599674688,
+          "title": "Pouch / 250 gms / Medium Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Medium Grind",
+          "sku": "COF0044",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272022336,
+            "product_id": 8380902506816,
+            "position": 3,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23311.jpg?v=1686923973",
+            "variant_ids": [
+              45285599609152,
+              45285599641920,
+              45285599674688,
+              45285599707456,
+              45381548409152
+            ]
+          },
+          "available": true,
+          "price": "890.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 9,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-13T14:01:06+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        },
+        {
+          "id": 45285599707456,
+          "title": "Pouch / 250 gms / Coarse Grind",
+          "option1": "Pouch",
+          "option2": "250 gms",
+          "option3": "Coarse Grind",
+          "sku": "COF0045",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": {
+            "id": 41639272022336,
+            "product_id": 8380902506816,
+            "position": 3,
+            "created_at": "2023-06-13T16:01:03+05:30",
+            "updated_at": "2023-06-16T19:29:33+05:30",
+            "alt": null,
+            "width": 2048,
+            "height": 2048,
+            "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23311.jpg?v=1686923973",
+            "variant_ids": [
+              45285599609152,
+              45285599641920,
+              45285599674688,
+              45285599707456,
+              45381548409152
+            ]
+          },
+          "available": true,
+          "price": "890.00",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 10,
+          "product_id": 8380902506816,
+          "created_at": "2023-06-13T14:01:06+05:30",
+          "updated_at": "2025-05-05T00:17:26+05:30"
+        }
+      ],
+      "images": [
+        {
+          "id": 41628987588928,
+          "created_at": "2023-06-12T17:26:54+05:30",
+          "position": 1,
+          "updated_at": "2023-06-16T18:07:41+05:30",
+          "product_id": 8380902506816,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/GrandReserveThumbnail-min_1.jpg?v=1686919061",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41679696855360,
+          "created_at": "2023-06-16T19:29:30+05:30",
+          "position": 2,
+          "updated_at": "2023-06-16T19:29:33+05:30",
+          "product_id": 8380902506816,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Coffee-grandreserve-mood.jpg?v=1686923973",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41639272022336,
+          "created_at": "2023-06-13T16:01:03+05:30",
+          "position": 3,
+          "updated_at": "2023-06-16T19:29:33+05:30",
+          "product_id": 8380902506816,
+          "variant_ids": [
+            45285599609152,
+            45285599641920,
+            45285599674688,
+            45285599707456,
+            45381548409152
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue-23311.jpg?v=1686923973",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 41639272055104,
+          "created_at": "2023-06-13T16:01:03+05:30",
+          "position": 4,
+          "updated_at": "2023-06-16T19:29:33+05:30",
+          "product_id": 8380902506816,
+          "variant_ids": [
+            45285462344000,
+            45285462376768,
+            45285462409536,
+            45285462442304,
+            45381548376384
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/Catalogue--2_f0cd142c-c883-4f08-933c-400377cf62f7.jpg?v=1686923973",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "options": [
+        {
+          "name": "Pack type",
+          "position": 1,
+          "values": [
+            "Tin",
+            "Pouch"
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            "250 gms"
+          ]
+        },
+        {
+          "name": "Grind size",
+          "position": 3,
+          "values": [
+            "Whole Beans",
+            "Very Fine Grind",
+            "Fine Grind",
+            "Medium Grind",
+            "Coarse Grind"
+          ]
+        }
+      ]
+    },
+    "image_url": "https://cdn.shopify.com/s/files/1/0734/5609/1456/files/GrandReserveThumbnail-min_1.jpg?v=1686919061",
+    "roaster_name": "Araku Coffee",
+    "roaster_slug": "araku-coffee",
+    "roaster_id": "2245177f-5c78-4619-864f-6e85afa00e03"
+  }
+]

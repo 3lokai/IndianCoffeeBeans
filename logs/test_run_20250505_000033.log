@@ -1,0 +1,167 @@
+2025-05-05 00:00:33,884 - __main__ - INFO - Log file: logs/test_run_20250505_000033.log
+2025-05-05 00:00:33,885 - db.supabase_client - INFO - Initializing Supabase client
+2025-05-05 00:00:34,222 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-05 00:00:34,223 - __main__ - INFO - Loaded 54 roasters from data/input/roasters_input.csv
+2025-05-05 00:00:34,223 - __main__ - INFO - Starting pipeline with 54 roasters
+2025-05-05 00:00:34,224 - scrapers.pipeline - INFO - Starting to process 54 roasters
+2025-05-05 00:00:34,224 - scrapers.pipeline - INFO - Processing roaster: Ainmane (https://ainmane.com)
+2025-05-05 00:00:34,231 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Ainmane (https://ainmane.com)
+2025-05-05 00:00:36,334 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'magento'
+2025-05-05 00:00:36,335 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for magento: ['/about', '/about-us', '/our-story', '/story']
+2025-05-05 00:00:36,335 - scrapers.roaster_pipeline - INFO - Trying about page: https://ainmane.com/about
+2025-05-05 00:00:37,237 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/about
+2025-05-05 00:00:39,662 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/about
+2025-05-05 00:00:44,131 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/about
+2025-05-05 00:00:52,139 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://ainmane.com/about
+2025-05-05 00:00:52,141 - scrapers.roaster_pipeline - INFO - Trying about page: https://ainmane.com/about-us
+2025-05-05 00:00:53,335 - scrapers.roaster_pipeline - INFO - Trying about page: https://ainmane.com/our-story
+2025-05-05 00:00:54,257 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/our-story
+2025-05-05 00:00:56,727 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/our-story
+2025-05-05 00:01:01,227 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/our-story
+2025-05-05 00:01:09,235 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://ainmane.com/our-story
+2025-05-05 00:01:09,236 - scrapers.roaster_pipeline - INFO - Trying about page: https://ainmane.com/story
+2025-05-05 00:01:10,242 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/story
+2025-05-05 00:01:12,699 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/story
+2025-05-05 00:01:17,208 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/story
+2025-05-05 00:01:25,217 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://ainmane.com/story
+2025-05-05 00:01:25,218 - scrapers.roaster_pipeline - INFO - Trying about page: https://ainmane.com/philosophy
+2025-05-05 00:01:26,262 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/philosophy
+2025-05-05 00:01:28,721 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/philosophy
+2025-05-05 00:01:33,197 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/philosophy
+2025-05-05 00:01:41,209 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://ainmane.com/philosophy
+2025-05-05 00:01:41,211 - scrapers.roaster_pipeline - INFO - Trying about page: https://ainmane.com/values
+2025-05-05 00:01:42,279 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/values
+2025-05-05 00:01:44,847 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/values
+2025-05-05 00:01:49,317 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/values
+2025-05-05 00:01:57,322 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://ainmane.com/values
+2025-05-05 00:01:57,323 - scrapers.roaster_pipeline - INFO - Trying about page: https://ainmane.com/mission
+2025-05-05 00:01:58,475 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/mission
+2025-05-05 00:02:01,003 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/mission
+2025-05-05 00:02:05,641 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://ainmane.com/mission
+2025-05-05 00:02:13,650 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://ainmane.com/mission
+2025-05-05 00:02:13,662 - scrapers.roaster_pipeline - ERROR - Error saving roaster Ainmane to database: 'SupabaseClient' object has no attribute 'upsert_roaster'
+2025-05-05 00:02:13,951 - scrapers.pipeline - INFO - Extracted metadata for Ainmane
+2025-05-05 00:02:13,951 - scrapers.pipeline - ERROR - Error processing roaster Ainmane: 'dict' object has no attribute 'dict'
+2025-05-05 00:02:13,952 - scrapers.pipeline - INFO - Processing roaster: Alchemist (https://alchemistroastery.com)
+2025-05-05 00:02:13,953 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Alchemist (https://alchemistroastery.com)
+2025-05-05 00:02:15,741 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'static'
+2025-05-05 00:02:15,745 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for static: ['/about', '/about-us', '/our-story', '/story']
+2025-05-05 00:02:15,748 - scrapers.roaster_pipeline - INFO - Trying about page: https://alchemistroastery.com/about
+2025-05-05 00:02:15,896 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/about
+2025-05-05 00:02:18,065 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/about
+2025-05-05 00:02:22,254 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/about
+2025-05-05 00:02:30,263 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://alchemistroastery.com/about
+2025-05-05 00:02:30,264 - scrapers.roaster_pipeline - INFO - Trying about page: https://alchemistroastery.com/about-us
+2025-05-05 00:02:30,478 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/about-us
+2025-05-05 00:02:32,665 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/about-us
+2025-05-05 00:02:36,841 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/about-us
+2025-05-05 00:02:44,843 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://alchemistroastery.com/about-us
+2025-05-05 00:02:44,845 - scrapers.roaster_pipeline - INFO - Trying about page: https://alchemistroastery.com/our-story
+2025-05-05 00:02:45,043 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/our-story
+2025-05-05 00:02:47,200 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/our-story
+2025-05-05 00:02:51,364 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/our-story
+2025-05-05 00:02:59,373 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://alchemistroastery.com/our-story
+2025-05-05 00:02:59,374 - scrapers.roaster_pipeline - INFO - Trying about page: https://alchemistroastery.com/story
+2025-05-05 00:02:59,558 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/story
+2025-05-05 00:03:01,738 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/story
+2025-05-05 00:03:05,897 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/story
+2025-05-05 00:03:13,908 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://alchemistroastery.com/story
+2025-05-05 00:03:13,910 - scrapers.roaster_pipeline - INFO - Trying about page: https://alchemistroastery.com/philosophy
+2025-05-05 00:03:14,054 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/philosophy
+2025-05-05 00:03:16,220 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/philosophy
+2025-05-05 00:03:20,400 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/philosophy
+2025-05-05 00:03:28,413 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://alchemistroastery.com/philosophy
+2025-05-05 00:03:28,415 - scrapers.roaster_pipeline - INFO - Trying about page: https://alchemistroastery.com/values
+2025-05-05 00:03:28,604 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/values
+2025-05-05 00:03:30,797 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/values
+2025-05-05 00:03:34,965 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/values
+2025-05-05 00:03:42,979 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://alchemistroastery.com/values
+2025-05-05 00:03:42,980 - scrapers.roaster_pipeline - INFO - Trying about page: https://alchemistroastery.com/mission
+2025-05-05 00:03:43,144 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/mission
+2025-05-05 00:03:45,311 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/mission
+2025-05-05 00:03:49,500 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://alchemistroastery.com/mission
+2025-05-05 00:03:57,518 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://alchemistroastery.com/mission
+2025-05-05 00:03:57,531 - scrapers.roaster_pipeline - ERROR - Error saving roaster Alchemist to database: 'SupabaseClient' object has no attribute 'upsert_roaster'
+2025-05-05 00:03:57,811 - scrapers.pipeline - INFO - Extracted metadata for Alchemist
+2025-05-05 00:03:57,812 - scrapers.pipeline - ERROR - Error processing roaster Alchemist: 'dict' object has no attribute 'dict'
+2025-05-05 00:03:57,813 - scrapers.pipeline - INFO - Processing roaster: Araku Coffee (https://www.arakucoffee.in/)
+2025-05-05 00:03:57,813 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Araku Coffee (https://www.arakucoffee.in/)
+2025-05-05 00:03:59,520 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'shopify'
+2025-05-05 00:03:59,521 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for shopify: ['/pages/about', '/pages/about-us', '/pages/our-story', '/pages/story', '/pages/mission']
+2025-05-05 00:03:59,522 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.arakucoffee.in/pages/about
+2025-05-05 00:04:00,232 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.arakucoffee.in/pages/about-us
+2025-05-05 00:04:00,474 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/about-us
+2025-05-05 00:04:02,586 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/about-us
+2025-05-05 00:04:06,749 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/about-us
+2025-05-05 00:04:14,752 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.arakucoffee.in/pages/about-us
+2025-05-05 00:04:14,752 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.arakucoffee.in/pages/our-story
+2025-05-05 00:04:14,935 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/our-story
+2025-05-05 00:04:17,048 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/our-story
+2025-05-05 00:04:21,159 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/our-story
+2025-05-05 00:04:29,162 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.arakucoffee.in/pages/our-story
+2025-05-05 00:04:29,165 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.arakucoffee.in/pages/story
+2025-05-05 00:04:29,290 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/story
+2025-05-05 00:04:31,469 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/story
+2025-05-05 00:04:35,621 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/story
+2025-05-05 00:04:43,631 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.arakucoffee.in/pages/story
+2025-05-05 00:04:43,632 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.arakucoffee.in/pages/mission
+2025-05-05 00:04:43,796 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/mission
+2025-05-05 00:04:46,062 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/mission
+2025-05-05 00:04:50,192 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/pages/mission
+2025-05-05 00:04:58,201 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.arakucoffee.in/pages/mission
+2025-05-05 00:04:58,202 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.arakucoffee.in/about
+2025-05-05 00:04:58,355 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/about
+2025-05-05 00:05:00,606 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/about
+2025-05-05 00:05:04,720 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/about
+2025-05-05 00:05:12,731 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.arakucoffee.in/about
+2025-05-05 00:05:12,732 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.arakucoffee.in/about-us
+2025-05-05 00:05:12,994 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/about-us
+2025-05-05 00:05:15,122 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/about-us
+2025-05-05 00:05:19,273 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/about-us
+2025-05-05 00:05:27,284 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.arakucoffee.in/about-us
+2025-05-05 00:05:27,285 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.arakucoffee.in/our-story
+2025-05-05 00:05:27,431 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/our-story
+2025-05-05 00:05:29,588 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/our-story
+2025-05-05 00:05:33,765 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/our-story
+2025-05-05 00:05:41,776 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.arakucoffee.in/our-story
+2025-05-05 00:05:41,777 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.arakucoffee.in/story
+2025-05-05 00:05:41,943 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/story
+2025-05-05 00:05:44,197 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/story
+2025-05-05 00:05:48,343 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.arakucoffee.in/story
+2025-05-05 00:05:56,357 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.arakucoffee.in/story
+2025-05-05 00:05:56,368 - scrapers.roaster_pipeline - ERROR - Error saving roaster Araku Coffee to database: 'SupabaseClient' object has no attribute 'upsert_roaster'
+2025-05-05 00:05:56,740 - scrapers.pipeline - INFO - Extracted metadata for Araku Coffee
+2025-05-05 00:05:56,741 - scrapers.pipeline - ERROR - Error processing roaster Araku Coffee: 'dict' object has no attribute 'dict'
+2025-05-05 00:05:56,741 - scrapers.pipeline - INFO - Processing roaster: BaarbaraBerry (https://baarbaracoffee.com/)
+2025-05-05 00:05:56,742 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: BaarbaraBerry (https://baarbaracoffee.com/)
+2025-05-05 00:06:01,613 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'shopify'
+2025-05-05 00:06:01,613 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for shopify: ['/pages/about', '/pages/about-us', '/pages/our-story', '/pages/story', '/pages/mission']
+2025-05-05 00:06:01,614 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/about
+2025-05-05 00:06:02,251 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:06:02,552 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:06:04,772 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:06:09,021 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:06:17,035 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:06:17,036 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:06:17,400 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:06:19,647 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:06:23,896 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:06:31,912 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:06:31,913 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/story
+2025-05-05 00:06:32,247 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/story
+2025-05-05 00:06:34,469 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/story
+2025-05-05 00:06:38,742 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/story
+2025-05-05 00:06:46,749 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/pages/story
+2025-05-05 00:06:46,750 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/mission
+2025-05-05 00:06:46,980 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/mission
+2025-05-05 00:06:49,224 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/mission
+2025-05-05 00:06:53,432 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/mission
+2025-05-05 00:07:01,437 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/pages/mission
+2025-05-05 00:07:01,438 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/about
+2025-05-05 00:07:01,691 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about
+2025-05-05 00:07:03,959 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about
+2025-05-05 00:07:08,190 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about
+2025-05-05 00:07:16,203 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/about
+2025-05-05 00:07:16,204 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/about-us
+2025-05-05 00:07:16,390 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about-us
+2025-05-05 00:07:18,627 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about-us

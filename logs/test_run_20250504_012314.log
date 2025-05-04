@@ -1,0 +1,79 @@
+2025-05-04 01:23:14,798 - __main__ - INFO - Testing extraction for Attikan Estate | Medium Roast from Blue Tokai Coffee Roasters
+2025-05-04 01:23:14,799 - __main__ - INFO - URL: https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 01:23:16,159 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 01:23:16,239 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 01:23:16,430 - __main__ - INFO - Product needs DeepSeek enrichment (missing 4 attributes)
+2025-05-04 01:23:17,652 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 01:23:17,917 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 01:23:17,917 - __main__ - INFO - DeepSeek extraction took 1.49 seconds
+2025-05-04 01:23:17,923 - __main__ - INFO - Extracted data:
+2025-05-04 01:23:17,924 - __main__ - INFO -   Name: Attikan Estate | Medium Roast
+2025-05-04 01:23:17,924 - __main__ - INFO -   Description: A classic South Indian Coffee with notes of chocolate and nuts
+2025-05-04 01:23:17,924 - __main__ - INFO -   Roast Level: Unknown
+2025-05-04 01:23:17,925 - __main__ - INFO -   Bean Type: Unknown
+2025-05-04 01:23:17,925 - __main__ - INFO -   Processing Method: Unknown
+2025-05-04 01:23:17,925 - __main__ - INFO -   Region: Unknown
+2025-05-04 01:23:17,925 - __main__ - INFO -   Extracted by: json_css
+2025-05-04 01:23:17,925 - __main__ - INFO -   DeepSeek enriched: False
+2025-05-04 01:23:17,928 - __main__ - INFO -   Results saved to test_results/extractors\attikan-estate-medium-roast_extracted.json
+2025-05-04 01:23:17,928 - __main__ - INFO - Testing extraction for Nachammai Natural from Subko Coffee Roasters
+2025-05-04 01:23:17,928 - __main__ - INFO - URL: https://www.subko.coffee/product/nachammai-natural/
+2025-05-04 01:23:19,241 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.subko.coffee/product/nachammai-natural/
+2025-05-04 01:23:22,192 - __main__ - INFO - Product needs DeepSeek enrichment (missing 4 attributes)
+2025-05-04 01:23:23,549 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.subko.coffee/product/nachammai-natural/
+2025-05-04 01:23:23,806 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.subko.coffee/product/nachammai-natural/
+2025-05-04 01:23:23,806 - __main__ - INFO - DeepSeek extraction took 1.61 seconds
+2025-05-04 01:23:23,812 - __main__ - INFO - Extracted data:
+2025-05-04 01:23:23,812 - __main__ - INFO -   Name: Nachammai Natural
+2025-05-04 01:23:23,812 - __main__ - INFO -   Description: Juicy and sweet coffee from Tamil Nadu
+2025-05-04 01:23:23,813 - __main__ - INFO -   Roast Level: Unknown
+2025-05-04 01:23:23,813 - __main__ - INFO -   Bean Type: Unknown
+2025-05-04 01:23:23,813 - __main__ - INFO -   Processing Method: Unknown
+2025-05-04 01:23:23,814 - __main__ - INFO -   Region: Unknown
+2025-05-04 01:23:23,814 - __main__ - INFO -   Extracted by: json_css
+2025-05-04 01:23:23,814 - __main__ - INFO -   DeepSeek enriched: False
+2025-05-04 01:23:23,817 - __main__ - INFO -   Results saved to test_results/extractors\nachammai-natural_extracted.json
+2025-05-04 01:23:23,817 - __main__ - INFO - Testing extraction for Ethiopia Kayon Mountain from KC Roasters
+2025-05-04 01:23:23,818 - __main__ - INFO - URL: https://kcroasters.com/products/ethiopia-kayon-mountain
+2025-05-04 01:23:25,111 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://kcroasters.com/products/ethiopia-kayon-mountain
+2025-05-04 01:23:30,362 - __main__ - INFO - Product needs DeepSeek enrichment (missing 4 attributes)
+2025-05-04 01:23:31,535 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://kcroasters.com/products/ethiopia-kayon-mountain
+2025-05-04 01:23:31,796 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://kcroasters.com/products/ethiopia-kayon-mountain
+2025-05-04 01:23:31,797 - __main__ - INFO - DeepSeek extraction took 1.43 seconds
+2025-05-04 01:23:31,801 - __main__ - INFO - Extracted data:
+2025-05-04 01:23:31,801 - __main__ - INFO -   Name: Ethiopia Kayon Mountain
+2025-05-04 01:23:31,801 - __main__ - INFO -   Description: Vibrant and fruity Ethiopian coffee
+2025-05-04 01:23:31,802 - __main__ - INFO -   Roast Level: Unknown
+2025-05-04 01:23:31,802 - __main__ - INFO -   Bean Type: BeanType.UNKNOWN
+2025-05-04 01:23:31,802 - __main__ - INFO -   Processing Method: Unknown
+2025-05-04 01:23:31,803 - __main__ - INFO -   Region: CoffeesBrewing EquipmentCollectiveAbout usSign inNo results found.CoffeesDrip'd Kit - Portable Fresh Coffee BagsSingle Origin Indian CoffeesTaster PacksCoffee SubscriptionsInternational EstatesCOLDBREW®GiftingNo results found.Brewing EquipmentFilter PaperClever DripperHome Espresso MachinesBialetti Moka PotsHario V60 Drip KettleAeroPressCoffee GrinderNo results found.CollectiveEtherLa Folie Breads And ChocolatesBoombayMilklabTote BagsCOLDBREW®Naagin Hot SauceBrownsalt Granola & CookiesSvami Tonic Water & Ginger AleBon FictionNaviluna Artisanal ChocolateesNo results found.About usFAQ'SBrew GuidesCafesFarmsOur StoryOur BlogWholesaleGiftingNo results found.
+2025-05-04 01:23:31,803 - __main__ - INFO -   Prices:
+2025-05-04 01:23:31,804 - __main__ - INFO -     price_250g: 300.0
+2025-05-04 01:23:31,804 - __main__ - INFO -   Extracted by: json_css
+2025-05-04 01:23:31,804 - __main__ - INFO -   DeepSeek enriched: False
+2025-05-04 01:23:31,807 - __main__ - INFO -   Results saved to test_results/extractors\ethiopia-kayon-mountain_extracted.json
+2025-05-04 01:23:31,807 - __main__ - INFO - Testing extraction for Kalledevarapura Estate from Corridor Seven Coffee Roasters
+2025-05-04 01:23:31,808 - __main__ - INFO - URL: https://www.corridorseven.coffee/collections/coffee/products/kalledevarapura-estate
+2025-05-04 01:23:33,334 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.corridorseven.coffee/collections/coffee/products/kalledevarapura-estate
+2025-05-04 01:23:36,731 - __main__ - INFO - Product needs DeepSeek enrichment (missing 4 attributes)
+2025-05-04 01:23:37,947 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.corridorseven.coffee/collections/coffee/products/kalledevarapura-estate
+2025-05-04 01:23:38,199 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.corridorseven.coffee/collections/coffee/products/kalledevarapura-estate
+2025-05-04 01:23:38,200 - __main__ - INFO - DeepSeek extraction took 1.47 seconds
+2025-05-04 01:23:38,204 - __main__ - INFO - Extracted data:
+2025-05-04 01:23:38,205 - __main__ - INFO -   Name: Kalledevarapura Estate
+2025-05-04 01:23:38,205 - __main__ - INFO -   Description: Elegant and smooth coffee from Karnataka
+2025-05-04 01:23:38,205 - __main__ - INFO -   Roast Level: Unknown
+2025-05-04 01:23:38,205 - __main__ - INFO -   Bean Type: BeanType.UNKNOWN
+2025-05-04 01:23:38,206 - __main__ - INFO -   Processing Method: Unknown
+2025-05-04 01:23:38,206 - __main__ - INFO -   Region: 
+2025-05-04 01:23:38,206 - __main__ - INFO -   Prices:
+2025-05-04 01:23:38,206 - __main__ - INFO -     price_250g: 0.0
+2025-05-04 01:23:38,207 - __main__ - INFO -   Extracted by: json_css
+2025-05-04 01:23:38,207 - __main__ - INFO -   DeepSeek enriched: False
+2025-05-04 01:23:38,211 - __main__ - INFO -   Results saved to test_results/extractors\kalledevarapura-estate_extracted.json
+2025-05-04 01:23:38,212 - __main__ - INFO - 
+===== EXTRACTION TEST SUMMARY =====
+2025-05-04 01:23:38,212 - __main__ - INFO - Total products tested: 4
+2025-05-04 01:23:38,212 - __main__ - INFO - Successful: 4
+2025-05-04 01:23:38,213 - __main__ - INFO - Failed: 0
+2025-05-04 01:23:38,215 - __main__ - INFO - Summary saved to test_results/extractors\extraction_summary.json

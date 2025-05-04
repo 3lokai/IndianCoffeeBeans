@@ -1,0 +1,22 @@
+2025-05-03 13:46:11,882 - __main__ - INFO - Starting comprehensive test run for component: discoverer, mode: real
+2025-05-03 13:46:11,883 - __main__ - INFO - Log file: logs/test_run_20250503_134611.log
+2025-05-03 13:46:11,885 - __main__ - INFO - === Running Product Discoverer Tests ===
+2025-05-03 13:46:11,886 - __main__ - ERROR - Error in discoverer tests: 'PlatformDetector' object has no attribute 'session'
+Traceback (most recent call last):
+  File "C:\Users\abhthril\Downloads\IndianCoffeeBeans\tests\run_all_tests.py", line 158, in main
+    await run_discoverer_tests()
+  File "C:\Users\abhthril\Downloads\IndianCoffeeBeans\tests\test_real_discoverers.py", line 118, in run_tests
+    discovery_manager = DiscoveryManager(refresh_cache=True)
+  File "C:\Users\abhthril\Downloads\IndianCoffeeBeans\scrapers\discoverers\discovery_manager.py", line 26, in __init__
+    self.platform_detector = PlatformDetector()
+                             ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\abhthril\Downloads\IndianCoffeeBeans\scrapers\platform_detector.py", line 24, in __init__
+    if self.session is None or self.session.closed:
+       ^^^^^^^^^^^^
+AttributeError: 'PlatformDetector' object has no attribute 'session'
+2025-05-03 13:46:11,892 - __main__ - INFO - === Generating Comprehensive Test Report ===
+2025-05-03 13:46:11,895 - __main__ - INFO - Comprehensive test summary saved to test_results\comprehensive_test_summary.json
+2025-05-03 13:46:11,896 - __main__ - INFO - 
+===== OVERALL TEST RESULTS =====
+2025-05-03 13:46:11,896 - __main__ - INFO - Components tested: 
+2025-05-03 13:46:11,897 - __main__ - INFO - Test run completed

@@ -1,0 +1,520 @@
+2025-05-04 12:13:57,506 - __main__ - INFO - Starting comprehensive test run for component: all, mode: both
+2025-05-04 12:13:57,506 - __main__ - INFO - Log file: logs/test_run_20250504_121357.log
+2025-05-04 12:13:57,508 - __main__ - INFO - === Running Setup Tests ===
+2025-05-04 12:13:57,508 - test_setup - INFO - Testing project setup...
+2025-05-04 12:13:57,508 - test_setup - INFO - Checking environment variables...
+2025-05-04 12:13:57,511 - test_setup - INFO - Environment variables check passed!
+2025-05-04 12:13:57,511 - test_setup - INFO - Testing imports...
+2025-05-04 12:13:57,512 - test_setup - INFO - Config loaded. USER_AGENT: IndianCoffeeBeans.com Scraper/1.0
+2025-05-04 12:13:57,512 - test_setup - INFO - Models imported successfully
+2025-05-04 12:13:57,513 - test_setup - INFO - Utility functions working. Slug test: blue-tokai-coffee-roasters
+2025-05-04 12:13:57,835 - db.supabase_client - INFO - Initializing Supabase client
+2025-05-04 12:13:58,122 - test_setup - INFO - Supabase client initialized
+2025-05-04 12:13:58,122 - test_setup - INFO - Platform detector imported successfully
+2025-05-04 12:13:58,122 - test_setup - INFO - All imports successful!
+2025-05-04 12:13:58,122 - __main__ - INFO - === Running Platform Detector Tests ===
+2025-05-04 12:14:00,063 - __main__ - INFO - Detected platforms: https://bluetokaicoffee.com: shopify, https://www.subko.coffee: shopify, https://kcroasters.com: shopify, https://www.corridorseven.coffee: shopify
+2025-05-04 12:14:00,064 - __main__ - INFO - === Running Real-World Roaster Tests ===
+2025-05-04 12:14:00,064 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-04 12:14:00,064 - tests.test_multiple_roasters - INFO - Testing pipeline with Blue Tokai Coffee Roasters
+2025-05-04 12:14:00,065 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-04 12:14:00,136 - tests.test_multiple_roasters - INFO - Testing pipeline with Third Wave Coffee Roasters
+2025-05-04 12:14:00,136 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Third Wave Coffee Roasters (https://www.thirdwavecoffeeroasters.com)
+2025-05-04 12:14:00,197 - tests.test_multiple_roasters - INFO - Testing pipeline with Subko Coffee Roasters
+2025-05-04 12:14:00,198 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Subko Coffee Roasters (https://www.subko.coffee)
+2025-05-04 12:14:00,256 - tests.test_multiple_roasters - INFO - Testing pipeline with KC Roasters
+2025-05-04 12:14:00,256 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: KC Roasters (https://kcroasters.com)
+2025-05-04 12:14:00,322 - tests.test_multiple_roasters - INFO - Testing pipeline with Roastery Coffee House
+2025-05-04 12:14:00,322 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Roastery Coffee House (https://roasterycoffee.co.in)
+2025-05-04 12:14:00,386 - tests.test_multiple_roasters - INFO - Testing pipeline with Bombay Island Coffee
+2025-05-04 12:14:00,386 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Bombay Island Coffee (https://www.bombayisland.com)
+2025-05-04 12:14:00,446 - tests.test_multiple_roasters - INFO - Testing pipeline with Grey Soul Coffee Roasters
+2025-05-04 12:14:00,446 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Grey Soul Coffee Roasters (https://greysoul.coffee)
+2025-05-04 12:14:00,505 - tests.test_multiple_roasters - INFO - Testing pipeline with Naivo Coffee Company
+2025-05-04 12:14:00,505 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Naivo Coffee Company (https://naivo.in)
+2025-05-04 12:14:05,087 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'shopify'
+2025-05-04 12:14:05,163 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for shopify: ['/pages/about', '/pages/about-us', '/pages/our-story', '/pages/story', '/pages/mission']
+2025-05-04 12:14:05,245 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.subko.coffee/pages/about
+2025-05-04 12:14:32,163 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'woocommerce'
+2025-05-04 12:14:32,163 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for woocommerce: ['/about-page', '/our-company', '/our-mission', '/who-we-are', '/about']
+2025-05-04 12:14:32,164 - scrapers.roaster_pipeline - INFO - Trying about page: https://roasterycoffee.co.in/about-page
+2025-05-04 12:14:32,172 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/about
+2025-05-04 12:14:32,192 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'shopify'
+2025-05-04 12:14:32,193 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for shopify: ['/pages/about', '/pages/about-us', '/pages/our-story', '/pages/story', '/pages/mission']
+2025-05-04 12:14:32,193 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/pages/about
+2025-05-04 12:14:32,407 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/about
+2025-05-04 12:14:32,798 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'shopify'
+2025-05-04 12:14:32,799 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for shopify: ['/pages/about', '/pages/about-us', '/pages/our-story', '/pages/story', '/pages/mission']
+2025-05-04 12:14:32,799 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.bombayisland.com/pages/about
+2025-05-04 12:14:33,006 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'shopify'
+2025-05-04 12:14:33,007 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for shopify: ['/pages/about', '/pages/about-us', '/pages/our-story', '/pages/story', '/pages/mission']
+2025-05-04 12:14:33,007 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.thirdwavecoffeeroasters.com/pages/about
+2025-05-04 12:14:56,976 - scrapers.roaster_pipeline - INFO - Found sufficient about page data, stopping search
+2025-05-04 12:14:56,987 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.bombayisland.com/pages/about
+2025-05-04 12:14:57,001 - scrapers.platform_detector - WARNING - Error detecting platform from content for https://kcroasters.com: Cannot connect to host kcroasters.com:443 ssl:default [None]
+2025-05-04 12:14:57,056 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'woocommerce'
+2025-05-04 12:14:57,056 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for woocommerce: ['/about-page', '/our-company', '/our-mission', '/who-we-are', '/about']
+2025-05-04 12:14:57,057 - scrapers.roaster_pipeline - INFO - Trying about page: https://naivo.in/about-page
+2025-05-04 12:14:57,080 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'shopify'
+2025-05-04 12:14:57,080 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for shopify: ['/pages/about', '/pages/about-us', '/pages/our-story', '/pages/story', '/pages/mission']
+2025-05-04 12:14:57,081 - scrapers.roaster_pipeline - INFO - Trying about page: https://greysoul.coffee/pages/about
+2025-05-04 12:14:57,456 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'unknown'
+2025-05-04 12:14:57,457 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for unknown: ['/about', '/about-us', '/our-story', '/story']
+2025-05-04 12:14:57,457 - scrapers.roaster_pipeline - INFO - Trying about page: https://kcroasters.com/about
+2025-05-04 12:14:57,461 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/about
+2025-05-04 12:14:57,463 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/about
+2025-05-04 12:14:57,546 - scrapers.roaster_pipeline - INFO - Found sufficient about page data, stopping search
+2025-05-04 12:14:57,596 - tests.test_multiple_roasters - INFO -   Logo URL: https://roasterycoffee.co.in/wp-content/uploads/2024/07/ad-logo-2.png
+2025-05-04 12:14:57,597 - tests.test_multiple_roasters - INFO -   Social Links: 4 links found
+2025-05-04 12:14:57,597 - tests.test_multiple_roasters - INFO -   Instagram: roasterycoffeehouseindia
+2025-05-04 12:14:57,597 - tests.test_multiple_roasters - INFO -   Location: Hyderabad, Telangana
+2025-05-04 12:14:57,597 - tests.test_multiple_roasters - INFO -   Founded: 2017
+2025-05-04 12:14:57,598 - tests.test_multiple_roasters - INFO -   Has Subscription: True
+2025-05-04 12:14:57,598 - tests.test_multiple_roasters - INFO -   Has Physical Store: True
+2025-05-04 12:14:57,600 - tests.test_multiple_roasters - INFO -   Results saved to test_results\roastery-coffee-house_result.json
+2025-05-04 12:14:57,730 - tests.test_multiple_roasters - INFO -   Description: Offering you the best coffee brand with ethically and sustainably sourced 100 % arabica coffee | Caf...
+2025-05-04 12:14:57,730 - tests.test_multiple_roasters - INFO -   Logo URL: https://www.thirdwavecoffeeroasters.com/cdn/shop/files/TWC_logo_without_R-01.png?v=1695243143
+2025-05-04 12:14:57,730 - tests.test_multiple_roasters - INFO -   Social Links: 7 links found
+2025-05-04 12:14:57,730 - tests.test_multiple_roasters - INFO -   Instagram: thirdwavecoffeeindia
+2025-05-04 12:14:57,731 - tests.test_multiple_roasters - INFO -   Location: Bangalore, Karnataka
+2025-05-04 12:14:57,731 - tests.test_multiple_roasters - INFO -   Founded: None
+2025-05-04 12:14:57,731 - tests.test_multiple_roasters - INFO -   Has Subscription: True
+2025-05-04 12:14:57,732 - tests.test_multiple_roasters - INFO -   Has Physical Store: False
+2025-05-04 12:14:57,734 - tests.test_multiple_roasters - INFO -   Results saved to test_results\third-wave-coffee-roasters_result.json
+2025-05-04 12:14:57,736 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/about
+2025-05-04 12:14:57,823 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/about
+2025-05-04 12:14:58,345 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/about-page
+2025-05-04 12:14:59,108 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.bombayisland.com/pages/about
+2025-05-04 12:14:59,836 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/about
+2025-05-04 12:15:00,035 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/about
+2025-05-04 12:15:01,576 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://bluetokaicoffee.com/pages/about
+2025-05-04 12:15:01,596 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/about
+2025-05-04 12:15:02,605 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/about-page
+2025-05-04 12:15:03,245 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.bombayisland.com/pages/about
+2025-05-04 12:15:03,954 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/about
+2025-05-04 12:15:04,187 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/about
+2025-05-04 12:15:07,925 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/about-page
+2025-05-04 12:15:09,588 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://bluetokaicoffee.com/pages/about
+2025-05-04 12:15:09,589 - scrapers.roaster_pipeline - INFO - Trying about page: https://bluetokaicoffee.com/pages/about-us
+2025-05-04 12:15:09,602 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.subko.coffee/pages/about
+2025-05-04 12:15:09,602 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.subko.coffee/pages/about-us
+2025-05-04 12:15:09,717 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/about-us
+2025-05-04 12:15:10,009 - scrapers.roaster_pipeline - INFO - Found sufficient about page data, stopping search
+2025-05-04 12:15:10,194 - tests.test_multiple_roasters - INFO -   Description: We buy our great tasting coffees (100% Arabica) from Indian estates, roast the beans with care, and ...
+2025-05-04 12:15:10,194 - tests.test_multiple_roasters - INFO -   Logo URL: https://bluetokaicoffee.com/favicon.ico
+2025-05-04 12:15:10,194 - tests.test_multiple_roasters - INFO -   Social Links: 6 links found
+2025-05-04 12:15:10,194 - tests.test_multiple_roasters - INFO -   Instagram: bluetokaicoffee
+2025-05-04 12:15:10,195 - tests.test_multiple_roasters - INFO -   Location: Bangalore, Karnataka
+2025-05-04 12:15:10,195 - tests.test_multiple_roasters - INFO -   Founded: None
+2025-05-04 12:15:10,195 - tests.test_multiple_roasters - INFO -   Has Subscription: False
+2025-05-04 12:15:10,195 - tests.test_multiple_roasters - INFO -   Has Physical Store: False
+2025-05-04 12:15:10,197 - tests.test_multiple_roasters - INFO -   Results saved to test_results\blue-tokai-coffee-roasters_result.json
+2025-05-04 12:15:11,253 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.bombayisland.com/pages/about
+2025-05-04 12:15:11,254 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.bombayisland.com/pages/about-us
+2025-05-04 12:15:11,587 - scrapers.roaster_pipeline - INFO - Found sufficient about page data, stopping search
+2025-05-04 12:15:11,728 - tests.test_multiple_roasters - INFO -   Description: Experience 100% Arabica coffee from Chikmagalur, freshly roasted in Mumbai, Order Specialty-grade co...
+2025-05-04 12:15:11,729 - tests.test_multiple_roasters - INFO -   Logo URL: https://www.bombayisland.com/cdn/shop/files/bombay-island_54174129-4ba5-4d52-aa1d-084280fb8e2f.png?v=1661605152&width=200
+2025-05-04 12:15:11,729 - tests.test_multiple_roasters - INFO -   Social Links: 5 links found
+2025-05-04 12:15:11,729 - tests.test_multiple_roasters - INFO -   Instagram: p
+2025-05-04 12:15:11,729 - tests.test_multiple_roasters - INFO -   Location: Mumbai, Maharashtra
+2025-05-04 12:15:11,730 - tests.test_multiple_roasters - INFO -   Founded: None
+2025-05-04 12:15:11,730 - tests.test_multiple_roasters - INFO -   Has Subscription: True
+2025-05-04 12:15:11,730 - tests.test_multiple_roasters - INFO -   Has Physical Store: False
+2025-05-04 12:15:11,732 - tests.test_multiple_roasters - INFO -   Results saved to test_results\bombay-island-coffee_result.json
+2025-05-04 12:15:11,863 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/about-us
+2025-05-04 12:15:11,970 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://kcroasters.com/about
+2025-05-04 12:15:11,971 - scrapers.roaster_pipeline - INFO - Trying about page: https://kcroasters.com/about-us
+2025-05-04 12:15:12,130 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/about-us
+2025-05-04 12:15:12,198 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://greysoul.coffee/pages/about
+2025-05-04 12:15:12,199 - scrapers.roaster_pipeline - INFO - Trying about page: https://greysoul.coffee/pages/about-us
+2025-05-04 12:15:12,327 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/about-us
+2025-05-04 12:15:14,259 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/about-us
+2025-05-04 12:15:14,454 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/about-us
+2025-05-04 12:15:15,929 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://naivo.in/about-page
+2025-05-04 12:15:15,931 - scrapers.roaster_pipeline - INFO - Trying about page: https://naivo.in/our-company
+2025-05-04 12:15:15,984 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/about-us
+2025-05-04 12:15:17,246 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/our-company
+2025-05-04 12:15:18,359 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/about-us
+2025-05-04 12:15:18,613 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/about-us
+2025-05-04 12:15:20,442 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/our-company
+2025-05-04 12:15:24,003 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.subko.coffee/pages/about-us
+2025-05-04 12:15:24,005 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.subko.coffee/pages/our-story
+2025-05-04 12:15:24,134 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/our-story
+2025-05-04 12:15:26,171 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/our-company
+2025-05-04 12:15:26,311 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/our-story
+2025-05-04 12:15:26,365 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://kcroasters.com/about-us
+2025-05-04 12:15:26,367 - scrapers.roaster_pipeline - INFO - Trying about page: https://kcroasters.com/our-story
+2025-05-04 12:15:26,478 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/our-story
+2025-05-04 12:15:26,617 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://greysoul.coffee/pages/about-us
+2025-05-04 12:15:26,618 - scrapers.roaster_pipeline - INFO - Trying about page: https://greysoul.coffee/pages/our-story
+2025-05-04 12:15:27,593 - scrapers.roaster_pipeline - INFO - Trying about page: https://greysoul.coffee/pages/story
+2025-05-04 12:15:27,707 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/story
+2025-05-04 12:15:28,635 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/our-story
+2025-05-04 12:15:29,887 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/story
+2025-05-04 12:15:30,480 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/our-story
+2025-05-04 12:15:32,778 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/our-story
+2025-05-04 12:15:34,025 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/story
+2025-05-04 12:15:34,172 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://naivo.in/our-company
+2025-05-04 12:15:34,173 - scrapers.roaster_pipeline - INFO - Trying about page: https://naivo.in/our-mission
+2025-05-04 12:15:35,260 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/our-mission
+2025-05-04 12:15:38,410 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/our-mission
+2025-05-04 12:15:38,484 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.subko.coffee/pages/our-story
+2025-05-04 12:15:38,485 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.subko.coffee/pages/story
+2025-05-04 12:15:38,608 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/story
+2025-05-04 12:15:40,782 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://kcroasters.com/our-story
+2025-05-04 12:15:40,784 - scrapers.roaster_pipeline - INFO - Trying about page: https://kcroasters.com/story
+2025-05-04 12:15:40,827 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/story
+2025-05-04 12:15:40,914 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/story
+2025-05-04 12:15:42,027 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://greysoul.coffee/pages/story
+2025-05-04 12:15:42,029 - scrapers.roaster_pipeline - INFO - Trying about page: https://greysoul.coffee/pages/mission
+2025-05-04 12:15:42,207 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/mission
+2025-05-04 12:15:43,066 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/story
+2025-05-04 12:15:43,528 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/our-mission
+2025-05-04 12:15:44,388 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/mission
+2025-05-04 12:15:45,000 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/story
+2025-05-04 12:15:47,225 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/story
+2025-05-04 12:15:48,517 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/pages/mission
+2025-05-04 12:15:51,533 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://naivo.in/our-mission
+2025-05-04 12:15:51,534 - scrapers.roaster_pipeline - INFO - Trying about page: https://naivo.in/who-we-are
+2025-05-04 12:15:52,697 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/who-we-are
+2025-05-04 12:15:53,015 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.subko.coffee/pages/story
+2025-05-04 12:15:53,017 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.subko.coffee/pages/mission
+2025-05-04 12:15:53,176 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/mission
+2025-05-04 12:15:55,227 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://kcroasters.com/story
+2025-05-04 12:15:55,227 - scrapers.roaster_pipeline - INFO - Trying about page: https://kcroasters.com/philosophy
+2025-05-04 12:15:55,325 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/philosophy
+2025-05-04 12:15:55,331 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/mission
+2025-05-04 12:15:56,286 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/who-we-are
+2025-05-04 12:15:56,526 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://greysoul.coffee/pages/mission
+2025-05-04 12:15:56,527 - scrapers.roaster_pipeline - INFO - Trying about page: https://greysoul.coffee/about
+2025-05-04 12:15:56,698 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/about
+2025-05-04 12:15:57,496 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/philosophy
+2025-05-04 12:15:58,812 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/about
+2025-05-04 12:15:59,480 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/pages/mission
+2025-05-04 12:16:01,506 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/who-we-are
+2025-05-04 12:16:01,683 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/philosophy
+2025-05-04 12:16:02,938 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/about
+2025-05-04 12:16:07,495 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.subko.coffee/pages/mission
+2025-05-04 12:16:07,495 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.subko.coffee/about
+2025-05-04 12:16:07,620 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/about
+2025-05-04 12:16:09,509 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://naivo.in/who-we-are
+2025-05-04 12:16:09,510 - scrapers.roaster_pipeline - INFO - Trying about page: https://naivo.in/about
+2025-05-04 12:16:09,692 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://kcroasters.com/philosophy
+2025-05-04 12:16:09,693 - scrapers.roaster_pipeline - INFO - Trying about page: https://kcroasters.com/values
+2025-05-04 12:16:09,762 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/about
+2025-05-04 12:16:09,874 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/values
+2025-05-04 12:16:10,941 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://greysoul.coffee/about
+2025-05-04 12:16:10,942 - scrapers.roaster_pipeline - INFO - Trying about page: https://greysoul.coffee/about-us
+2025-05-04 12:16:11,042 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/about-us
+2025-05-04 12:16:11,977 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/values
+2025-05-04 12:16:13,106 - scrapers.roaster_pipeline - INFO - Trying about page: https://naivo.in/about-us
+2025-05-04 12:16:13,250 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/about-us
+2025-05-04 12:16:13,919 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/about
+2025-05-04 12:16:15,065 - scrapers.roaster_pipeline - INFO - Trying about page: https://naivo.in/our-story
+2025-05-04 12:16:15,695 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/our-story
+2025-05-04 12:16:16,125 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/values
+2025-05-04 12:16:17,369 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/about-us
+2025-05-04 12:16:19,649 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/our-story
+2025-05-04 12:16:21,929 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.subko.coffee/about
+2025-05-04 12:16:21,930 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.subko.coffee/about-us
+2025-05-04 12:16:22,079 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/about-us
+2025-05-04 12:16:24,137 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://kcroasters.com/values
+2025-05-04 12:16:24,138 - scrapers.roaster_pipeline - INFO - Trying about page: https://kcroasters.com/mission
+2025-05-04 12:16:24,245 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/about-us
+2025-05-04 12:16:24,257 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/mission
+2025-05-04 12:16:25,196 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/our-story
+2025-05-04 12:16:25,373 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://greysoul.coffee/about-us
+2025-05-04 12:16:25,374 - scrapers.roaster_pipeline - INFO - Trying about page: https://greysoul.coffee/our-story
+2025-05-04 12:16:25,500 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/our-story
+2025-05-04 12:16:26,367 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/mission
+2025-05-04 12:16:27,612 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/our-story
+2025-05-04 12:16:28,361 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/about-us
+2025-05-04 12:16:30,539 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://kcroasters.com/mission
+2025-05-04 12:16:31,775 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/our-story
+2025-05-04 12:16:33,211 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://naivo.in/our-story
+2025-05-04 12:16:33,212 - scrapers.roaster_pipeline - INFO - Trying about page: https://naivo.in/story
+2025-05-04 12:16:34,324 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/story
+2025-05-04 12:16:36,375 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.subko.coffee/about-us
+2025-05-04 12:16:36,377 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.subko.coffee/our-story
+2025-05-04 12:16:36,534 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/our-story
+2025-05-04 12:16:37,448 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/story
+2025-05-04 12:16:38,541 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://kcroasters.com/mission
+2025-05-04 12:16:38,685 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/our-story
+2025-05-04 12:16:38,716 - tests.test_multiple_roasters - INFO -   Description: Order the most delicious freshly roasted 100% Arabica coffee beans online from KCROASTERS by Koinoni...
+2025-05-04 12:16:38,716 - tests.test_multiple_roasters - INFO -   Logo URL: https://kcroasters.com/cdn/shop/files/website_logo_410x.png?v=1613518911
+2025-05-04 12:16:38,717 - tests.test_multiple_roasters - INFO -   Social Links: 6 links found
+2025-05-04 12:16:38,717 - tests.test_multiple_roasters - INFO -   Instagram: kcroasters
+2025-05-04 12:16:38,717 - tests.test_multiple_roasters - INFO -   Location: Mumbai, Maharashtra
+2025-05-04 12:16:38,717 - tests.test_multiple_roasters - INFO -   Founded: None
+2025-05-04 12:16:38,717 - tests.test_multiple_roasters - INFO -   Has Subscription: True
+2025-05-04 12:16:38,717 - tests.test_multiple_roasters - INFO -   Has Physical Store: False
+2025-05-04 12:16:38,719 - tests.test_multiple_roasters - INFO -   Results saved to test_results\kc-roasters_result.json
+2025-05-04 12:16:39,786 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://greysoul.coffee/our-story
+2025-05-04 12:16:39,788 - scrapers.roaster_pipeline - INFO - Trying about page: https://greysoul.coffee/story
+2025-05-04 12:16:39,878 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/story
+2025-05-04 12:16:42,036 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/story
+2025-05-04 12:16:42,617 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://naivo.in/story
+2025-05-04 12:16:42,875 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/our-story
+2025-05-04 12:16:46,254 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://greysoul.coffee/story
+2025-05-04 12:16:50,621 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://naivo.in/story
+2025-05-04 12:16:50,777 - tests.test_multiple_roasters - INFO -   Description: A specialty coffee roaster....
+2025-05-04 12:16:50,777 - tests.test_multiple_roasters - INFO -   Logo URL: https://naivo.in/favicon.ico
+2025-05-04 12:16:50,778 - tests.test_multiple_roasters - INFO -   Social Links: 0 links found
+2025-05-04 12:16:50,778 - tests.test_multiple_roasters - INFO -   Instagram: None
+2025-05-04 12:16:50,778 - tests.test_multiple_roasters - INFO -   Location: Bangalore, Karnataka
+2025-05-04 12:16:50,778 - tests.test_multiple_roasters - INFO -   Founded: None
+2025-05-04 12:16:50,778 - tests.test_multiple_roasters - INFO -   Has Subscription: False
+2025-05-04 12:16:50,779 - tests.test_multiple_roasters - INFO -   Has Physical Store: False
+2025-05-04 12:16:50,780 - tests.test_multiple_roasters - INFO -   Results saved to test_results\naivo-coffee-company_result.json
+2025-05-04 12:16:50,889 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.subko.coffee/our-story
+2025-05-04 12:16:50,891 - scrapers.roaster_pipeline - INFO - Trying about page: https://www.subko.coffee/story
+2025-05-04 12:16:51,046 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/story
+2025-05-04 12:16:53,196 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/story
+2025-05-04 12:16:54,268 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://greysoul.coffee/story
+2025-05-04 12:16:54,428 - tests.test_multiple_roasters - INFO -   Description: Because telling a story is an impactful way to get closer to a brand ……. A one-year Journey starting...
+2025-05-04 12:16:54,429 - tests.test_multiple_roasters - INFO -   Logo URL: https://greysoul.coffee/favicon.ico
+2025-05-04 12:16:54,429 - tests.test_multiple_roasters - INFO -   Social Links: 8 links found
+2025-05-04 12:16:54,429 - tests.test_multiple_roasters - INFO -   Instagram: greysoulcoffee
+2025-05-04 12:16:54,429 - tests.test_multiple_roasters - INFO -   Location: Bangalore, Karnataka
+2025-05-04 12:16:54,429 - tests.test_multiple_roasters - INFO -   Founded: None
+2025-05-04 12:16:54,429 - tests.test_multiple_roasters - INFO -   Has Subscription: False
+2025-05-04 12:16:54,430 - tests.test_multiple_roasters - INFO -   Has Physical Store: False
+2025-05-04 12:16:54,431 - tests.test_multiple_roasters - INFO -   Results saved to test_results\grey-soul-coffee-roasters_result.json
+2025-05-04 12:16:57,333 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://www.subko.coffee/story
+2025-05-04 12:17:05,335 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://www.subko.coffee/story
+2025-05-04 12:17:05,536 - tests.test_multiple_roasters - INFO -   Description: Subko Specialty Coffee Roasters and Craft Bakehouse is at its core, committed to an ideal: to help r...
+2025-05-04 12:17:05,536 - tests.test_multiple_roasters - INFO -   Logo URL: https://www.subko.coffee/cdn/shop/files/subko_png_logo_2x_cfb73125-bccc-4011-b894-b8d9dec6d340.png?v=1676363945
+2025-05-04 12:17:05,537 - tests.test_multiple_roasters - INFO -   Social Links: 0 links found
+2025-05-04 12:17:05,537 - tests.test_multiple_roasters - INFO -   Instagram: None
+2025-05-04 12:17:05,537 - tests.test_multiple_roasters - INFO -   Location: Mumbai, Maharashtra
+2025-05-04 12:17:05,537 - tests.test_multiple_roasters - INFO -   Founded: None
+2025-05-04 12:17:05,538 - tests.test_multiple_roasters - INFO -   Has Subscription: True
+2025-05-04 12:17:05,538 - tests.test_multiple_roasters - INFO -   Has Physical Store: False
+2025-05-04 12:17:05,540 - tests.test_multiple_roasters - INFO -   Results saved to test_results\subko-coffee-roasters_result.json
+2025-05-04 12:17:05,541 - tests.test_multiple_roasters - INFO - 
+===== TEST SUMMARY =====
+2025-05-04 12:17:05,541 - tests.test_multiple_roasters - INFO - Total roasters tested: 8
+2025-05-04 12:17:05,541 - tests.test_multiple_roasters - INFO - Successful: 8
+2025-05-04 12:17:05,542 - tests.test_multiple_roasters - INFO - Failed: 0
+2025-05-04 12:17:05,544 - tests.test_multiple_roasters - INFO - Summary saved to test_results\summary.json
+2025-05-04 12:17:05,544 - __main__ - INFO - Real-world roaster tests completed
+2025-05-04 12:17:05,545 - __main__ - INFO - === Running Mock Roaster Tests ===
+2025-05-04 12:17:05,545 - test_helpers - INFO - Testing with mock data for Sunrise Coffee Roasters
+2025-05-04 12:17:05,545 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-04 12:17:05,546 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Sunrise Coffee Roasters (https://sunrisecoffeeroasters.com)
+2025-05-04 12:17:07,002 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: '<coroutine object AsyncMockMixin._execute_mock_call at 0x000001E12B0B5C40>'
+2025-05-04 12:17:07,003 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for <coroutine object AsyncMockMixin._execute_mock_call at 0x000001E12B0B5C40>: ['/about', '/about-us', '/our-story', '/story']
+2025-05-04 12:17:07,003 - scrapers.roaster_pipeline - INFO - Trying about page: https://sunrisecoffeeroasters.com/about
+2025-05-04 12:17:07,008 - scrapers.roaster_pipeline - INFO - Found sufficient about page data, stopping search
+2025-05-04 12:17:07,172 - test_helpers - INFO - Testing with mock data for Mountain Peak Coffee
+2025-05-04 12:17:07,172 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-04 12:17:07,176 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Mountain Peak Coffee (https://mountainpeakcoffee.com)
+2025-05-04 12:17:08,830 - test_helpers - INFO - Testing with mock data for Urban Brew Coffee
+2025-05-04 12:17:08,831 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-04 12:17:08,832 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Urban Brew Coffee (https://urbanbrewcoffee.com)
+2025-05-04 12:17:10,184 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: '<coroutine object AsyncMockMixin._execute_mock_call at 0x000001E12B197B40>'
+2025-05-04 12:17:10,184 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for <coroutine object AsyncMockMixin._execute_mock_call at 0x000001E12B197B40>: ['/about', '/about-us', '/our-story', '/story']
+2025-05-04 12:17:10,184 - scrapers.roaster_pipeline - INFO - Trying about page: https://urbanbrewcoffee.com/about
+2025-05-04 12:17:10,189 - scrapers.roaster_pipeline - INFO - Found sufficient about page data, stopping search
+2025-05-04 12:17:10,348 - test_helpers - INFO - Saved mock test result to test_results/mock_tests\sunrise_coffee_roasters.json
+2025-05-04 12:17:10,349 - test_helpers - INFO - Saved mock test result to test_results/mock_tests\mountain_peak_coffee.json
+2025-05-04 12:17:10,351 - test_helpers - INFO - Saved mock test result to test_results/mock_tests\urban_brew_coffee.json
+2025-05-04 12:17:10,352 - test_helpers - INFO - Mock tests complete: 3/3 successful
+2025-05-04 12:17:10,353 - __main__ - INFO - Mock roaster tests completed
+2025-05-04 12:17:10,354 - __main__ - INFO - === Running Product Discoverer Tests ===
+2025-05-04 12:17:10,400 - test_real_discoverers - INFO - Testing discovery for Blue Tokai Coffee Roasters
+2025-05-04 12:17:10,526 - test_real_discoverers - INFO - Detected platform: shopify
+2025-05-04 12:17:10,527 - scrapers.discoverers.discovery_manager - INFO - Platform type for Blue Tokai Coffee Roasters: shopify
+2025-05-04 12:17:12,910 - scrapers.discoverers.discovery_manager - INFO - Discovered 64 products via Shopify API
+2025-05-04 12:17:12,981 - scrapers.discoverers.discovery_manager - INFO - Discovered 64 unique products for Blue Tokai Coffee Roasters
+2025-05-04 12:17:12,986 - test_real_discoverers - INFO - Sample of discovered products:
+2025-05-04 12:17:12,987 - test_real_discoverers - INFO -   1. Are you tasting your coffee?
+2025-05-04 12:17:12,987 - test_real_discoverers - INFO -      URL: https://bluetokaicoffee.com/products/cupping-kolkata
+2025-05-04 12:17:12,987 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:12,987 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0738/1409/files/...
+2025-05-04 12:17:12,987 - test_real_discoverers - INFO -   2. Kerehaklu Estate - Washed
+2025-05-04 12:17:12,988 - test_real_discoverers - INFO -      URL: https://bluetokaicoffee.com/products/kerehaklu-estate-light
+2025-05-04 12:17:12,988 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:12,988 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0738/1409/files/...
+2025-05-04 12:17:12,988 - test_real_discoverers - INFO -   3. Seethargundu Estate
+2025-05-04 12:17:12,988 - test_real_discoverers - INFO -      URL: https://bluetokaicoffee.com/products/poabs-estate
+2025-05-04 12:17:12,989 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:12,989 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0738/1409/files/...
+2025-05-04 12:17:13,039 - test_real_discoverers - INFO -   Products saved to test_results/discoverers\blue-tokai-coffee-roasters_products.json
+2025-05-04 12:17:13,039 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001E1289C5810>
+2025-05-04 12:17:13,040 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001E12B0408F0>, 151432.0817092)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001E128AA8510>
+2025-05-04 12:17:13,041 - test_real_discoverers - INFO - Testing discovery for Subko Coffee Roasters
+2025-05-04 12:17:13,172 - test_real_discoverers - INFO - Detected platform: shopify
+2025-05-04 12:17:13,172 - scrapers.discoverers.discovery_manager - INFO - Platform type for Subko Coffee Roasters: shopify
+2025-05-04 12:17:15,493 - scrapers.discoverers.discovery_manager - INFO - Discovered 31 products via Shopify API
+2025-05-04 12:17:15,526 - scrapers.discoverers.discovery_manager - INFO - Discovered 31 unique products for Subko Coffee Roasters
+2025-05-04 12:17:15,532 - test_real_discoverers - INFO - Sample of discovered products:
+2025-05-04 12:17:15,532 - test_real_discoverers - INFO -   1. Salawara Estate : 1486, Karnataka (SCA 84+) : Naturals (Medium Roast)
+2025-05-04 12:17:15,532 - test_real_discoverers - INFO -      URL: https://www.subko.coffee/products/salawara-estate-1486-karnataka-sca-84-naturals-medium-roast
+2025-05-04 12:17:15,533 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:15,533 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0308/0857/1963/f...
+2025-05-04 12:17:15,533 - test_real_discoverers - INFO -   2. Specialty Excelsa (SCA 86+): Mooleh Manay Estate, Coorg, Karnataka, India: Lot #Kempu - Black Honey (Medium Roast)
+2025-05-04 12:17:15,534 - test_real_discoverers - INFO -      URL: https://www.subko.coffee/products/specialty-excelsa-mooleh-manay-estate-coorg-karnataka-black-honey-medium-roast
+2025-05-04 12:17:15,534 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:15,534 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0308/0857/1963/f...
+2025-05-04 12:17:15,535 - test_real_discoverers - INFO -   3. Project Pearl, Ratnagiri Estate, Karnataka (SCA 86+): Alchemy - Naturals (Medium-Light Roast)
+2025-05-04 12:17:15,535 - test_real_discoverers - INFO -      URL: https://www.subko.coffee/products/project-pearl-ratnagiri-estate-karnataka-sca-86-alchemy-naturals-medium-light-roast
+2025-05-04 12:17:15,535 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:15,535 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0308/0857/1963/f...
+2025-05-04 12:17:15,553 - test_real_discoverers - INFO -   Products saved to test_results/discoverers\subko-coffee-roasters_products.json
+2025-05-04 12:17:15,553 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001E128AA3110>
+2025-05-04 12:17:15,554 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001E12B174050>, 151434.7267374)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001E128AA8510>
+2025-05-04 12:17:15,554 - test_real_discoverers - INFO - Testing discovery for Corridor Seven Coffee Roasters
+2025-05-04 12:17:16,160 - test_real_discoverers - INFO - Detected platform: shopify
+2025-05-04 12:17:16,160 - scrapers.discoverers.discovery_manager - INFO - Platform type for Corridor Seven Coffee Roasters: shopify
+2025-05-04 12:17:18,470 - scrapers.discoverers.discovery_manager - INFO - Discovered 35 products via Shopify API
+2025-05-04 12:17:18,544 - scrapers.discoverers.discovery_manager - INFO - Discovered 35 unique products for Corridor Seven Coffee Roasters
+2025-05-04 12:17:18,549 - test_real_discoverers - INFO - Sample of discovered products:
+2025-05-04 12:17:18,549 - test_real_discoverers - INFO -   1. Kudiraipanjan Estate Lactic Honey
+2025-05-04 12:17:18,550 - test_real_discoverers - INFO -      URL: https://www.corridorseven.coffee/products/kudiraipanjan-estate-lactic-honey
+2025-05-04 12:17:18,550 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:18,550 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0137/1714/3609/f...
+2025-05-04 12:17:18,551 - test_real_discoverers - INFO -   2. Anai Kadu Estate Aerobic Naturals
+2025-05-04 12:17:18,551 - test_real_discoverers - INFO -      URL: https://www.corridorseven.coffee/products/anai-kadu
+2025-05-04 12:17:18,551 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:18,552 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0137/1714/3609/f...
+2025-05-04 12:17:18,552 - test_real_discoverers - INFO -   3. Riverdale Estate Lactic Carbonic Maceration
+2025-05-04 12:17:18,552 - test_real_discoverers - INFO -      URL: https://www.corridorseven.coffee/products/riverdale-estate-lactic-carbonic-maceration
+2025-05-04 12:17:18,553 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:18,553 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/0137/1714/3609/f...
+2025-05-04 12:17:18,653 - test_real_discoverers - INFO -   Products saved to test_results/discoverers\corridor-seven-coffee-roasters_products.json
+2025-05-04 12:17:18,653 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001E128AA3110>
+2025-05-04 12:17:18,654 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001E12B174050>, 151437.3234405)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001E12B08B830>, 151437.7158799)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001E128AA8510>
+2025-05-04 12:17:18,655 - test_real_discoverers - INFO - Testing discovery for KC Roasters
+2025-05-04 12:17:18,826 - test_real_discoverers - INFO - Detected platform: shopify
+2025-05-04 12:17:18,827 - scrapers.discoverers.discovery_manager - INFO - Platform type for KC Roasters: shopify
+2025-05-04 12:17:21,067 - scrapers.discoverers.discovery_manager - INFO - Discovered 5 products via Shopify API
+2025-05-04 12:17:21,088 - scrapers.discoverers.discovery_manager - INFO - Discovered 5 unique products for KC Roasters
+2025-05-04 12:17:21,098 - test_real_discoverers - INFO - Sample of discovered products:
+2025-05-04 12:17:21,099 - test_real_discoverers - INFO -   1. Winter Espresso Blend | Dark Roast Coffee | NEW HARVEST !
+2025-05-04 12:17:21,099 - test_real_discoverers - INFO -      URL: https://kcroasters.com/products/winter-espresso-blend-dark-roast-coffee
+2025-05-04 12:17:21,100 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:21,100 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/2552/7686/files/...
+2025-05-04 12:17:21,101 - test_real_discoverers - INFO -   2. Olive And Roasted Garlic Sourdough Bread
+2025-05-04 12:17:21,101 - test_real_discoverers - INFO -      URL: https://kcroasters.com/products/olive-garlic-sourdough-bread
+2025-05-04 12:17:21,102 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:21,102 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/2552/7686/produc...
+2025-05-04 12:17:21,103 - test_real_discoverers - INFO -   3. Gaggia Cadorna - Automatic Espresso Machine
+2025-05-04 12:17:21,103 - test_real_discoverers - INFO -      URL: https://kcroasters.com/products/gaggia-cadorna-automatic-espresso-machine
+2025-05-04 12:17:21,103 - test_real_discoverers - INFO -      Discovery method: N/A
+2025-05-04 12:17:21,104 - test_real_discoverers - INFO -      Image URL: https://cdn.shopify.com/s/files/1/2552/7686/produc...
+2025-05-04 12:17:21,112 - test_real_discoverers - INFO -   Products saved to test_results/discoverers\kc-roasters_products.json
+2025-05-04 12:17:21,113 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001E128AA3110>
+2025-05-04 12:17:21,114 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001E12B174050>, 151440.3827356)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001E128AA8510>
+2025-05-04 12:17:21,114 - test_real_discoverers - INFO - 
+===== DISCOVERY TEST SUMMARY =====
+2025-05-04 12:17:21,115 - test_real_discoverers - INFO - Total roasters tested: 4
+2025-05-04 12:17:21,115 - test_real_discoverers - INFO - Successful: 4
+2025-05-04 12:17:21,115 - test_real_discoverers - INFO - Failed: 0
+2025-05-04 12:17:21,118 - test_real_discoverers - INFO - Summary saved to test_results/discoverers\discovery_summary.json
+2025-05-04 12:17:21,119 - __main__ - INFO - Discoverer tests completed
+2025-05-04 12:17:21,120 - __main__ - INFO - === Running Product Extractor Tests ===
+2025-05-04 12:17:21,120 - test_real_extractors - INFO - Testing extraction for Attikan Estate | Medium Roast from Blue Tokai Coffee Roasters
+2025-05-04 12:17:21,121 - test_real_extractors - INFO - URL: https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 12:17:22,244 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 12:17:22,268 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 12:17:22,464 - test_real_extractors - INFO - Product needs DeepSeek enrichment (missing 4 attributes)
+2025-05-04 12:17:23,546 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 12:17:23,776 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://bluetokaicoffee.com/products/attikan-estate
+2025-05-04 12:17:23,776 - test_real_extractors - INFO - DeepSeek extraction took 1.31 seconds
+2025-05-04 12:17:23,781 - test_real_extractors - INFO - Extracted data:
+2025-05-04 12:17:23,781 - test_real_extractors - INFO -   Name: Attikan Estate | Medium Roast
+2025-05-04 12:17:23,781 - test_real_extractors - INFO -   Description: A classic South Indian Coffee with notes of chocolate and nuts
+2025-05-04 12:17:23,781 - test_real_extractors - INFO -   Roast Level: Unknown
+2025-05-04 12:17:23,782 - test_real_extractors - INFO -   Bean Type: Unknown
+2025-05-04 12:17:23,782 - test_real_extractors - INFO -   Processing Method: Unknown
+2025-05-04 12:17:23,782 - test_real_extractors - INFO -   Region: Unknown
+2025-05-04 12:17:23,782 - test_real_extractors - INFO -   Extracted by: json_css
+2025-05-04 12:17:23,783 - test_real_extractors - INFO -   DeepSeek enriched: False
+2025-05-04 12:17:23,785 - test_real_extractors - INFO -   Results saved to test_results/extractors\attikan-estate-medium-roast_extracted.json
+2025-05-04 12:17:23,785 - test_real_extractors - INFO - Testing extraction for Nachammai Natural from Subko Coffee Roasters
+2025-05-04 12:17:23,785 - test_real_extractors - INFO - URL: https://www.subko.coffee/product/nachammai-natural/
+2025-05-04 12:17:24,851 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.subko.coffee/product/nachammai-natural/
+2025-05-04 12:17:25,037 - test_real_extractors - INFO - Product needs DeepSeek enrichment (missing 4 attributes)
+2025-05-04 12:17:26,074 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.subko.coffee/product/nachammai-natural/
+2025-05-04 12:17:26,263 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.subko.coffee/product/nachammai-natural/
+2025-05-04 12:17:26,264 - test_real_extractors - INFO - DeepSeek extraction took 1.23 seconds
+2025-05-04 12:17:26,268 - test_real_extractors - INFO - Extracted data:
+2025-05-04 12:17:26,268 - test_real_extractors - INFO -   Name: Nachammai Natural
+2025-05-04 12:17:26,268 - test_real_extractors - INFO -   Description: Juicy and sweet coffee from Tamil Nadu
+2025-05-04 12:17:26,268 - test_real_extractors - INFO -   Roast Level: Unknown
+2025-05-04 12:17:26,269 - test_real_extractors - INFO -   Bean Type: Unknown
+2025-05-04 12:17:26,269 - test_real_extractors - INFO -   Processing Method: Unknown
+2025-05-04 12:17:26,269 - test_real_extractors - INFO -   Region: Unknown
+2025-05-04 12:17:26,269 - test_real_extractors - INFO -   Extracted by: json_css
+2025-05-04 12:17:26,269 - test_real_extractors - INFO -   DeepSeek enriched: False
+2025-05-04 12:17:26,271 - test_real_extractors - INFO -   Results saved to test_results/extractors\nachammai-natural_extracted.json
+2025-05-04 12:17:26,271 - test_real_extractors - INFO - Testing extraction for Ethiopia Kayon Mountain from KC Roasters
+2025-05-04 12:17:26,272 - test_real_extractors - INFO - URL: https://kcroasters.com/products/ethiopia-kayon-mountain
+2025-05-04 12:17:27,347 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://kcroasters.com/products/ethiopia-kayon-mountain
+2025-05-04 12:17:27,567 - test_real_extractors - INFO - Product needs DeepSeek enrichment (missing 4 attributes)
+2025-05-04 12:17:28,648 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://kcroasters.com/products/ethiopia-kayon-mountain
+2025-05-04 12:17:28,915 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://kcroasters.com/products/ethiopia-kayon-mountain
+2025-05-04 12:17:28,916 - test_real_extractors - INFO - DeepSeek extraction took 1.35 seconds
+2025-05-04 12:17:28,918 - test_real_extractors - INFO - Extracted data:
+2025-05-04 12:17:28,919 - test_real_extractors - INFO -   Name: Ethiopia Kayon Mountain
+2025-05-04 12:17:28,919 - test_real_extractors - INFO -   Description: Vibrant and fruity Ethiopian coffee
+2025-05-04 12:17:28,919 - test_real_extractors - INFO -   Roast Level: Unknown
+2025-05-04 12:17:28,919 - test_real_extractors - INFO -   Bean Type: BeanType.UNKNOWN
+2025-05-04 12:17:28,919 - test_real_extractors - INFO -   Processing Method: Unknown
+2025-05-04 12:17:28,919 - test_real_extractors - INFO -   Region: CoffeesBrewing EquipmentCollectiveAbout usSign inNo results found.CoffeesDrip'd Kit - Portable Fresh Coffee BagsSingle Origin Indian CoffeesTaster PacksCoffee SubscriptionsInternational EstatesCOLDBREW®GiftingNo results found.Brewing EquipmentFilter PaperClever DripperHome Espresso MachinesBialetti Moka PotsHario V60 Drip KettleAeroPressCoffee GrinderNo results found.CollectiveEtherLa Folie Breads And ChocolatesBoombayMilklabTote BagsCOLDBREW®Naagin Hot SauceBrownsalt Granola & CookiesSvami Tonic Water & Ginger AleBon FictionNaviluna Artisanal ChocolateesNo results found.About usFAQ'SBrew GuidesCafesFarmsOur StoryOur BlogWholesaleGiftingNo results found.
+2025-05-04 12:17:28,920 - test_real_extractors - INFO -   Prices:
+2025-05-04 12:17:28,920 - test_real_extractors - INFO -     price_250g: 300.0
+2025-05-04 12:17:28,920 - test_real_extractors - INFO -   Extracted by: json_css
+2025-05-04 12:17:28,920 - test_real_extractors - INFO -   DeepSeek enriched: False
+2025-05-04 12:17:28,922 - test_real_extractors - INFO -   Results saved to test_results/extractors\ethiopia-kayon-mountain_extracted.json
+2025-05-04 12:17:28,923 - test_real_extractors - INFO - Testing extraction for Kalledevarapura Estate from Corridor Seven Coffee Roasters
+2025-05-04 12:17:28,923 - test_real_extractors - INFO - URL: https://www.corridorseven.coffee/collections/coffee/products/kalledevarapura-estate
+2025-05-04 12:17:30,008 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.corridorseven.coffee/collections/coffee/products/kalledevarapura-estate
+2025-05-04 12:17:30,245 - test_real_extractors - INFO - Product needs DeepSeek enrichment (missing 4 attributes)
+2025-05-04 12:17:31,314 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.corridorseven.coffee/collections/coffee/products/kalledevarapura-estate
+2025-05-04 12:17:31,550 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.corridorseven.coffee/collections/coffee/products/kalledevarapura-estate
+2025-05-04 12:17:31,551 - test_real_extractors - INFO - DeepSeek extraction took 1.30 seconds
+2025-05-04 12:17:31,555 - test_real_extractors - INFO - Extracted data:
+2025-05-04 12:17:31,555 - test_real_extractors - INFO -   Name: Kalledevarapura Estate
+2025-05-04 12:17:31,555 - test_real_extractors - INFO -   Description: Elegant and smooth coffee from Karnataka
+2025-05-04 12:17:31,556 - test_real_extractors - INFO -   Roast Level: Unknown
+2025-05-04 12:17:31,556 - test_real_extractors - INFO -   Bean Type: BeanType.UNKNOWN
+2025-05-04 12:17:31,556 - test_real_extractors - INFO -   Processing Method: Unknown
+2025-05-04 12:17:31,556 - test_real_extractors - INFO -   Region: 
+2025-05-04 12:17:31,556 - test_real_extractors - INFO -   Prices:
+2025-05-04 12:17:31,557 - test_real_extractors - INFO -     price_250g: 0.0
+2025-05-04 12:17:31,557 - test_real_extractors - INFO -   Extracted by: json_css
+2025-05-04 12:17:31,557 - test_real_extractors - INFO -   DeepSeek enriched: False
+2025-05-04 12:17:31,559 - test_real_extractors - INFO -   Results saved to test_results/extractors\kalledevarapura-estate_extracted.json
+2025-05-04 12:17:31,559 - test_real_extractors - INFO - 
+===== EXTRACTION TEST SUMMARY =====
+2025-05-04 12:17:31,559 - test_real_extractors - INFO - Total products tested: 4
+2025-05-04 12:17:31,559 - test_real_extractors - INFO - Successful: 4
+2025-05-04 12:17:31,560 - test_real_extractors - INFO - Failed: 0
+2025-05-04 12:17:31,561 - test_real_extractors - INFO - Summary saved to test_results/extractors\extraction_summary.json
+2025-05-04 12:17:31,561 - __main__ - INFO - Extractor tests completed
+2025-05-04 12:17:31,562 - __main__ - INFO - === Running Unit Tests ===
+2025-05-04 12:17:32,074 - __main__ - INFO - Unit tests completed with result code: 1
+2025-05-04 12:17:32,074 - __main__ - INFO - === Generating Comprehensive Test Report ===
+2025-05-04 12:17:32,076 - __main__ - INFO - Comprehensive test summary saved to test_results\comprehensive_test_summary.json
+2025-05-04 12:17:32,076 - __main__ - INFO - 
+===== OVERALL TEST RESULTS =====
+2025-05-04 12:17:32,077 - __main__ - INFO - Components tested: setup, detector, roaster, discoverer, extractor, unit_tests
+2025-05-04 12:17:32,077 - __main__ - INFO - Roaster success rate: 11/11 (100.0%)
+2025-05-04 12:17:32,077 - __main__ - INFO - Discoverer success rate: 4/4 (100.0%)
+2025-05-04 12:17:32,077 - __main__ - INFO - Extractor success rate: 4/4 (100.0%)
+2025-05-04 12:17:32,077 - __main__ - INFO - Overall success rate: 19/19 (100.0%)
+2025-05-04 12:17:32,077 - __main__ - INFO - Test run completed

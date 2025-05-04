@@ -1,0 +1,26 @@
+{
+  "id": "77c7d43f-823d-48a3-a4b7-6bfa916bbb25",
+  "name": "Bombay Island Coffee",
+  "slug": "bombay-island-coffee",
+  "description": "Experience 100% Arabica coffee from Chikmagalur, freshly roasted in Mumbai, Order Specialty-grade coffee beans online. Visit Experience store in Mumbai to try India's finest artisanal coffee, delicious treats, and coffee beans. Coffee workshops and barista trainings.",
+  "website_url": "https://www.bombayisland.com",
+  "social_links": [
+    "https://www.instagram.com/p/CZ1TsVErkj0/",
+    "https://www.instagram.com/p/CVSf7N-j3bw/",
+    "https://twitter.com/BombayIsland",
+    "https://www.facebook.com/Bombayisland",
+    "https://www.instagram.com/bombayisland/"
+  ],
+  "contact_email": "orders@bombayisland.com",
+  "contact_phone": "9120806593",
+  "city": "Mumbai",
+  "state": "Maharashtra",
+  "founded_year": null,
+  "instagram_handle": "p",
+  "logo_url": "https://www.bombayisland.com/cdn/shop/files/bombay-island_54174129-4ba5-4d52-aa1d-084280fb8e2f.png?v=1661605152&width=200",
+  "has_subscription": true,
+  "has_physical_store": false,
+  "is_featured": false,
+  "created_at": null,
+  "updated_at": null
+}

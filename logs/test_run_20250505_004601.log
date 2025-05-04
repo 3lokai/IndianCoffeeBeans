@@ -1,0 +1,178 @@
+2025-05-05 00:46:01,933 - __main__ - INFO - Log file: logs/test_run_20250505_004601.log
+2025-05-05 00:46:01,934 - db.supabase_client - INFO - Initializing Supabase client
+2025-05-05 00:46:02,512 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-05 00:46:02,514 - __main__ - INFO - Loaded 54 roasters from data/input/roasters_input.csv
+2025-05-05 00:46:02,514 - __main__ - INFO - Starting pipeline with 54 roasters
+2025-05-05 00:46:02,515 - scrapers.pipeline - INFO - Starting to process 54 roasters
+2025-05-05 00:46:02,515 - scrapers.pipeline - INFO - Processing roaster: Ainmane (https://ainmane.com)
+2025-05-05 00:46:02,522 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Ainmane (https://ainmane.com)
+2025-05-05 00:46:02,524 - scrapers.roaster_pipeline - INFO - Found cached data for Ainmane
+2025-05-05 00:46:02,525 - scrapers.pipeline - INFO - Extracted metadata for Ainmane
+2025-05-05 00:46:02,527 - scrapers.discoverers.discovery_manager - INFO - Found 3 cached products for Ainmane
+2025-05-05 00:46:02,527 - scrapers.pipeline - INFO - Discovered 3 products for Ainmane
+2025-05-05 00:46:02,530 - scrapers.pipeline - INFO - Using cached data for Speciality Coffee
+2025-05-05 00:46:02,532 - scrapers.pipeline - INFO - Using cached data for Single Origin Coffee
+2025-05-05 00:46:02,534 - scrapers.pipeline - INFO - Using cached data for Micro lot Coffee
+2025-05-05 00:46:06,545 - scrapers.pipeline - INFO - Extracted details for 3 products from Ainmane
+2025-05-05 00:46:06,546 - scrapers.pipeline - INFO - Uploading 3 products for Ainmane
+2025-05-05 00:46:07,490 - httpx - INFO - HTTP Request: POST https://xrgmpplicqnlyowbhhrj.supabase.co/rest/v1/coffees?on_conflict=slug&columns=%22is_single_origin%22%2C%22updated_at%22%2C%22is_featured%22%2C%22roaster_id%22%2C%22image_url%22%2C%22tags%22%2C%22bean_type%22%2C%22is_available%22%2C%22processing_method%22%2C%22region_id%22%2C%22description%22%2C%22name%22%2C%22deepseek_enriched%22%2C%22id%22%2C%22is_seasonal%22%2C%22slug%22%2C%22created_at%22%2C%22roast_level%22%2C%22direct_buy_url%22 "HTTP/2 409 Conflict"
+2025-05-05 00:46:07,493 - db.supabase_client - ERROR - Error upserting coffees: {'code': '23503', 'details': 'Key (roaster_id)=(66f08fac-87d1-4a2d-a858-83bd97dad861) is not present in table "roasters".', 'hint': None, 'message': 'insert or update on table "coffees" violates foreign key constraint "coffees_roaster_id_fkey"'}
+2025-05-05 00:46:07,495 - scrapers.pipeline - ERROR - Error uploading batch: {'code': '23503', 'details': 'Key (roaster_id)=(66f08fac-87d1-4a2d-a858-83bd97dad861) is not present in table "roasters".', 'hint': None, 'message': 'insert or update on table "coffees" violates foreign key constraint "coffees_roaster_id_fkey"'}
+2025-05-05 00:46:09,501 - scrapers.pipeline - INFO - Uploaded 0 products from Ainmane to database
+2025-05-05 00:46:11,515 - scrapers.pipeline - INFO - Processing roaster: Alchemist (https://alchemistroastery.com)
+2025-05-05 00:46:11,516 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Alchemist (https://alchemistroastery.com)
+2025-05-05 00:46:11,518 - scrapers.roaster_pipeline - INFO - Found cached data for Alchemist
+2025-05-05 00:46:11,519 - scrapers.pipeline - INFO - Extracted metadata for Alchemist
+2025-05-05 00:46:11,747 - scrapers.discoverers.discovery_manager - INFO - Platform type for Alchemist: static
+2025-05-05 00:46:11,748 - scrapers.discoverers.discovery_manager - INFO - Trying sitemap discovery for Alchemist
+2025-05-05 00:46:11,749 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap.xml
+2025-05-05 00:46:11,872 - scrapers.discoverers.sitemap_discoverer - INFO - Found sitemap index with 3 sitemaps
+2025-05-05 00:46:11,913 - scrapers.discoverers.sitemap_discoverer - INFO - Found 10 URLs in sitemap https://alchemistroastery.com/sitemap.website.xml
+2025-05-05 00:46:11,914 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://alchemistroastery.com/sitemap.website.xml
+2025-05-05 00:46:12,813 - scrapers.discoverers.sitemap_discoverer - INFO - Found 3 URLs in sitemap https://alchemistroastery.com/sitemap.blog.xml
+2025-05-05 00:46:12,814 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://alchemistroastery.com/sitemap.blog.xml
+2025-05-05 00:46:13,783 - scrapers.discoverers.sitemap_discoverer - INFO - Found 19 URLs in sitemap https://alchemistroastery.com/sitemap.ols.xml
+2025-05-05 00:46:22,063 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://alchemistroastery.com/sitemap.ols.xml
+2025-05-05 00:46:22,065 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap_index.xml
+2025-05-05 00:46:22,128 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/sitemap_index.xml: 404
+2025-05-05 00:46:22,131 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap_products_1.xml
+2025-05-05 00:46:22,191 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/sitemap_products_1.xml: 404
+2025-05-05 00:46:22,193 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap/sitemap.xml
+2025-05-05 00:46:22,262 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/sitemap/sitemap.xml: 404
+2025-05-05 00:46:22,264 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/product-sitemap.xml
+2025-05-05 00:46:22,329 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/product-sitemap.xml: 404
+2025-05-05 00:46:22,331 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/wp-sitemap.xml
+2025-05-05 00:46:22,393 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/wp-sitemap.xml: 404
+2025-05-05 00:46:22,396 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/post-sitemap.xml
+2025-05-05 00:46:22,553 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/post-sitemap.xml: 404
+2025-05-05 00:46:22,555 - scrapers.discoverers.sitemap_discoverer - INFO - Discovered 0 products from sitemaps
+2025-05-05 00:46:22,557 - scrapers.discoverers.discovery_manager - INFO - Trying structured data discovery for Alchemist
+2025-05-05 00:46:27,029 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/products: 404
+2025-05-05 00:46:27,158 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/coffee: 404
+2025-05-05 00:46:27,348 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/all: 404
+2025-05-05 00:46:27,492 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/product-category/coffee: 404
+2025-05-05 00:46:27,641 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/coffee: 404
+2025-05-05 00:46:27,781 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/store: 404
+2025-05-05 00:46:27,919 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/beans: 404
+2025-05-05 00:46:27,922 - scrapers.discoverers.structured_data_discoverer - INFO - Discovered 0 products from structured data
+2025-05-05 00:46:27,923 - scrapers.discoverers.discovery_manager - INFO - Trying Crawl4AI discovery for Alchemist
+2025-05-05 00:46:29,901 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI deep crawling: https://alchemistroastery.com
+2025-05-05 00:46:34,815 - scrapers.discoverers.crawl4ai_discoverer - INFO - Deep crawl found 5 pages
+2025-05-05 00:46:37,376 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI deep crawling: https://alchemistroastery.com/shop
+2025-05-05 00:46:37,525 - scrapers.discoverers.crawl4ai_discoverer - INFO - Deep crawl found 2 pages
+2025-05-05 00:46:39,536 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI deep crawling: https://alchemistroastery.com/products
+2025-05-05 00:46:39,644 - scrapers.discoverers.crawl4ai_discoverer - INFO - Deep crawl found 1 pages
+2025-05-05 00:46:41,666 - scrapers.discoverers.crawl4ai_discoverer - INFO - Discovered 0 unique products after deduplication
+2025-05-05 00:46:41,944 - scrapers.discoverers.discovery_manager - INFO - Trying HTML discovery for Alchemist
+2025-05-05 00:46:46,528 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/products: 404
+2025-05-05 00:46:46,675 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/coffee: 404
+2025-05-05 00:46:46,822 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/all: 404
+2025-05-05 00:46:46,978 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/product-category/coffee: 404
+2025-05-05 00:46:47,110 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/coffee: 404
+2025-05-05 00:46:47,258 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/store: 404
+2025-05-05 00:46:47,403 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/beans: 404
+2025-05-05 00:46:47,405 - scrapers.discoverers.html_discoverer - INFO - Discovered 0 products via HTML crawling
+2025-05-05 00:46:47,405 - scrapers.discoverers.discovery_manager - INFO - Discovered 0 unique products for Alchemist
+2025-05-05 00:46:47,406 - scrapers.pipeline - INFO - Discovered 0 products for Alchemist
+2025-05-05 00:46:49,415 - scrapers.pipeline - INFO - Processing roaster: Araku Coffee (https://www.arakucoffee.in/)
+2025-05-05 00:46:49,416 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Araku Coffee (https://www.arakucoffee.in/)
+2025-05-05 00:46:49,420 - scrapers.roaster_pipeline - INFO - Found cached data for Araku Coffee
+2025-05-05 00:46:49,421 - scrapers.pipeline - INFO - Extracted metadata for Araku Coffee
+2025-05-05 00:46:49,436 - scrapers.discoverers.discovery_manager - INFO - Found 28 cached products for Araku Coffee
+2025-05-05 00:46:49,437 - scrapers.pipeline - INFO - Discovered 28 products for Araku Coffee
+2025-05-05 00:46:49,443 - scrapers.pipeline - INFO - Using cached data for Coffee 101: Coffee Mocktails, Shaken or Stirred? (Mumbai)
+2025-05-05 00:46:49,449 - scrapers.pipeline - INFO - Using cached data for Coffee 101: Nail That Brew (Mumbai)
+2025-05-05 00:46:49,454 - scrapers.pipeline - INFO - Using cached data for Pocket Brew - Selection
+2025-05-05 00:46:51,457 - scrapers.pipeline - INFO - Using cached data for Coffee Masterclass: Barista Bootcamp; Coffee Crash Course
+2025-05-05 00:46:51,462 - scrapers.pipeline - INFO - Using cached data for SCA Coffee Skills Program: Sensory Skills (Professional)
+2025-05-05 00:46:51,467 - scrapers.pipeline - INFO - Using cached data for Pocket Brew - Grand Reserve
+2025-05-05 00:46:53,471 - scrapers.pipeline - INFO - Using cached data for The Bean to Bliss Kit
+2025-05-05 00:46:53,477 - scrapers.pipeline - INFO - Using cached data for Paragon Espresso - set of four
+2025-05-05 00:46:53,482 - scrapers.pipeline - INFO - Using cached data for Kalita Wave Coffee Dripper 185
+2025-05-05 00:46:55,485 - scrapers.pipeline - INFO - Using cached data for Melodrip Pour Over Coffee Tool
+2025-05-05 00:46:55,489 - scrapers.pipeline - INFO - Using cached data for Coffee Harmony
+2025-05-05 00:46:55,494 - scrapers.pipeline - INFO - Using cached data for Coffee Break
+2025-05-05 00:46:57,495 - scrapers.pipeline - INFO - Using cached data for Coffee Reflections
+2025-05-05 00:46:57,500 - scrapers.pipeline - INFO - Using cached data for SCA Coffee Skills Program: Sensory Skills (Intermediate)
+2025-05-05 00:46:57,506 - scrapers.pipeline - INFO - Using cached data for SCA Coffee Skills Program: Sensory Skills (Foundation)
+2025-05-05 00:46:59,508 - scrapers.pipeline - INFO - Using cached data for Pocket Brew - Micro Climate
+2025-05-05 00:46:59,513 - scrapers.pipeline - INFO - Using cached data for Coffee 101: Nail That Brew
+2025-05-05 00:46:59,518 - scrapers.pipeline - INFO - Using cached data for Coffee 101: Whole Latte Love
+2025-05-05 00:47:01,514 - scrapers.pipeline - INFO - Using cached data for Coffee 101: Sensory Essentials
+2025-05-05 00:47:01,517 - scrapers.pipeline - INFO - Using cached data for SCA Coffee Skills Program: Introduction to Coffee
+2025-05-05 00:47:05,545 - scrapers.pipeline - INFO - Using cached data for Brewing with V60 - Event
+2025-05-05 00:47:05,553 - scrapers.pipeline - INFO - Using cached data for Brewing with V60
+2025-05-05 00:47:05,560 - scrapers.pipeline - INFO - Using cached data for Coffee Debates
+2025-05-05 00:47:07,557 - scrapers.pipeline - INFO - Using cached data for Micro Climate
+2025-05-05 00:47:07,594 - scrapers.pipeline - INFO - Using cached data for Selection
+2025-05-05 00:47:10,164 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-party
+2025-05-05 00:47:10,831 - scrapers.pipeline - INFO - Product Coffee Party needs DeepSeek enrichment
+2025-05-05 00:47:14,033 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/signature
+2025-05-05 00:47:14,338 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/grande-reserve
+2025-05-05 00:47:15,005 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://www.arakucoffee.in/products/signature
+2025-05-05 00:47:15,136 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://www.arakucoffee.in/products/grande-reserve
+2025-05-05 00:47:16,294 - scrapers.pipeline - INFO - Product Grand Reserve needs DeepSeek enrichment
+2025-05-05 00:47:16,459 - scrapers.pipeline - INFO - Product Signature needs DeepSeek enrichment
+2025-05-05 00:47:16,575 - scrapers.extractors.deepseek_extractor - ERROR - Error getting markdown for https://www.arakucoffee.in/products/coffee-party: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-05 00:47:16,576 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-party
+2025-05-05 00:47:16,577 - scrapers.extractors.deepseek_extractor - INFO - Using product description as fallback for DeepSeek extraction
+2025-05-05 00:47:18,003 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 00:47:24,820 - scrapers.pipeline - ERROR - Error extracting product Coffee Party: 'Pipeline' object has no attribute '_map_to_valid_roast_level'
+2025-05-05 00:47:26,626 - scrapers.extractors.deepseek_extractor - ERROR - Error getting markdown for https://www.arakucoffee.in/products/grande-reserve: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-05 00:47:26,627 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/grande-reserve
+2025-05-05 00:47:26,627 - scrapers.extractors.deepseek_extractor - INFO - Using product description as fallback for DeepSeek extraction
+2025-05-05 00:47:27,471 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 00:47:34,542 - scrapers.pipeline - ERROR - Error extracting product Grand Reserve: 'Pipeline' object has no attribute '_map_to_valid_roast_level'
+2025-05-05 00:47:41,528 - scrapers.extractors.deepseek_extractor - ERROR - Error getting markdown for https://www.arakucoffee.in/products/signature: CrawlerRunConfig.__init__() got an unexpected keyword argument 'timeout'
+2025-05-05 00:47:41,529 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/signature
+2025-05-05 00:47:41,530 - scrapers.extractors.deepseek_extractor - INFO - Using product description as fallback for DeepSeek extraction
+2025-05-05 00:47:42,719 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 00:47:50,789 - scrapers.pipeline - ERROR - Error extracting product Signature: 'Pipeline' object has no attribute '_map_to_valid_roast_level'
+2025-05-05 00:47:54,800 - scrapers.pipeline - INFO - Extracted details for 25 products from Araku Coffee
+2025-05-05 00:47:54,801 - scrapers.pipeline - INFO - Uploading 25 products for Araku Coffee
+2025-05-05 00:47:55,315 - httpx - INFO - HTTP Request: POST https://xrgmpplicqnlyowbhhrj.supabase.co/rest/v1/coffees?on_conflict=slug&columns=%22is_single_origin%22%2C%22updated_at%22%2C%22is_featured%22%2C%22roaster_id%22%2C%22image_url%22%2C%22tags%22%2C%22bean_type%22%2C%22is_available%22%2C%22processing_method%22%2C%22region_id%22%2C%22description%22%2C%22name%22%2C%22deepseek_enriched%22%2C%22id%22%2C%22is_seasonal%22%2C%22slug%22%2C%22created_at%22%2C%22roast_level%22%2C%22direct_buy_url%22 "HTTP/2 409 Conflict"
+2025-05-05 00:47:55,318 - db.supabase_client - ERROR - Error upserting coffees: {'code': '23503', 'details': 'Key (roaster_id)=(2245177f-5c78-4619-864f-6e85afa00e03) is not present in table "roasters".', 'hint': None, 'message': 'insert or update on table "coffees" violates foreign key constraint "coffees_roaster_id_fkey"'}
+2025-05-05 00:47:55,319 - scrapers.pipeline - ERROR - Error uploading batch: {'code': '23503', 'details': 'Key (roaster_id)=(2245177f-5c78-4619-864f-6e85afa00e03) is not present in table "roasters".', 'hint': None, 'message': 'insert or update on table "coffees" violates foreign key constraint "coffees_roaster_id_fkey"'}
+2025-05-05 00:47:57,434 - httpx - INFO - HTTP Request: POST https://xrgmpplicqnlyowbhhrj.supabase.co/rest/v1/coffees?on_conflict=slug&columns=%22is_single_origin%22%2C%22updated_at%22%2C%22is_featured%22%2C%22roaster_id%22%2C%22image_url%22%2C%22tags%22%2C%22bean_type%22%2C%22is_available%22%2C%22processing_method%22%2C%22region_id%22%2C%22description%22%2C%22name%22%2C%22deepseek_enriched%22%2C%22id%22%2C%22is_seasonal%22%2C%22slug%22%2C%22created_at%22%2C%22roast_level%22%2C%22direct_buy_url%22 "HTTP/2 409 Conflict"
+2025-05-05 00:47:57,438 - db.supabase_client - ERROR - Error upserting coffees: {'code': '23503', 'details': 'Key (roaster_id)=(2245177f-5c78-4619-864f-6e85afa00e03) is not present in table "roasters".', 'hint': None, 'message': 'insert or update on table "coffees" violates foreign key constraint "coffees_roaster_id_fkey"'}
+2025-05-05 00:47:57,440 - scrapers.pipeline - ERROR - Error uploading batch: {'code': '23503', 'details': 'Key (roaster_id)=(2245177f-5c78-4619-864f-6e85afa00e03) is not present in table "roasters".', 'hint': None, 'message': 'insert or update on table "coffees" violates foreign key constraint "coffees_roaster_id_fkey"'}
+2025-05-05 00:47:59,449 - scrapers.pipeline - INFO - Uploaded 0 products from Araku Coffee to database
+2025-05-05 00:48:01,453 - scrapers.pipeline - INFO - Processing roaster: BaarbaraBerry (https://baarbaracoffee.com/)
+2025-05-05 00:48:01,454 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: BaarbaraBerry (https://baarbaracoffee.com/)
+2025-05-05 00:48:04,674 - scrapers.roaster_pipeline - INFO - Platform type before crawling about pages: 'shopify'
+2025-05-05 00:48:04,675 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for shopify: ['/pages/about', '/pages/about-us', '/pages/our-story', '/pages/story', '/pages/mission']
+2025-05-05 00:48:04,676 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/about
+2025-05-05 00:48:05,275 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:48:05,470 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:48:07,743 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:48:12,001 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:48:20,007 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:48:20,009 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:48:20,302 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:48:22,657 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:48:26,858 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:48:34,863 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/pages/our-story
+2025-05-05 00:48:34,865 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/story
+2025-05-05 00:48:35,079 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/story
+2025-05-05 00:48:37,370 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/story
+2025-05-05 00:48:41,615 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/story
+2025-05-05 00:48:49,617 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/pages/story
+2025-05-05 00:48:49,618 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/mission
+2025-05-05 00:48:49,896 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/mission
+2025-05-05 00:48:52,104 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/mission
+2025-05-05 00:48:56,346 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/mission
+2025-05-05 00:49:04,353 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/pages/mission
+2025-05-05 00:49:04,355 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/about
+2025-05-05 00:49:04,611 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about
+2025-05-05 00:49:06,959 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about
+2025-05-05 00:49:11,193 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about
+2025-05-05 00:49:19,196 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/about
+2025-05-05 00:49:19,197 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/about-us
+2025-05-05 00:49:19,446 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about-us
+2025-05-05 00:49:21,656 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/about-us
+2025-05-05 00:49:23,737 - scrapers.roaster_pipeline - ERROR - Error processing roaster BaarbaraBerry with Crawl4AI: Browser.close: Connection closed while reading from the driver
+2025-05-05 00:49:23,737 - scrapers.roaster_pipeline - INFO - Processing roaster with basic method: BaarbaraBerry (https://baarbaracoffee.com/)
+2025-05-05 00:49:24,789 - scrapers.roaster_pipeline - INFO - Using platform-specific paths for shopify: ['/pages/about', '/pages/about-us', '/pages/our-story', '/pages/story', '/pages/mission']
+2025-05-05 00:49:24,790 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/about
+2025-05-05 00:49:25,226 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/pages/about-us
+2025-05-05 00:49:25,417 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/pages/about-us

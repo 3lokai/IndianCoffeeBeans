@@ -1,0 +1,20 @@
+{
+  "id": "0aac5011-0366-4943-a524-ab473007c518",
+  "name": "Blue Tokai Coffee Roasters",
+  "slug": "blue-tokai-coffee-roasters",
+  "description": "A specialty coffee roaster.",
+  "website_url": "https://bluetokaicoffee.com",
+  "social_links": [],
+  "contact_email": null,
+  "contact_phone": null,
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "founded_year": null,
+  "instagram_handle": null,
+  "logo_url": "https://bluetokaicoffee.com/favicon.ico",
+  "has_subscription": false,
+  "has_physical_store": false,
+  "is_featured": false,
+  "created_at": null,
+  "updated_at": null
+}

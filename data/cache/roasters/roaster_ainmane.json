@@ -1,0 +1,23 @@
+{
+  "id": "66f08fac-87d1-4a2d-a858-83bd97dad861",
+  "name": "Ainmane",
+  "slug": "ainmane",
+  "description": "JavaScript seems to be disabled in your browser.For the best experience on our site, be sure to turn on Javascript in your browser.Skip to ContentSign In..",
+  "website_url": "https://ainmane.com",
+  "social_links": [
+    "https://www.facebook.com/AinmaneCoorg",
+    "https://www.instagram.com/ainmane/"
+  ],
+  "contact_email": null,
+  "contact_phone": null,
+  "city": null,
+  "state": null,
+  "founded_year": null,
+  "instagram_handle": "ainmane",
+  "logo_url": "https://ainmane.com/favicon.ico",
+  "has_subscription": false,
+  "has_physical_store": false,
+  "is_featured": false,
+  "created_at": null,
+  "updated_at": null
+}

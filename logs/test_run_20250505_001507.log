@@ -1,0 +1,235 @@
+2025-05-05 00:15:07,115 - __main__ - INFO - Log file: logs/test_run_20250505_001507.log
+2025-05-05 00:15:07,115 - db.supabase_client - INFO - Initializing Supabase client
+2025-05-05 00:15:07,446 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-05 00:15:07,447 - __main__ - INFO - Loaded 54 roasters from data/input/roasters_input.csv
+2025-05-05 00:15:07,447 - __main__ - INFO - Starting pipeline with 54 roasters
+2025-05-05 00:15:07,448 - scrapers.pipeline - INFO - Starting to process 54 roasters
+2025-05-05 00:15:07,448 - scrapers.pipeline - INFO - Processing roaster: Ainmane (https://ainmane.com)
+2025-05-05 00:15:07,454 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Ainmane (https://ainmane.com)
+2025-05-05 00:15:07,457 - scrapers.roaster_pipeline - INFO - Found cached data for Ainmane
+2025-05-05 00:15:07,457 - scrapers.pipeline - INFO - Extracted metadata for Ainmane
+2025-05-05 00:15:08,545 - scrapers.discoverers.discovery_manager - INFO - Platform type for Ainmane: magento
+2025-05-05 00:15:08,546 - scrapers.discoverers.discovery_manager - INFO - Trying sitemap discovery for Ainmane
+2025-05-05 00:15:08,547 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://ainmane.com/sitemap.xml
+2025-05-05 00:15:09,302 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://ainmane.com/sitemap.xml: 404
+2025-05-05 00:15:09,303 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://ainmane.com/sitemap_index.xml
+2025-05-05 00:15:10,163 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://ainmane.com/sitemap_index.xml: 404
+2025-05-05 00:15:10,163 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://ainmane.com/sitemap_products_1.xml
+2025-05-05 00:15:11,155 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://ainmane.com/sitemap_products_1.xml: 404
+2025-05-05 00:15:11,157 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://ainmane.com/sitemap/sitemap.xml
+2025-05-05 00:15:12,267 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://ainmane.com/sitemap/sitemap.xml: 404
+2025-05-05 00:15:12,268 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://ainmane.com/product-sitemap.xml
+2025-05-05 00:15:13,291 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://ainmane.com/product-sitemap.xml: 404
+2025-05-05 00:15:13,292 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://ainmane.com/wp-sitemap.xml
+2025-05-05 00:15:14,320 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://ainmane.com/wp-sitemap.xml: 404
+2025-05-05 00:15:14,321 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://ainmane.com/post-sitemap.xml
+2025-05-05 00:15:15,234 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://ainmane.com/post-sitemap.xml: 404
+2025-05-05 00:15:15,235 - scrapers.discoverers.sitemap_discoverer - INFO - Discovered 0 products from sitemaps
+2025-05-05 00:15:15,236 - scrapers.discoverers.discovery_manager - INFO - Trying structured data discovery for Ainmane
+2025-05-05 00:15:18,805 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://ainmane.com/shop: 404
+2025-05-05 00:15:19,594 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://ainmane.com/products: 404
+2025-05-05 00:15:20,310 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://ainmane.com/collections/coffee: 404
+2025-05-05 00:15:21,163 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://ainmane.com/collections/all: 404
+2025-05-05 00:15:21,981 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://ainmane.com/product-category/coffee: 404
+2025-05-05 00:15:23,014 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://ainmane.com/coffee: 404
+2025-05-05 00:15:23,854 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://ainmane.com/store: 404
+2025-05-05 00:15:24,752 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://ainmane.com/beans: 404
+2025-05-05 00:15:24,754 - scrapers.discoverers.structured_data_discoverer - INFO - Discovered 0 products from structured data
+2025-05-05 00:15:24,755 - scrapers.discoverers.discovery_manager - INFO - Trying Crawl4AI discovery for Ainmane
+2025-05-05 00:15:26,688 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI deep crawling: https://ainmane.com
+2025-05-05 00:16:06,551 - scrapers.discoverers.crawl4ai_discoverer - INFO - Deep crawl found 47 pages
+2025-05-05 00:16:17,008 - scrapers.discoverers.crawl4ai_discoverer - INFO - Found 135 products, stopping early
+2025-05-05 00:16:17,010 - scrapers.discoverers.crawl4ai_discoverer - INFO - Discovered 3 unique products after deduplication
+2025-05-05 00:16:17,300 - scrapers.discoverers.discovery_manager - INFO - Discovered 3 unique products for Ainmane
+2025-05-05 00:16:17,301 - scrapers.pipeline - INFO - Discovered 3 products for Ainmane
+2025-05-05 00:16:18,821 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.ainmane.com/coffee/micro-lot-coffee.html
+2025-05-05 00:16:18,979 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.ainmane.com/coffee/single-origin-coffee.html
+2025-05-05 00:16:19,095 - scrapers.extractors.json_css_extractor - WARNING - No content extracted from https://www.ainmane.com/coffee/micro-lot-coffee.html
+2025-05-05 00:16:19,179 - scrapers.extractors.json_css_extractor - WARNING - No content extracted from https://www.ainmane.com/coffee/single-origin-coffee.html
+2025-05-05 00:16:19,562 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.ainmane.com/coffee/speciality-coffee.html
+2025-05-05 00:16:19,620 - scrapers.extractors.json_css_extractor - WARNING - No content extracted from https://www.ainmane.com/coffee/speciality-coffee.html
+2025-05-05 00:16:19,846 - scrapers.pipeline - INFO - Product Micro lot Coffee needs DeepSeek enrichment
+2025-05-05 00:16:19,999 - scrapers.pipeline - INFO - Product Single Origin Coffee needs DeepSeek enrichment
+2025-05-05 00:16:20,142 - scrapers.pipeline - INFO - Product Speciality Coffee needs DeepSeek enrichment
+2025-05-05 00:16:21,672 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.ainmane.com/coffee/micro-lot-coffee.html
+2025-05-05 00:16:21,950 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.ainmane.com/coffee/speciality-coffee.html
+2025-05-05 00:16:22,027 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.ainmane.com/coffee/single-origin-coffee.html
+2025-05-05 00:16:22,479 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.ainmane.com/coffee/micro-lot-coffee.html
+2025-05-05 00:16:22,504 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.ainmane.com/coffee/single-origin-coffee.html
+2025-05-05 00:16:37,468 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.ainmane.com/coffee/speciality-coffee.html
+2025-05-05 00:16:41,493 - scrapers.pipeline - INFO - Extracted details for 3 products from Ainmane
+2025-05-05 00:16:41,494 - scrapers.pipeline - INFO - Uploading 3 products for Ainmane
+2025-05-05 00:16:42,648 - httpx - INFO - HTTP Request: POST https://xrgmpplicqnlyowbhhrj.supabase.co/rest/v1/coffees?on_conflict=slug&columns=%22bean_type%22%2C%22is_available%22%2C%22name%22%2C%22description%22%2C%22direct_buy_url%22%2C%22image_url%22%2C%22slug%22%2C%22deepseek_enriched%22%2C%22region_id%22%2C%22id%22%2C%22is_single_origin%22%2C%22is_featured%22%2C%22roaster_id%22%2C%22is_seasonal%22%2C%22tags%22%2C%22roast_level%22%2C%22processing_method%22%2C%22updated_at%22%2C%22created_at%22 "HTTP/2 400 Bad Request"
+2025-05-05 00:16:42,651 - db.supabase_client - ERROR - Error upserting coffees: {'code': '23514', 'details': 'Failing row contains (c9bc7d8c-8c37-43c8-983c-10f337b66f7d, 66f08fac-87d1-4a2d-a858-83bd97dad861, Speciality Coffee, speciality-coffee, null, unknown, unknown, unknown, null, https://www.ainmane.com/coffee/speciality-coffee.html, null, f, t, f, t, {}, f, 2025-05-05 00:16:37.469557+00, 2025-05-05 00:16:37.469561+00).', 'hint': None, 'message': 'new row for relation "coffees" violates check constraint "coffees_bean_type_check"'}
+2025-05-05 00:16:42,653 - scrapers.pipeline - ERROR - Error uploading batch: {'code': '23514', 'details': 'Failing row contains (c9bc7d8c-8c37-43c8-983c-10f337b66f7d, 66f08fac-87d1-4a2d-a858-83bd97dad861, Speciality Coffee, speciality-coffee, null, unknown, unknown, unknown, null, https://www.ainmane.com/coffee/speciality-coffee.html, null, f, t, f, t, {}, f, 2025-05-05 00:16:37.469557+00, 2025-05-05 00:16:37.469561+00).', 'hint': None, 'message': 'new row for relation "coffees" violates check constraint "coffees_bean_type_check"'}
+2025-05-05 00:16:44,656 - scrapers.pipeline - INFO - Uploaded 0 products from Ainmane to database
+2025-05-05 00:16:46,659 - scrapers.pipeline - INFO - Processing roaster: Alchemist (https://alchemistroastery.com)
+2025-05-05 00:16:46,660 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Alchemist (https://alchemistroastery.com)
+2025-05-05 00:16:46,665 - scrapers.roaster_pipeline - INFO - Found cached data for Alchemist
+2025-05-05 00:16:46,666 - scrapers.pipeline - INFO - Extracted metadata for Alchemist
+2025-05-05 00:16:46,904 - scrapers.discoverers.discovery_manager - INFO - Platform type for Alchemist: static
+2025-05-05 00:16:46,905 - scrapers.discoverers.discovery_manager - INFO - Trying sitemap discovery for Alchemist
+2025-05-05 00:16:46,906 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap.xml
+2025-05-05 00:16:47,100 - scrapers.discoverers.sitemap_discoverer - INFO - Found sitemap index with 3 sitemaps
+2025-05-05 00:16:47,170 - scrapers.discoverers.sitemap_discoverer - INFO - Found 10 URLs in sitemap https://alchemistroastery.com/sitemap.website.xml
+2025-05-05 00:16:47,172 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://alchemistroastery.com/sitemap.website.xml
+2025-05-05 00:16:48,158 - scrapers.discoverers.sitemap_discoverer - INFO - Found 3 URLs in sitemap https://alchemistroastery.com/sitemap.blog.xml
+2025-05-05 00:16:48,160 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://alchemistroastery.com/sitemap.blog.xml
+2025-05-05 00:16:49,458 - scrapers.discoverers.sitemap_discoverer - INFO - Found 19 URLs in sitemap https://alchemistroastery.com/sitemap.ols.xml
+2025-05-05 00:16:57,849 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://alchemistroastery.com/sitemap.ols.xml
+2025-05-05 00:16:57,850 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap_index.xml
+2025-05-05 00:16:57,916 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/sitemap_index.xml: 404
+2025-05-05 00:16:57,918 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap_products_1.xml
+2025-05-05 00:16:57,980 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/sitemap_products_1.xml: 404
+2025-05-05 00:16:57,983 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap/sitemap.xml
+2025-05-05 00:16:58,042 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/sitemap/sitemap.xml: 404
+2025-05-05 00:16:58,044 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/product-sitemap.xml
+2025-05-05 00:16:58,106 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/product-sitemap.xml: 404
+2025-05-05 00:16:58,108 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/wp-sitemap.xml
+2025-05-05 00:16:58,173 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/wp-sitemap.xml: 404
+2025-05-05 00:16:58,175 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/post-sitemap.xml
+2025-05-05 00:16:58,339 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/post-sitemap.xml: 404
+2025-05-05 00:16:58,342 - scrapers.discoverers.sitemap_discoverer - INFO - Discovered 0 products from sitemaps
+2025-05-05 00:16:58,343 - scrapers.discoverers.discovery_manager - INFO - Trying structured data discovery for Alchemist
+2025-05-05 00:17:02,730 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/products: 404
+2025-05-05 00:17:02,865 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/coffee: 404
+2025-05-05 00:17:03,012 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/all: 404
+2025-05-05 00:17:03,145 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/product-category/coffee: 404
+2025-05-05 00:17:03,308 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/coffee: 404
+2025-05-05 00:17:03,457 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/store: 404
+2025-05-05 00:17:03,599 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/beans: 404
+2025-05-05 00:17:03,601 - scrapers.discoverers.structured_data_discoverer - INFO - Discovered 0 products from structured data
+2025-05-05 00:17:03,603 - scrapers.discoverers.discovery_manager - INFO - Trying Crawl4AI discovery for Alchemist
+2025-05-05 00:17:04,763 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI deep crawling: https://alchemistroastery.com
+2025-05-05 00:17:10,064 - scrapers.discoverers.crawl4ai_discoverer - INFO - Deep crawl found 5 pages
+2025-05-05 00:17:12,492 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI deep crawling: https://alchemistroastery.com/shop
+2025-05-05 00:17:12,671 - scrapers.discoverers.crawl4ai_discoverer - INFO - Deep crawl found 2 pages
+2025-05-05 00:17:14,687 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI deep crawling: https://alchemistroastery.com/products
+2025-05-05 00:17:15,673 - scrapers.discoverers.crawl4ai_discoverer - INFO - Deep crawl found 1 pages
+2025-05-05 00:17:17,694 - scrapers.discoverers.crawl4ai_discoverer - INFO - Discovered 0 unique products after deduplication
+2025-05-05 00:17:18,101 - scrapers.discoverers.discovery_manager - INFO - Trying HTML discovery for Alchemist
+2025-05-05 00:17:22,658 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/products: 404
+2025-05-05 00:17:22,809 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/coffee: 404
+2025-05-05 00:17:22,942 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/all: 404
+2025-05-05 00:17:23,104 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/product-category/coffee: 404
+2025-05-05 00:17:23,253 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/coffee: 404
+2025-05-05 00:17:23,387 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/store: 404
+2025-05-05 00:17:23,530 - scrapers.discoverers.html_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/beans: 404
+2025-05-05 00:17:23,532 - scrapers.discoverers.html_discoverer - INFO - Discovered 0 products via HTML crawling
+2025-05-05 00:17:23,533 - scrapers.discoverers.discovery_manager - INFO - Discovered 0 unique products for Alchemist
+2025-05-05 00:17:23,535 - scrapers.pipeline - INFO - Discovered 0 products for Alchemist
+2025-05-05 00:17:25,540 - scrapers.pipeline - INFO - Processing roaster: Araku Coffee (https://www.arakucoffee.in/)
+2025-05-05 00:17:25,541 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Araku Coffee (https://www.arakucoffee.in/)
+2025-05-05 00:17:25,543 - scrapers.roaster_pipeline - INFO - Found cached data for Araku Coffee
+2025-05-05 00:17:25,544 - scrapers.pipeline - INFO - Extracted metadata for Araku Coffee
+2025-05-05 00:17:25,692 - scrapers.discoverers.discovery_manager - INFO - Platform type for Araku Coffee: shopify
+2025-05-05 00:17:27,955 - scrapers.discoverers.discovery_manager - INFO - Discovered 28 products via Shopify API
+2025-05-05 00:17:27,990 - scrapers.discoverers.discovery_manager - INFO - Discovered 28 unique products for Araku Coffee
+2025-05-05 00:17:27,991 - scrapers.pipeline - INFO - Discovered 28 products for Araku Coffee
+2025-05-05 00:17:29,850 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-101-coffee-mocktails-shaken-or-stirred-mumbai
+2025-05-05 00:17:29,913 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/pocket-brew-selection
+2025-05-05 00:17:30,022 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://www.arakucoffee.in/products/pocket-brew-selection
+2025-05-05 00:17:30,231 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-101-nail-that-brew-mumbai
+2025-05-05 00:17:31,737 - scrapers.pipeline - INFO - Product Pocket Brew - Selection needs DeepSeek enrichment
+2025-05-05 00:17:35,975 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/pocket-brew-selection
+2025-05-05 00:17:36,304 - scrapers.pipeline - INFO - Product Coffee 101: Nail That Brew (Mumbai) needs DeepSeek enrichment
+2025-05-05 00:17:36,342 - scrapers.pipeline - INFO - Product Coffee 101: Coffee Mocktails, Shaken or Stirred? (Mumbai) needs DeepSeek enrichment
+2025-05-05 00:17:36,399 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/pocket-brew-selection
+2025-05-05 00:17:38,578 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-101-nail-that-brew-mumbai
+2025-05-05 00:17:38,710 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-101-coffee-mocktails-shaken-or-stirred-mumbai
+2025-05-05 00:17:39,096 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-101-nail-that-brew-mumbai
+2025-05-05 00:17:39,160 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-101-coffee-mocktails-shaken-or-stirred-mumbai
+2025-05-05 00:17:40,607 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-masterclass-barista-bootcamp
+2025-05-05 00:17:44,570 - scrapers.pipeline - INFO - Product Coffee Masterclass: Barista Bootcamp; Coffee Crash Course needs DeepSeek enrichment
+2025-05-05 00:17:45,090 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/pocket-brew-grand-reserve
+2025-05-05 00:17:45,240 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills-professional
+2025-05-05 00:17:45,374 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://www.arakucoffee.in/products/pocket-brew-grand-reserve
+2025-05-05 00:17:45,721 - scrapers.pipeline - INFO - Product Pocket Brew - Grand Reserve needs DeepSeek enrichment
+2025-05-05 00:17:47,331 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-masterclass-barista-bootcamp
+2025-05-05 00:17:47,913 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-masterclass-barista-bootcamp
+2025-05-05 00:17:49,040 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/pocket-brew-grand-reserve
+2025-05-05 00:17:49,320 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/pocket-brew-grand-reserve
+2025-05-05 00:17:49,419 - scrapers.pipeline - INFO - Product SCA Coffee Skills Program: Sensory Skills (Professional) needs DeepSeek enrichment
+2025-05-05 00:17:50,879 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills-professional
+2025-05-05 00:17:51,239 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills-professional
+2025-05-05 00:17:51,608 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/the-bean-to-bliss-kit
+2025-05-05 00:17:54,099 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/paragon-espresso-set-of-four
+2025-05-05 00:17:55,574 - scrapers.pipeline - INFO - Product The Bean to Bliss Kit needs DeepSeek enrichment
+2025-05-05 00:17:56,179 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/kalita-pour-over-185
+2025-05-05 00:18:00,887 - scrapers.pipeline - INFO - Product Paragon Espresso - set of four needs DeepSeek enrichment
+2025-05-05 00:18:01,568 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/the-bean-to-bliss-kit
+2025-05-05 00:18:03,881 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/the-bean-to-bliss-kit
+2025-05-05 00:18:04,170 - scrapers.pipeline - INFO - Product Kalita Wave Coffee Dripper 185 needs DeepSeek enrichment
+2025-05-05 00:18:05,166 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/paragon-espresso-set-of-four
+2025-05-05 00:18:05,570 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/paragon-espresso-set-of-four
+2025-05-05 00:18:06,388 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/kalita-pour-over-185
+2025-05-05 00:18:06,899 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/kalita-pour-over-185
+2025-05-05 00:18:08,560 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/melodrip-stainless-n-a-43
+2025-05-05 00:18:10,935 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-harmony
+2025-05-05 00:18:13,637 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-break
+2025-05-05 00:18:15,294 - scrapers.pipeline - INFO - Product Melodrip Pour Over Coffee Tool needs DeepSeek enrichment
+2025-05-05 00:18:16,371 - scrapers.pipeline - INFO - Product Coffee Harmony needs DeepSeek enrichment
+2025-05-05 00:18:17,526 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/melodrip-stainless-n-a-43
+2025-05-05 00:18:18,731 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/melodrip-stainless-n-a-43
+2025-05-05 00:18:19,688 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-harmony
+2025-05-05 00:18:20,701 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-harmony
+2025-05-05 00:18:20,793 - scrapers.pipeline - INFO - Product Coffee Break needs DeepSeek enrichment
+2025-05-05 00:18:22,624 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-reflections
+2025-05-05 00:18:23,073 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-break
+2025-05-05 00:18:23,538 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-break
+2025-05-05 00:18:25,949 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills-intermediate
+2025-05-05 00:18:28,283 - scrapers.pipeline - INFO - Product Coffee Reflections needs DeepSeek enrichment
+2025-05-05 00:18:30,662 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills
+2025-05-05 00:18:31,220 - scrapers.pipeline - INFO - Product SCA Coffee Skills Program: Sensory Skills (Intermediate) needs DeepSeek enrichment
+2025-05-05 00:18:32,260 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-reflections
+2025-05-05 00:18:35,997 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-reflections
+2025-05-05 00:18:36,424 - scrapers.pipeline - INFO - Product SCA Coffee Skills Program: Sensory Skills (Foundation) needs DeepSeek enrichment
+2025-05-05 00:18:36,982 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills-intermediate
+2025-05-05 00:18:37,406 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills-intermediate
+2025-05-05 00:18:38,828 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills
+2025-05-05 00:18:39,358 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/sca-coffee-skills-program-sensory-skills
+2025-05-05 00:18:40,222 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/pocket-brew-micro-climate
+2025-05-05 00:18:40,324 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://www.arakucoffee.in/products/pocket-brew-micro-climate
+2025-05-05 00:18:40,602 - scrapers.pipeline - INFO - Product Pocket Brew - Micro Climate needs DeepSeek enrichment
+2025-05-05 00:18:41,586 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-101-nail-that-brew
+2025-05-05 00:18:43,180 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/pocket-brew-micro-climate
+2025-05-05 00:18:44,022 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/pocket-brew-micro-climate
+2025-05-05 00:18:44,930 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-101-whole-latte-love
+2025-05-05 00:18:46,869 - scrapers.pipeline - INFO - Product Coffee 101: Nail That Brew needs DeepSeek enrichment
+2025-05-05 00:18:50,315 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-101-sensory_essentials
+2025-05-05 00:18:51,059 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-101-nail-that-brew
+2025-05-05 00:18:51,733 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-101-nail-that-brew
+2025-05-05 00:18:51,746 - scrapers.pipeline - INFO - Product Coffee 101: Whole Latte Love needs DeepSeek enrichment
+2025-05-05 00:18:54,093 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-101-whole-latte-love
+2025-05-05 00:18:54,600 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-101-whole-latte-love
+2025-05-05 00:18:54,614 - scrapers.pipeline - INFO - Product Coffee 101: Sensory Essentials needs DeepSeek enrichment
+2025-05-05 00:18:56,026 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/sca-coffee-skills-program-introduction-to-coffee
+2025-05-05 00:18:56,558 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-101-sensory_essentials
+2025-05-05 00:18:57,146 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-101-sensory_essentials
+2025-05-05 00:19:00,091 - scrapers.pipeline - INFO - Product SCA Coffee Skills Program: Introduction to Coffee needs DeepSeek enrichment
+2025-05-05 00:19:01,851 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/sca-coffee-skills-program-introduction-to-coffee
+2025-05-05 00:19:02,342 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/sca-coffee-skills-program-introduction-to-coffee
+2025-05-05 00:19:08,374 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-debates
+2025-05-05 00:19:08,858 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/brewing-with-v60-event
+2025-05-05 00:19:09,260 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/brewing-with-v60
+2025-05-05 00:19:17,984 - scrapers.pipeline - INFO - Product Coffee Debates needs DeepSeek enrichment
+2025-05-05 00:19:18,008 - scrapers.pipeline - INFO - Product Brewing with V60 - Event needs DeepSeek enrichment
+2025-05-05 00:19:18,344 - scrapers.pipeline - INFO - Product Brewing with V60 needs DeepSeek enrichment
+2025-05-05 00:19:20,097 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/brewing-with-v60-event
+2025-05-05 00:19:20,455 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/coffee-debates
+2025-05-05 00:19:21,044 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/brewing-with-v60
+2025-05-05 00:19:21,324 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/brewing-with-v60-event
+2025-05-05 00:19:21,517 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/coffee-debates
+2025-05-05 00:19:21,530 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/brewing-with-v60
+2025-05-05 00:19:25,001 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/micro-climate
+2025-05-05 00:19:25,082 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://www.arakucoffee.in/products/micro-climate
+2025-05-05 00:19:25,653 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/coffee-party
+2025-05-05 00:19:25,968 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://www.arakucoffee.in/products/selection
+2025-05-05 00:19:26,057 - scrapers.pipeline - INFO - Product Micro Climate needs DeepSeek enrichment
+2025-05-05 00:19:26,244 - scrapers.extractors.json_css_extractor - WARNING - Failed to parse extracted content as JSON for https://www.arakucoffee.in/products/selection
+2025-05-05 00:19:26,852 - scrapers.pipeline - INFO - Product Selection needs DeepSeek enrichment
+2025-05-05 00:19:29,689 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/micro-climate
+2025-05-05 00:19:31,115 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://www.arakucoffee.in/products/selection
+2025-05-05 00:19:31,121 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/micro-climate
+2025-05-05 00:19:31,412 - scrapers.extractors.deepseek_extractor - WARNING - Failed to get markdown for https://www.arakucoffee.in/products/selection
+2025-05-05 00:19:31,480 - scrapers.pipeline - INFO - Product Coffee Party needs DeepSeek enrichment

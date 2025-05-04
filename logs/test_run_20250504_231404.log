@@ -1,0 +1,27 @@
+2025-05-04 23:14:04,265 - __main__ - INFO - Log file: logs/test_run_20250504_231404.log
+2025-05-04 23:14:04,265 - db.supabase_client - INFO - Initializing Supabase client
+2025-05-04 23:14:04,741 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-04 23:14:04,742 - __main__ - INFO - Loaded 54 roasters from data/input/roasters_input.csv
+2025-05-04 23:14:04,743 - __main__ - INFO - Starting pipeline with 1 roasters
+2025-05-04 23:14:04,743 - scrapers.pipeline - INFO - Starting to process 1 roasters
+2025-05-04 23:14:04,743 - scrapers.pipeline - INFO - Processing roaster: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-04 23:14:04,749 - scrapers.roaster_pipeline - ERROR - Missing required fields for roaster: {'name': 'Blue Tokai Coffee Roasters', 'website_url': 'https://bluetokaicoffee.com'}
+2025-05-04 23:14:04,750 - scrapers.roaster_pipeline - INFO - Processing roaster with basic method: Blue Tokai Coffee Roasters (https://bluetokaicoffee.com)
+2025-05-04 23:14:04,751 - scrapers.roaster_pipeline - INFO - Found cached data for Blue Tokai Coffee Roasters
+2025-05-04 23:14:04,752 - scrapers.pipeline - INFO - Extracted metadata for Blue Tokai Coffee Roasters
+2025-05-04 23:14:04,752 - scrapers.pipeline - ERROR - Error processing roaster Blue Tokai Coffee Roasters: 'dict' object has no attribute 'dict'
+2025-05-04 23:14:04,752 - scrapers.pipeline - INFO - Completed processing 0 roasters
+2025-05-04 23:14:04,752 - scrapers.pipeline - INFO - Discovered 0 products
+2025-05-04 23:14:04,753 - scrapers.pipeline - INFO - Extracted 0 products
+2025-05-04 23:14:04,753 - scrapers.pipeline - INFO - Enriched 0 products with DeepSeek
+2025-05-04 23:14:04,753 - scrapers.pipeline - INFO - Uploaded 0 products to database
+2025-05-04 23:14:04,754 - scrapers.pipeline - INFO - Encountered 1 errors
+2025-05-04 23:14:04,754 - __main__ - INFO - 
+===== PIPELINE RESULTS =====
+2025-05-04 23:14:04,754 - __main__ - INFO - Roasters processed: 0/1
+2025-05-04 23:14:04,755 - __main__ - INFO - Products discovered: 0
+2025-05-04 23:14:04,755 - __main__ - INFO - Products extracted: 0
+2025-05-04 23:14:04,755 - __main__ - INFO - Products enriched with DeepSeek: 0
+2025-05-04 23:14:04,756 - __main__ - INFO - Products uploaded to database: 0
+2025-05-04 23:14:04,756 - __main__ - INFO - Errors encountered: 1
+2025-05-04 23:14:04,757 - __main__ - WARNING - No coffees to export

@@ -1,0 +1,28 @@
+{
+  "id": "fa044848-b313-4d1d-b139-50978ccb1cea",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "South Indian Filter Coffee Powder",
+  "slug": "south-indian-filter-coffee-powder",
+  "description": "<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<p><span data-mce-fragment=\"1\">Enjoy the ultimate farm-to-cup experience with the nuanced flavours of  South Indian Filter Coffee Powder from our estate nestled in the verdant, misty hills of the Bababudangiri Range in Chikkamagaluru, Karnataka.</span></p>\n</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<p><span data-mce-fragment=\"1\"> Our estate's Arabica beans are of the highest quality, shade-grown amidst lush native jungle and fruit trees at high elevations of 4500 to 5000 feet. </span></p>\n</li>\n</ul>",
+  "roast_level": "unknown",
+  "bean_type": "unknown",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/CoffeePacks250_0000_Layer3copy_e3290bfb-618a-44f8-be5d-fd7ce618f497.jpg?v=1727354891",
+  "direct_buy_url": "https://baarbaracoffee.com/products/south-indian-filter-coffee-powder",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": true,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:02:06.884322",
+  "updated_at": "2025-05-05T02:02:06.884325",
+  "region_name": "Bababudangiri Range, Chikkamagaluru, Karnataka",
+  "flavor_profiles": [],
+  "brew_methods": [
+    "filter"
+  ],
+  "external_links": {},
+  "prices": {}
+}

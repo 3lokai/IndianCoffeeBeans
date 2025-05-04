@@ -1,0 +1,32 @@
+{
+  "id": "dad754a4-8396-499a-ab2b-75cab6610c3c",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "Monsoon Malabar Roasted Coffee Beans",
+  "slug": "monsoon-malabar-roasted-coffee-beans",
+  "description": "<p><strong>Wake up to the aroma of Monsoon Malabar.</strong> This unique coffee undergoes a meticulous monsooning process, where carefully selected Baarbara Estate beans are exposed to the moisture-laden winds of the Indian monsoon, enhancing their bold character and smooth texture. The result? A cup brimming with earthy, spicy notes and a mellow, full-bodied richness.</p>\n<p>Origin - Baarbara, Chikmagalur, Karnataka</p>\n<p>Altitude - 4500 ft - 5000 ft</p>\n<p>Varietal - SLN 795</p>\n<p>Roasted for - Filter</p>\n<p>Recommended Brewing Equipment - <span data-sheets-formula-bar-text-style=\"font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">V60 and Inverted Aeropress<br></span><span><br>Enjoy a distinctive brew with low acidity and an indulgent depth of flavor in every sip.<br></span></p>\n<!---->",
+  "roast_level": "unknown",
+  "bean_type": "unknown",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/Screenshot1947-01-11at10.46.50AM.png?v=1745585701",
+  "direct_buy_url": "https://baarbaracoffee.com/products/naturals-roasted-coffee-copy",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": true,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:01:25.874999",
+  "updated_at": "2025-05-05T02:01:25.875008",
+  "region_name": "Baarbara, Chikmagalur, Karnataka",
+  "flavor_profiles": [
+    "earthy",
+    "spice"
+  ],
+  "brew_methods": [
+    "V60",
+    "Inverted Aeropress"
+  ],
+  "external_links": {},
+  "prices": {}
+}

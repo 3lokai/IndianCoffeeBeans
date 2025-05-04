@@ -1,0 +1,59 @@
+2025-05-05 01:39:33,763 - __main__ - INFO - Log file: logs/test_run_20250505_013933.log
+2025-05-05 01:39:33,763 - db.supabase_client - INFO - Initializing Supabase client
+2025-05-05 01:39:34,078 - scrapers.roaster_pipeline - INFO - Crawl4AI successfully loaded
+2025-05-05 01:39:34,079 - __main__ - INFO - Loaded 54 roasters from data/input/roasters_input.csv
+2025-05-05 01:39:34,079 - __main__ - INFO - Starting pipeline with 54 roasters
+2025-05-05 01:39:34,079 - scrapers.pipeline - INFO - Starting to process 54 roasters
+2025-05-05 01:39:34,079 - scrapers.pipeline - INFO - Processing roaster: Ainmane (https://ainmane.com)
+2025-05-05 01:39:34,085 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Ainmane (https://ainmane.com)
+2025-05-05 01:39:34,087 - scrapers.roaster_pipeline - INFO - Found cached data for Ainmane
+2025-05-05 01:39:34,088 - scrapers.pipeline - INFO - Extracted metadata for Ainmane
+2025-05-05 01:39:34,089 - scrapers.discoverers.discovery_manager - INFO - Found 3 cached products for Ainmane
+2025-05-05 01:39:34,089 - scrapers.pipeline - INFO - Discovered 3 products for Ainmane
+2025-05-05 01:39:34,091 - scrapers.pipeline - INFO - Using cached data for Speciality Coffee
+2025-05-05 01:39:34,092 - scrapers.pipeline - INFO - Using cached data for Single Origin Coffee
+2025-05-05 01:39:34,093 - scrapers.pipeline - INFO - Using cached data for Micro lot Coffee
+2025-05-05 01:39:38,100 - scrapers.pipeline - INFO - Extracted details for 3 products from Ainmane
+2025-05-05 01:39:38,101 - scrapers.pipeline - INFO - Uploading 3 products for Ainmane
+2025-05-05 01:39:38,858 - httpx - INFO - HTTP Request: POST https://xrgmpplicqnlyowbhhrj.supabase.co/rest/v1/coffees?on_conflict=slug&columns=%22is_featured%22%2C%22is_seasonal%22%2C%22updated_at%22%2C%22id%22%2C%22description%22%2C%22processing_method%22%2C%22is_single_origin%22%2C%22tags%22%2C%22roaster_id%22%2C%22region_id%22%2C%22direct_buy_url%22%2C%22name%22%2C%22slug%22%2C%22is_available%22%2C%22roast_level%22%2C%22bean_type%22%2C%22created_at%22%2C%22deepseek_enriched%22%2C%22image_url%22 "HTTP/2 409 Conflict"
+2025-05-05 01:39:38,860 - db.supabase_client - ERROR - Error upserting coffees: {'code': '23503', 'details': 'Key (roaster_id)=(66f08fac-87d1-4a2d-a858-83bd97dad861) is not present in table "roasters".', 'hint': None, 'message': 'insert or update on table "coffees" violates foreign key constraint "coffees_roaster_id_fkey"'}
+2025-05-05 01:39:38,860 - scrapers.pipeline - ERROR - Error uploading batch: {'code': '23503', 'details': 'Key (roaster_id)=(66f08fac-87d1-4a2d-a858-83bd97dad861) is not present in table "roasters".', 'hint': None, 'message': 'insert or update on table "coffees" violates foreign key constraint "coffees_roaster_id_fkey"'}
+2025-05-05 01:39:40,874 - scrapers.pipeline - INFO - Uploaded 0 products from Ainmane to database
+2025-05-05 01:39:42,887 - scrapers.pipeline - INFO - Processing roaster: Alchemist (https://alchemistroastery.com)
+2025-05-05 01:39:42,887 - scrapers.roaster_pipeline - INFO - Processing roaster with Crawl4AI: Alchemist (https://alchemistroastery.com)
+2025-05-05 01:39:42,889 - scrapers.roaster_pipeline - INFO - Found cached data for Alchemist
+2025-05-05 01:39:42,889 - scrapers.pipeline - INFO - Extracted metadata for Alchemist
+2025-05-05 01:39:43,489 - scrapers.discoverers.discovery_manager - INFO - Platform type for Alchemist: static
+2025-05-05 01:39:43,490 - scrapers.discoverers.discovery_manager - INFO - Trying sitemap discovery for Alchemist
+2025-05-05 01:39:43,490 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap.xml
+2025-05-05 01:39:43,760 - scrapers.discoverers.sitemap_discoverer - INFO - Found sitemap index with 3 sitemaps
+2025-05-05 01:39:43,888 - scrapers.discoverers.sitemap_discoverer - INFO - Found 10 URLs in sitemap https://alchemistroastery.com/sitemap.website.xml
+2025-05-05 01:39:43,891 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://alchemistroastery.com/sitemap.website.xml
+2025-05-05 01:39:44,843 - scrapers.discoverers.sitemap_discoverer - INFO - Found 3 URLs in sitemap https://alchemistroastery.com/sitemap.blog.xml
+2025-05-05 01:39:44,845 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://alchemistroastery.com/sitemap.blog.xml
+2025-05-05 01:39:46,034 - scrapers.discoverers.sitemap_discoverer - INFO - Found 19 URLs in sitemap https://alchemistroastery.com/sitemap.ols.xml
+2025-05-05 01:39:54,537 - scrapers.discoverers.sitemap_discoverer - INFO - Found 0 product URLs in sitemap https://alchemistroastery.com/sitemap.ols.xml
+2025-05-05 01:39:54,538 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap_index.xml
+2025-05-05 01:39:54,682 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/sitemap_index.xml: 404
+2025-05-05 01:39:54,683 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap_products_1.xml
+2025-05-05 01:39:54,824 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/sitemap_products_1.xml: 404
+2025-05-05 01:39:54,826 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/sitemap/sitemap.xml
+2025-05-05 01:39:54,883 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/sitemap/sitemap.xml: 404
+2025-05-05 01:39:54,883 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/product-sitemap.xml
+2025-05-05 01:39:54,947 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/product-sitemap.xml: 404
+2025-05-05 01:39:54,948 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/wp-sitemap.xml
+2025-05-05 01:39:55,085 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/wp-sitemap.xml: 404
+2025-05-05 01:39:55,085 - scrapers.discoverers.sitemap_discoverer - INFO - Trying sitemap at: https://alchemistroastery.com/post-sitemap.xml
+2025-05-05 01:39:55,408 - scrapers.discoverers.sitemap_discoverer - WARNING - Failed to fetch sitemap at https://alchemistroastery.com/post-sitemap.xml: 404
+2025-05-05 01:39:55,410 - scrapers.discoverers.sitemap_discoverer - INFO - Discovered 0 products from sitemaps
+2025-05-05 01:39:55,410 - scrapers.discoverers.discovery_manager - INFO - Trying structured data discovery for Alchemist
+2025-05-05 01:40:00,058 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/products: 404
+2025-05-05 01:40:00,203 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/coffee: 404
+2025-05-05 01:40:00,500 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/collections/all: 404
+2025-05-05 01:40:00,643 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/product-category/coffee: 404
+2025-05-05 01:40:00,940 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/coffee: 404
+2025-05-05 01:40:01,069 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/store: 404
+2025-05-05 01:40:01,376 - scrapers.discoverers.structured_data_discoverer - WARNING - Failed to fetch https://alchemistroastery.com/beans: 404
+2025-05-05 01:40:01,378 - scrapers.discoverers.structured_data_discoverer - INFO - Discovered 0 products from structured data
+2025-05-05 01:40:01,379 - scrapers.discoverers.discovery_manager - INFO - Trying Crawl4AI discovery for Alchemist
+2025-05-05 01:40:02,771 - scrapers.discoverers.crawl4ai_discoverer - INFO - Processing page with Crawl4AI deep crawling: https://alchemistroastery.com

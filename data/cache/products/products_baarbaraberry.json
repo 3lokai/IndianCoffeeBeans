@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Make Your Own Blend",
+    "slug": "make-your-own-blend",
+    "direct_buy_url": "https://baarbaracoffee.com/products/make-your-own-blend",
+    "description": "",
+    "is_available": true,
+    "platform": "shopify",
+    "source_data": {
+      "id": 9961787818284,
+      "title": "Make Your Own Blend",
+      "handle": "make-your-own-blend",
+      "body_html": "",
+      "published_at": "2025-04-29T11:37:53+05:30",
+      "created_at": "2025-04-29T11:37:53+05:30",
+      "updated_at": "2025-05-05T02:00:46+05:30",
+      "vendor": "Baarbara Coffee",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51028229816620,
+          "title": "1kg / 1kg / 1kg",
+          "option1": "1kg",
+          "option2": "1kg",
+          "option3": "1kg",
+          "sku": "",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "0.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 9961787818284,
+          "created_at": "2025-05-01T11:54:31+05:30",
+          "updated_at": "2025-05-05T02:00:46+05:30"
+        }
+      ],
+      "images": [],
+      "options": [
+        {
+          "name": "Arabica Coffee Beans",
+          "position": 1,
+          "values": [
+            "1kg"
+          ]
+        },
+        {
+          "name": "Robusta Coffee Beans",
+          "position": 2,
+          "values": [
+            "1kg"
+          ]
+        },
+        {
+          "name": "Naturals Coffee Beans",
+          "position": 3,
+          "values": [
+            "1kg"
+          ]
+        }
+      ]
+    },
+    "roaster_name": "BaarbaraBerry",
+    "roaster_slug": "baarbaraberry",
+    "roaster_id": 

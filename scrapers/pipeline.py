@@ -144,17 +144,29 @@ class Pipeline:
         
         # Add verification step
         if self.db_client:
-            # Verify that the roaster exists in the database
+            # Force upsert the roaster directly, right before product processing
             try:
-                roaster_id = roaster.id if hasattr(roaster, 'id') else None
+                db_roaster = roaster.dict()
+                # Remove any fields not in the database schema
+                for field in ['_platform', 'location']:
+                    if field in db_roaster:
+                        db_roaster.pop(field)
+                
+                # Get the roaster ID
+                roaster_id = await self.db_client.upsert_roaster(db_roaster)
+                logger.info(f"Forcibly ensured roaster {name} exists in DB with ID: {roaster_id}")
+                
+                # Wait a moment to ensure database consistency
+                await asyncio.sleep(1)
+                
                 if not roaster_id:
-                    logger.error(f"Roaster {name} has no ID, cannot proceed with product extraction")
+                    logger.error(f"Cannot get roaster ID for {name}, skipping product extraction")
                     return roaster
-                # Optional: You could add a check here to query the database and verify 
-                # the roaster exists before proceeding
-            
+                
+                # Update the roaster object with the confirmed ID
+                roaster.id = roaster_id
             except Exception as e:
-                logger.error(f"Error verifying roaster {name}: {str(e)}")
+                logger.error(f"Error ensuring roaster {name} exists in DB: {str(e)}")
                 return roaster
                 
         # Step 2: Discover products

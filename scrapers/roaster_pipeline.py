@@ -510,11 +510,12 @@ class RoasterPipeline:
         # Normalize website URL
         if not website.startswith(("http://", "https://")):
             website = "https://" + website
-      
+    
         logger.info(f"Processing roaster with Crawl4AI: {name} ({website})")
         
         # Check cache first
         cache_key = f"roaster_{slugify(name)}"
+        cached_data = None
         if not self.refresh_cache:
             cached_data = load_from_cache(cache_key, "roasters")
         if cached_data:
@@ -652,26 +653,40 @@ class RoasterPipeline:
                 
                 # Pydantic validation before Save to cache
                 try:
-                    roaster = RoasterModel(**roaster).dict()
+                    roaster_model = RoasterModel(**roaster)
+                    roaster = roaster_model.dict()
+                    save_to_cache(cache_key, roaster, "roasters")
+                    
+                    # Insert into database if client provided
+                    if self.db_client:
+                        try:
+                            # Create a copy without non-DB fields
+                            db_roaster = {k: v for k, v in roaster.items() if k not in ["_platform"]}
+                            
+                            # Use the upsert_roaster method from SupabaseClient
+                            roaster_id = self.db_client.upsert_roaster(db_roaster)
+                            logger.info(f"Saved roaster {name} to database with ID: {roaster_id}")
+                            
+                            # Wait a moment to ensure database consistency
+                            await asyncio.sleep(1)
+                            
+                            # Critical fix: Update the roaster dictionary with the returned ID
+                            if roaster_id:
+                                roaster["id"] = roaster_id
+                                # Update the model as well
+                                roaster_model.id = roaster_id
+                            else:
+                                logger.error(f"Failed to get valid roaster ID from database")
+                                return None
+                                
+                        except Exception as e:
+                            logger.error(f"Error saving roaster {name} to database: {str(e)}")
+                            return None
+                            
+                    return roaster_model
                 except Exception as e:
                     logger.error(f"Validation failed for {name}: {str(e)}")
                     return None
-                save_to_cache(cache_key, roaster, "roasters")
-                
-                # Insert into database if client provided
-                if self.db_client:
-                    try:
-                        # Create a copy without non-DB fields
-                        db_roaster = {k: v for k, v in roaster.items() if k not in ["_platform"]}
-                        
-                        # Use the upsert_roaster method from SupabaseClient
-                        roaster_id = self.db_client.upsert_roaster(db_roaster)
-                        logger.info(f"Saved roaster {name} to database with ID: {roaster_id}")
-                        
-                    except Exception as e:
-                        logger.error(f"Error saving roaster {name} to database: {str(e)}")
-                
-                return roaster
                 
         except Exception as e:
             logger.error(f"Error processing roaster {name} with Crawl4AI: {str(e)}")
@@ -810,6 +825,13 @@ class RoasterPipeline:
                     # Use the upsert_roaster method from SupabaseClient
                     roaster_id = self.db_client.upsert_roaster(db_roaster)
                     logger.info(f"Saved roaster {name} to database with ID: {roaster_id}")
+                    
+                    # Critical fix: Update the model with the returned ID
+                    if roaster_id:
+                        roaster_model.id = roaster_id
+                    else:
+                        logger.error(f"Failed to get valid roaster ID from database")
+                        
                 except Exception as e:
                     logger.error(f"Error saving roaster {name} to database: {str(e)}")
         

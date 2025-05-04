@@ -28,7 +28,7 @@ class SupabaseClient:
             )
         )
     
-    def upsert_coffees(self, coffees_data: List[Dict[str, Any]]) -> List[str]:
+    async def upsert_coffees(self, coffees_data: List[Dict[str, Any]]) -> List[str]:
         """
         Batch insert or update coffee products and return their IDs
         """
@@ -57,7 +57,7 @@ class SupabaseClient:
             logger.error(f"Error upserting coffees: {str(e)}")
             raise
     
-    def upsert_region(self, region_name: str) -> Optional[str]:
+    async def upsert_region(self, region_name: str) -> Optional[str]:
         """
         Use the upsert_region RPC function to get or create a region
         """
@@ -74,7 +74,7 @@ class SupabaseClient:
             logger.error(f"Error upserting region: {str(e)}")
             return None
             
-    def link_flavor_profile(self, coffee_id: str, flavor_name: str) -> None:
+    async def link_flavor_profile(self, coffee_id: str, flavor_name: str) -> None:
         """
         Link a flavor profile to a coffee using the RPC function
         """
@@ -86,7 +86,7 @@ class SupabaseClient:
         except Exception as e:
             logger.error(f"Error linking flavor profile: {str(e)}")
             
-    def link_brew_method(self, coffee_id: str, method_name: str) -> None:
+    async def link_brew_method(self, coffee_id: str, method_name: str) -> None:
         """
         Link a brew method to a coffee using the RPC function
         """
@@ -98,7 +98,7 @@ class SupabaseClient:
         except Exception as e:
             logger.error(f"Error linking brew method: {str(e)}")
     
-    def add_external_link(self, coffee_id: str, provider: str, url: str) -> None:
+    async def add_external_link(self, coffee_id: str, provider: str, url: str) -> None:
         """
         Add or update an external purchase link
         """
@@ -110,7 +110,7 @@ class SupabaseClient:
         except Exception as e:
             logger.error(f"Error adding external link: {str(e)}")
     
-    def upsert_coffee_prices(self, coffee_id: str, prices: Dict[int, float]) -> bool:
+    async def upsert_coffee_prices(self, coffee_id: str, prices: Dict[int, float]) -> bool:
         """
         Insert or update coffee prices.
         
@@ -143,7 +143,7 @@ class SupabaseClient:
             logger.error(f"Error upserting coffee prices: {str(e)}")
             return False
         
-    def upsert_roaster(self, roaster_data: Dict[str, Any]) -> Optional[str]:
+    async def upsert_roaster(self, roaster_data: Dict[str, Any]) -> Optional[str]:
         """
         Insert or update a roaster and return its ID.
         

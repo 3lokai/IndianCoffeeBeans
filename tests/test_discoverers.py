@@ -280,9 +280,7 @@ from scrapers.platform_detector import PlatformDetector
 @pytest.mark.skipif(sys.platform == "win32", reason="Windows + Proactor loop bug")
 @pytest.mark.asyncio
 async def test_platform_detector():
-    detector = PlatformDetector()
-
-    try:
+    async with PlatformDetector() as detector:
         # Test Shopify detection
         html_shopify = """
             <html><head><link rel="stylesheet" href="//cdn.shopify.com/s/files/1/0123/4567/t/1/assets/theme.css"></head></html>
@@ -303,9 +301,6 @@ async def test_platform_detector():
         """
         result = await detector.detect("https://example.com", html=html_static)
         assert result["platform"] == "static"
-
-    finally:
-        await detector.close()
 
 
 @pytest.mark.asyncio

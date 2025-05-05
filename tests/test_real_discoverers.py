@@ -54,8 +54,8 @@ async def test_discovery_for_roaster(discovery_manager, roaster_data):
     
     try:
         # First detect platform
-        platform_detector = PlatformDetector()
-        platform_info = await platform_detector.detect(roaster_data["website_url"])
+        async with PlatformDetector() as platform_detector:
+            platform_info = await platform_detector.detect(roaster_data["website_url"])
         logger.info(f"Detected platform: {platform_info.get('platform', 'unknown')}")
         
         # Add platform info to roaster data

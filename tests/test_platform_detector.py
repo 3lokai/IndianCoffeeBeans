@@ -25,19 +25,19 @@ async def main():
     url = sys.argv[1]
     logger.info(f"Testing platform detection for: {url}")
     
-    detector = PlatformDetector()
-    try:
-        result = await detector.detect(url)
-        print(json.dumps(result, indent=2))
-        logger.info(f"Detected platform: {result['platform']}")
-        
-        if result['api_endpoints']:
-            logger.info(f"API endpoints to try: {result['api_endpoints']}")
-        
-        if result['structured_data_paths']:
-            logger.info(f"Structured data paths: {result['structured_data_paths']}")
-    finally:
-        await detector.close()
+    async with PlatformDetector() as detector:
+        try:
+            result = await detector.detect(url)
+            print(json.dumps(result, indent=2))
+            logger.info(f"Detected platform: {result['platform']}")
+            
+            if result['api_endpoints']:
+                logger.info(f"API endpoints to try: {result['api_endpoints']}")
+            
+            if result['structured_data_paths']:
+                logger.info(f"Structured data paths: {result['structured_data_paths']}")
+        except Exception as e:
+            logger.error(f"Error in platform detection: {e}")
 
 if __name__ == "__main__":
     asyncio.run(main())

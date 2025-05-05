@@ -186,26 +186,9 @@ class PlatformDetector:
         Returns:
             List[str]: List of API endpoints to try
         """
-        endpoints = {
-            "shopify": [
-                "/products.json",
-                "/collections/all/products.json",
-                "/collections/all.json"
-            ],
-            "woocommerce": [
-                "/wp-json/wc/v3/products",
-                "/wp-json/wc/store/products"
-            ],
-            "wordpress": [
-                "/wp-json/wp/v2/posts",
-                "/wp-json/wp/v2/pages"
-            ],
-            "magento": [
-                "/rest/V1/products"
-            ]
-        }
-        
-        return endpoints.get(platform, [])
+        # Use PLATFORM_SPECIFIC from config.py if available
+        endpoints = PLATFORM_SPECIFIC.get(platform, {}).get("api_endpoints", [])
+        return endpoints
     
     def get_structured_data_paths(self, platform: PlatformType) -> List[str]:
         """
@@ -217,7 +200,13 @@ class PlatformDetector:
         Returns:
             List[str]: List of relevant paths to check for structured data
         """
-        paths = {
+        # Use PLATFORM_SPECIFIC from config.py if available
+        # If not present, fallback to previous hardcoded logic
+        paths = PLATFORM_SPECIFIC.get(platform, {}).get("structured_data_paths")
+        if paths is not None:
+            return paths
+        # Fallback to previous logic for backward compatibility
+        default_paths = {
             "shopify": [
                 "//script[@type='application/ld+json']",
                 "//meta[@property='og:type']"
@@ -234,10 +223,16 @@ class PlatformDetector:
                 "//meta[@property='og:type']"
             ]
         }
-        
-        return paths.get(platform, paths["custom"])
+        return default_paths.get(platform, default_paths["custom"])
     
     async def close(self):
         """Close the aiohttp session"""
         if self.session and not self.session.closed:
             await self.session.close()
+    
+    async def __aenter__(self):
+        await self._get_session()
+        return self
+
+    async def __aexit__(self, exc_type, exc, tb):
+        await self.close()

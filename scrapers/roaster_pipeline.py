@@ -57,8 +57,6 @@ class RoasterPipeline:
     def __init__(self, db_client=None, refresh_cache=False):
         self.db_client = db_client
         self.refresh_cache = refresh_cache
-        self.platform_detector = PlatformDetector()
-        self.session = None
         self.crawl4ai_loaded = False
         self._try_load_crawl4ai()
         
@@ -565,7 +563,8 @@ class RoasterPipeline:
             async with self.AsyncWebCrawler(config=browser_config) as crawler:
                 try:
                     # First detect the platform directly
-                    platform_info = await self.platform_detector.detect(website)
+                    async with PlatformDetector() as detector:
+                        platform_info = await detector.detect(website)
                     platform_type = platform_info.get("platform", "unknown")
                     result = await crawler.arun(url=website, config=run_config)
                 except Exception as e:
@@ -573,6 +572,9 @@ class RoasterPipeline:
                         logger.warning(f"SSL error on {website}, retrying with HTTP fallback...")
                         alt_url = website.replace("https://", "http://")
                         try:
+                            async with PlatformDetector() as detector:
+                                platform_info = await detector.detect(alt_url)
+                            platform_type = platform_info.get("platform", "unknown")
                             result = await crawler.arun(url=alt_url, config=run_config)
                         except Exception as e2:
                             logger.error(f"HTTP fallback also failed for {website}: {str(e2)}")
@@ -630,6 +632,9 @@ class RoasterPipeline:
 
                     # Try to visit about page for missing information, using platform-aware paths
                     logger.info(f"Platform type before crawling about pages: '{platform_type}'")
+                    async with PlatformDetector() as detector:
+                        platform_info = await detector.detect(website)
+                    platform_type = platform_info.get("platform", "unknown")
                     about_data = await self.crawl_about_pages(website, platform_type)
 
                     # Add about page descriptions to candidates
@@ -744,7 +749,8 @@ class RoasterPipeline:
         soup = BeautifulSoup(html_content, "html.parser")
         
         # Detect platform
-        platform_info = await self.platform_detector.detect(website, html_content)
+        async with PlatformDetector() as detector:
+            platform_info = await detector.detect(website, html_content)
         platform_type = platform_info.get("platform", "unknown")
 
         # Extract metadata
@@ -790,6 +796,7 @@ class RoasterPipeline:
         }
 
         # Try to visit about page using platform-aware paths
+        logger.info(f"Platform type before crawling about pages: '{platform_type}'")
         about_data = await self.crawl_about_pages(website, platform_type)
 
         # Add about page descriptions to candidates
@@ -880,7 +887,5 @@ class RoasterPipeline:
         
     async def close(self):
         """Close resources"""
-        await self.platform_detector.close()
-        
         if self.session and not self.session.closed:
             await self.session.close()

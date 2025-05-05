@@ -23,7 +23,6 @@ class DiscoveryManager:
     def __init__(self, db_client=None, refresh_cache=False):
         self.db_client = db_client
         self.refresh_cache = refresh_cache
-        self.platform_detector = PlatformDetector()
         
         # Initialize discoverers
         self.sitemap_discoverer = SitemapDiscoverer()
@@ -63,7 +62,8 @@ class DiscoveryManager:
         
         # Try to detect platform if not already provided
         if '_platform' not in roaster:
-            platform_info = await self.platform_detector.detect(website)
+            async with PlatformDetector() as detector:
+                platform_info = await detector.detect(website)
             platform_type = platform_info.get("platform", "unknown")
         else:
             platform_type = roaster.get('_platform', {}).get('platform', 'unknown')
@@ -380,7 +380,6 @@ class DiscoveryManager:
         
     async def close(self):
         """Close resources"""
-        await self.platform_detector.close()
         await self.sitemap_discoverer.close()
         await self.html_discoverer.close()
         await self.structured_data_discoverer.close()

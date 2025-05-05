@@ -1,21 +1,17 @@
 # scrapers/discoverers/crawl4ai_discoverer.py
-import asyncio
-import json
 import logging
 import re
 from typing import List, Dict, Any, Optional, Set
 from urllib.parse import urljoin, urlparse, unquote
 
-import aiohttp
 from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
 from crawl4ai.deep_crawling import BFSDeepCrawlStrategy
 from crawl4ai.deep_crawling.filters import FilterChain, URLPatternFilter, DomainFilter
-from openai import OpenAI
 
 from common.utils import slugify
 from common.product_classifier import is_likely_coffee_product
-from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY, DEEPSEEK_API_KEY
+from config import CRAWL_DELAY
 
 logger = logging.getLogger(__name__)
 
@@ -32,17 +28,15 @@ class Crawl4AIDiscoverer:
     2. Handles dynamic "Load More" buttons and pagination
     3. Cleans content with PruningContentFilter
     4. Extracts product information from the cleaned content
-    5. Optionally uses DeepSeek to enhance discovery with semantic understanding
     """
     
-    def __init__(self, deepseek_api_key: Optional[str] = None):
+    def __init__(self):
         """
         Initialize the Crawl4AI discoverer.
         
         Args:
             deepseek_api_key: Optional API key for DeepSeek enhancement
         """
-        self.deepseek_api_key = deepseek_api_key or DEEPSEEK_API_KEY
         self.browser_config = BrowserConfig(
             headless=True,
             ignore_https_errors=True,
@@ -141,9 +135,9 @@ class Crawl4AIDiscoverer:
             
             # Configure deep crawl strategy
             deep_crawl_strategy = BFSDeepCrawlStrategy(
-                max_depth=2,               # Crawl up to 2 levels deep
+                max_depth=3,               # Crawl up to 3 levels deep
                 include_external=False,    # Stay within the same domain
-                max_pages=30,              # Limit total pages to avoid overwhelming
+                max_pages=50,              # Limit total pages to avoid overwhelming
                 filter_chain=filter_chain  # Apply our filtering rules
             )
             
@@ -152,6 +146,8 @@ class Crawl4AIDiscoverer:
                 cache_mode=CacheMode.ENABLED,
                 wait_until="domcontentloaded",
                 page_timeout=60000,  # 60 seconds timeout
+                word_count_threshold=15, # Lower threshold for potentially smaller product blocks
+                deep_crawl_strategy=deep_crawl_strategy,
                 stream=False  # Get all results at once since we need to process them
             )
             
@@ -448,199 +444,6 @@ class Crawl4AIDiscoverer:
             
         except Exception as e:
             logger.error(f"Error extracting from HTML: {str(e)}")
-            return []
-            
-    async def _extract_with_deepseek(self, markdown: str, current_url: str, base_url: str) -> List[Dict[str, Any]]:
-        """
-        Extract products using DeepSeek from markdown.
-        
-        Args:
-            markdown: Markdown content
-            current_url: Current page URL
-            base_url: Base URL of the website
-            
-        Returns:
-            List of discovered products
-        """
-        products = []
-        
-        if not self.deepseek_api_key or not markdown:
-            return products
-            
-        try:
-            # Initialize DeepSeek client
-            client = OpenAI(
-                api_key=self.deepseek_api_key,
-                base_url="https://api.deepseek.com"
-            )
-            
-            # Prepare context
-            context = f"""
-            This is the content of a coffee website page. The page might list multiple coffee products.
-            
-            Page URL: {current_url}
-            Base URL: {base_url}
-            
-            Page content:
-            {markdown[:6000]}  # Trim to avoid token limits
-            """
-            
-            # Prepare prompt
-            prompt = f"""
-            Identify all coffee bean products mentioned on this page. For each product, extract:
-            1. product_name: Full name of the coffee product
-            2. product_url: URL to the product page (might be relative, missing from content)
-            3. description: Brief description if available (optional)
-            4. image_url: URL to product image if available (optional)
-            
-            Extract ONLY coffee bean products (ground or whole bean coffee) - ignore coffee equipment, merchandise, subscriptions, etc.
-            
-            Return results as a JSON array of products. If no coffee products are found, return an empty array.
-            
-            Example format:
-            [
-              {{
-                "product_name": "Ethiopia Yirgacheffe",
-                "product_url": "/products/ethiopia-yirgacheffe",
-                "description": "Floral and citrusy single-origin coffee.",
-                "image_url": "/images/ethiopia.jpg"
-              }},
-              ...
-            ]
-            """
-            
-            # Call DeepSeek API
-            response = client.chat.completions.create(
-                model="deepseek-chat",
-                messages=[
-                    {"role": "system", "content": "You are a coffee product discovery expert."},
-                    {"role": "user", "content": context + "\n\n" + prompt}
-                ],
-                max_tokens=1500,
-                temperature=0.2
-            )
-            
-            # Extract response content
-            ai_response = response.choices[0].message.content
-            
-            # Parse JSON from response
-            try:
-                # Find JSON in the response
-                json_start = ai_response.find('[')
-                json_end = ai_response.rfind(']') + 1
-                
-                if json_start >= 0 and json_end > json_start:
-                    json_str = ai_response[json_start:json_end]
-                    extracted_products = json.loads(json_str)
-                    
-                    # Process each product
-                    for item in extracted_products:
-                        if not isinstance(item, dict):
-                            continue
-                            
-                        name = item.get('product_name')
-                        url = item.get('product_url')
-                        
-                        if not name or not url:
-                            continue
-                            
-                        # Normalize URL
-                        if not url.startswith(('http://', 'https://')):
-                            url = urljoin(base_url, url)
-                            
-                        # Create product entry
-                        product = {
-                            "name": name,
-                            "slug": slugify(name),
-                            "direct_buy_url": url,
-                            "discovery_method": "crawl4ai_deepseek"
-                        }
-                        
-                        # Add description if available
-                        if 'description' in item and item['description']:
-                            product["description"] = item['description']
-                            
-                        # Add image URL if available
-                        if 'image_url' in item and item['image_url']:
-                            img_url = item['image_url']
-                            
-                            # Normalize image URL
-                            if not img_url.startswith(('http://', 'https://')):
-                                img_url = urljoin(base_url, img_url)
-                                
-                            product["image_url"] = img_url
-                            
-                        products.append(product)
-                        
-            except json.JSONDecodeError as e:
-                logger.error(f"Failed to parse DeepSeek response as JSON: {str(e)}")
-                logger.debug(f"Response content: {ai_response[:100]}...")
-                
-            return products
-            
-        except Exception as e:
-            logger.error(f"Error extracting with DeepSeek: {str(e)}")
-            return []
-            
-    def _extract_next_pages(self, html: str, current_url: str) -> List[str]:
-        """
-        Extract URLs of next pages (pagination).
-        
-        Args:
-            html: HTML content
-            current_url: Current page URL
-            
-        Returns:
-            List of next page URLs
-        """
-        next_pages = []
-        
-        try:
-            # Parse HTML
-            soup = BeautifulSoup(html, 'html.parser')
-            
-            # Look for common pagination patterns
-            pagination_selectors = [
-                '.pagination a',
-                '.pager a',
-                '.pages a',
-                'nav.woocommerce-pagination a',
-                'a.page-numbers',
-                '.next-page',
-                '.paginator a',
-                '.pagination-next',
-                'a[rel="next"]',
-                'a.next'
-            ]
-            
-            for selector in pagination_selectors:
-                links = soup.select(selector)
-                
-                for link in links:
-                    if link.has_attr('href'):
-                        href = link['href']
-                        
-                        # Skip empty, fragment, or javascript links
-                        if not href or href.startswith('#') or href.startswith('javascript:'):
-                            continue
-                            
-                        # Skip "previous" links
-                        if 'prev' in href.lower() or 'previous' in href.lower():
-                            continue
-                            
-                        # Normalize URL
-                        full_url = urljoin(current_url, href)
-                        
-                        # Skip if same as current page
-                        if full_url == current_url:
-                            continue
-                            
-                        next_pages.append(full_url)
-                        
-            return next_pages
-            
-        except Exception as e:
-            logger.error(f"Error extracting next pages: {str(e)}")
             return []
             
     def _is_product_url(self, url: str) -> bool:

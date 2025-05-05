@@ -1,0 +1,29 @@
+{
+  "id": "0086fa3c-5e84-4090-8763-c2994f141977",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "Whiskey Barrel Aged Green Coffee",
+  "slug": "whiskey-barrel-aged-green-coffee",
+  "description": "<p class=\"MsoNormal\" style=\"margin-left: 0cm; text-indent: 0cm; mso-list: l0 level1 lfo1; tab-stops: 15.6pt;\"><!-- [if !supportLists]--><span lang=\"EN-US\">High-quality green coffee beans are chosen and placed in used whiskey barrels, allowing them to absorb the residual flavors and aromas. This aging process can last from a few weeks to several months, depending on the desired intensity of flavor.</span></p>\n<p class=\"MsoNormal\"><span lang=\"EN-US\">Throughout the aging process, the beans are regularly monitored for flavor development and moisture content to ensure optimal aging without spoilage.</span></p>\n<p class=\"MsoNormal\"><span lang=\"EN-US\">After aging, the beans are roasted. The roasting process further enhances the whiskey notes and balances the coffee’s natural flavors.</span></p>\n<p><strong>FLAVOR NOTES: </strong></p>\n<p class=\"MsoNormal\"><span lang=\"EN-US\">The flavor notes of coffee are winy,fruity,slight mixed berries, tropical fruits and ceralic</span></p>",
+  "roast_level": "unknown",
+  "bean_type": "unknown",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/1_9d4424e3-1266-4ac9-ae83-793c2ae01209.png?v=1712760136",
+  "direct_buy_url": "https://baarbaracoffee.com/products/whisky-barrel-aged-green-coffee",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": true,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:04:42.284674",
+  "updated_at": "2025-05-05T02:04:42.284682",
+  "region_name": null,
+  "flavor_profiles": [
+    "fruity",
+    "berry"
+  ],
+  "brew_methods": [],
+  "external_links": {},
+  "prices": {}
+}

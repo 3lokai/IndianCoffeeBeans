@@ -1,0 +1,32 @@
+{
+  "id": "069a26d3-ce00-491b-9378-4c1617cc7e60",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "Frozen Cherry Roasted Coffee Beans",
+  "slug": "frozen-cherry-roasted-coffee-beans",
+  "description": "<p><span data-mce-fragment=\"1\" data-sheets-formula-bar-text-style=\"font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">The method takes inspiration from ingredients outside of coffee which develop amazing natural sweetness thanks to freezing temperatures. Inspired by the wine industry, whole cherries are fermented and put in a freezer in bags so the sugars accumulate. Further removed and slow dried on raised beds.</span><br></p>\n<p>Origin - Baarbara, Chikmagalur, Karnataka</p>\n<p>Altitude - 4500 ft - 5000 ft</p>\n<p>Varietal - SLN 795</p>\n<p>Roasted for - Filter<br></p>\n<p>Recommended Brewing Equipment -<span data-mce-fragment=\"1\" data-sheets-formula-bar-text-style=\"font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">Pour Over and Aeropress</span><span data-mce-fragment=\"1\" data-sheets-formula-bar-text-style=\"font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\"></span><span data-mce-fragment=\"1\"></span></p>\n<p>Taste Notes - Juicy Mango, Mixed berries</p>",
+  "roast_level": "unknown",
+  "bean_type": "unknown",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/CoffeePacks250_0000_Layer3copy_e3290bfb-618a-44f8-be5d-fd7ce618f497.jpg?v=1727354891",
+  "direct_buy_url": "https://baarbaracoffee.com/products/frozen-cherry-1",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": true,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:02:38.873048",
+  "updated_at": "2025-05-05T02:02:38.873053",
+  "region_name": "Baarbara, Chikmagalur, Karnataka",
+  "flavor_profiles": [
+    "fruity",
+    "berry"
+  ],
+  "brew_methods": [
+    "pour-over",
+    "aeropress"
+  ],
+  "external_links": {},
+  "prices": {}
+}

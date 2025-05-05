@@ -1,0 +1,31 @@
+{
+  "id": "3a0948e0-af53-48c7-b01c-c1e70ad90a69",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "Naturals Roasted Coffee Beans",
+  "slug": "naturals-roasted-coffee-beans",
+  "description": "<p>Wake up to the aroma of Natural coffee. For this product, luscious ripened coffee cherries are fermented for 24 hours and dried on raised beds, till you get a burst of flavour with every sip.</p>\n<p> Origin - Baarbara, Chikmagalur, Karnataka</p>\n<p>Altitude - 4500 ft - 5000 ft</p>\n<p>Varietal - SLN 795</p>\n<p>Roasted for - Filter</p>\n<p>Recommended Brewing Equipment - <span data-sheets-formula-bar-text-style=\"font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\" data-mce-fragment=\"1\">V60 and Inverted Aeropress</span><br></p>\n<p>Taste Notes - <span data-mce-fragment=\"1\">Coconut Chips, Mango</span></p>\n<!---->",
+  "roast_level": "unknown",
+  "bean_type": "unknown",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/Screenshot1947-01-11at10.46.50AM.png?v=1745585701",
+  "direct_buy_url": "https://baarbaracoffee.com/products/naturals",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": true,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:05:27.847436",
+  "updated_at": "2025-05-05T02:05:27.847439",
+  "region_name": "Baarbara, Chikmagalur, Karnataka",
+  "flavor_profiles": [
+    "fruity"
+  ],
+  "brew_methods": [
+    "pour-over",
+    "aeropress"
+  ],
+  "external_links": {},
+  "prices": {}
+}

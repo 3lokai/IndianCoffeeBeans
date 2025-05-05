@@ -1,0 +1,28 @@
+{
+  "id": "04cd88cb-4459-4e32-97cc-daced4ea52ce",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "50% Arabica - 50% Robusta- Roasted Coffee Beans",
+  "slug": "50-arabica-50-robusta-roasted-coffee-beans",
+  "description": "<ul data-mce-fragment=\"1\">\n<li>Our range of premium blends seamlessly combine the exquisite flavours of single-origin, shade-grown AA-Grade Arabica and Robusta beans, creating a unique flavour profile. </li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li>\n<strong data-mce-fragment=\"1\">FLAVOUR NOTES:</strong> This particular blend gets its layered and naunced flavours from the Arabica beans, with the Robusta beans adding the right amount of brightness and acidity, making it a perfectly balanced cup.</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li>\n<strong>DRINKING PREFERENCES:</strong><span> </span>Best enjoyed black. Great for brewing an Espresso, Risteretto or Cortado.</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Our 1 kg and 5 kg offerings are ideal for stocking up your office pantry or for coffee machines at any food retail outlet.</li>\n</ul>",
+  "roast_level": "unknown",
+  "bean_type": "blend",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/1_Kg_Pack.jpg?v=1731410535",
+  "direct_buy_url": "https://baarbaracoffee.com/products/50-arabica-50-robusta-roasted-coffee",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": false,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:03:31.607280",
+  "updated_at": "2025-05-05T02:03:31.607287",
+  "region_name": null,
+  "flavor_profiles": [],
+  "brew_methods": [
+    "espresso"
+  ],
+  "external_links": {},
+  "prices": {}
+}

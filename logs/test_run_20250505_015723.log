@@ -160,3 +160,235 @@
 2025-05-05 02:00:27,737 - scrapers.roaster_pipeline - INFO - Trying about page: https://baarbaracoffee.com/story
 2025-05-05 02:00:27,983 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/story
 2025-05-05 02:00:30,214 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/story
+2025-05-05 02:00:34,438 - scrapers.roaster_pipeline - WARNING - [404] Failed to fetch https://baarbaracoffee.com/story
+2025-05-05 02:00:42,451 - scrapers.roaster_pipeline - ERROR - All attempts failed for https://baarbaracoffee.com/story
+2025-05-05 02:00:42,458 - scrapers.roaster_pipeline - INFO - Saved roaster BaarbaraBerry to database with ID: <coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEBD0>
+2025-05-05 02:00:43,627 - scrapers.pipeline - INFO - Extracted metadata for BaarbaraBerry
+2025-05-05 02:00:43,627 - scrapers.pipeline - INFO - Forcibly ensured roaster BaarbaraBerry exists in DB with ID: <coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>
+2025-05-05 02:00:44,893 - scrapers.discoverers.discovery_manager - INFO - Platform type for BaarbaraBerry: shopify
+2025-05-05 02:00:47,453 - scrapers.discoverers.discovery_manager - INFO - Discovered 60 products via Shopify API
+2025-05-05 02:00:47,457 - common.utils - ERROR - Error saving cache for products_baarbaraberry: Object of type coroutine is not JSON serializable
+2025-05-05 02:00:47,457 - scrapers.discoverers.discovery_manager - INFO - Discovered 60 unique products for BaarbaraBerry
+2025-05-05 02:00:47,458 - scrapers.pipeline - INFO - Discovered 60 products for BaarbaraBerry
+2025-05-05 02:00:50,384 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/naturals-roasted-coffee-copy
+2025-05-05 02:00:50,597 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/aaa-roasted-beans
+2025-05-05 02:00:50,720 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/make-your-own-blend
+2025-05-05 02:01:00,186 - scrapers.pipeline - INFO - Product 100% AAA Grade Roasted Arabica Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:01:00,552 - scrapers.pipeline - INFO - Product Monsoon Malabar Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:01:00,605 - scrapers.pipeline - INFO - Product Make Your Own Blend needs DeepSeek enrichment
+2025-05-05 02:01:03,832 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/aaa-roasted-beans
+2025-05-05 02:01:03,935 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/aaa-roasted-beans
+2025-05-05 02:01:03,959 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/aaa-roasted-beans
+2025-05-05 02:01:04,341 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/make-your-own-blend
+2025-05-05 02:01:04,662 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/naturals-roasted-coffee-copy
+2025-05-05 02:01:05,043 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/make-your-own-blend
+2025-05-05 02:01:05,066 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/make-your-own-blend
+2025-05-05 02:01:05,188 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/naturals-roasted-coffee-copy
+2025-05-05 02:01:05,198 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/naturals-roasted-coffee-copy
+2025-05-05 02:01:07,184 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:01:15,389 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:01:26,524 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:01:36,857 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/arabica-90-robusta-10
+2025-05-05 02:01:38,786 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/south-indian-filter-coffee-powder
+2025-05-05 02:01:41,669 - scrapers.pipeline - INFO - Product Arabica 90% Robusta 10% Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:01:42,370 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/100-aa-grade-roasted-arabica-coffee-beans
+2025-05-05 02:01:42,948 - scrapers.pipeline - INFO - Product South Indian Filter Coffee Powder needs DeepSeek enrichment
+2025-05-05 02:01:45,333 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/arabica-90-robusta-10
+2025-05-05 02:01:45,575 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/arabica-90-robusta-10
+2025-05-05 02:01:45,581 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/arabica-90-robusta-10
+2025-05-05 02:01:47,862 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:01:57,043 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/south-indian-filter-coffee-powder
+2025-05-05 02:01:57,120 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/south-indian-filter-coffee-powder
+2025-05-05 02:01:57,121 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/south-indian-filter-coffee-powder
+2025-05-05 02:01:57,793 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:02:06,892 - scrapers.pipeline - INFO - Product 100% AA Grade Roasted Arabica Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:02:08,327 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/100-aa-grade-roasted-arabica-coffee-beans
+2025-05-05 02:02:08,386 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/intenso-fermentation-1
+2025-05-05 02:02:08,493 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/100-aa-grade-roasted-arabica-coffee-beans
+2025-05-05 02:02:08,498 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/100-aa-grade-roasted-arabica-coffee-beans
+2025-05-05 02:02:09,773 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:02:19,661 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/frozen-cherry-1
+2025-05-05 02:02:20,589 - scrapers.pipeline - INFO - Product Intenso Fermentation Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:02:24,172 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/premium-grade-a-coffee-beans-powder-blended-arabica-coffee-black-coffee-pack-of-2
+2025-05-05 02:02:24,566 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/intenso-fermentation-1
+2025-05-05 02:02:24,623 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/intenso-fermentation-1
+2025-05-05 02:02:24,625 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/intenso-fermentation-1
+2025-05-05 02:02:25,502 - scrapers.pipeline - INFO - Product Frozen Cherry Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:02:28,445 - scrapers.pipeline - INFO - Product Premium Grade 'A' Coffee Beans Powder | Blended Arabica Coffee | Black Coffee (Pack of 2) needs DeepSeek enrichment
+2025-05-05 02:02:28,660 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/frozen-cherry-1
+2025-05-05 02:02:28,791 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/frozen-cherry-1
+2025-05-05 02:02:28,800 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/frozen-cherry-1
+2025-05-05 02:02:30,056 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:02:39,424 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/premium-grade-a-coffee-beans-powder-blended-arabica-coffee-black-coffee-pack-of-2
+2025-05-05 02:02:39,467 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/premium-grade-a-coffee-beans-powder-blended-arabica-coffee-black-coffee-pack-of-2
+2025-05-05 02:02:39,470 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/premium-grade-a-coffee-beans-powder-blended-arabica-coffee-black-coffee-pack-of-2
+2025-05-05 02:02:40,193 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:02:47,805 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:03:00,104 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/100-roasted-arabica-coffee-beans-pack-of-2
+2025-05-05 02:03:02,328 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/50-arabica-50-robusta-roasted-coffee
+2025-05-05 02:03:05,049 - scrapers.pipeline - INFO - Product 100% Roasted Arabica Coffee Beans (Pack of 2) needs DeepSeek enrichment
+2025-05-05 02:03:06,888 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/60-arabica-40-robusta-roasted-coffee-beans
+2025-05-05 02:03:09,535 - scrapers.pipeline - INFO - Product 50% Arabica - 50% Robusta- Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:03:10,087 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/100-roasted-arabica-coffee-beans-pack-of-2
+2025-05-05 02:03:10,283 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/100-roasted-arabica-coffee-beans-pack-of-2
+2025-05-05 02:03:10,284 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/100-roasted-arabica-coffee-beans-pack-of-2
+2025-05-05 02:03:12,567 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:03:23,362 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/50-arabica-50-robusta-roasted-coffee
+2025-05-05 02:03:23,487 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/50-arabica-50-robusta-roasted-coffee
+2025-05-05 02:03:23,490 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/50-arabica-50-robusta-roasted-coffee
+2025-05-05 02:03:24,200 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:03:31,646 - scrapers.pipeline - INFO - Product 60% Arabica - 40% Robusta- Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:03:33,034 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/70-arabica-30-robusta-roasted-coffee
+2025-05-05 02:03:33,379 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/60-arabica-40-robusta-roasted-coffee-beans
+2025-05-05 02:03:33,469 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/60-arabica-40-robusta-roasted-coffee-beans
+2025-05-05 02:03:33,473 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/60-arabica-40-robusta-roasted-coffee-beans
+2025-05-05 02:03:34,586 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:03:46,930 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/arabica-80-robusta-20-roasted-coffee-beans
+2025-05-05 02:03:47,367 - scrapers.pipeline - INFO - Product 70% Arabica - 30% Robusta Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:03:49,949 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/70-arabica-30-robusta-roasted-coffee
+2025-05-05 02:03:50,949 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/70-arabica-30-robusta-roasted-coffee
+2025-05-05 02:03:50,949 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/70-arabica-30-robusta-roasted-coffee
+2025-05-05 02:03:52,311 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:04:02,843 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/100-arabica-roasted-coffee-beans
+2025-05-05 02:04:02,845 - scrapers.pipeline - INFO - Product Arabica 80% Robusta 20%- Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:04:04,196 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/arabica-80-robusta-20-roasted-coffee-beans
+2025-05-05 02:04:04,345 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/arabica-80-robusta-20-roasted-coffee-beans
+2025-05-05 02:04:04,366 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/arabica-80-robusta-20-roasted-coffee-beans
+2025-05-05 02:04:05,338 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:04:14,330 - scrapers.pipeline - INFO - Product 100% Arabica - Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:04:15,029 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/whisky-barrel-aged-green-coffee
+2025-05-05 02:04:15,898 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/100-arabica-roasted-coffee-beans
+2025-05-05 02:04:15,983 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/100-arabica-roasted-coffee-beans
+2025-05-05 02:04:15,988 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/100-arabica-roasted-coffee-beans
+2025-05-05 02:04:17,244 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:04:30,591 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/whisky-barrel-aged-coffee-roasted-coffee
+2025-05-05 02:04:30,855 - scrapers.pipeline - INFO - Product Whiskey Barrel Aged Green Coffee needs DeepSeek enrichment
+2025-05-05 02:04:32,543 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/whisky-barrel-aged-green-coffee
+2025-05-05 02:04:32,708 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/whisky-barrel-aged-green-coffee
+2025-05-05 02:04:32,710 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/whisky-barrel-aged-green-coffee
+2025-05-05 02:04:33,960 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:04:42,323 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/naturals
+2025-05-05 02:04:42,594 - scrapers.pipeline - INFO - Product Whiskey Barrel Aged Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:04:45,879 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/whisky-barrel-aged-coffee-roasted-coffee
+2025-05-05 02:04:45,943 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/whisky-barrel-aged-coffee-roasted-coffee
+2025-05-05 02:04:45,944 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/whisky-barrel-aged-coffee-roasted-coffee
+2025-05-05 02:04:47,233 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:04:58,080 - scrapers.pipeline - INFO - Product Naturals Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:04:58,816 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/intenso-fermentation
+2025-05-05 02:05:00,595 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/naturals
+2025-05-05 02:05:00,694 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/naturals
+2025-05-05 02:05:00,695 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/naturals
+2025-05-05 02:05:03,603 - scrapers.pipeline - INFO - Product Intenso Fermentation Green Beans needs DeepSeek enrichment
+2025-05-05 02:05:04,216 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/honey-sun-dried
+2025-05-05 02:05:06,228 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/intenso-fermentation
+2025-05-05 02:05:06,660 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/intenso-fermentation
+2025-05-05 02:05:06,669 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/intenso-fermentation
+2025-05-05 02:05:08,040 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:05:18,884 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:05:28,847 - scrapers.pipeline - INFO - Product Honey Sun Dried Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:05:30,498 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/honey-sun-dried
+2025-05-05 02:05:30,566 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/honey-sun-dried
+2025-05-05 02:05:30,567 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/honey-sun-dried
+2025-05-05 02:05:31,580 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:05:47,269 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/frozen-cherry
+2025-05-05 02:05:47,527 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/pineapple-fermentation
+2025-05-05 02:05:47,709 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/baarbara-coffee-roasted-arabica-coffee-beans-vienna-dark-roasted-coffee-beans
+2025-05-05 02:05:54,466 - scrapers.pipeline - INFO - Product Frozen Cherry Green Beans needs DeepSeek enrichment
+2025-05-05 02:05:54,803 - scrapers.pipeline - INFO - Product Baarbara Coffee's Roasted Arabica Coffee Beans + Vienna Dark Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:05:54,845 - scrapers.pipeline - INFO - Product Pineapple Fermentation Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:05:56,672 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/frozen-cherry
+2025-05-05 02:05:56,786 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/frozen-cherry
+2025-05-05 02:05:56,797 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/frozen-cherry
+2025-05-05 02:05:57,507 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/pineapple-fermentation
+2025-05-05 02:05:57,701 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/baarbara-coffee-roasted-arabica-coffee-beans-vienna-dark-roasted-coffee-beans
+2025-05-05 02:05:57,856 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/pineapple-fermentation
+2025-05-05 02:05:57,869 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/pineapple-fermentation
+2025-05-05 02:05:58,001 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/baarbara-coffee-roasted-arabica-coffee-beans-vienna-dark-roasted-coffee-beans
+2025-05-05 02:05:58,048 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/baarbara-coffee-roasted-arabica-coffee-beans-vienna-dark-roasted-coffee-beans
+2025-05-05 02:05:59,816 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:06:11,876 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:06:21,734 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:06:31,700 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/arabica-washed-peaberry-green-beans
+2025-05-05 02:06:32,733 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/pineapple-fermented-coffee-grean-beans
+2025-05-05 02:06:37,018 - scrapers.pipeline - INFO - Product Arabica Washed Peaberry Green Beans needs DeepSeek enrichment
+2025-05-05 02:06:37,605 - scrapers.pipeline - INFO - Product Pineapple Fermented Coffee Grean Beans needs DeepSeek enrichment
+2025-05-05 02:06:37,963 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/honey-sundried-green-beans
+2025-05-05 02:06:40,390 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/arabica-washed-peaberry-green-beans
+2025-05-05 02:06:40,622 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/arabica-washed-peaberry-green-beans
+2025-05-05 02:06:40,629 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/arabica-washed-peaberry-green-beans
+2025-05-05 02:06:42,694 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:06:50,381 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/pineapple-fermented-coffee-grean-beans
+2025-05-05 02:06:50,410 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/pineapple-fermented-coffee-grean-beans
+2025-05-05 02:06:50,410 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/pineapple-fermented-coffee-grean-beans
+2025-05-05 02:06:51,024 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:06:59,336 - scrapers.pipeline - INFO - Product Honey Sundried Green Beans needs DeepSeek enrichment
+2025-05-05 02:07:00,562 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/honey-sundried-green-beans
+2025-05-05 02:07:00,639 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/anaerobic-naturals-green-beans
+2025-05-05 02:07:00,726 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/honey-sundried-green-beans
+2025-05-05 02:07:00,728 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/honey-sundried-green-beans
+2025-05-05 02:07:02,216 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:07:12,617 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/naturals-green-beans
+2025-05-05 02:07:12,963 - scrapers.pipeline - INFO - Product Anaerobic Naturals Green Beans needs DeepSeek enrichment
+2025-05-05 02:07:16,507 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/anaerobic-naturals-green-beans
+2025-05-05 02:07:16,628 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/anaerobic-naturals-green-beans
+2025-05-05 02:07:16,628 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/anaerobic-naturals-green-beans
+2025-05-05 02:07:17,431 - scrapers.pipeline - INFO - Product Naturals Green Beans needs DeepSeek enrichment
+2025-05-05 02:07:18,495 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:07:27,463 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/robusta-fruit-cherry-green-beans
+2025-05-05 02:07:28,168 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/naturals-green-beans
+2025-05-05 02:07:28,446 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/naturals-green-beans
+2025-05-05 02:07:28,449 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/naturals-green-beans
+2025-05-05 02:07:29,434 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:07:41,366 - scrapers.pipeline - INFO - Product Robusta fruit cherry Green Beans needs DeepSeek enrichment
+2025-05-05 02:07:42,073 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/monsoon-malabar-green-beans
+2025-05-05 02:07:43,090 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/robusta-fruit-cherry-green-beans
+2025-05-05 02:07:43,207 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/robusta-fruit-cherry-green-beans
+2025-05-05 02:07:43,215 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/robusta-fruit-cherry-green-beans
+2025-05-05 02:07:44,855 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:07:55,012 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/arabica-washed-bulk-green-beans
+2025-05-05 02:07:58,002 - scrapers.pipeline - INFO - Product Monsoon Malabar Green Beans needs DeepSeek enrichment
+2025-05-05 02:08:01,617 - scrapers.pipeline - INFO - Product Arabica Washed Bulk Green Beans needs DeepSeek enrichment
+2025-05-05 02:08:01,830 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/arabica-washed-a-green-beans
+2025-05-05 02:08:06,991 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/monsoon-malabar-green-beans
+2025-05-05 02:08:07,406 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/monsoon-malabar-green-beans
+2025-05-05 02:08:07,417 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/monsoon-malabar-green-beans
+2025-05-05 02:08:10,047 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:08:17,666 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/arabica-washed-bulk-green-beans
+2025-05-05 02:08:17,686 - scrapers.pipeline - INFO - Product Arabica Washed A Green Beans needs DeepSeek enrichment
+2025-05-05 02:08:17,716 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/arabica-washed-bulk-green-beans
+2025-05-05 02:08:17,717 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/arabica-washed-bulk-green-beans
+2025-05-05 02:08:18,476 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:08:27,207 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/arabica-washed-a-green-beans
+2025-05-05 02:08:27,268 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/arabica-washed-a-green-beans
+2025-05-05 02:08:27,268 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/arabica-washed-a-green-beans
+2025-05-05 02:08:27,917 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:08:37,206 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/copy-of-arabica-washed-aaa-green-beans
+2025-05-05 02:08:40,014 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/arabica-washed-aaa-green-beans
+2025-05-05 02:08:41,939 - scrapers.pipeline - INFO - Product Arabica Washed AA Green Beans needs DeepSeek enrichment
+2025-05-05 02:08:44,763 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/cold-brew-blend
+2025-05-05 02:08:45,610 - scrapers.pipeline - INFO - Product Arabica Washed AAA Green Beans needs DeepSeek enrichment
+2025-05-05 02:08:46,017 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/copy-of-arabica-washed-aaa-green-beans
+2025-05-05 02:08:46,380 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/copy-of-arabica-washed-aaa-green-beans
+2025-05-05 02:08:46,409 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/copy-of-arabica-washed-aaa-green-beans
+2025-05-05 02:08:48,774 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:08:58,107 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/arabica-washed-aaa-green-beans
+2025-05-05 02:08:58,164 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/arabica-washed-aaa-green-beans
+2025-05-05 02:08:58,165 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/arabica-washed-aaa-green-beans
+2025-05-05 02:08:59,171 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:09:06,961 - scrapers.pipeline - INFO - Product Cold Brew Blend Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:09:08,445 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/premium-blended-filter-coffee-powder
+2025-05-05 02:09:08,516 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/cold-brew-blend
+2025-05-05 02:09:08,641 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/cold-brew-blend
+2025-05-05 02:09:08,641 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/cold-brew-blend
+2025-05-05 02:09:11,765 - scrapers.extractors.json_css_extractor - INFO - Extracting product from https://baarbaracoffee.com/products/vienna-dark-roast-roasted-whole-beans
+2025-05-05 02:09:12,239 - scrapers.pipeline - INFO - Product Premium Blended Filter Coffee Powder needs DeepSeek enrichment
+2025-05-05 02:09:15,069 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/premium-blended-filter-coffee-powder
+2025-05-05 02:09:15,107 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/premium-blended-filter-coffee-powder
+2025-05-05 02:09:15,108 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/premium-blended-filter-coffee-powder
+2025-05-05 02:09:16,234 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:09:23,790 - scrapers.pipeline - INFO - Product Vienna Dark Roasted Coffee Beans needs DeepSeek enrichment
+2025-05-05 02:09:24,402 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-05-05 02:09:32,411 - scrapers.extractors.deepseek_extractor - INFO - Getting markdown for https://baarbaracoffee.com/products/vienna-dark-roast-roasted-whole-beans
+2025-05-05 02:09:32,459 - scrapers.extractors.deepseek_extractor - WARNING - Empty or very short markdown retrieved for https://baarbaracoffee.com/products/vienna-dark-roast-roasted-whole-beans
+2025-05-05 02:09:32,460 - scrapers.extractors.deepseek_extractor - INFO - Using HTML content as fallback for https://baarbaracoffee.com/products/vienna-dark-roast-roasted-whole-beans
+2025-05-05 02:09:33,189 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"

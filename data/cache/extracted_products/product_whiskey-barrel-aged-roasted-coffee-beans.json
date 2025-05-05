@@ -1,0 +1,29 @@
+{
+  "id": "4e205821-591e-49bf-95f6-d2b04f60d465",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "Whiskey Barrel Aged Roasted Coffee Beans",
+  "slug": "whiskey-barrel-aged-roasted-coffee-beans",
+  "description": "<p class=\"MsoNormal\" style=\"margin-left: 0cm; text-indent: 0cm; mso-list: l0 level1 lfo1; tab-stops: 15.6pt;\"><!-- [if !supportLists]--><span lang=\"EN-US\">High-quality coffee beans are chosen and placed in used whiskey barrels, allowing them to absorb the residual flavors and aromas. This aging process can last from a few weeks to several months, depending on the desired intensity of flavor.</span></p>\n<p class=\"MsoNormal\"><span lang=\"EN-US\">Throughout the aging process, the beans are regularly monitored for flavor development and moisture content to ensure optimal aging without spoilage.</span></p>\n<p class=\"MsoNormal\"><span lang=\"EN-US\">After aging, the beans are roasted. The roasting process further enhances the whiskey notes and balances the coffee’s natural flavors.</span></p>\n<p><strong>FLAVOR NOTES: </strong></p>\n<p class=\"MsoNormal\"><span lang=\"EN-US\">The flavor notes of coffee are winy,fruity,slight mixed berries, tropical fruits and ceralic</span></p>",
+  "roast_level": "unknown",
+  "bean_type": "unknown",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/CoffeePacks250_0000_Layer3copy_e3290bfb-618a-44f8-be5d-fd7ce618f497.jpg?v=1727354891",
+  "direct_buy_url": "https://baarbaracoffee.com/products/whisky-barrel-aged-coffee-roasted-coffee",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": true,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:04:58.052349",
+  "updated_at": "2025-05-05T02:04:58.052353",
+  "region_name": null,
+  "flavor_profiles": [
+    "fruity",
+    "berry"
+  ],
+  "brew_methods": [],
+  "external_links": {},
+  "prices": {}
+}

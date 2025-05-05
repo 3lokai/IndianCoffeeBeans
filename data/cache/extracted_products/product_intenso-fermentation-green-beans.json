@@ -1,0 +1,33 @@
+{
+  "id": "74723dff-333b-446b-9cdb-ffcbf3e269f9",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "Intenso Fermentation Green Beans",
+  "slug": "intenso-fermentation-green-beans",
+  "description": "<p><span data-mce-fragment=\"1\">This nano-lot from Baarbara Estate was produced by adding yeast to the ripened cherries in a controlled environment. The fermentation process results in notes of candied fruits and berries in the cup with a prominent acidity and complexity.</span></p>\n<p><span data-mce-fragment=\"1\">This is the first year we experiment with yeast fermentation. For this lot, we chose a yeast called Intenso (Saccharomyces cerevisiae), intended to increase fruity flavours, mouthfeel and general cup quality.</span></p>\n<p><span data-mce-fragment=\"1\">We found a floral aroma and notes of pomegranate, cherry, candied fruit and a hints of prunes supported by a smooth mouthfeel and the best way to enjoy this is to either brew a pour over or an iced coffee.</span></p>\n<p><span data-mce-fragment=\"1\">We have cupped this coffee multiple times in different stages of harvest and roast profiles. It can be strange and puzzling (in a nice way) because the flavours are constantly developing. It's like watching your favourite movie, that you've forgotten.</span><br></p>\n<p>Origin - Single Origin<br data-mce-fragment=\"1\"></p>\n<p>Altitude - 4500 ft - 5000 ft<br data-mce-fragment=\"1\"></p>\n<p>Varietal - SLN 795<br data-mce-fragment=\"1\"></p>\n<p>Roasted for - Filter<br></p>\n<p><span style=\"font-weight: 400;\">Best brewed as -Pour Over and Iced Coffees<br data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"></span></span></p>\n<p><span style=\"font-weight: 400;\">Taste Notes - Pomegranate, Cherry, Candied Fruit &amp; Prunes</span></p>\n<p><em><!----></em></p>",
+  "roast_level": "unknown",
+  "bean_type": "unknown",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/1_9d4424e3-1266-4ac9-ae83-793c2ae01209.png?v=1712760136",
+  "direct_buy_url": "https://baarbaracoffee.com/products/intenso-fermentation",
+  "region_id": null,
+  "is_seasonal": true,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": true,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:05:18.196648",
+  "updated_at": "2025-05-05T02:05:18.196650",
+  "region_name": "Baarbara Estate",
+  "flavor_profiles": [
+    "fruity",
+    "berry",
+    "floral"
+  ],
+  "brew_methods": [
+    "pour-over",
+    "iced coffee"
+  ],
+  "external_links": {},
+  "prices": {}
+}

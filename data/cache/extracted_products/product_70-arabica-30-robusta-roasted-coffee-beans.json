@@ -1,0 +1,30 @@
+{
+  "id": "83d9a441-2074-4579-9dbb-01bd5044ec0a",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "70% Arabica - 30% Robusta Roasted Coffee Beans",
+  "slug": "70-arabica-30-robusta-roasted-coffee-beans",
+  "description": "<ul data-mce-fragment=\"1\">\n<li><span>Enjoy the ultimate farm-to-cup experience with the nuanced flavours of shade-grown coffee beans (Bulk-Grade) grown in the verdant, misty hills of the Bababudangiri Range in Chikkamagaluru, Karnataka. </span></li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">All our coffee is of the highest quality, shade-grown amidst lush native jungle and fruit trees at high elevations of 4500 to 5000 feet.</span></li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<strong>FLAVOUR NOTES: </strong>This particular blend gets its layered and nuanced flavours from the Arabica beans, with the Robusta beans adding a subtle amount of brightness and acidity.</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<strong data-mce-fragment=\"1\">DRINKING PREFERENCES:</strong><span data-mce-fragment=\"1\"> </span>Best enjoyed black. Great for brewing an Espresso, Ristretto, or Cortado.</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">Our 1 kg and 5 kg offerings are ideal for stocking up your office pantry or for coffee machines at any food retail outlet.</span></li>\n</ul>",
+  "roast_level": "unknown",
+  "bean_type": "blend",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/1_Kg_Pack.jpg?v=1731410535",
+  "direct_buy_url": "https://baarbaracoffee.com/products/70-arabica-30-robusta-roasted-coffee",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": false,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:04:02.821137",
+  "updated_at": "2025-05-05T02:04:02.821142",
+  "region_name": "Bababudangiri Range, Chikkamagaluru, Karnataka",
+  "flavor_profiles": [],
+  "brew_methods": [
+    "espresso",
+    "ristretto",
+    "cortado"
+  ],
+  "external_links": {},
+  "prices": {}
+}

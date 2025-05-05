@@ -1,0 +1,28 @@
+{
+  "id": "824bbe1b-fea3-400f-8ee8-9d364541ffc4",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "Premium Blended Filter Coffee Powder",
+  "slug": "premium-blended-filter-coffee-powder",
+  "description": "<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">If you enjoy classic filter coffee to start your day, this Premium blend from our Signature Collection is the ideal choice for you!</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<span data-mce-fragment=\"1\">This blend of hand-picked, ground premium 'Grade AA' coffee beans offers a characteristic texture and aroma. </span><span>A stronger brew with 15% chicory makes for a rich cup of filter coffee.</span>\n</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<span></span>Experience the unparalleled flavors of Arabica beans from our estate located amidst the lush, misty hills of the Bababudangiri Range in Chikkamagaluru, Karnataka. Our farm's coffee beans are of the highest quality and are shade-grown at <a href=\"tel:4500%E2%80%935000\">4500 to 5000</a> feet among native foliage and various fruit trees.</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<strong>SHELF LIFE</strong><span data-mce-fragment=\"1\"><strong>:</strong> 12 months from the date of manufacture</span>\n</li>\n</ul>",
+  "roast_level": "unknown",
+  "bean_type": "blend",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/Premiumpack_0001_IMG_6509.jpg?v=1695102775",
+  "direct_buy_url": "https://baarbaracoffee.com/products/premium-blended-filter-coffee-powder",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": false,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:09:23.776774",
+  "updated_at": "2025-05-05T02:09:23.776777",
+  "region_name": "Bababudangiri Range, Chikkamagaluru, Karnataka",
+  "flavor_profiles": [],
+  "brew_methods": [
+    "filter"
+  ],
+  "external_links": {},
+  "prices": {}
+}

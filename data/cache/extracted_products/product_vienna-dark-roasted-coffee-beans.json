@@ -1,0 +1,32 @@
+{
+  "id": "2f9f734e-9c89-4d43-9db8-e257a667d66e",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "Vienna Dark Roasted Coffee Beans",
+  "slug": "vienna-dark-roasted-coffee-beans",
+  "description": "<ul data-mce-fragment=\"1\"></ul>\n<blockquote>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Experience the distinctive flavour of our darkest roast. This full-bodied brew boasts high to low acidity and provides an intense and enriching coffee taste that will thrill any coffee enthusiast. </li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<strong data-mce-fragment=\"1\">FLAVOUR NOTES: </strong><span data-mce-fragment=\"1\">Dark Chocolate </span>\n</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<strong data-mce-fragment=\"1\">DRINKING PREFERENCES:</strong><span data-mce-fragment=\"1\"> Best brewed in a French Press, Moka Pot, or South Indian Filter</span>\n</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">The Bababudangiri Range in Chikkamagaluru, Karnataka, is renowned as the birthplace of India's coffee. Indulge in a true farm-to-cup experience with these distinguished AA Grade specialty Arabica coffee beans, cultivated in the region's lush and rolling hills at high elevations (4500 to 5000 feet). Our high-quality coffee is grown in the shade, surrounded by native jungle and fruit trees.</li>\n</ul>\n</blockquote>",
+  "roast_level": "unknown",
+  "bean_type": "unknown",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/ViennaDarkRoastedCoffeeBeans-192.jpg?v=1695102818",
+  "direct_buy_url": "https://baarbaracoffee.com/products/vienna-dark-roast-roasted-whole-beans",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": true,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:09:43.264309",
+  "updated_at": "2025-05-05T02:09:43.264313",
+  "region_name": "Bababudangiri Range, Chikkamagaluru, Karnataka",
+  "flavor_profiles": [
+    "chocolate"
+  ],
+  "brew_methods": [
+    "french-press",
+    "moka-pot",
+    "south-indian-filter"
+  ],
+  "external_links": {},
+  "prices": {}
+}

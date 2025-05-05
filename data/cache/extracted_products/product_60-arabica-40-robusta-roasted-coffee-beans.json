@@ -1,0 +1,28 @@
+{
+  "id": "376b5d95-81f0-485e-a006-c55907ef352d",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "60% Arabica - 40% Robusta- Roasted Coffee Beans",
+  "slug": "60-arabica-40-robusta-roasted-coffee-beans",
+  "description": "<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\"><span>The Bababudangiri Range in Chikkamagaluru, Karnataka is renowned as the birthplace of India's coffee. Indulge in a true farm-to-cup experience with this distinguished <strong>AA Grade specialty coffee beans</strong>, cultivated in the region's lush and rolling hills at high elevations (4500 to 5000 feet). </span></li>\n</ul>\n<ul data-mce-fragment=\"1\"></ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<span data-mce-fragment=\"1\"><strong>FLAVOUR NOTES:</strong> </span>This particular blend gets its layered and nuanced flavours from the Arabica beans, with the Robusta beans adding the right amount of brightness and acidity.</li>\n</ul>\n<ul>\n<li>\n<strong>DRINKING PREFERENCES:</strong><span> </span>Best enjoyed black. Great for brewing an Espresso, Ristretto, or Cortado.</li>\n</ul>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">Our 1 kg and 5 kg offerings are ideal for stocking up your office pantry or for coffee machines at any food retail outlet.</span></li>\n</ul>",
+  "roast_level": "unknown",
+  "bean_type": "blend",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/1_Kg_Pack.jpg?v=1731410535",
+  "direct_buy_url": "https://baarbaracoffee.com/products/60-arabica-40-robusta-roasted-coffee-beans",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": false,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:03:45.995503",
+  "updated_at": "2025-05-05T02:03:45.995507",
+  "region_name": "Bababudangiri Range, Chikkamagaluru, Karnataka",
+  "flavor_profiles": [],
+  "brew_methods": [
+    "espresso"
+  ],
+  "external_links": {},
+  "prices": {}
+}

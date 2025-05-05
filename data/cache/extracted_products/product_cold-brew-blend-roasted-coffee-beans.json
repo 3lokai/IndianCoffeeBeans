@@ -1,0 +1,31 @@
+{
+  "id": "d3f760c4-d68b-46a3-adcd-30db98f007e5",
+  "roaster_id": "<coroutine object SupabaseClient.upsert_roaster at 0x0000023D5F5FEAC0>",
+  "name": "Cold Brew Blend Roasted Coffee Beans",
+  "slug": "cold-brew-blend-roasted-coffee-beans",
+  "description": "<p>Beat the summer heat or shake up your coffee routine with our bright and refreshing Cold Brew Blend. Medium-roasted and full of fruity notes, this blend, with its enlivening flavour, is sure to light up your day.</p>\n<ul>\n<li>\n<strong>DRINKING PREFERENCES:</strong> <span data-mce-fragment=\"1\"> Best served as an iced beverage like a cold brew or iced pour-over.</span>\n</li>\n</ul>",
+  "roast_level": "unknown",
+  "bean_type": "blend",
+  "processing_method": "unknown",
+  "image_url": "https://cdn.shopify.com/s/files/1/0786/5414/4812/files/Coldbrewweb-18.jpg?v=1695102517",
+  "direct_buy_url": "https://baarbaracoffee.com/products/cold-brew-blend",
+  "region_id": null,
+  "is_seasonal": false,
+  "is_available": true,
+  "is_featured": false,
+  "is_single_origin": false,
+  "tags": [],
+  "deepseek_enriched": true,
+  "created_at": "2025-05-05T02:09:31.838691",
+  "updated_at": "2025-05-05T02:09:31.838694",
+  "region_name": null,
+  "flavor_profiles": [
+    "fruity"
+  ],
+  "brew_methods": [
+    "cold-brew",
+    "pour-over"
+  ],
+  "external_links": {},
+  "prices": {}
+}

@@ -9,6 +9,7 @@ import aiohttp
 from bs4 import BeautifulSoup
 
 from common.utils import slugify
+from common.product_classifier import is_likely_coffee_product
 from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY
 
 logger = logging.getLogger(__name__)
@@ -178,13 +179,23 @@ class StructuredDataDiscoverer:
                             is_product = product_type == 'Product'
                             
                         if is_product:
-                            # Check if it's a coffee product
-                            if self._is_coffee_product(item):
-                                # Extract product data
-                                product = self._extract_product_from_json_ld(item, page_url)
+                            # Extract details for classification
+                            name = item.get('name')
+                            description = item.get('description')
+                            # Get URL, try multiple properties and resolve relative URLs
+                            item_url_prop = item.get('url') or item.get('offers', {}).get('url') # Offers might contain the specific variant URL
+                            item_url = urljoin(page_url, item_url_prop) if item_url_prop else page_url # Fallback to page_url if no specific item URL
+                            category = item.get('category') # Can be string or list
+                            categories = [category] if isinstance(category, str) else category
+                            
+                            # REMOVED: Centralized filtering applied later in DiscoveryManager
+                            # Use the centralized classifier
+                            # if is_likely_coffee_product(name=name, url=item_url, categories=categories, description=description):
+                            # Extract product data always, filter later
+                            product = self._extract_product_from_json_ld(item, page_url)
                                 
-                                if product:
-                                    products.append(product)
+                            if product:
+                                products.append(product)
             
             except Exception as e:
                 logger.debug(f"Error parsing JSON-LD: {str(e)}")
@@ -302,7 +313,10 @@ class StructuredDataDiscoverer:
                 # Extract product data
                 product = self._extract_product_from_microdata(element, page_url)
                 
-                if product and self._is_coffee_product_from_dict(product):
+                # REMOVED: Centralized filtering applied later in DiscoveryManager
+                # if product and is_likely_coffee_product(name=product['name'], url=product['direct_buy_url'], categories=[], description=product.get('description')):
+                # Add product always, filter later
+                if product:
                     products.append(product)
                     
             except Exception as e:
@@ -567,7 +581,7 @@ class StructuredDataDiscoverer:
                     product["image_url"] = og_image.get('content')
                 
                 # Check if it's a coffee product
-                if not self._is_coffee_product_from_dict(product):
+                if not is_likely_coffee_product(name=name, url=url, categories=[], description=product.get('description')):
                     return None
                     
                 return product
@@ -576,92 +590,6 @@ class StructuredDataDiscoverer:
             logger.warning(f"Error fetching product page {url}: {str(e)}")
             return None
     
-    def _is_coffee_product(self, data: Dict[str, Any]) -> bool:
-        """
-        Determine if a product from structured data is a coffee product.
-        
-        Args:
-            data: Structured data for a product
-            
-        Returns:
-            True if it's a coffee product, False otherwise
-        """
-        # Extract text to check
-        text_to_check = ''
-        
-        # Add product name
-        if 'name' in data:
-            text_to_check += str(data['name']).lower() + ' '
-            
-        # Add description
-        if 'description' in data:
-            text_to_check += str(data['description']).lower() + ' '
-            
-        # Add category
-        if 'category' in data:
-            text_to_check += str(data['category']).lower() + ' '
-            
-        # Check for coffee-related keywords
-        coffee_keywords = [
-            'coffee', 'bean', 'roast', 'brew', 'espresso', 'arabica', 
-            'robusta', 'blend', 'single origin', 'estate'
-        ]
-        
-        non_product_keywords = [
-            'mug', 'cup', 'filter', 'brewer', 'grinder', 'equipment', 'machine', 
-            'maker', 'merch', 'merchandise', 't-shirt', 'subscription'
-        ]
-        
-        # Check for coffee keywords
-        has_coffee_keyword = any(keyword in text_to_check for keyword in coffee_keywords)
-        
-        # Check for non-product keywords
-        has_non_product_keyword = any(keyword in text_to_check for keyword in non_product_keywords)
-        
-        # It's a coffee product if it has coffee keywords and doesn't have non-product keywords
-        return has_coffee_keyword and not has_non_product_keyword
-    
-    def _is_coffee_product_from_dict(self, product: Dict[str, Any]) -> bool:
-        """
-        Determine if a product dict represents a coffee product.
-        
-        Args:
-            product: Product dict
-            
-        Returns:
-            True if it's a coffee product, False otherwise
-        """
-        # Extract text to check
-        text_to_check = ''
-        
-        # Add product name
-        if 'name' in product:
-            text_to_check += str(product['name']).lower() + ' '
-            
-        # Add description
-        if 'description' in product:
-            text_to_check += str(product['description']).lower() + ' '
-            
-        # Check for coffee-related keywords
-        coffee_keywords = [
-            'coffee', 'bean', 'roast', 'brew', 'espresso', 'arabica', 
-            'robusta', 'blend', 'single origin', 'estate'
-        ]
-        
-        non_product_keywords = [
-            'mug', 'cup', 'filter', 'brewer', 'grinder', 'equipment', 'machine', 
-            'maker', 'merch', 'merchandise', 't-shirt', 'subscription'
-        ]
-        
-        # Check for coffee keywords
-        has_coffee_keyword = any(keyword in text_to_check for keyword in coffee_keywords)
-        
-        # Check for non-product keywords
-        has_non_product_keyword = any(keyword in text_to_check for keyword in non_product_keywords)
-        
-        # It's a coffee product if it has coffee keywords and doesn't have non-product keywords
-        return has_coffee_keyword and not has_non_product_keyword
-        
     async def close(self):
         """Close resources"""
         if self.session and not self.session.closed:

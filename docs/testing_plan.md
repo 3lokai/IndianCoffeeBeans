@@ -63,7 +63,7 @@ You can now focus on running, maintaining, and expanding these tests as your pip
 Below is the single recommended order to run **all tests** (new, edge-case/unit, and core/integration) for complete pipeline coverage. Run each test individually to debug, or use the full command to run all at once.
 
 ### 1. Input & Metadata
-1. **test_input_csv.py**
+1. [x] **test_input_csv.py**
    - `pytest tests/test_input_csv.py`
 2. **test_homepage_crawl.py**
    - `pytest tests/test_homepage_crawl.py`

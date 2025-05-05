@@ -89,15 +89,22 @@ class PlatformDetector:
             # Shopify
             if 'cdn.shopify.com' in html or 'data-shopify' in html:
                 return "shopify"
-            # WooCommerce
+            
+            # Check for general WordPress first, but don't return immediately
+            is_wordpress = 'wp-content' in html or 'wp-includes' in html
+            
+            # WooCommerce (Check specific before returning general WordPress)
             if 'woocommerce' in html:
                 return "woocommerce"
+                
             # Magento
             if 'Magento' in html or 'mage-' in html:
                 return "magento"
-            # WordPress
-            if 'wp-content' in html or 'wp-includes' in html:
+
+            # If it matched general WordPress but none of the specific ones above, return WordPress
+            if is_wordpress:
                 return "wordpress"
+                
             # Framer
             if 'framer.com' in html or 'framerusercontent.com' in html:
                 return "framer"
@@ -136,7 +143,7 @@ class PlatformDetector:
             if soup.find(class_=lambda x: x and 'wp-' in x):
                 return "wordpress"
             
-            return "static"
+            return "unknown"
         except Exception as e:
             logger.warning(f"Error detecting platform from content for {url}: {e}")
             return "unknown"
@@ -167,13 +174,9 @@ class PlatformDetector:
         # Get API endpoints for this platform
         api_endpoints = self.get_api_endpoints(platform)
         
-        # Get structured data paths
-        data_paths = self.get_structured_data_paths(platform)
-        
         return {
             "platform": platform,
             "api_endpoints": api_endpoints,
-            "structured_data_paths": data_paths
         }
     
     def get_api_endpoints(self, platform: PlatformType) -> List[str]:
@@ -189,41 +192,6 @@ class PlatformDetector:
         # Use PLATFORM_SPECIFIC from config.py if available
         endpoints = PLATFORM_SPECIFIC.get(platform, {}).get("api_endpoints", [])
         return endpoints
-    
-    def get_structured_data_paths(self, platform: PlatformType) -> List[str]:
-        """
-        Get recommended paths for structured data based on platform.
-        
-        Args:
-            platform (PlatformType): Detected platform
-            
-        Returns:
-            List[str]: List of relevant paths to check for structured data
-        """
-        # Use PLATFORM_SPECIFIC from config.py if available
-        # If not present, fallback to previous hardcoded logic
-        paths = PLATFORM_SPECIFIC.get(platform, {}).get("structured_data_paths")
-        if paths is not None:
-            return paths
-        # Fallback to previous logic for backward compatibility
-        default_paths = {
-            "shopify": [
-                "//script[@type='application/ld+json']",
-                "//meta[@property='og:type']"
-            ],
-            "woocommerce": [
-                "//script[@type='application/ld+json']",
-                "//div[@class='product']//script[@type='application/ld+json']"
-            ],
-            "wordpress": [
-                "//script[@type='application/ld+json']"
-            ],
-            "custom": [
-                "//script[@type='application/ld+json']",
-                "//meta[@property='og:type']"
-            ]
-        }
-        return default_paths.get(platform, default_paths["custom"])
     
     async def close(self):
         """Close the aiohttp session"""

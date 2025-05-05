@@ -6,6 +6,7 @@ from unittest.mock import AsyncMock, patch, MagicMock
 import json
 import os
 from pathlib import Path
+from common.product_classifier import is_likely_coffee_product
 
 # Import modules to test
 from scrapers.discoverers.discovery_manager import DiscoveryManager
@@ -433,8 +434,7 @@ async def test_discovery_manager_full_flow(mock_aiohttp_client, mock_crawler, sh
     # Patch the detect method to avoid real network call
     with patch.object(PlatformDetector, 'detect', new=AsyncMock(return_value={
         "platform": "shopify",
-        "api_endpoints": [],
-        "structured_data_paths": []
+        "api_endpoints": ["/products.json"]
     })):
    
     
@@ -496,14 +496,35 @@ async def test_discovery_manager_with_cache(mock_aiohttp_client):
 
 
 def test_is_coffee_product():
-    discovery_manager = DiscoveryManager()
-    
-    # Test coffee product names
-    assert discovery_manager._is_coffee_product("Ethiopia Yirgacheffe", "coffee") == True
-    assert discovery_manager._is_coffee_product("Dark Roast Blend", "") == True
-    assert discovery_manager._is_coffee_product("Arabica Beans", "") == True
-    
-    # Test non-coffee product names
-    assert discovery_manager._is_coffee_product("Coffee Mug", "") == False
-    assert discovery_manager._is_coffee_product("Coffee Subscription", "") == False
-    assert discovery_manager._is_coffee_product("Coffee Grinder", "") == False
+    # --- Test Cases: Should be INCLUDED ---
+    # 1. Clear coffee keywords, no negative keywords
+    assert is_likely_coffee_product(name="Ethiopia Yirgacheffe Coffee Beans") is True
+    assert is_likely_coffee_product(name="Dark Roast Blend") is True
+    assert is_likely_coffee_product(name="Monsooned Malabar Arabica") is True
+    assert is_likely_coffee_product(description="Rich espresso blend") is True
+    assert is_likely_coffee_product(name="Coffee Sample Pack", description="Try our best beans") is True # Sample packs often contain coffee
+
+    # 2. Ambiguous name, but NO negative keywords/patterns (NEW LOGIC: should be included)
+    assert is_likely_coffee_product(name="Morning Ritual") is True
+    assert is_likely_coffee_product(name="House Special", url="/product/house-special") is True
+    assert is_likely_coffee_product(name="Festive Delight", categories=["Gifts"]) is True # Ambiguous category, no negative keywords
+
+    # --- Test Cases: Should be EXCLUDED ---
+    # 1. Clear non-product keywords in name/description/category
+    assert is_likely_coffee_product(name="Coffee Mug") is False
+    assert is_likely_coffee_product(name="Cool Beans T-Shirt", categories=["Merchandise"]) is False
+    assert is_likely_coffee_product(name="Premium Coffee Grinder") is False
+    assert is_likely_coffee_product(name="Monthly Coffee Subscription") is False
+    assert is_likely_coffee_product(description="Sign up for our brewing workshop") is False
+    assert is_likely_coffee_product(name="Gift Card", categories=["Gifts"]) is False # Specific non-product keyword
+
+    # 2. Non-product URL patterns
+    assert is_likely_coffee_product(name="Our Story", url="/about-us") is False
+    assert is_likely_coffee_product(name="Contact Information", url="/pages/contact") is False
+    assert is_likely_coffee_product(name="Latest News", url="/blog/exciting-updates") is False
+    assert is_likely_coffee_product(name="All Equipment", url="/collections/equipment") is False
+    assert is_likely_coffee_product(name="Roasting Course", url="/workshops/learn-to-roast") is False
+
+    # 3. Mixed signals (should prioritize exclusion rule)
+    assert is_likely_coffee_product(name="Coffee Brewing Kit", url="/products/brewing-kit") is False # 'kit' and 'brewing' are negative
+    assert is_likely_coffee_product(name="Espresso Machine Bundle", description="Includes free beans!") is False # 'machine' is negative

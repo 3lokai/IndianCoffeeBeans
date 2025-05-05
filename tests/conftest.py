@@ -2,6 +2,31 @@ import pytest
 from unittest.mock import MagicMock, AsyncMock
 
 @pytest.fixture
+def roaster_data():
+    """Provides sample roaster data for tests."""
+    return {
+        "name": "Blue Tokai Coffee Roasters",
+        "url": "https://bluetokaicoffee.com/",
+        "instagram": "https://www.instagram.com/bluetokaicoffee/",
+        # Add other relevant fields if needed by tests
+    }
+
+@pytest.fixture
+def mock_html():
+    """Provides sample HTML content for tests."""
+    return """
+    <html>
+    <head><title>Test Page</title></head>
+    <body>
+        <h1>Welcome</h1>
+        <p>This is a test.</p>
+        <a href='/product1'>Product 1</a>
+        <a href='/product2'>Product 2</a>
+    </body>
+    </html>
+    """
+
+@pytest.fixture
 def mock_aiohttp_client(monkeypatch):
     # Mock response
     mock_response = MagicMock()

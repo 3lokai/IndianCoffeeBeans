@@ -1,5 +1,5 @@
 # common/models.py
-from pydantic import BaseModel, Field, validator, HttpUrl
+from pydantic import BaseModel, Field, field_validator, HttpUrl
 from typing import List, Optional, Dict, Any
 from enum import Enum
 from datetime import datetime
@@ -48,20 +48,33 @@ class RoasterModel(BaseModel):
     name: str
     slug: str
     description: Optional[str] = None
-    website_url: str
-    social_links: Optional[List[str]] = Field(default_factory=list)
+    website_url: HttpUrl
+    social_links: Optional[List[HttpUrl]] = Field(default_factory=list)
     contact_email: Optional[str] = None
     contact_phone: Optional[str] = None
     city: Optional[str] = None
     state: Optional[str] = None
     founded_year: Optional[int] = None
     instagram_handle: Optional[str]
-    logo_url: Optional[str] = None
+    logo_url: Optional[HttpUrl] = None
     has_subscription: bool = False
     has_physical_store: bool = False
     is_featured: bool = False
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
+
+    @field_validator('founded_year', mode='before')
+    def validate_founded_year(cls, value):
+        if value is None:
+            return value
+        try:
+            year = int(value)
+            current_year = datetime.now().year
+            if not (1800 < year <= current_year):
+                raise ValueError(f"Founded year {year} must be between 1801 and {current_year}")
+            return year
+        except (ValueError, TypeError):
+            raise ValueError(f"Invalid year format: {value}")
 
     class Config:
         use_enum_values = True
@@ -75,13 +88,13 @@ class CoffeeModel(BaseModel):
     roast_level: RoastLevel = RoastLevel.UNKNOWN
     bean_type: BeanType = BeanType.UNKNOWN
     processing_method: ProcessingMethod = ProcessingMethod.UNKNOWN
-    image_url: Optional[str] = None
-    direct_buy_url: Optional[str] = None
+    image_url: Optional[HttpUrl] = None
+    direct_buy_url: Optional[HttpUrl] = None
     region_id: Optional[str] = None
     is_seasonal: bool = False
     is_available: bool = True
     is_featured: bool = False
-    is_single_origin: bool = True
+    is_single_origin: bool = False
     tags: Optional[List[str]] = Field(default_factory=list)
     deepseek_enriched: bool = False
     created_at: Optional[datetime] = None
@@ -91,8 +104,28 @@ class CoffeeModel(BaseModel):
     region_name: Optional[str] = None
     flavor_profiles: Optional[List[str]] = Field(default_factory=list)
     brew_methods: Optional[List[str]] = Field(default_factory=list)
-    external_links: Optional[Dict[str, str]] = Field(default_factory=dict)
+    external_links: Optional[Dict[str, HttpUrl]] = Field(default_factory=dict)
     prices: Optional[Dict[int, float]] = Field(default_factory=dict)  # size_grams -> price
+
+    @field_validator('prices', mode='before')
+    def validate_prices(cls, value):
+        if value is None:
+            return {}
+        if not isinstance(value, dict):
+            raise TypeError("Prices must be a dictionary")
+        validated_prices = {}
+        for k, v in value.items():
+            try:
+                grams = int(k)
+                price = float(v)
+                if grams <= 0:
+                    raise ValueError(f"Weight (grams) must be positive: {k}")
+                if price < 0:
+                    raise ValueError(f"Price must be non-negative: {v}")
+                validated_prices[grams] = price
+            except (ValueError, TypeError):
+                raise ValueError(f"Invalid price entry: {k}={v}")
+        return validated_prices
 
     class Config:
         use_enum_values = True

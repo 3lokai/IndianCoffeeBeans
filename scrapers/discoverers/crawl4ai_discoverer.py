@@ -1,23 +1,26 @@
 # scrapers/discoverers/crawl4ai_discoverer.py
-import logging
 import asyncio
-import re
 import json
+import logging
+import re
 from typing import List, Dict, Any, Optional, Set
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, unquote
 
+import aiohttp
+from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
-from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
-from crawl4ai.content_filter_strategy import PruningContentFilter
 from crawl4ai.deep_crawling import BFSDeepCrawlStrategy
 from crawl4ai.deep_crawling.filters import FilterChain, URLPatternFilter, DomainFilter
-from bs4 import BeautifulSoup
 from openai import OpenAI
 
 from common.utils import slugify
+from common.product_classifier import is_likely_coffee_product
 from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY, DEEPSEEK_API_KEY
 
 logger = logging.getLogger(__name__)
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
 class Crawl4AIDiscoverer:
     """
@@ -115,15 +118,6 @@ class Crawl4AIDiscoverer:
         logger.info(f"Processing page with Crawl4AI deep crawling: {url}")
         
         try:
-            # Configure markdown generator with content filter
-            markdown_generator = DefaultMarkdownGenerator(
-                content_filter=PruningContentFilter(
-                    threshold=0.5, 
-                    threshold_type="fixed", 
-                    min_word_threshold=15
-                )
-            )
-            
             # Set up URL filter for product pages only
             url_filter = URLPatternFilter(
                 patterns=[
@@ -158,9 +152,6 @@ class Crawl4AIDiscoverer:
                 cache_mode=CacheMode.ENABLED,
                 wait_until="domcontentloaded",
                 page_timeout=60000,  # 60 seconds timeout
-                markdown_generator=markdown_generator,
-                word_count_threshold=15,
-                deep_crawl_strategy=deep_crawl_strategy,
                 stream=False  # Get all results at once since we need to process them
             )
             
@@ -257,45 +248,50 @@ class Crawl4AIDiscoverer:
                                 is_product = product_type == 'Product'
                                 
                             if is_product:
-                                # Check if it's a coffee product
-                                if self._is_coffee_product_from_data(item):
-                                    # Extract basic info
-                                    name = item.get('name')
-                                    url = item.get('url')
-                                    description = item.get('description')
+                                # Extract details for classification
+                                name = item.get('name')
+                                description = item.get('description')
+                                item_url_prop = item.get('url') or item.get('offers', {}).get('url') # Offers might contain the specific variant URL
+                                item_url = urljoin(current_url, item_url_prop) if item_url_prop else current_url # Fallback to current_url if no specific item URL
+                                category = item.get('category') # Can be string or list
+                                categories = [category] if isinstance(category, str) else category
+                                
+                                # Always extract if it's a Product type, filter later
+                                # Extract basic info
+                                # name, url, description already extracted above
                                     
-                                    # Normalize URL
-                                    if url and not url.startswith(('http://', 'https://')):
-                                        url = urljoin(current_url, url)
+                                # Normalize URL
+                                if item_url and not item_url.startswith(('http://', 'https://')):
+                                    item_url = urljoin(current_url, item_url)
                                     
-                                    # Create product entry
-                                    if name and url:
-                                        product = {
-                                            "name": name,
-                                            "slug": slugify(name),
-                                            "direct_buy_url": url,
-                                            "discovery_method": "crawl4ai_structured"
-                                        }
+                                # Create product entry
+                                if name and item_url:
+                                    product = {
+                                        "name": name,
+                                        "slug": slugify(name),
+                                        "direct_buy_url": item_url,
+                                        "discovery_method": "crawl4ai_structured"
+                                    }
                                         
-                                        if description:
-                                            product["description"] = description
+                                    if description:
+                                        product["description"] = description
+                                        
+                                    # Get image
+                                    image = item.get('image')
+                                    if image:
+                                        if isinstance(image, list) and image:
+                                            image_url = image[0].get('url') if isinstance(image[0], dict) else image[0]
+                                        elif isinstance(image, dict):
+                                            image_url = image.get('url')
+                                        else:
+                                            image_url = image
                                             
-                                        # Get image
-                                        image = item.get('image')
-                                        if image:
-                                            if isinstance(image, list) and image:
-                                                image_url = image[0].get('url') if isinstance(image[0], dict) else image[0]
-                                            elif isinstance(image, dict):
-                                                image_url = image.get('url')
-                                            else:
-                                                image_url = image
-                                                
-                                            if image_url and not image_url.startswith(('http://', 'https://')):
-                                                image_url = urljoin(current_url, image_url)
-                                                
-                                            product["image_url"] = image_url
+                                        if image_url and not image_url.startswith(('http://', 'https://')):
+                                            image_url = urljoin(current_url, image_url)
                                             
-                                        products.append(product)
+                                        product["image_url"] = image_url
+                                        
+                                    products.append(product)
                 
                 except Exception as e:
                     logger.debug(f"Error parsing JSON-LD: {str(e)}")
@@ -378,10 +374,7 @@ class Crawl4AIDiscoverer:
                     if not name:
                         continue
                         
-                    # Check if it looks like a coffee product
-                    if not self._is_coffee_product_name(name):
-                        continue
-                        
+                    # Always extract, filter later
                     # Create product entry
                     product = {
                         "name": name,
@@ -414,36 +407,27 @@ class Crawl4AIDiscoverer:
                 for link in soup.find_all('a', href=True):
                     href = link['href']
                     
-                    # Skip non-product links
-                    if not self._is_product_url(href):
+                    # Skip empty, fragment, or javascript links
+                    if not href or href.startswith('#') or href.startswith('javascript:'):
                         continue
-                        
+                            
+                    # Skip "previous" links
+                    if 'prev' in href.lower() or 'previous' in href.lower():
+                        continue
+                            
                     # Normalize URL
-                    if not href.startswith(('http://', 'https://')):
-                        href = urljoin(current_url, href)
+                    full_url = urljoin(current_url, href)
                         
-                    # Skip if already found
-                    if href in found_products:
+                    # Skip if same as current page
+                    if full_url == current_url:
                         continue
-                        
-                    found_products.add(href)
-                    
-                    # Get text
-                    text = link.get_text().strip()
-                    
-                    # Skip if no text or too short
-                    if not text or len(text) < 5:
-                        continue
-                        
-                    # Check if it looks like a coffee product
-                    if not self._is_coffee_product_name(text):
-                        continue
-                        
+                            
+                    # Always extract, filter later        
                     # Create product entry
                     product = {
-                        "name": text,
-                        "slug": slugify(text),
-                        "direct_buy_url": href,
+                        "name": link.get_text().strip(),
+                        "slug": slugify(link.get_text().strip()),
+                        "direct_buy_url": full_url,
                         "discovery_method": "crawl4ai_links"
                     }
                     
@@ -673,8 +657,8 @@ class Crawl4AIDiscoverer:
         
         # Check for common product URL patterns
         product_indicators = [
-            '/product/', '/products/', '/shop/', '/store/',
-            '/coffee/', '/bean/', '/item/', '/p/', 
+            '/product/', '/products/', '/shop/', '/store/', '/ols/'
+            '/coffee/', '/bean/', '/item/', '/p/', '/collection/', '/collections/',
             'product_id=', 'productid='
         ]
         
@@ -688,60 +672,3 @@ class Crawl4AIDiscoverer:
         has_exclude_indicator = any(indicator in url_lower for indicator in exclude_indicators)
         
         return has_product_indicator and not has_exclude_indicator
-        
-    def _is_coffee_product_name(self, name: str) -> bool:
-        """
-        Check if a name is likely to be a coffee product.
-        
-        Args:
-            name: Product name
-            
-        Returns:
-            True if likely a coffee product, False otherwise
-        """
-        name_lower = name.lower()
-        
-        # Common coffee product indicators
-        coffee_keywords = [
-            'coffee', 'bean', 'roast', 'brew', 'espresso', 'arabica', 
-            'robusta', 'blend', 'single origin', 'estate', 'light roast',
-            'medium roast', 'dark roast', 'whole bean', 'ground'
-        ]
-        
-        # Common non-coffee product indicators
-        non_coffee_keywords = [
-            'mug', 'cup', 'filter', 'brewer', 'grinder', 'equipment', 'machine', 
-            'maker', 'merch', 'merchandise', 't-shirt', 'subscription'
-        ]
-        
-        has_coffee_keyword = any(keyword in name_lower for keyword in coffee_keywords)
-        has_non_coffee_keyword = any(keyword in name_lower for keyword in non_coffee_keywords)
-        
-        return has_coffee_keyword and not has_non_coffee_keyword
-        
-    def _is_coffee_product_from_data(self, data: Dict[str, Any]) -> bool:
-        """
-        Check if structured data represents a coffee product.
-        
-        Args:
-            data: Structured data
-            
-        Returns:
-            True if likely a coffee product, False otherwise
-        """
-        # Extract text to check
-        text_to_check = ''
-        
-        # Add product name
-        if 'name' in data:
-            text_to_check += str(data['name']).lower() + ' '
-            
-        # Add description
-        if 'description' in data:
-            text_to_check += str(data['description']).lower() + ' '
-            
-        # Add category
-        if 'category' in data:
-            text_to_check += str(data['category']).lower() + ' '
-            
-        return self._is_coffee_product_name(text_to_check)

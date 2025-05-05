@@ -9,6 +9,7 @@ import aiohttp
 from bs4 import BeautifulSoup
 
 from common.utils import slugify
+from common.product_classifier import is_likely_coffee_product
 from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY
 
 logger = logging.getLogger(__name__)
@@ -392,21 +393,23 @@ class HtmlDiscoverer:
                 # Parse the HTML
                 soup = BeautifulSoup(html, 'html.parser')
                 
-                # Check if this really is a coffee product page
-                if not self._is_coffee_product_page(soup):
-                    return None
-                
                 # Extract product name
                 name = self._extract_product_name(soup, url)
                 if not name:
                     logger.warning(f"Could not extract product name from {url}")
                     return None
                     
-                # Extract product image
-                image_url = self._extract_product_image(soup)
-                
                 # Extract product description
                 description = self._extract_product_description(soup)
+                
+                # REMOVED: Centralized filtering applied later in DiscoveryManager
+                # Check if this is likely a coffee product using the central classifier
+                # if not is_likely_coffee_product(name=name, url=url, description=description):
+                #     logger.debug(f"HTML discoverer skipping non-coffee item: {name} ({url})")
+                #     return None
+
+                # Extract product image
+                image_url = self._extract_product_image(soup)
                 
                 # Create product entry
                 product = {
@@ -545,67 +548,6 @@ class HtmlDiscoverer:
                 
         return None
     
-    def _is_coffee_product_page(self, soup: BeautifulSoup) -> bool:
-        """
-        Determine if a page is a coffee product page.
-        
-        Args:
-            soup: BeautifulSoup parsed HTML
-            
-        Returns:
-            True if it's a coffee product page, False otherwise
-        """
-        # First check the product title
-        title_tag = soup.find('h1') or soup.find('title')
-        if title_tag:
-            title = title_tag.get_text().lower()
-            
-            coffee_keywords = [
-                'coffee', 'bean', 'roast', 'brew', 'espresso', 'arabica', 
-                'robusta', 'blend', 'single origin', 'estate'
-            ]
-            
-            non_product_keywords = [
-                'mug', 'cup', 'filter', 'brewer', 'grinder', 'equipment', 'machine', 
-                'maker', 'merch', 'merchandise', 't-shirt', 'subscription'
-            ]
-            
-            if any(keyword in title for keyword in coffee_keywords):
-                if not any(keyword in title for keyword in non_product_keywords):
-                    return True
-        
-        # Check page content keywords
-        page_text = soup.get_text().lower()
-        coffee_content_keywords = [
-            'coffee bean', 'coffee blend', 'brewing', 'roast profile',
-            'flavor notes', 'tasting notes', 'origin', 'altitude', 'aroma'
-        ]
-        
-        if any(keyword in page_text for keyword in coffee_content_keywords):
-            return True
-            
-        # Check for coffee-specific form elements
-        grind_selector = soup.select_one('select[name*="grind"], select[id*="grind"]')
-        if grind_selector:
-            return True
-            
-        weight_selector = soup.select_one('select[name*="weight"], select[name*="size"]')
-        if weight_selector:
-            options = weight_selector.find_all('option')
-            for option in options:
-                option_text = option.get_text().lower()
-                if 'g' in option_text or 'gram' in option_text or 'kg' in option_text:
-                    return True
-                    
-        # Check for price elements
-        price_elem = soup.select_one('.price, .product-price, .woocommerce-Price-amount')
-        if price_elem and re.search(r'₹|Rs\.|\$|\€|\£', price_elem.get_text()):
-            # If there's a price and any coffee keyword on the page, it's likely a product
-            if any(keyword in page_text for keyword in ['coffee', 'bean', 'roast']):
-                return True
-        
-        return False
-        
     async def close(self):
         """Close resources"""
         if self.session and not self.session.closed:

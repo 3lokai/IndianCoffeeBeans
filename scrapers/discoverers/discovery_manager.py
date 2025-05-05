@@ -10,6 +10,7 @@ from scrapers.discoverers.html_discoverer import HtmlDiscoverer
 from scrapers.discoverers.structured_data_discoverer import StructuredDataDiscoverer
 from scrapers.discoverers.crawl4ai_discoverer import Crawl4AIDiscoverer
 from common.utils import load_from_cache, save_to_cache, slugify
+from common.product_classifier import is_likely_coffee_product
 from config import CRAWL_DELAY
 
 logger = logging.getLogger(__name__)
@@ -71,49 +72,72 @@ class DiscoveryManager:
         logger.info(f"Platform type for {name}: {platform_type}")
         
         # Select discovery strategy based on platform
-        discovered_products = []
+        all_discovered_items = []
         
         # 1. Try platform-specific API endpoints (most efficient)
         if platform_type == "shopify":
+            logger.info(f"Trying Shopify API discovery for {name}")
             products = await self._discover_shopify_products(website)
             if products:
-                discovered_products.extend(products)
+                all_discovered_items.extend(products)
                 
         elif platform_type == "woocommerce":
+            logger.info(f"Trying WooCommerce API discovery for {name}")
             products = await self._discover_woocommerce_products(website)
             if products:
-                discovered_products.extend(products)
+                all_discovered_items.extend(products)
         
-        # 2. If no products found yet, try sitemap discovery
-        if not discovered_products:
-            logger.info(f"Trying sitemap discovery for {name}")
+        # 2. If platform API didn't yield results OR platform unknown, try others
+        logger.info(f"Trying sitemap discovery for {name}")
+        try:
             products = await self.sitemap_discoverer.discover(website)
             if products:
-                discovered_products.extend(products)
+                all_discovered_items.extend(products)
+        except Exception as e:
+            logger.error(f"Sitemap discovery failed for {name}: {e}")
                 
-        # 3. If still no products, try structured data discovery
-        if not discovered_products:
-            logger.info(f"Trying structured data discovery for {name}")
+        logger.info(f"Trying structured data discovery for {name}")
+        try:
             products = await self.structured_data_discoverer.discover(website)
             if products:
-                discovered_products.extend(products)
+                all_discovered_items.extend(products)
+        except Exception as e:
+            logger.error(f"Structured data discovery failed for {name}: {e}")
                 
-        # 4. If still no products, try Crawl4AI discovery
-        if not discovered_products:
-            logger.info(f"Trying Crawl4AI discovery for {name}")
+        logger.info(f"Trying Crawl4AI discovery for {name}")
+        try:
             products = await self.crawl4ai_discoverer.discover(website)
             if products:
-                discovered_products.extend(products)
+                all_discovered_items.extend(products)
+        except Exception as e:
+            logger.error(f"Crawl4AI discovery failed for {name}: {e}")
                 
-        # 5. Last resort: HTML crawling
-        if not discovered_products:
-            logger.info(f"Trying HTML discovery for {name}")
+        logger.info(f"Trying HTML discovery for {name}")
+        try:
             products = await self.html_discoverer.discover(website)
             if products:
-                discovered_products.extend(products)
+                all_discovered_items.extend(products)
+        except Exception as e:
+            logger.error(f"HTML discovery failed for {name}: {e}")
                 
+        # --- Centralized Filtering --- 
+        logger.info(f"Aggregated {len(all_discovered_items)} potential items before filtering.")
+        filtered_products = []
+        for item in all_discovered_items:
+            url = item.get("direct_buy_url")
+            item_name = item.get("name")
+            description = item.get("description")
+            # Attempt to get product_type if discoverer provided it
+            product_type = item.get("product_type") 
+            if is_likely_coffee_product(name=item_name, url=url, description=description, product_type=product_type):
+                filtered_products.append(item)
+            else:
+                logger.debug(f"Filtering out non-coffee item: {item_name} ({url})")
+        
+        logger.info(f"Filtered down to {len(filtered_products)} likely coffee products.")
+        
         # Post-process and deduplicate products
-        unique_products = self._deduplicate_products(discovered_products)
+        unique_products = self._deduplicate_products(filtered_products)
         
         # Add roaster metadata to each product
         for product in unique_products:
@@ -174,17 +198,21 @@ class DiscoveryManager:
                             if not name:
                                 continue
                                 
-                            # Check if it's a coffee product
-                            product_type = product.get('product_type', '').lower()
-                            if not self._is_coffee_product(name, product_type):
+                            # Construct URL assuming standard Shopify structure
+                            handle = product.get('handle')
+                            if not handle:
+                                logger.warning(f"Skipping Shopify product with no handle: {name}")
                                 continue
-                                
+                            product_url = f"{base_url.rstrip('/')}/products/{handle}"
+                            # Extract description if available (might be HTML)
+                            description = product.get('body_html', '') 
+                            
                             # Create basic product object
                             product_data = {
                                 "name": name,
                                 "slug": slugify(name),
-                                "direct_buy_url": f"{base_url.rstrip('/')}/products/{product.get('handle')}",
-                                "description": product.get('body_html', ''),
+                                "direct_buy_url": product_url,
+                                "description": description,
                                 "is_available": not product.get('is_out_of_stock', False),
                                 "platform": "shopify",
                                 "source_data": product  # Store original data for later extraction
@@ -249,22 +277,17 @@ class DiscoveryManager:
                             if not name:
                                 continue
                                 
-                            # Check if it's a coffee product
-                            product_type = self._extract_woo_product_type(product)
-                            if not self._is_coffee_product(name, product_type):
-                                continue
-                                
-                            # Get product URL
                             product_url = product.get('permalink', 
                                             product.get('link', 
                                                     f"{base_url.rstrip('/')}/product/{product.get('slug', slugify(name))}"))
+                            description = self._extract_woo_description(product)
                             
                             # Create basic product object
                             product_data = {
                                 "name": name,
                                 "slug": slugify(name),
                                 "direct_buy_url": product_url,
-                                "description": self._extract_woo_description(product),
+                                "description": description,
                                 "is_available": not product.get('is_out_of_stock', False),
                                 "platform": "woocommerce",
                                 "source_data": product  # Store original data for later extraction
@@ -315,43 +338,6 @@ class DiscoveryManager:
             if isinstance(image, dict):
                 return image.get('src', image.get('source_url', ''))
         return None
-    
-    def _is_coffee_product(self, name: str, product_type: str) -> bool:
-        """
-        Determine if a product is a coffee product based on name and type.
-        
-        Args:
-            name: Product name
-            product_type: Product type or category
-            
-        Returns:
-            True if it's a coffee product, False otherwise
-        """
-        name_lower = name.lower()
-        
-        # Check product type first
-        if product_type and ('coffee' in product_type or 'bean' in product_type):
-            return True
-            
-        # Check name for coffee-related keywords
-        coffee_keywords = [
-            'coffee', 'bean', 'roast', 'brew', 'espresso', 'arabica', 
-            'robusta', 'blend', 'single origin', 'estate'
-        ]
-        
-        non_product_keywords = [
-            'mug', 'cup', 'filter', 'brewer', 'grinder', 'equipment', 'machine', 
-            'maker', 'merch', 'merchandise', 't-shirt', 'subscription'
-        ]
-        
-        # Check for coffee keywords in name
-        has_coffee_keyword = any(keyword in name_lower for keyword in coffee_keywords)
-        
-        # Check for non-product keywords that would indicate it's not a coffee bean product
-        has_non_product_keyword = any(keyword in name_lower for keyword in non_product_keywords)
-        
-        # It's a coffee product if it has a coffee keyword and doesn't have non-product keywords
-        return has_coffee_keyword and not has_non_product_keyword
     
     def _deduplicate_products(self, products: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """

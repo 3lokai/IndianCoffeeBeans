@@ -33,9 +33,6 @@ async def main():
             
             if result['api_endpoints']:
                 logger.info(f"API endpoints to try: {result['api_endpoints']}")
-            
-            if result['structured_data_paths']:
-                logger.info(f"Structured data paths: {result['structured_data_paths']}")
         except Exception as e:
             logger.error(f"Error in platform detection: {e}")
 

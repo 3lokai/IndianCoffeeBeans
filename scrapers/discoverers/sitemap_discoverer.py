@@ -10,6 +10,7 @@ import aiohttp
 from bs4 import BeautifulSoup
 
 from common.utils import slugify
+from common.product_classifier import is_likely_coffee_product
 from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY
 
 logger = logging.getLogger(__name__)
@@ -291,6 +292,9 @@ class SitemapDiscoverer:
             # Rate limiting
             await asyncio.sleep(CRAWL_DELAY)
             
+            description = None
+            soup = None
+            
             try:
                 # We'll do a HEAD request first to check if the page is available
                 async with self.session.head(url, allow_redirects=True) as head_response:
@@ -326,11 +330,10 @@ class SitemapDiscoverer:
                                 if img and img.get('src'):
                                     image_url = img.get('src')
                         
-                        # Check if this is a coffee product
-                        if not self._is_coffee_product_page(soup, title or ''):
-                            return None
-                
-                # If we still don't have a title, extract from URL
+                        # Extract description since we have the soup
+                        description = self._extract_product_description(soup)
+                        
+                # Ensure title is present, extract from URL if needed
                 if not title:
                     # Extract name from the URL path
                     path_parts = url.rstrip('/').split('/')
@@ -367,79 +370,38 @@ class SitemapDiscoverer:
                 logger.debug(f"Error checking product URL {url}: {str(e)}")
                 return None
     
-    def _is_coffee_product_page(self, soup: BeautifulSoup, title: str) -> bool:
+    def _extract_product_description(self, soup: BeautifulSoup) -> Optional[str]:
         """
-        Determine if a page is a coffee product page based on its content.
+        Extract product description from a product page.
         
         Args:
             soup: BeautifulSoup parsed HTML
-            title: Page title
             
         Returns:
-            True if it's a coffee product page, False otherwise
+            Description if found, None otherwise
         """
-        # Check title first
-        title_lower = title.lower()
-        
-        coffee_keywords = [
-            'coffee', 'bean', 'roast', 'brew', 'espresso', 'arabica', 
-            'robusta', 'blend', 'single origin', 'estate'
-        ]
-        
-        non_product_keywords = [
-            'mug', 'cup', 'filter', 'brewer', 'grinder', 'equipment', 'machine', 
-            'maker', 'merch', 'merchandise', 't-shirt', 'subscription'
-        ]
-        
-        # Check if title contains coffee keywords
-        if any(keyword in title_lower for keyword in coffee_keywords):
-            # Make sure it's not a non-product
-            if not any(keyword in title_lower for keyword in non_product_keywords):
-                return True
-                
-        # Check page content
-        # 1. Look for structured data
-        json_ld = soup.find('script', type='application/ld+json')
-        if json_ld:
-            try:
-                import json
-                data = json.loads(json_ld.string)
-                
-                # Check for product type in structured data
-                if isinstance(data, dict):
-                    if data.get('@type') == 'Product':
-                        # Check if it's a coffee product
-                        description = data.get('description', '').lower()
-                        if any(keyword in description for keyword in coffee_keywords):
-                            return True
-            except:
-                pass
-                
-        # 2. Check content keywords
-        page_text = soup.get_text().lower()
-        coffee_content_keywords = [
-            'coffee bean', 'coffee blend', 'brewing', 'roast profile',
-            'flavor notes', 'tasting notes', 'origin', 'altitude', 'aroma'
-        ]
-        
-        if any(keyword in page_text for keyword in coffee_content_keywords):
-            return True
+        # Try meta description
+        meta_desc = soup.find('meta', attrs={'name': 'description'})
+        if meta_desc and meta_desc.get('content'):
+            return meta_desc.get('content')
             
-        # 3. Check for coffee-specific form fields (weight selection, grind selection)
-        grind_selector = soup.select_one('select[name*="grind"], select[id*="grind"]')
-        if grind_selector:
-            return True
-            
-        weight_selector = soup.select_one('select[name*="weight"], select[name*="size"]')
-        if weight_selector:
-            options = weight_selector.find_all('option')
-            for option in options:
-                option_text = option.get_text().lower()
-                if 'g' in option_text or 'gram' in option_text or 'kg' in option_text:
-                    return True
-                    
-        return False
+        # Try common description selectors
+        selectors = [
+            '.product-description', 
+            '.description', 
+            '.product_description',
+            '.woocommerce-product-details__short-description',
+            '#product-description',
+            '.product-short-description'
+        ]
         
+        for selector in selectors:
+            desc = soup.select_one(selector)
+            if desc:
+                return desc.get_text(strip=True)
+                
+        return None
+
     async def close(self):
         """Close resources"""
         if self.session and not self.session.closed:

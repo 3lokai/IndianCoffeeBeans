@@ -113,7 +113,7 @@ async def test_with_mock_html(roaster_data, mock_html):
         # Patch PlatformDetector.detect at the module level to avoid actual network calls
         with patch('scrapers.roaster_pipeline.PlatformDetector.detect', new_callable=AsyncMock, return_value={"platform": "custom", "api_endpoints": []}):
             # Process the roaster
-            result = await pipeline.process_roaster(roaster_data)
+            result = await pipeline.unified_process_roaster(roaster_data)
             # Close the pipeline
             await pipeline.close()
             return result

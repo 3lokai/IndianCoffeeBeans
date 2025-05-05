@@ -196,7 +196,7 @@ class RoasterPipeline:
     async def extract_all_metadata(self, soup: BeautifulSoup, base_url: str, city_from_input: Optional[str] = None, platform: str = "unknown") -> Dict[str, Any]:
         """Extract all metadata from a BeautifulSoup object in a single pass"""
         results = {}
-        results["logo_url"] = await self._extract_logo(soup, base_url, platform)
+        results["logo_url"] = await self.extract_logo(soup, base_url, platform)
         results["description"] = self._extract_description(soup)
         results.update(self._extract_contact_info(soup, platform))
         results.update(self._extract_location(soup, city_from_input))
@@ -400,6 +400,17 @@ class RoasterPipeline:
             if html_content:
                 return await detector.detect(url, html_content)
             return await detector.detect(url)
+
+    async def get_platform_specific_about_paths(self, platform: str) -> list:
+        """Return a list of about-page suffixes for the given platform."""
+        if platform == "shopify":
+            return ["/pages/about", "/pages/our-story", "/about", "/about-us"]
+        elif platform == "woocommerce":
+            return ["/about", "/about-us", "/our-story"]
+        elif platform == "wordpress":
+            return ["/about", "/about-us", "/our-story"]
+        else:
+            return ["/about", "/about-us", "/our-story"]
 
     async def crawl_about_pages(self, base_url: str, platform: str = "unknown") -> dict:
         """Optimized: fetch and process about pages in parallel, merging results"""

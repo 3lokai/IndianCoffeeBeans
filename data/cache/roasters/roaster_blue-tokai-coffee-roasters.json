@@ -1,27 +1,6 @@
 {
-  "id": "e1395f47-d411-467d-8f17-449f7f9b6a2c",
+  "id": "8e335213-f3a8-4d82-a305-d904973354bd",
   "name": "Blue Tokai Coffee Roasters",
   "slug": "blue-tokai-coffee-roasters",
-  "description": "We buy our great tasting coffees (100% Arabica) from Indian estates, roast the beans with care, and ship freshly roasted beans as quickly as possible.",
-  "website_url": "https://bluetokaicoffee.com",
-  "social_links": [
-    "https://twitter.com/bluetokaicoffee",
-    "https://www.facebook.com/bluetokaicoffee/",
-    "https://www.instagram.com/bluetokaicoffee/",
-    "https://twitter.com/bluetokaicoffee",
-    "https://www.facebook.com/bluetokaicoffee/",
-    "https://www.instagram.com/bluetokaicoffee/"
-  ],
-  "contact_email": "getcoffee@bluetokaicoffee.com",
-  "contact_phone": "7436990138",
-  "city": "Bangalore",
-  "state": "Karnataka",
-  "founded_year": null,
-  "instagram_handle": "bluetokaicoffee",
-  "logo_url": "https://bluetokaicoffee.com/favicon.ico",
-  "has_subscription": false,
-  "has_physical_store": false,
-  "is_featured": false,
-  "created_at": null,
-  "updated_at": null
-}
+  "description": "Blue Tokai Coffee Roasters is a specialty coffee roaster focusing on quality beans and expert roasting techniques.",
+  "website_url": 

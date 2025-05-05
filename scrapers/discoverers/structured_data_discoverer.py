@@ -4,13 +4,11 @@ import asyncio
 import json
 from typing import List, Dict, Any, Optional
 from urllib.parse import urljoin
-
-import aiohttp
+import hashlib
+from common.utils import slugify, load_from_cache, save_to_cache
+from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY, CACHE_ENABLED, CACHE_EXPIRY
 from bs4 import BeautifulSoup
-
-from common.utils import slugify
-from common.product_classifier import is_likely_coffee_product
-from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY
+import aiohttp
 
 logger = logging.getLogger(__name__)
 
@@ -33,13 +31,25 @@ class StructuredDataDiscoverer:
                 timeout=aiohttp.ClientTimeout(total=REQUEST_TIMEOUT)
             )
             
+    async def __aenter__(self):
+        await self._init_session()
+        return self
+
+    async def __aexit__(self, exc_type, exc, tb):
+        await self.close()
+
+    async def close(self):
+        """Close aiohttp session if open."""
+        if self.session and not self.session.closed:
+            await self.session.close()
+
     async def discover(self, base_url: str) -> List[Dict[str, Any]]:
         """
         Discover product URLs from structured data.
-        
+
         Args:
             base_url: Base URL of the website
-            
+
         Returns:
             List of discovered product data
         """
@@ -67,29 +77,45 @@ class StructuredDataDiscoverer:
         # Start with a list of pages to check
         pages_to_check = [base_url + path for path in catalog_paths]
         
+        seen_urls = set()
         discovered_products = []
         
         for page_url in pages_to_check:
+            # --- Caching logic for HTML content ---
+            cache_key = f"structured_html_{hashlib.md5(page_url.encode()).hexdigest()}"
+            html = None
+            if CACHE_ENABLED:
+                html = load_from_cache(cache_key, "htmlpages")
+                if html:
+                    logger.info(f"Loaded HTML content from cache for {page_url}")
+            if not html:
+                try:
+                    # Fetch the page
+                    async with self.session.get(page_url) as response:
+                        if response.status != 200:
+                            logger.warning(f"Failed to fetch {page_url}: {response.status}")
+                            continue
+                        html = await response.text()
+                        # Save to cache
+                        if CACHE_ENABLED:
+                            save_to_cache(cache_key, html, "htmlpages")
+                except Exception as e:
+                    logger.warning(f"Error processing {page_url}: {str(e)}")
+                    continue
             try:
-                # Fetch the page
-                async with self.session.get(page_url) as response:
-                    if response.status != 200:
-                        logger.warning(f"Failed to fetch {page_url}: {response.status}")
-                        continue
-                        
-                    html = await response.text()
-                    
-                    # Extract products from structured data
-                    products = await self._extract_structured_data(html, page_url)
-                    
-                    if products:
-                        discovered_products.extend(products)
-                        logger.info(f"Found {len(products)} products from structured data on {page_url}")
-                        
+                # Extract products from structured data
+                products = await self._extract_structured_data(html, page_url)
             except Exception as e:
-                logger.warning(f"Error processing {page_url}: {str(e)}")
+                logger.warning(f"Error extracting structured data from {page_url}: {str(e)}")
                 continue
-                
+            if products:
+                for product in products:
+                    url = product.get("direct_buy_url")
+                    if url in seen_urls:
+                        continue
+                    seen_urls.add(url)
+                    discovered_products.append(product)
+                logger.info(f"Found {len(products)} products from structured data on {page_url}")
             # Be nice to the server
             await asyncio.sleep(CRAWL_DELAY)
             
@@ -268,6 +294,7 @@ class StructuredDataDiscoverer:
                 
         # Get price
         offers = data.get('offers')
+        tags = []
         if offers:
             # Handle different offers formats
             if isinstance(offers, list) and offers:
@@ -286,6 +313,21 @@ class StructuredDataDiscoverer:
                 availability = offer.get('availability')
                 if availability:
                     product["is_available"] = 'InStock' in availability
+                    # Tagging based on availability
+                    availability_str = str(availability).lower()
+                    if 'outofstock' in availability_str:
+                        tags.append('out_of_stock')
+                    if 'preorder' in availability_str:
+                        tags.append('preorder')
+                    if 'instock' in availability_str:
+                        tags.append('in_stock')
+                # Check for potential sale
+                if offer.get('priceValidUntil'):
+                    tags.append('on_sale')
+                if offer.get('salePrice') or offer.get('discount'):  # Non-standard fields
+                    tags.append('on_sale')
+        if tags:
+            product["tags"] = tags
         
         # Store raw data for later extraction
         product["structured_data"] = data
@@ -384,6 +426,27 @@ class StructuredDataDiscoverer:
             if image_url:
                 product["image_url"] = image_url
                 
+        # Check availability
+        tags = []
+        avail_elem = element.find(itemprop='availability')
+        if avail_elem:
+            avail_text = avail_elem.get_text(strip=True) or avail_elem.get('href') or avail_elem.get('content')
+            if avail_text:
+                product["is_available"] = 'InStock' in avail_text
+                avail_text_lc = avail_text.lower()
+                if 'outofstock' in avail_text_lc:
+                    tags.append('out_of_stock')
+                if 'preorder' in avail_text_lc:
+                    tags.append('preorder')
+                if 'instock' in avail_text_lc:
+                    tags.append('in_stock')
+        # Check for potential sale
+        sale_elem = element.find(itemprop='salePrice') or element.find(itemprop='discount')
+        if sale_elem:
+            tags.append('on_sale')
+        if tags:
+            product["tags"] = tags
+        
         # Get price
         price_elem = element.find(itemprop='price')
         if price_elem:
@@ -396,13 +459,6 @@ class StructuredDataDiscoverer:
                 except ValueError:
                     pass
                     
-        # Check availability
-        avail_elem = element.find(itemprop='availability')
-        if avail_elem:
-            avail_text = avail_elem.get_text(strip=True) or avail_elem.get('href') or avail_elem.get('content')
-            if avail_text:
-                product["is_available"] = 'InStock' in avail_text
-                
         return product
     
     def _extract_product_urls_from_data(self, soup: BeautifulSoup, page_url: str) -> List[str]:
@@ -475,122 +531,57 @@ class StructuredDataDiscoverer:
     
     async def _process_additional_urls(self, urls: List[str]) -> List[Dict[str, Any]]:
         """
-        Fetch and process additional product URLs.
-        
+        Fetch and extract product data from additional product pages, limiting concurrency.
+
         Args:
-            urls: List of URLs to fetch
-            
+            urls: List of product page URLs
         Returns:
-            List of discovered products
+            List of discovered products from these URLs
         """
         products = []
-        
-        # Process URLs in batches to avoid overwhelming the server
+        seen_urls = set()
         batch_size = 5
-        
-        for i in range(0, len(urls), batch_size):
-            batch = urls[i:i+batch_size]
-            
-            # Create tasks
-            tasks = []
-            for url in batch:
-                tasks.append(self._fetch_and_extract_product(url))
-                
-            # Wait for all tasks to complete
-            batch_results = await asyncio.gather(*tasks)
-            
-            # Add valid results to products
-            for result in batch_results:
-                if result:
-                    products.append(result)
-                    
-            # Be nice to the server
-            await asyncio.sleep(CRAWL_DELAY)
-            
+        semaphore = asyncio.Semaphore(batch_size)
+        tasks = []
+        for url in urls:
+            tasks.append(self._fetch_and_extract_product(url, semaphore, seen_urls))
+        batch_results = await asyncio.gather(*tasks)
+        for result in batch_results:
+            if result:
+                url = result.get("direct_buy_url")
+                if url in seen_urls:
+                    continue
+                seen_urls.add(url)
+                products.append(result)
         return products
-    
-    async def _fetch_and_extract_product(self, url: str) -> Optional[Dict[str, Any]]:
+
+    async def _fetch_and_extract_product(self, url: str, semaphore: asyncio.Semaphore, seen_urls: set) -> Optional[Dict[str, Any]]:
         """
-        Fetch a product page and extract product data.
-        
+        Fetch a product page and extract product data, using concurrency control.
         Args:
-            url: URL of the product page
-            
+            url: Product page URL
+            semaphore: Concurrency limiter
+            seen_urls: Set of URLs already seen
         Returns:
-            Product data dict if valid, None otherwise
+            Product dict or None
         """
-        try:
-            # Fetch the product page
-            async with self.session.get(url) as response:
-                if response.status != 200:
-                    logger.warning(f"Failed to fetch product page {url}: {response.status}")
-                    return None
-                    
-                html = await response.text()
-                
-                # Parse the HTML
-                soup = BeautifulSoup(html, 'html.parser')
-                
-                # Extract product data
-                # First, try JSON-LD
-                json_ld_products = self._extract_json_ld_products(soup, url)
-                if json_ld_products:
-                    return json_ld_products[0]
-                    
-                # Then, try microdata
-                microdata_products = self._extract_microdata_products(soup, url)
-                if microdata_products:
-                    return microdata_products[0]
-                    
-                # If structured data extraction failed, try basic extraction
-                # Extract product name
-                name = None
-                for selector in ['h1', '.product_title', '.product-title', '.title']:
-                    heading = soup.select_one(selector)
-                    if heading:
-                        name = heading.get_text(strip=True)
-                        break
-                        
-                if not name:
-                    title = soup.find('title')
-                    if title:
-                        name = title.get_text(strip=True)
-                        # Remove site name if present
-                        if ' - ' in name:
-                            name = name.split(' - ')[0]
-                
-                if not name:
-                    return None
-                    
-                # Create product entry
-                product = {
-                    "name": name,
-                    "slug": slugify(name),
-                    "direct_buy_url": url,
-                    "discovery_method": "structured_data_fallback"
-                }
-                
-                # Extract meta description
-                meta_desc = soup.find('meta', attrs={'name': 'description'})
-                if meta_desc and meta_desc.get('content'):
-                    product["description"] = meta_desc.get('content')
-                    
-                # Extract image
-                og_image = soup.find('meta', property='og:image')
-                if og_image and og_image.get('content'):
-                    product["image_url"] = og_image.get('content')
-                
-                # Check if it's a coffee product
-                if not is_likely_coffee_product(name=name, url=url, categories=[], description=product.get('description')):
-                    return None
-                    
-                return product
-                
-        except Exception as e:
-            logger.warning(f"Error fetching product page {url}: {str(e)}")
+        async with semaphore:
+            if url in seen_urls:
+                return None
+            seen_urls.add(url)
+            try:
+                async with self.session.get(url) as response:
+                    if response.status != 200:
+                        return None
+                    html = await response.text()
+                    # Try extracting from structured data
+                    soup = BeautifulSoup(html, 'html.parser')
+                    products = self._extract_json_ld_products(soup, url)
+                    if products:
+                        return products[0]
+                    microdata_products = self._extract_microdata_products(soup, url)
+                    if microdata_products:
+                        return microdata_products[0]
+            except Exception as e:
+                logger.debug(f"Error fetching additional product page {url}: {str(e)}")
             return None
-    
-    async def close(self):
-        """Close resources"""
-        if self.session and not self.session.closed:
-            await self.session.close()

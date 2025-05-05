@@ -73,53 +73,65 @@ class DiscoveryManager:
         
         # Select discovery strategy based on platform
         all_discovered_items = []
+        seen_urls = set()
         
         # 1. Try platform-specific API endpoints (most efficient)
         if platform_type == "shopify":
             logger.info(f"Trying Shopify API discovery for {name}")
             products = await self._discover_shopify_products(website)
             if products:
-                all_discovered_items.extend(products)
-                
+                for p in products:
+                    url = p.get("direct_buy_url")
+                    if url and url not in seen_urls:
+                        seen_urls.add(url)
+                        all_discovered_items.append(p)
         elif platform_type == "woocommerce":
             logger.info(f"Trying WooCommerce API discovery for {name}")
             products = await self._discover_woocommerce_products(website)
             if products:
-                all_discovered_items.extend(products)
-        
-        # 2. If platform API didn't yield results OR platform unknown, try others
-        logger.info(f"Trying sitemap discovery for {name}")
-        try:
-            products = await self.sitemap_discoverer.discover(website)
+                for p in products:
+                    url = p.get("direct_buy_url")
+                    if url and url not in seen_urls:
+                        seen_urls.add(url)
+                        all_discovered_items.append(p)
+
+        # --- New: Run discoverers concurrently with priority using as_completed ---
+        from asyncio import create_task, as_completed
+        discoverer_tasks = [
+            ("sitemap", create_task(self.sitemap_discoverer.discover(website))),
+            ("structured", create_task(self.structured_data_discoverer.discover(website))),
+            ("html", create_task(self.html_discoverer.discover(website))),
+            ("crawl4ai", create_task(self.crawl4ai_discoverer.discover(website)))
+        ]
+        # Priority order: sitemap > structured > html > crawl4ai
+        priority = {"sitemap": 0, "structured": 1, "html": 2, "crawl4ai": 3}
+        html_cap = 20
+        crawl4ai_cap = 20
+        html_count = 0
+        crawl4ai_count = 0
+        for fut in as_completed([t[1] for t in discoverer_tasks]):
+            idx = [t[1] for t in discoverer_tasks].index(fut)
+            name = discoverer_tasks[idx][0]
+            try:
+                products = await fut
+            except Exception as e:
+                logger.error(f"{name.capitalize()} discovery failed for {roaster.get('name')}: {e}")
+                continue
             if products:
-                all_discovered_items.extend(products)
-        except Exception as e:
-            logger.error(f"Sitemap discovery failed for {name}: {e}")
-                
-        logger.info(f"Trying structured data discovery for {name}")
-        try:
-            products = await self.structured_data_discoverer.discover(website)
-            if products:
-                all_discovered_items.extend(products)
-        except Exception as e:
-            logger.error(f"Structured data discovery failed for {name}: {e}")
-                
-        logger.info(f"Trying Crawl4AI discovery for {name}")
-        try:
-            products = await self.crawl4ai_discoverer.discover(website)
-            if products:
-                all_discovered_items.extend(products)
-        except Exception as e:
-            logger.error(f"Crawl4AI discovery failed for {name}: {e}")
-                
-        logger.info(f"Trying HTML discovery for {name}")
-        try:
-            products = await self.html_discoverer.discover(website)
-            if products:
-                all_discovered_items.extend(products)
-        except Exception as e:
-            logger.error(f"HTML discovery failed for {name}: {e}")
-                
+                for p in products:
+                    url = p.get("direct_buy_url")
+                    if not url or url in seen_urls:
+                        continue
+                    if name == "html":
+                        if html_count >= html_cap:
+                            continue
+                        html_count += 1
+                    if name == "crawl4ai":
+                        if crawl4ai_count >= crawl4ai_cap:
+                            continue
+                        crawl4ai_count += 1
+                    seen_urls.add(url)
+                    all_discovered_items.append(p)
         # --- Centralized Filtering --- 
         logger.info(f"Aggregated {len(all_discovered_items)} potential items before filtering.")
         filtered_products = []

@@ -92,7 +92,7 @@ def check_env_vars():
             missing[category] = missing_in_category
     
     if missing:
-        print("\n⚠️ WARNING: Missing environment variables:")
+        print("\n[WARNING] Missing environment variables:")
         for category, vars in missing.items():
             print(f"  {category.upper()}: {', '.join(vars)}")
         print("Some functionality may be limited.\n")

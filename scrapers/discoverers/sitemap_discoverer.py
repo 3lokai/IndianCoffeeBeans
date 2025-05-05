@@ -5,13 +5,10 @@ import xml.etree.ElementTree as ET
 from typing import List, Dict, Any, Optional
 from urllib.parse import urljoin
 import re
-
-import aiohttp
+import hashlib
+from common.utils import slugify, load_from_cache, save_to_cache
+from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY, CACHE_ENABLED, CACHE_EXPIRY
 from bs4 import BeautifulSoup
-
-from common.utils import slugify
-from common.product_classifier import is_likely_coffee_product
-from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY
 
 logger = logging.getLogger(__name__)
 
@@ -26,6 +23,13 @@ class SitemapDiscoverer:
         """Initialize the sitemap discoverer"""
         self.session = None
         
+    async def __aenter__(self):
+        await self._init_session()
+        return self
+
+    async def __aexit__(self, exc_type, exc, tb):
+        await self.close()
+
     async def _init_session(self):
         """Initialize aiohttp session if needed"""
         if self.session is None or self.session.closed:
@@ -34,6 +38,11 @@ class SitemapDiscoverer:
                 timeout=aiohttp.ClientTimeout(total=REQUEST_TIMEOUT)
             )
             
+    async def close(self):
+        """Close aiohttp session if open."""
+        if self.session and not self.session.closed:
+            await self.session.close()
+
     async def discover(self, base_url: str) -> List[Dict[str, Any]]:
         """
         Discover product URLs from sitemap.xml.
@@ -64,60 +73,67 @@ class SitemapDiscoverer:
         ]
         
         discovered_products = []
+        seen_urls = set()
         
         for path in sitemap_paths:
             sitemap_url = base_url + path
             logger.info(f"Trying sitemap at: {sitemap_url}")
-            
+
+            # --- Caching logic ---
+            cache_key = f"sitemap_{hashlib.md5(sitemap_url.encode()).hexdigest()}"
+            sitemap_content = None
+            if CACHE_ENABLED:
+                sitemap_content = load_from_cache(cache_key, "sitemaps")
+                if sitemap_content:
+                    logger.info(f"Loaded sitemap content from cache for {sitemap_url}")
+            if not sitemap_content:
+                try:
+                    # Fetch sitemap
+                    async with self.session.get(sitemap_url) as response:
+                        if response.status != 200:
+                            logger.warning(f"Failed to fetch sitemap at {sitemap_url}: {response.status}")
+                            continue
+                        sitemap_content = await response.text()
+                        # Save to cache
+                        if CACHE_ENABLED:
+                            save_to_cache(cache_key, sitemap_content, "sitemaps")
+                except Exception as e:
+                    logger.warning(f"Error processing sitemap at {sitemap_url}: {str(e)}")
+                    continue
             try:
-                # Fetch sitemap
-                async with self.session.get(sitemap_url) as response:
-                    if response.status != 200:
-                        logger.warning(f"Failed to fetch sitemap at {sitemap_url}: {response.status}")
-                        continue
-                        
-                    sitemap_content = await response.text()
-                    
-                    # Parse the XML
-                    try:
-                        root = ET.fromstring(sitemap_content)
-                    except ET.ParseError:
-                        logger.warning(f"Failed to parse XML from {sitemap_url}")
-                        continue
-                        
-                    # Define XML namespaces
-                    nsmap = {
-                        'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-                        'image': 'http://www.google.com/schemas/sitemap-image/1.1'
-                    }
-                    
-                    # Check if this is a sitemap index
-                    sitemaps = root.findall('.//ns:sitemap/ns:loc', nsmap)
-                    if sitemaps:
-                        logger.info(f"Found sitemap index with {len(sitemaps)} sitemaps")
-                        
-                        # Process each sitemap in the index that looks product-related
-                        for sitemap in sitemaps:
-                            sitemap_loc = sitemap.text
-                            if sitemap_loc and self._is_product_sitemap(sitemap_loc):
-                                # Process this sub-sitemap
-                                sub_products = await self._process_sitemap(sitemap_loc)
-                                if sub_products:
-                                    discovered_products.extend(sub_products)
-                    else:
-                        # This is a regular sitemap, process URLs directly
-                        products = await self._process_sitemap_urls(root, sitemap_url, nsmap)
-                        if products:
-                            discovered_products.extend(products)
-                    
-                    # If we found products, no need to check other sitemap paths
-                    if discovered_products:
-                        break
-                        
-            except Exception as e:
-                logger.warning(f"Error processing sitemap at {sitemap_url}: {str(e)}")
+                root = ET.fromstring(sitemap_content)
+            except ET.ParseError:
+                logger.warning(f"Failed to parse XML from {sitemap_url}")
                 continue
-                
+            nsmap = {
+                'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
+                'image': 'http://www.google.com/schemas/sitemap-image/1.1'
+            }
+            sitemaps = root.findall('.//ns:sitemap/ns:loc', nsmap)
+            if sitemaps:
+                logger.info(f"Found sitemap index with {len(sitemaps)} sitemaps")
+                for sitemap in sitemaps:
+                    sitemap_loc = sitemap.text
+                    if sitemap_loc and self._is_product_sitemap(sitemap_loc):
+                        sub_products = await self._process_sitemap(sitemap_loc, seen_urls)
+                        if sub_products:
+                            discovered_products.extend(sub_products)
+                            # Early exit if products found
+                            if discovered_products:
+                                logger.info("Early exit: products found in sub-sitemap.")
+                                break
+                # Early exit from main loop if products found
+                if discovered_products:
+                    logger.info("Early exit: products found in sitemap index.")
+                    break
+            else:
+                products = await self._process_sitemap_urls(root, sitemap_url, nsmap, seen_urls)
+                if products:
+                    discovered_products.extend(products)
+                    # Early exit if products found
+                    if discovered_products:
+                        logger.info("Early exit: products found in sitemap URLs.")
+                        break
         logger.info(f"Discovered {len(discovered_products)} products from sitemaps")
         return discovered_products
     
@@ -141,55 +157,65 @@ class SitemapDiscoverer:
         
         return any(indicator in url_lower for indicator in product_indicators)
     
-    async def _process_sitemap(self, sitemap_url: str) -> List[Dict[str, Any]]:
+    async def _process_sitemap(self, sitemap_url: str, seen_urls: set) -> List[Dict[str, Any]]:
         """
         Process a specific sitemap file to extract product URLs.
-        
+
         Args:
             sitemap_url: URL of the sitemap
-            
+            seen_urls: Set of URLs already seen (for deduplication)
         Returns:
             List of discovered products
         """
         await self._init_session()
         
+        # --- Caching logic ---
+        cache_key = f"sitemap_{hashlib.md5(sitemap_url.encode()).hexdigest()}"
+        sitemap_content = None
+        if CACHE_ENABLED:
+            sitemap_content = load_from_cache(cache_key, "sitemaps")
+            if sitemap_content:
+                logger.info(f"Loaded sitemap content from cache for {sitemap_url}")
+        if not sitemap_content:
+            try:
+                async with self.session.get(sitemap_url) as response:
+                    if response.status != 200:
+                        logger.warning(f"Failed to fetch sub-sitemap at {sitemap_url}: {response.status}")
+                        return []
+                        
+                    sitemap_content = await response.text()
+                    # Save to cache
+                    if CACHE_ENABLED:
+                        save_to_cache(cache_key, sitemap_content, "sitemaps")
+            except Exception as e:
+                logger.warning(f"Error processing sub-sitemap at {sitemap_url}: {str(e)}")
+                return []
+                    
+        # Parse the XML
         try:
-            async with self.session.get(sitemap_url) as response:
-                if response.status != 200:
-                    logger.warning(f"Failed to fetch sub-sitemap at {sitemap_url}: {response.status}")
-                    return []
-                    
-                sitemap_content = await response.text()
-                
-                # Parse the XML
-                try:
-                    root = ET.fromstring(sitemap_content)
-                except ET.ParseError:
-                    logger.warning(f"Failed to parse XML from {sitemap_url}")
-                    return []
-                    
-                # Define XML namespaces
-                nsmap = {
-                    'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-                    'image': 'http://www.google.com/schemas/sitemap-image/1.1'
-                }
-                
-                # Process URLs in this sitemap
-                return await self._process_sitemap_urls(root, sitemap_url, nsmap)
-                
-        except Exception as e:
-            logger.warning(f"Error processing sub-sitemap at {sitemap_url}: {str(e)}")
+            root = ET.fromstring(sitemap_content)
+        except ET.ParseError:
+            logger.warning(f"Failed to parse XML from {sitemap_url}")
             return []
-    
-    async def _process_sitemap_urls(self, root, sitemap_url: str, nsmap: Dict[str, str]) -> List[Dict[str, Any]]:
+                    
+        # Define XML namespaces
+        nsmap = {
+            'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
+            'image': 'http://www.google.com/schemas/sitemap-image/1.1'
+        }
+                
+        # Process URLs in this sitemap
+        return await self._process_sitemap_urls(root, sitemap_url, nsmap, seen_urls)
+                
+    async def _process_sitemap_urls(self, root, sitemap_url: str, nsmap: Dict[str, str], seen_urls: set) -> List[Dict[str, Any]]:
         """
         Process URLs from a parsed sitemap XML.
-        
+
         Args:
             root: ElementTree root node
             sitemap_url: URL of the sitemap (for reference)
             nsmap: XML namespace mappings
-            
+            seen_urls: Set of seen URLs
         Returns:
             List of discovered products
         """
@@ -209,6 +235,10 @@ class SitemapDiscoverer:
                 continue
                 
             url = loc.text
+            
+            if url in seen_urls:
+                continue
+            seen_urls.add(url)
             
             # Skip if not likely a product URL
             if not self._is_product_url(url):
@@ -232,7 +262,7 @@ class SitemapDiscoverer:
                 image_url = image_loc.text
                 
             # Create a task to check if this is a product page
-            tasks.append(self._check_product_url(url, title, image_url, lastmod_str, semaphore))
+            tasks.append(self._check_product_url(url, title, image_url, lastmod_str, semaphore, seen_urls))
             
         # Wait for all tasks to complete
         results = await asyncio.gather(*tasks)
@@ -274,23 +304,24 @@ class SitemapDiscoverer:
         return has_product_indicator and not has_exclude_indicator
     
     async def _check_product_url(self, url: str, title: Optional[str], image_url: Optional[str], 
-                                lastmod: Optional[str], semaphore: asyncio.Semaphore) -> Optional[Dict[str, Any]]:
+                                lastmod: Optional[str], semaphore: asyncio.Semaphore, seen_urls: set) -> Optional[Dict[str, Any]]:
         """
         Check if a URL is a product page and extract basic info.
-        
+
         Args:
             url: URL to check
             title: Pre-extracted title, if available
             image_url: Pre-extracted image URL, if available
             lastmod: Last modified date from sitemap
             semaphore: Semaphore for limiting concurrent requests
-            
+            seen_urls: Set of URLs already seen (for deduplication)
         Returns:
             Product data dict if it's a product page, None otherwise
         """
         async with semaphore:
-            # Rate limiting
-            await asyncio.sleep(CRAWL_DELAY)
+            if url in seen_urls:
+                return None
+            seen_urls.add(url)
             
             description = None
             soup = None
@@ -300,13 +331,13 @@ class SitemapDiscoverer:
                 async with self.session.head(url, allow_redirects=True) as head_response:
                     if head_response.status != 200:
                         return None
-                
+            
                 # Only do a GET request if we need to extract more info
                 if not title or not image_url:
                     async with self.session.get(url) as response:
                         if response.status != 200:
                             return None
-                            
+                        
                         html = await response.text()
                         
                         # Parse the HTML
@@ -349,7 +380,7 @@ class SitemapDiscoverer:
                         
                     # Replace hyphens and underscores with spaces and capitalize
                     title = last_part.replace('-', ' ').replace('_', ' ').title()
-                
+            
                 # Create product entry
                 product = {
                     "name": title,
@@ -357,15 +388,18 @@ class SitemapDiscoverer:
                     "direct_buy_url": url,
                     "discovery_method": "sitemap"
                 }
-                
                 if image_url:
                     product["image_url"] = image_url
-                    
                 if lastmod:
                     product["last_modified"] = lastmod
-                    
-                return product
-                
+
+                # Use the centralized classifier to filter
+                if is_likely_coffee_product(name=title, url=url, description=description):
+                    return product
+                else:
+                    logger.debug(f"Filtered out non-coffee product from sitemap: {title} ({url})")
+                    return None
+            
             except Exception as e:
                 logger.debug(f"Error checking product URL {url}: {str(e)}")
                 return None
@@ -401,8 +435,3 @@ class SitemapDiscoverer:
                 return desc.get_text(strip=True)
                 
         return None
-
-    async def close(self):
-        """Close resources"""
-        if self.session and not self.session.closed:
-            await self.session.close()

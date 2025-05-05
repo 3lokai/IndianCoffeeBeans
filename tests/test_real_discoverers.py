@@ -70,6 +70,23 @@ async def test_discovery_for_roaster(discovery_manager, roaster_data):
         if products:
             logger.info(f"✅ Successfully discovered {len(products)} products for {roaster_data['name']} in {time_taken:.2f} seconds")
             
+            # Analyze discovery methods to highlight Crawl4AI usage
+            discovery_methods = {}
+            for product in products:
+                method = product.get("discovery_method", "unknown")
+                discovery_methods[method] = discovery_methods.get(method, 0) + 1
+            
+            logger.info(f"Discovery methods breakdown:")
+            for method, count in discovery_methods.items():
+                logger.info(f"  - {method}: {count} products ({count/len(products)*100:.1f}%)")
+            
+            # Highlight Crawl4AI-related methods
+            crawl4ai_methods = [m for m in discovery_methods.keys() 
+                               if m.startswith('crawl4ai_')]
+            if crawl4ai_methods:
+                crawl4ai_count = sum(discovery_methods[m] for m in crawl4ai_methods)
+                logger.info(f"  → Total Crawl4AI: {crawl4ai_count} products ({crawl4ai_count/len(products)*100:.1f}%)")
+            
             # Print some sample products
             sample_size = min(3, len(products))
             logger.info(f"Sample of discovered products:")
@@ -93,8 +110,9 @@ async def test_discovery_for_roaster(discovery_manager, roaster_data):
                 "platform": platform_info.get("platform"),
                 "products_count": len(products),
                 "products_with_image": sum(1 for p in products if p.get("image_url")),
-                "discovery_methods": {p.get("discovery_method", "unknown"): sum(1 for x in products if x.get("discovery_method") == p.get("discovery_method", "unknown")) 
-                                    for p in products[:5]}  # Count by discovery method
+                "discovery_methods": {
+                    method: count for method, count in discovery_methods.items()
+                }
             }
         else:
             logger.error(f"❌ Failed to discover products for {roaster_data['name']}")
@@ -140,12 +158,32 @@ async def run_tests():
         if errors:
             logger.warning(f"Failed roasters: {', '.join(errors)}")
         
+        # Analyze which discoverers performed best
+        all_methods = set()
+        for r in results:
+            if "discovery_methods" in r:
+                all_methods.update(r["discovery_methods"].keys())
+        
+        method_counts = {method: sum(r.get("discovery_methods", {}).get(method, 0) for r in results) 
+                        for method in all_methods}
+        
+        logger.info("\n===== DISCOVERY METHODS PERFORMANCE =====")
+        for method, count in sorted(method_counts.items(), key=lambda x: x[1], reverse=True):
+            logger.info(f"{method}: {count} products")
+        
+        # Group Crawl4AI methods
+        crawl4ai_methods = [m for m in all_methods if m.startswith('crawl4ai_')]
+        if crawl4ai_methods:
+            crawl4ai_count = sum(method_counts[m] for m in crawl4ai_methods)
+            logger.info(f"\nTotal Crawl4AI: {crawl4ai_count} products")
+        
         # Create a consolidated summary JSON
         summary = {
             "total_tested": len(TEST_ROASTERS),
             "successful": len(results),
             "failed": len(errors),
             "failed_roasters": errors,
+            "discovery_methods_performance": method_counts,
             "results": {r["name"]: {
                 "platform": r.get("platform", "unknown"),
                 "products_count": r.get("products_count", 0),

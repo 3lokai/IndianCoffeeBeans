@@ -3,15 +3,12 @@ import logging
 import re
 from typing import List, Dict, Any, Optional, Set
 from urllib.parse import urljoin, urlparse, unquote
-
-from bs4 import BeautifulSoup
+import hashlib
+from common.utils import slugify, load_from_cache, save_to_cache
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
 from crawl4ai.deep_crawling import BFSDeepCrawlStrategy
 from crawl4ai.deep_crawling.filters import FilterChain, URLPatternFilter, DomainFilter
-
-from common.utils import slugify
-from common.product_classifier import is_likely_coffee_product
-from config import CRAWL_DELAY
+from config import CRAWL_DELAY, CACHE_ENABLED, CACHE_EXPIRY
 
 logger = logging.getLogger(__name__)
 
@@ -70,6 +67,7 @@ class Crawl4AIDiscoverer:
         
         # Track discovered products
         discovered_products = []
+        seen_urls = set()
         visited_urls = set()
         
         # Create crawler instance with the browser config
@@ -82,9 +80,38 @@ class Crawl4AIDiscoverer:
                     
                 visited_urls.add(shop_url)
                 
-                # Deep crawl from this starting point
-                products_batch, _ = await self._process_page(crawler, shop_url, base_url, base_domain)
-                discovered_products.extend(products_batch)
+                # --- Caching logic for Crawl4AI HTML content ---
+                cache_key = f"crawl4ai_html_{hashlib.md5(shop_url.encode()).hexdigest()}"
+                html = None
+                products_batch = None
+                if CACHE_ENABLED:
+                    html = load_from_cache(cache_key, "htmlpages")
+                    if html:
+                        logger.info(f"Loaded Crawl4AI HTML content from cache for {shop_url}")
+                        try:
+                            # Directly extract products from cached HTML
+                            products_batch = self._extract_from_html(html, shop_url, base_url)
+                        except Exception as e:
+                            logger.warning(f"Error extracting products from cached HTML for {shop_url}: {str(e)}")
+                            products_batch = None
+                if products_batch is None:
+                    # Deep crawl from this starting point
+                    products_batch, _ = await self._process_page(crawler, shop_url, base_url, base_domain)
+                    # Save HTML of the main page to cache for quick re-extraction
+                    if CACHE_ENABLED and products_batch:
+                        try:
+                            # Only cache the initial HTML if available in crawler
+                            page_html = getattr(crawler, 'last_html', None)
+                            if page_html:
+                                save_to_cache(cache_key, page_html, "htmlpages")
+                        except Exception as e:
+                            logger.warning(f"Error caching HTML for {shop_url}: {str(e)}")
+                for product in products_batch:
+                    url = product.get("direct_buy_url")
+                    if url in seen_urls:
+                        continue
+                    seen_urls.add(url)
+                    discovered_products.append(product)
                 
                 # If we've found a good number of products, we can stop
                 if len(discovered_products) >= 10:
@@ -286,6 +313,31 @@ class Crawl4AIDiscoverer:
                                             image_url = urljoin(current_url, image_url)
                                             
                                         product["image_url"] = image_url
+                                        
+                                    # Add tags if available in structured data
+                                    tags = []
+                                    offers = item.get('offers')
+                                    if offers:
+                                        if isinstance(offers, list) and offers:
+                                            offer = offers[0]
+                                        else:
+                                            offer = offers
+                                        if isinstance(offer, dict):
+                                            availability = offer.get('availability')
+                                            if availability:
+                                                availability_str = str(availability).lower()
+                                                if 'outofstock' in availability_str:
+                                                    tags.append('out_of_stock')
+                                                if 'preorder' in availability_str:
+                                                    tags.append('preorder')
+                                                if 'instock' in availability_str:
+                                                    tags.append('in_stock')
+                                            if offer.get('priceValidUntil'):
+                                                tags.append('on_sale')
+                                            if offer.get('salePrice') or offer.get('discount'):
+                                                tags.append('on_sale')
+                                    if tags:
+                                        product["tags"] = tags
                                         
                                     products.append(product)
                 

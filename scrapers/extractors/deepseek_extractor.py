@@ -220,35 +220,35 @@ class DeepseekExtractor:
             # Prepare context
             context = f"""
             Product Name: {name}
-            
-            Original Description: {description}
-            
-            Product Page Content:
-            {markdown[:6000]}  # Trim to avoid token limits
+            \nOriginal Description: {description}
+            \nProduct Page Content:\n{markdown[:6000]}  # Trim to avoid token limits
             """
-            
-            # Prepare prompt
-            prompt = f"""
-            Based on the coffee product information provided, extract the following attributes:
-            
-            1. roast_level: (exactly one of: light, medium-light, medium, medium-dark, dark, or unknown if unclear)
-            2. bean_type: (exactly one of: arabica, robusta, blend, or unknown if unclear)
-            3. processing_method: (one of: washed, natural, honey, anaerobic, pulped-natural, or unknown if unclear)
-            4. region_name: (geographic origin of the coffee beans, or null if not specified)
-            5. tasting_notes: (comma-separated flavor notes found in the description, or null if not specified)
-            6. flavor_profiles: (array of common flavor categories like: chocolate, fruity, nutty, caramel, berry, citrus, floral, spice, or empty array if not specified)
-            7. brew_methods: (array of recommended brewing methods like: espresso, filter, pour-over, french-press, aeropress, moka-pot, cold-brew, or empty array if not specified)
-            8. altitude_min: (lowest altitude in meters, integer only or null if not specified)
-            9. altitude_max: (highest altitude in meters, integer only or null if not specified)
-            10. varietal: (coffee varietal/cultivar like SL9, Catuai, Kent, etc., or null if not specified)
-            11. is_blend: (boolean true if it's a blend of different beans, false otherwise)
-            12. is_seasonal: (boolean true if it's described as a seasonal or limited release, false otherwise)
-            
-            DO NOT infer or guess any values for which there's no clear evidence in the text.
-            If a field is not clearly stated in the text, return unknown or null for that field.
-            Return ONLY a valid JSON object with these fields and nothing else.
-            """
-            
+
+            # Prepare prompt (CoffeeModel fields only)
+            prompt = (
+                """
+                Based on the coffee product information provided, extract the following attributes as JSON. Only include fields for which you find clear evidence. If a field is not clearly stated, use null or empty value as appropriate. Do not guess or infer beyond the text.
+
+                1. roast_level: (one of: light, medium-light, medium, medium-dark, dark, or unknown)
+                2. bean_type: (one of: arabica, robusta, blend, liberica, or unknown)
+                3. processing_method: (one of: washed, natural, honey, anaerobic, pulped-natural, or unknown)
+                4. region_name: (string, or null)
+                5. flavor_profiles: (array of common flavor categories, e.g. chocolate, fruity, nutty, caramel, berry, citrus, floral, spice, or empty array)
+                6. brew_methods: (array of brewing methods, e.g. espresso, filter, pour-over, french-press, aeropress, moka-pot, cold-brew, or empty array)
+                7. prices: (dictionary mapping weight in grams to price, e.g. {\"250\": 450, \"500\": 800}, or empty if not found)
+                8. image_url: (URL of main product image, or null)
+                9. direct_buy_url: (URL to buy the product, or null)
+                10. is_seasonal: (boolean, true if described as seasonal or limited release, else false)
+                11. is_featured: (boolean, true if described as featured, bestseller, or recommended, else false)
+                12. is_single_origin: (boolean, true if described as single origin, else false)
+                13. is_available: (boolean, true if the product is in stock or available, else false)
+                14. tags: (array of tags or keywords found, or empty array)
+                15. external_links: (array of any external URLs found, or empty array)
+
+                Return ONLY a valid JSON object with these fields and nothing else.
+                """
+            )
+
             # Call DeepSeek API
             response = client.chat.completions.create(
                 model="deepseek-chat",
@@ -256,104 +256,91 @@ class DeepseekExtractor:
                     {"role": "system", "content": "You are a coffee expert who extracts structured attributes from product descriptions."},
                     {"role": "user", "content": context + "\n\n" + prompt}
                 ],
-                max_tokens=800,
+                max_tokens=900,
                 temperature=0.1
             )
-            
+
             # Extract response content
             ai_response = response.choices[0].message.content
-            
+
             # Parse JSON from response
             try:
                 # Find JSON in the response
                 json_start = ai_response.find('{')
                 json_end = ai_response.rfind('}') + 1
-                
+
                 if json_start >= 0 and json_end > json_start:
                     json_str = ai_response[json_start:json_end]
                     attributes = json.loads(json_str)
-                    
+
                     # Clean up attributes
                     cleaned_attributes = self._clean_attributes(attributes)
-                    
+
                     return cleaned_attributes
                 else:
-                    logger.warning(f"No JSON found in DeepSeek response: {ai_response[:100]}...")
+                    logger.warning(f"No JSON found in DeepSeek response: {ai_response[:300]}...")
                     return None
-                    
+
             except json.JSONDecodeError as e:
                 logger.error(f"Failed to parse DeepSeek response as JSON: {str(e)}")
-                logger.debug(f"Response content: {ai_response[:100]}...")
+                logger.debug(f"Response content: {ai_response[:500]}...")
                 return None
-                
+
         except Exception as e:
             logger.error(f"Error extracting attributes with DeepSeek: {str(e)}")
+            logger.debug(f"Prompt: {prompt[:500]}\nMarkdown: {markdown[:500]}...")
             return None
-            
+
     def _clean_attributes(self, attributes: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Clean and normalize extracted attributes.
-        
-        Args:
-            attributes: Raw attributes from DeepSeek
-            
-        Returns:
-            Cleaned attributes dict
+        Clean and normalize extracted attributes to match CoffeeModel.
         """
         cleaned = {}
-        
         # Normalize roast level
         if "roast_level" in attributes:
             roast = str(attributes["roast_level"]).lower()
             if roast in RoastLevel.__members__:
                 cleaned["roast_level"] = roast
-                
         # Normalize bean type
         if "bean_type" in attributes:
             bean = str(attributes["bean_type"]).lower()
             if bean in BeanType.__members__:
                 cleaned["bean_type"] = bean
-                
         # Normalize processing method
         if "processing_method" in attributes:
             process = str(attributes["processing_method"]).lower()
-            # Handle special cases
             if process == "pulped natural":
                 process = "pulped-natural"
-                
             if process in ProcessingMethod.__members__:
                 cleaned["processing_method"] = process
-                
         # Handle region name
         if "region_name" in attributes and attributes["region_name"]:
             cleaned["region_name"] = attributes["region_name"]
-            
-        # Handle flavor notes
-        if "tasting_notes" in attributes and attributes["tasting_notes"]:
-            cleaned["tasting_notes"] = attributes["tasting_notes"]
-            
-        # Handle arrays
-        for array_field in ["flavor_profiles", "brew_methods"]:
-            if array_field in attributes and isinstance(attributes[array_field], list):
-                cleaned[array_field] = attributes[array_field]
-                
-        # Handle altitude
-        for altitude_field in ["altitude_min", "altitude_max"]:
-            if altitude_field in attributes and attributes[altitude_field] is not None:
-                try:
-                    cleaned[altitude_field] = int(attributes[altitude_field])
-                except (ValueError, TypeError):
-                    pass
-                    
-        # Handle varietal
-        if "varietal" in attributes and attributes["varietal"]:
-            cleaned["varietal"] = attributes["varietal"]
-            
-        # Handle booleans
-        for bool_field in ["is_blend", "is_seasonal"]:
+        # Flavor profiles
+        if "flavor_profiles" in attributes and isinstance(attributes["flavor_profiles"], list):
+            cleaned["flavor_profiles"] = attributes["flavor_profiles"]
+        # Brew methods
+        if "brew_methods" in attributes and isinstance(attributes["brew_methods"], list):
+            cleaned["brew_methods"] = attributes["brew_methods"]
+        # Prices
+        if "prices" in attributes and isinstance(attributes["prices"], dict):
+            cleaned["prices"] = attributes["prices"]
+        # Image URL
+        if "image_url" in attributes and attributes["image_url"]:
+            cleaned["image_url"] = attributes["image_url"]
+        # Direct buy URL
+        if "direct_buy_url" in attributes and attributes["direct_buy_url"]:
+            cleaned["direct_buy_url"] = attributes["direct_buy_url"]
+        # is_seasonal, is_featured, is_single_origin, is_available
+        for bool_field in ["is_seasonal", "is_featured", "is_single_origin", "is_available"]:
             if bool_field in attributes:
                 cleaned[bool_field] = bool(attributes[bool_field])
-                
+        # Tags
+        if "tags" in attributes and isinstance(attributes["tags"], list):
+            cleaned["tags"] = attributes["tags"]
+        # External links
+        if "external_links" in attributes and isinstance(attributes["external_links"], list):
+            cleaned["external_links"] = attributes["external_links"]
         return cleaned
         
     def _merge_attributes(self, product: Dict[str, Any], attributes: Dict[str, Any]) -> Dict[str, Any]:

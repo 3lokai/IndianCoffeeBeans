@@ -9,6 +9,7 @@ from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
 
 from common.utils import slugify
 from common.models import CoffeeModel, RoastLevel, BeanType, ProcessingMethod
+from common.tag_utils import is_negative_tag
 
 logger = logging.getLogger(__name__)
 
@@ -113,46 +114,40 @@ class JsonCssExtractor:
         if isinstance(extracted_data, list):
             if not extracted_data:
                 return product
-            extracted_data = extracted_data[0]
-            
-        # Start with original product
+            # If it's a list of dicts (e.g. variants), merge them
+            merged = {}
+            for d in extracted_data:
+                merged.update(d)
+            extracted_data = merged
         enhanced = product.copy()
-        
-        # Extract and normalize basic fields
-        if "name" in extracted_data and extracted_data["name"] and not enhanced.get("name"):
+        enhanced.update(extracted_data)
+        # Always set name/slug
+        if "name" in extracted_data and extracted_data["name"]:
             enhanced["name"] = extracted_data["name"]
             enhanced["slug"] = slugify(extracted_data["name"])
-            
         if "product_description" in extracted_data and extracted_data["product_description"]:
             enhanced["description"] = self._clean_html(extracted_data["product_description"])
-            
         if "image_url" in extracted_data and extracted_data["image_url"] and not enhanced.get("image_url"):
             enhanced["image_url"] = extracted_data["image_url"]
-            
         # Process prices
         self._process_prices(enhanced, extracted_data, platform)
-        
-        # Process roast level
-        self._process_roast_level(enhanced, extracted_data)
-        
         # Process processing method
         self._process_processing_method(enhanced, extracted_data)
-        
         # Process bean type
         self._process_bean_type(enhanced, extracted_data)
-        
         # Process origin/region
         self._process_origin(enhanced, extracted_data)
-        
         # Process flavor profiles
         self._process_flavor_profiles(enhanced, extracted_data)
-        
         # Process availability
         self._process_availability(enhanced, extracted_data)
-        
+        # Platform-specific post-processing for missing fields
+        if platform == "woocommerce":
+            self._process_woocommerce_attributes(enhanced, extracted_data)
+        elif platform == "generic":
+            self._process_generic_attributes(enhanced, extracted_data)
         # Store raw extracted data for potential further processing
         enhanced["_extracted_data"] = extracted_data
-        
         return enhanced
         
     def _process_prices(self, product: Dict[str, Any], extracted_data: Dict[str, Any], platform: str):
@@ -245,6 +240,107 @@ class JsonCssExtractor:
             except (ValueError, TypeError):
                 pass
                 
+        # Extract brew methods from variants
+        brew_methods = self._extract_brew_methods(variants)
+        product["brew_methods"] = brew_methods
+        
+        # If _extracted_single_origin or _extracted_bean_type were set, update product fields
+        if hasattr(self, "_extracted_single_origin"):
+            product["is_single_origin"] = self._extracted_single_origin
+            del self._extracted_single_origin
+        if hasattr(self, "_extracted_bean_type"):
+            product["bean_type"] = self._extracted_bean_type
+            del self._extracted_bean_type
+        
+        # Process Shopify tags
+        tags = extracted_data.get("tags", [])
+        self._process_shopify_tags(tags, product)
+        
+    def _extract_brew_methods(self, variants: List[Dict[str, Any]]) -> List[str]:
+        """
+        Extract brew methods (and grind types as proxy) from Shopify variants.
+        
+        Args:
+            variants: List of variant dicts
+        Returns:
+            List of standardized brew methods (including grind sizes/types)
+        """
+        BREW_METHOD_MAPPING = {
+            "whole bean": "whole_bean",
+            "whole beans": "whole_bean",
+            "french press": "french_press",
+            "aeropress": "aeropress",
+            "pourover": "pour_over",
+            "pour over": "pour_over",
+            "moka pot": "moka_pot",
+            "channi": "filter_drip",
+            "coffee filter": "filter_drip",
+            "filter": "filter_drip",
+            "south indian filter": "south_indian",
+            "turkish": "turkish",
+            "home espresso": "espresso",
+            "commercial espresso": "espresso",
+            "espresso": "espresso",
+            "cold brew": "cold_brew",
+            "inverted aeropress": "aeropress",
+            "drip": "filter_drip",
+            "percolator": "percolator",
+            "syphon": "syphon",
+            "stovetop": "moka_pot"
+        }
+        brew_methods = set()
+        is_single_origin = None
+        bean_type = None
+        for variant in variants:
+            if not isinstance(variant, dict):
+                continue
+                
+            # Extract attributes looking for weight
+            grind_type = None
+            if variant.get("option2"):
+                grind_type = variant["option2"]
+            if not grind_type and "title" in variant:
+                title_parts = variant["title"].split("/")
+                if len(title_parts) > 1:
+                    potential_grind = title_parts[1].strip()
+                    if potential_grind:
+                        grind_type = potential_grind
+                        
+            # Check for single origin or blend in grind_type or title
+            # (Normalize both grind_type and title for matching)
+            all_text = []
+            if grind_type:
+                all_text.append(grind_type.strip().lower())
+            if "title" in variant:
+                all_text.append(variant["title"].strip().lower())
+            for text in all_text:
+                if "single origin" in text:
+                    is_single_origin = True
+                if "blend" in text:
+                    bean_type = "blend"
+                    
+            # Normalize and match
+            if grind_type:
+                norm = grind_type.strip().lower()
+                mapped = None
+                for key, val in BREW_METHOD_MAPPING.items():
+                    if key in norm and val:
+                        mapped = val
+                        break
+                if mapped:
+                    brew_methods.add(mapped)
+                else:
+                    brew_methods.add(norm)
+                    logger.debug(f"Unknown grind type or brew method: {grind_type}")
+                    
+        # Attach single origin and bean_type if found
+        if is_single_origin is not None:
+            self._extracted_single_origin = is_single_origin
+        if bean_type:
+            self._extracted_bean_type = bean_type
+            
+        return list(brew_methods)
+
     def _process_woo_price(self, product: Dict[str, Any], extracted_data: Dict[str, Any]):
         """
         Process WooCommerce price information.
@@ -701,6 +797,196 @@ class JsonCssExtractor:
         
         return text
         
+    def _process_shopify_tags(self, tags: List[str], product: Dict[str, Any]):
+        """
+        Process Shopify product tags and map to roast_level, bean_type, processing_method, brew_methods, flavor_profiles.
+        Args:
+            tags: List of tag strings from Shopify product
+            product: Product dict to update
+        """
+        from common.models import RoastLevel, BeanType, ProcessingMethod
+        from common.tag_utils import is_negative_tag
+        # Normalize enums for matching
+        roast_levels = {rl.value.lower().replace('-', ' ').replace('_', ' '): rl.value for rl in RoastLevel}
+        bean_types = {bt.value.lower().replace('-', ' ').replace('_', ' '): bt.value for bt in BeanType}
+        processing_methods = {pm.value.lower().replace('-', ' ').replace('_', ' '): pm.value for pm in ProcessingMethod}
+        # Use the same brew method mapping as in _extract_brew_methods
+        BREW_METHOD_MAPPING = {
+            "whole bean": "whole_bean",
+            "whole beans": "whole_bean",
+            "french press": "french_press",
+            "aeropress": "aeropress",
+            "pourover": "pour_over",
+            "pour over": "pour_over",
+            "moka pot": "moka_pot",
+            "channi": "filter_drip",
+            "coffee filter": "filter_drip",
+            "filter": "filter_drip",
+            "south indian filter": "south_indian",
+            "turkish": "turkish",
+            "home espresso": "espresso",
+            "commercial espresso": "espresso",
+            "espresso": "espresso",
+            "cold brew": "cold_brew",
+            "inverted aeropress": "aeropress",
+            "drip": "filter_drip",
+            "percolator": "percolator",
+            "syphon": "syphon",
+            "stovetop": "moka_pot"
+        }
+        # Prepare product fields
+        brew_methods = set(product.get("brew_methods", []))
+        flavor_profiles = set(product.get("flavor_profiles", []))
+        tags_field = set(product.get("tags", []))
+        for tag in tags:
+            norm = tag.strip().lower().replace('-', ' ').replace('_', ' ')
+            if is_negative_tag(norm):
+                continue
+            # Roast level
+            if norm in roast_levels:
+                product["roast_level"] = roast_levels[norm]
+                continue
+            # Bean type
+            if norm in bean_types:
+                product["bean_type"] = bean_types[norm]
+                continue
+            # Processing method
+            if norm in processing_methods:
+                product["processing_method"] = processing_methods[norm]
+                continue
+            # Brew method (partial match)
+            mapped_brew = None
+            for key, val in BREW_METHOD_MAPPING.items():
+                if key in norm and val:
+                    mapped_brew = val
+                    break
+            if mapped_brew:
+                brew_methods.add(mapped_brew)
+                continue
+            # If not matched above, treat as flavor profile and also add to tags field
+            flavor_profiles.add(tag)
+            tags_field.add(tag)
+        if brew_methods:
+            product["brew_methods"] = list(brew_methods)
+        if flavor_profiles:
+            product["flavor_profiles"] = list(flavor_profiles)
+        if tags_field:
+            product["tags"] = list(tags_field)
+        
+    def _process_woocommerce_attributes(self, product: Dict[str, Any], extracted_data: Dict[str, Any]):
+        """
+        Post-process WooCommerce extracted data to fill missing CoffeeModel fields.
+        Scans attributes, specs, and descriptions for bean_type, roast_level, processing_method, region_name, flavor_profiles, brew_methods, is_single_origin, is_seasonal, is_featured, and prices by weight.
+        """
+        # --- Bean Type ---
+        if "bean_type" not in product:
+            text = self._combine_text_fields(extracted_data, ["specifications", "product_description", "name"])
+            self._process_bean_type(product, {"specifications": text, "product_description": text, "name": text})
+        # --- Roast Level ---
+        if "roast_level" not in product:
+            text = self._combine_text_fields(extracted_data, ["attributes_table", "specifications", "product_description"])
+            self._process_roast_level(product, {"roast_level": text, "product_description": text})
+        # --- Processing Method ---
+        if "processing_method" not in product:
+            text = self._combine_text_fields(extracted_data, ["attributes_table", "specifications", "product_description"])
+            self._process_processing_method(product, {"process_info": text, "specifications": text, "product_description": text})
+        # --- Region Name ---
+        if "region_name" not in product:
+            text = self._combine_text_fields(extracted_data, ["attributes_table", "specifications", "product_description"])
+            self._process_origin(product, {"origin_info": text, "specifications": text, "product_description": text})
+        # --- Flavor Profiles ---
+        if "flavor_profiles" not in product:
+            text = self._combine_text_fields(extracted_data, ["specifications", "product_description"])
+            self._process_flavor_profiles(product, {"specifications": text, "product_description": text})
+        # --- Brew Methods ---
+        if "brew_methods" not in product:
+            text = self._combine_text_fields(extracted_data, ["specifications", "product_description"])
+            self._process_brew_methods_generic(product, text)
+        # --- is_single_origin, is_seasonal, is_featured ---
+        text = self._combine_text_fields(extracted_data, ["attributes_table", "specifications", "product_description", "name"])
+        self._process_boolean_keywords(product, text)
+        # --- Prices by weight ---
+        if not product.get("prices"):
+            price_text = extracted_data.get("price_text", "")
+            self._process_generic_price(product, price_text)
+
+    def _process_generic_attributes(self, product: Dict[str, Any], extracted_data: Dict[str, Any]):
+        """
+        Post-process generic/static extracted data to fill missing CoffeeModel fields.
+        Scans all available text for bean_type, roast_level, processing_method, region_name, flavor_profiles, brew_methods, is_single_origin, is_seasonal, is_featured, and prices by weight.
+        """
+        # --- Bean Type ---
+        if "bean_type" not in product:
+            text = self._combine_text_fields(extracted_data, ["specifications", "product_description", "name"])
+            self._process_bean_type(product, {"specifications": text, "product_description": text, "name": text})
+        # --- Roast Level ---
+        if "roast_level" not in product:
+            text = self._combine_text_fields(extracted_data, ["specifications", "product_description", "name"])
+            self._process_roast_level(product, {"roast_level": text, "product_description": text})
+        # --- Processing Method ---
+        if "processing_method" not in product:
+            text = self._combine_text_fields(extracted_data, ["specifications", "product_description"])
+            self._process_processing_method(product, {"process_info": text, "specifications": text, "product_description": text})
+        # --- Region Name ---
+        if "region_name" not in product:
+            text = self._combine_text_fields(extracted_data, ["specifications", "product_description"])
+            self._process_origin(product, {"origin_info": text, "specifications": text, "product_description": text})
+        # --- Flavor Profiles ---
+        if "flavor_profiles" not in product:
+            text = self._combine_text_fields(extracted_data, ["specifications", "product_description"])
+            self._process_flavor_profiles(product, {"specifications": text, "product_description": text})
+        # --- Brew Methods ---
+        if "brew_methods" not in product:
+            text = self._combine_text_fields(extracted_data, ["specifications", "product_description"])
+            self._process_brew_methods_generic(product, text)
+        # --- is_single_origin, is_seasonal, is_featured ---
+        text = self._combine_text_fields(extracted_data, ["specifications", "product_description", "name"])
+        self._process_boolean_keywords(product, text)
+        # --- Prices by weight ---
+        if not product.get("prices"):
+            price_text = extracted_data.get("price_text", "")
+            self._process_generic_price(product, price_text)
+
+    def _combine_text_fields(self, data: Dict[str, Any], fields: List[str]) -> str:
+        """Combine multiple text fields into a single string for keyword scanning."""
+        return " ".join(str(data.get(f, "")) for f in fields if data.get(f)).strip()
+
+    def _process_brew_methods_generic(self, product: Dict[str, Any], text: str):
+        """Extract brew methods from generic text using known keywords."""
+        BREW_METHOD_KEYWORDS = [
+            ("french press", "french_press"),
+            ("aeropress", "aeropress"),
+            ("pour over", "pour_over"),
+            ("pourover", "pour_over"),
+            ("moka pot", "moka_pot"),
+            ("espresso", "espresso"),
+            ("cold brew", "cold_brew"),
+            ("syphon", "syphon"),
+            ("filter", "filter_drip"),
+            ("channi", "filter_drip"),
+            ("percolator", "percolator"),
+            ("turkish", "turkish"),
+            ("stovetop", "moka_pot"),
+            ("south indian filter", "south_indian")
+        ]
+        found = set()
+        norm_text = text.lower()
+        for key, val in BREW_METHOD_KEYWORDS:
+            if key in norm_text:
+                found.add(val)
+        if found:
+            product["brew_methods"] = list(found)
+
+    def _process_boolean_keywords(self, product: Dict[str, Any], text: str):
+        """Set is_single_origin, is_seasonal, is_featured if keywords found in text."""
+        norm_text = text.lower()
+        if "single origin" in norm_text:
+            product["is_single_origin"] = True
+        if "seasonal" in norm_text or "limited edition" in norm_text:
+            product["is_seasonal"] = True
+        if "featured" in norm_text or "bestseller" in norm_text or "recommended" in norm_text:
+            product["is_featured"] = True
+
     def _create_shopify_schema(self) -> Dict[str, Any]:
         """
         Create extraction schema for Shopify stores.
@@ -734,7 +1020,10 @@ class JsonCssExtractor:
                 {"name": "variants", "selector": "script[type='application/json']:contains('variants')", "type": "text"},
                 
                 # Additional specifications
-                {"name": "specifications", "selector": "#product-specifications, .product-specifications, .product-description table", "type": "html"}
+                {"name": "specifications", "selector": "#product-specifications, .product-specifications, .product-description table", "type": "html"},
+                
+                # Extract tags
+                {"name": "tags", "selector": ".product__tags, .product-tags", "type": "text"}
             ]
         }
         

@@ -42,6 +42,18 @@ class SupabaseClient:
                     coffee['created_at'] = coffee['created_at'].isoformat()
                 if 'updated_at' in coffee and isinstance(coffee['updated_at'], datetime):
                     coffee['updated_at'] = coffee['updated_at'].isoformat()  
+                # Ensure tags is a list of strings for text[] column
+                if 'tags' in coffee and coffee['tags'] is not None:
+                    if isinstance(coffee['tags'], str):
+                        # Split comma-separated string to list
+                        coffee['tags'] = [t.strip() for t in coffee['tags'].split(',') if t.strip()]
+                    elif not isinstance(coffee['tags'], list):
+                        coffee['tags'] = []
+                    else:
+                        # Remove any empty or non-str items
+                        coffee['tags'] = [str(t) for t in coffee['tags'] if t]
+                else:
+                    coffee['tags'] = []
             
             response = self.client.table('coffees').upsert(
                 coffees_data,

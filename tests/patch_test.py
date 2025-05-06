@@ -124,20 +124,14 @@ async def test_with_mock():
             logger.info(f"Request: GET {url}")
 
 async def test_with_pytest_mock():
-    """Test with pytest-style mock"""
+    """Test with pytest-style mock (fixed to use MockClientSession for async context)"""
     logger.info("\n=== Testing with pytest-style mock ===")
     
-    # Mock the ClientSession.get method directly
-    mock_get = AsyncMock()
-    mock_get.return_value.__aenter__.return_value.status = 200
-    mock_get.return_value.__aenter__.return_value.json = AsyncMock(return_value=SAMPLE_DATA)
-    
-    # Mock the ClientSession class
-    mock_session = AsyncMock()
-    mock_session.get = mock_get
-    mock_session.__aenter__.return_value = mock_session
-    
-    # Patch aiohttp.ClientSession
+    # Create mock responses
+    mock_resp = MockResponse(json_data=SAMPLE_DATA)
+    mock_session = MockClientSession(responses=[mock_resp])
+
+    # Patch aiohttp.ClientSession with our async-compatible mock
     with patch('aiohttp.ClientSession', return_value=mock_session):
         # Call the function
         products = await fetch_shopify_products("https://example.com")
@@ -147,11 +141,10 @@ async def test_with_pytest_mock():
         for product in products:
             logger.info(f"Product: {product['name']}")
         
-        # Check if get was called
-        logger.info(f"mock_get.call_count: {mock_get.call_count}")
-        if mock_get.call_count > 0:
-            args, kwargs = mock_get.call_args
-            logger.info(f"mock_get called with: {args}")
+        # Log requests made to mock
+        logger.info(f"Requests made to mock session: {len(mock_session.requests)}")
+        for url, args, kwargs in mock_session.requests:
+            logger.info(f"Request: GET {url}")
 
 async def main():
     await test_with_mock()

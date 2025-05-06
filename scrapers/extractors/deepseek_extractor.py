@@ -299,19 +299,19 @@ class DeepseekExtractor:
         # Normalize roast level
         if "roast_level" in attributes:
             roast = str(attributes["roast_level"]).lower()
-            if roast in RoastLevel.__members__:
+            if roast in [v.value for v in RoastLevel]:
                 cleaned["roast_level"] = roast
         # Normalize bean type
         if "bean_type" in attributes:
             bean = str(attributes["bean_type"]).lower()
-            if bean in BeanType.__members__:
+            if bean in [v.value for v in BeanType]:
                 cleaned["bean_type"] = bean
         # Normalize processing method
         if "processing_method" in attributes:
             process = str(attributes["processing_method"]).lower()
             if process == "pulped natural":
                 process = "pulped-natural"
-            if process in ProcessingMethod.__members__:
+            if process in [v.value for v in ProcessingMethod]:
                 cleaned["processing_method"] = process
         # Handle region name
         if "region_name" in attributes and attributes["region_name"]:

@@ -262,7 +262,10 @@ async def run_pipeline(args):
         logger.info(f"Starting pipeline with {len(roasters)} roasters")
         
         # Run pipeline
-        stats = await pipeline.process_roaster_list(roasters)
+        pipeline_result = await pipeline.process_roaster_list(roasters)
+        stats = pipeline_result["stats"]
+        roasters_data = pipeline_result["roasters"]
+        coffees_data = pipeline_result["coffees"]
         
         # Print statistics
         logger.info("\n===== PIPELINE RESULTS =====")
@@ -279,8 +282,8 @@ async def run_pipeline(args):
             results = {
                 "timestamp": datetime.now().isoformat(),
                 "stats": stats,
-                "roasters": [],  # Would need to collect from pipeline
-                "coffees": []    # Would need to collect from pipeline
+                "roasters": roasters_data,
+                "coffees": coffees_data
             }
             
             # Export in requested format
@@ -288,9 +291,11 @@ async def run_pipeline(args):
                 export_path = export_to_csv(results, args.export)
             else:
                 export_path = export_to_json(results, args.export)
-                
+            
             if export_path:
                 logger.info(f"Results exported to {export_path}")
+        else:
+            logger.info("No export requested: results will not be saved to CSV or JSON.")
     
     finally:
         # Close pipeline resources

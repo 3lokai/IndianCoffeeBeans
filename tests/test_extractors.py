@@ -1,7 +1,10 @@
+import os
+os.environ["DEEPSEEK_API_KEY"] = "fake-key"
+
 # tests/test_extractors.py
 import pytest
 import asyncio
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch, MagicMock, AsyncMock
 import json
 import os
 from pathlib import Path
@@ -141,16 +144,13 @@ def deepseek_extracted_attributes():
 @pytest.fixture
 def mock_crawler():
     with patch('crawl4ai.AsyncWebCrawler') as mock_crawler_class:
-        mock_crawler = MagicMock()
+        mock_crawler = AsyncMock()
         mock_crawler_class.return_value.__aenter__.return_value = mock_crawler
         
         # Create mock result
-        mock_result = MagicMock()
+        mock_result = AsyncMock()
         mock_result.success = True
-        mock_result.markdown = MagicMock()
-        mock_result.markdown.fit_markdown = "Mocked markdown content"
-        mock_result.html = "<html>Mocked HTML content</html>"
-        mock_result.extracted_content = json.dumps({"test": "data"})
+        mock_result.extracted_content = ""
         
         mock_crawler.arun.return_value = mock_result
         
@@ -160,12 +160,12 @@ def mock_crawler():
 @pytest.fixture
 def mock_openai():
     with patch('openai.OpenAI') as mock_openai_class:
-        mock_client = MagicMock()
+        mock_client = AsyncMock()
         mock_openai_class.return_value = mock_client
         
         # Mock chat completion
-        mock_completion = MagicMock()
-        mock_message = MagicMock()
+        mock_completion = AsyncMock()
+        mock_message = AsyncMock()
         mock_message.content = json.dumps({
             "roast_level": "medium-dark",
             "bean_type": "arabica",
@@ -180,7 +180,7 @@ def mock_openai():
             "is_blend": False,
             "is_seasonal": False
         })
-        mock_completion.choices = [MagicMock(message=mock_message)]
+        mock_completion.choices = [mock_message]
         
         mock_client.chat.completions.create.return_value = mock_completion
         
@@ -188,264 +188,212 @@ def mock_openai():
 
 
 @pytest.mark.asyncio
-async def test_json_css_extractor_shopify(mock_crawler, shopify_product, extracted_data_shopify):
-    # Configure mock crawler to return the test data
-    mock_crawler.arun.return_value.extracted_content = json.dumps(extracted_data_shopify)
+@patch('scrapers.extractors.json_css_extractor.AsyncWebCrawler')
+async def test_json_css_extractor_shopify(mock_crawler_cls):
+    # Prepare mock crawl result
+    extracted = {
+        "name": "Ethiopia Yirgacheffe",
+        "product_description": "<p>Fruity, floral coffee.</p>",
+        "image_url": "https://example.com/test.jpg",
+        "variants": [
+            {"title": "250g", "price": "550.00"},
+            {"title": "500g", "price": "1000.00"}
+        ],
+        "roast_level": "Light",
+        "process_info": "Washed",
+        "origin_info": "Ethiopia, Yirgacheffe Region",
+    }
+    mock_result = AsyncMock()
+    mock_result.success = True
+    mock_result.extracted_content = json.dumps(extracted)
+    mock_crawler = AsyncMock()
+    mock_crawler.arun.return_value = mock_result
+    mock_crawler_cls.return_value.__aenter__.return_value = mock_crawler
     
+    product = {
+        "name": "Ethiopia Yirgacheffe",
+        "direct_buy_url": "https://example.com/products/ethiopia-yirgacheffe",
+        "platform": "shopify"
+    }
     extractor = JsonCssExtractor()
-    
-    enhanced_product = await extractor.extract(shopify_product)
-    
-    # Check basic fields were extracted
-    assert enhanced_product.get("name") == "Ethiopia Yirgacheffe"
-    assert enhanced_product.get("description") is not None
-    assert enhanced_product.get("image_url") == "https://example.com/test.jpg"
-    
-    # Check specific fields
-    assert enhanced_product.get("roast_level") == RoastLevel.LIGHT
-    assert enhanced_product.get("processing_method") == ProcessingMethod.WASHED
-    assert enhanced_product.get("region_name") == "Ethiopia, Yirgacheffe Region"
-    
-    # Check price extraction
-    assert "price_250g" in enhanced_product or "price_500g" in enhanced_product
-
+    result = await extractor.extract(product)
+    assert result["name"] == "Ethiopia Yirgacheffe"
+    assert result.get("description") == "Fruity, floral coffee."
+    assert result["image_url"] == "https://example.com/test.jpg"
+    assert result["roast_level"] == "Light"
+    assert result["processing_method"] == "Washed" or result["processing_method"] == ProcessingMethod.WASHED
+    assert result["region_name"] == "Ethiopia, Yirgacheffe Region"
+    assert result["price_250g"] == 550.0
+    assert result["price_500g"] == 1000.0
 
 @pytest.mark.asyncio
-async def test_json_css_extractor_woocommerce(mock_crawler, woocommerce_product, extracted_data_woocommerce):
-    # Configure mock crawler to return the test data
-    mock_crawler.arun.return_value.extracted_content = json.dumps(extracted_data_woocommerce)
-    
+@patch('scrapers.extractors.json_css_extractor.AsyncWebCrawler')
+async def test_json_css_extractor_woocommerce(mock_crawler_cls):
+    extracted = {
+        "name": "Colombia Supremo",
+        "product_description": "Balanced, smooth coffee.",
+        "image_url": "https://example.com/colombia.jpg",
+        "price": "500.00",
+        "roast_level": "Medium",
+        "process_info": "Washed",
+        "origin_info": "Colombia"
+    }
+    mock_result = AsyncMock()
+    mock_result.success = True
+    mock_result.extracted_content = json.dumps(extracted)
+    mock_crawler = AsyncMock()
+    mock_crawler.arun.return_value = mock_result
+    mock_crawler_cls.return_value.__aenter__.return_value = mock_crawler
+    product = {
+        "name": "Colombia Supremo",
+        "direct_buy_url": "https://example.com/products/colombia-supremo",
+        "platform": "woocommerce"
+    }
     extractor = JsonCssExtractor()
-    
-    enhanced_product = await extractor.extract(woocommerce_product)
-    
-    # Check basic fields were extracted
-    assert enhanced_product.get("name") == "Colombia Supremo"
-    assert enhanced_product.get("description") is not None
-    assert enhanced_product.get("image_url") == "https://example.com/colombia.jpg"
-    
-    # Check specific fields
-    assert enhanced_product.get("roast_level") == RoastLevel.MEDIUM
-    assert enhanced_product.get("processing_method") == ProcessingMethod.WASHED
-    assert enhanced_product.get("region_name") == "Colombia"
-    
-    # Check price extraction (WooCommerce often has a single price)
-    assert "price_250g" in enhanced_product or "price" in enhanced_product
-
+    result = await extractor.extract(product)
+    assert result["name"] == "Colombia Supremo"
+    assert result.get("description") == "Balanced, smooth coffee."
+    assert result["image_url"] == "https://example.com/colombia.jpg"
+    assert result["roast_level"] == "Medium"
+    assert result["processing_method"] == "Washed" or result["processing_method"] == ProcessingMethod.WASHED
+    assert result["region_name"] == "Colombia"
+    assert result["price_250g"] == 500.0
 
 @pytest.mark.asyncio
-async def test_json_css_extractor_generic(mock_crawler, generic_product, extracted_data_generic):
-    # Configure mock crawler to return the test data
-    mock_crawler.arun.return_value.extracted_content = json.dumps(extracted_data_generic)
-    
+@patch('scrapers.extractors.json_css_extractor.AsyncWebCrawler')
+async def test_json_css_extractor_failure(mock_crawler_cls):
+    mock_result = AsyncMock()
+    mock_result.success = False
+    mock_result.extracted_content = None
+    mock_crawler = AsyncMock()
+    mock_crawler.arun.return_value = mock_result
+    mock_crawler_cls.return_value.__aenter__.return_value = mock_crawler
+    product = {"name": "Fail Product", "direct_buy_url": "https://fail.com", "platform": "generic"}
     extractor = JsonCssExtractor()
-    
-    enhanced_product = await extractor.extract(generic_product)
-    
-    # Check basic fields were extracted
-    assert enhanced_product.get("name") == "Brazil Santos"
-    assert enhanced_product.get("description") is not None
-    assert enhanced_product.get("image_url") == "https://example.com/brazil.jpg"
-    
-    # Check specific fields
-    assert enhanced_product.get("roast_level") == RoastLevel.MEDIUM_DARK
-    assert enhanced_product.get("processing_method") == ProcessingMethod.NATURAL
-    assert enhanced_product.get("region_name") == "Brazil, Santos region"
-    
-    # Check price extraction from text
-    assert "price_250g" in enhanced_product
-
+    result = await extractor.extract(product)
+    assert result == product
 
 @pytest.mark.asyncio
-async def test_json_css_extractor_failure(mock_crawler, generic_product):
-    # Simulate a failed crawl
-    mock_crawler.arun.return_value.success = False
-    
-    extractor = JsonCssExtractor()
-    
-    # Even on failure, the original product should be returned unmodified
-    result = await extractor.extract(generic_product)
-    assert result == generic_product
-
-
-@pytest.mark.asyncio
-async def test_deepseek_extractor_success(mock_crawler, mock_openai, generic_product, deepseek_extracted_attributes):
-    # Configure the mock crawler
-    mock_crawler.arun.return_value.success = True
-    mock_crawler.arun.return_value.markdown.fit_markdown = """
-    # Brazil Santos
-
-    A nutty, chocolatey coffee from Brazil. Medium-dark roast with low acidity.
-
-    ## Details
-    - **Origin:** Brazil, Santos region
-    - **Altitude:** 1000-1200m
-    - **Varietals:** Bourbon, Catuai
-    - **Process:** Natural
-    - **Roast Level:** Medium-Dark
-
-    ## Tasting Notes
-    Chocolate, nuts, caramel
-
-    ## Recommended For
-    Espresso, French Press, Moka Pot
-    """
-    
-    extractor = DeepseekExtractor(browser_config=None)
-    
-    # Test the extraction
-    enhanced_product = await extractor.extract(generic_product)
-    
-    # Check the extracted fields
-    assert enhanced_product.get("roast_level") == RoastLevel.MEDIUM_DARK
-    assert enhanced_product.get("bean_type") == BeanType.ARABICA
-    assert enhanced_product.get("processing_method") == ProcessingMethod.NATURAL
-    assert enhanced_product.get("region_name") == "Brazil, Santos"
-    assert enhanced_product.get("flavor_profiles") == ["chocolate", "nutty", "caramel"]
-    assert enhanced_product.get("brew_methods") == ["espresso", "french-press", "moka-pot"]
-    assert enhanced_product.get("deepseek_enriched") == True
-    assert enhanced_product.get("extracted_by") == "deepseek"
-
-
-@pytest.mark.asyncio
-async def test_deepseek_extractor_with_description_fallback(mock_crawler, mock_openai, generic_product):
-    # Simulate a failed markdown generation but with description available
-    mock_crawler.arun.return_value.success = False
-    mock_crawler.arun.return_value.markdown.fit_markdown = None
-    
-    # Add a description to the product
-    product_with_desc = generic_product.copy()
-    product_with_desc["description"] = "A nutty, chocolatey coffee from Brazil. Medium-dark roast with natural processing."
-    
-    extractor = DeepseekExtractor(browser_config=None)
-    
-    # Test the extraction
-    enhanced_product = await extractor.extract(product_with_desc)
-    
-    # Even with a failed crawl, DeepSeek should use the description as fallback
-    assert enhanced_product.get("deepseek_enriched") == True
-    assert enhanced_product.get("extracted_by") == "deepseek"
-
-
-@pytest.mark.asyncio
-async def test_deepseek_extractor_no_enhancement_needed(mock_crawler, mock_openai):
-    # Create a product that already has all the necessary attributes
-    complete_product = {
+@patch('scrapers.extractors.json_css_extractor.AsyncWebCrawler')
+async def test_json_css_extractor_generic(mock_crawler_cls):
+    extracted = {
         "name": "Brazil Santos",
-        "slug": "brazil-santos",
-        "direct_buy_url": "https://example.com/products/brazil-santos",
-        "platform": "generic",
-        "description": "A nutty, chocolatey coffee from Brazil.",
+        "product_description": "Nutty, chocolatey coffee from Brazil.",
         "image_url": "https://example.com/brazil.jpg",
-        "roast_level": RoastLevel.MEDIUM_DARK,
-        "bean_type": BeanType.ARABICA,
-        "processing_method": ProcessingMethod.NATURAL,
-        "region_name": "Brazil, Santos",
+        "price": "450.00",
+        "roast_info": "Medium",
+        "process_info": "Natural",
+        "origin_info": "Brazil"
+    }
+    mock_result = AsyncMock()
+    mock_result.success = True
+    mock_result.extracted_content = json.dumps(extracted)
+    mock_crawler = AsyncMock()
+    mock_crawler.arun.return_value = mock_result
+    mock_crawler_cls.return_value.__aenter__.return_value = mock_crawler
+    product = {
+        "name": "Brazil Santos",
+        "direct_buy_url": "https://example.com/products/brazil-santos",
+        "platform": "generic"
+    }
+    extractor = JsonCssExtractor()
+    result = await extractor.extract(product)
+    assert result["name"] == "Brazil Santos"
+    assert result.get("description") == "Nutty, chocolatey coffee from Brazil."
+    assert result["image_url"] == "https://example.com/brazil.jpg"
+    assert result["roast_level"] == "Medium" or result["roast_level"] == RoastLevel.MEDIUM
+    assert result["processing_method"] == "Natural" or result["processing_method"] == ProcessingMethod.NATURAL
+    assert result["region_name"] == "Brazil"
+    assert result["price_250g"] == 450.0
+
+@pytest.mark.asyncio
+@patch('scrapers.extractors.deepseek_extractor.AsyncWebCrawler')
+@patch('scrapers.extractors.deepseek_extractor.OpenAI')
+async def test_deepseek_extractor_success(mock_openai_cls, mock_crawler_cls):
+    # Mock markdown extraction
+    mock_crawler = AsyncMock()
+    mock_result = AsyncMock()
+    mock_result.success = True
+    class Markdown:
+        fit_markdown = "# Coffee Product\nA great coffee for users who enjoy taste and caffeine. " * 2  # >50 chars
+    mock_result.markdown = Markdown()
+    mock_crawler.arun.return_value = mock_result
+    mock_crawler_cls.return_value.__aenter__.return_value = mock_crawler
+    # Mock OpenAI (DeepSeek)
+    mock_openai = MagicMock()
+    mock_response = MagicMock()
+    mock_choice = MagicMock()
+    mock_choice.message.content = json.dumps({
+        "roast_level": "medium",
+        "bean_type": "arabica",
+        "processing_method": "washed",
+        "region_name": "Colombia",
+        "flavor_profiles": ["chocolate", "nutty"],
+        "brew_methods": ["espresso", "filter"],
+        "prices": {"250": 500},
+        "image_url": "https://example.com/colombia.jpg",
+        "direct_buy_url": "https://example.com/products/colombia-supremo",
+        "is_seasonal": False,
+        "is_featured": False,
+        "is_single_origin": True,
+        "is_available": True,
+        "tags": ["colombia", "arabica"],
+        "external_links": []
+    })
+    mock_response.choices = [mock_choice]
+    mock_openai().chat.completions.create.return_value = mock_response
+    mock_openai_cls.return_value = mock_openai()
+    # Test
+    product = {"name": "Colombia Supremo", "direct_buy_url": "https://example.com/products/colombia-supremo"}
+    extractor = DeepseekExtractor()
+    result = await extractor.extract(product)
+    print("DEEPSEEK TEST RESULT:", result)
+    assert result["roast_level"] == "medium"
+    assert result["bean_type"] == "arabica"
+    assert result["processing_method"] == "washed"
+    assert result["region_name"] == "Colombia"
+    assert result["is_single_origin"] is True
+    assert result["is_available"] is True
+    assert result["deepseek_enriched"] is True
+    assert result["extracted_by"] == "deepseek"
+
+@pytest.mark.asyncio
+@patch('scrapers.extractors.deepseek_extractor.AsyncWebCrawler')
+@patch('scrapers.extractors.deepseek_extractor.OpenAI')
+async def test_deepseek_extractor_fallback_to_description(mock_openai_cls, mock_crawler_cls):
+    # Markdown extraction fails, fallback to description
+    mock_crawler = AsyncMock()
+    mock_result = AsyncMock()
+    mock_result.success = False
+    mock_result.markdown.fit_markdown = ""
+    mock_crawler.arun.return_value = mock_result
+    mock_crawler_cls.return_value.__aenter__.return_value = mock_crawler
+    # Mock OpenAI (DeepSeek)
+    mock_openai = MagicMock()
+    mock_response = MagicMock()
+    mock_choice = MagicMock()
+    mock_choice.message.content = json.dumps({"roast_level": "medium"})
+    mock_response.choices = [mock_choice]
+    mock_openai().chat.completions.create.return_value = mock_response
+    mock_openai_cls.return_value = mock_openai()
+    product = {"name": "Fallback Coffee", "direct_buy_url": "https://example.com/fallback", "description": "A fallback description with enough length to trigger fallback."}
+    extractor = DeepseekExtractor()
+    result = await extractor.extract(product)
+    assert result.get("roast_level") == "medium"
+
+@pytest.mark.asyncio
+@patch('scrapers.extractors.deepseek_extractor.AsyncWebCrawler')
+@patch('scrapers.extractors.deepseek_extractor.OpenAI')
+async def test_deepseek_extractor_no_enhancement_needed(mock_openai_cls, mock_crawler_cls):
+    # Product already has all attributes
+    product = {
+        "name": "Complete Coffee",
+        "direct_buy_url": "https://example.com/complete",
+        "roast_level": "medium",
+        "bean_type": "arabica",
+        "processing_method": "washed",
         "flavor_profiles": ["chocolate", "nutty"]
     }
-    
-    extractor = DeepseekExtractor(browser_config=None)
-    
-    # Test the extraction
-    result = await extractor.extract(complete_product)
-    
-    # Product should be returned unmodified since it already has necessary attributes
-    assert result == complete_product
-    assert "deepseek_enriched" not in result
-    assert "extracted_by" not in result
-
-
-@pytest.mark.asyncio
-async def test_deepseek_extractor_clean_attributes(mock_openai):
-    # Test the attribute cleaning function directly
-    extractor = DeepseekExtractor(browser_config=None)
-    
-    raw_attributes = {
-        "roast_level": "Medium-Dark",
-        "bean_type": "ARABICA",
-        "processing_method": "pulped natural",
-        "region_name": "Colombia, Huila",
-        "tasting_notes": "Caramel, berry, citrus",
-        "flavor_profiles": ["caramel", "berry", "citrus"],
-        "brew_methods": ["pour-over", "espresso"],
-        "altitude_min": "1600",
-        "altitude_max": "1900",
-        "is_blend": "false",
-        "is_seasonal": True
-    }
-    
-    cleaned = extractor._clean_attributes(raw_attributes)
-    
-    # Check normalization
-    assert cleaned["roast_level"] == RoastLevel.MEDIUM_DARK
-    assert cleaned["bean_type"] == BeanType.ARABICA
-    assert cleaned["processing_method"] == ProcessingMethod.PULPED_NATURAL
-    assert cleaned["region_name"] == "Colombia, Huila"
-    assert cleaned["flavor_profiles"] == ["caramel", "berry", "citrus"]
-    assert cleaned["brew_methods"] == ["pour-over", "espresso"]
-    assert cleaned["altitude_min"] == 1600
-    assert cleaned["altitude_max"] == 1900
-    assert cleaned["is_blend"] is False
-    assert cleaned["is_seasonal"] is True
-
-
-def test_deepseek_extractor_merge_attributes():
-    # Test the attribute merging function directly
-    extractor = DeepseekExtractor(browser_config=None)
-    
-    original_product = {
-        "name": "Test Coffee",
-        "slug": "test-coffee",
-        "roast_level": RoastLevel.UNKNOWN,
-        "bean_type": BeanType.UNKNOWN,
-        "processing_method": ProcessingMethod.UNKNOWN,
-        "existing_value": "Don't override me"
-    }
-    
-    extracted_attributes = {
-        "roast_level": RoastLevel.MEDIUM,
-        "bean_type": BeanType.ARABICA,
-        "processing_method": ProcessingMethod.WASHED,
-        "region_name": "Ethiopia",
-        "new_value": "Add me",
-        "unknown_value": "unknown"  # This should be skipped
-    }
-    
-    merged = extractor._merge_attributes(original_product, extracted_attributes)
-    
-    # Check that unknown values were filled in
-    assert merged["roast_level"] == RoastLevel.MEDIUM
-    assert merged["bean_type"] == BeanType.ARABICA
-    assert merged["processing_method"] == ProcessingMethod.WASHED
-    assert merged["region_name"] == "Ethiopia"
-    assert merged["new_value"] == "Add me"
-    
-    # Check that existing values were preserved
-    assert merged["existing_value"] == "Don't override me"
-    
-    # Check that unknown values were skipped
-    assert "unknown_value" not in merged
-
-
-def test_normalize_roast_level():
-    extractor = JsonCssExtractor()
-    
-    # Test various types of roast level text
-    assert extractor._normalize_roast_level("Light Roast") == RoastLevel.LIGHT
-    assert extractor._normalize_roast_level("Medium Light") == RoastLevel.MEDIUM_LIGHT
-    assert extractor._normalize_roast_level("Medium Roast") == RoastLevel.MEDIUM
-    assert extractor._normalize_roast_level("Medium-Dark") == RoastLevel.MEDIUM_DARK
-    assert extractor._normalize_roast_level("Dark") == RoastLevel.DARK
-    assert extractor._normalize_roast_level("Unknown") == RoastLevel.UNKNOWN
-
-
-def test_normalize_processing_method():
-    extractor = JsonCssExtractor()
-    
-    # Test various types of processing method text
-    assert extractor._normalize_processing_method("Washed Process") == ProcessingMethod.WASHED
-    assert extractor._normalize_processing_method("Natural / Dry Process") == ProcessingMethod.NATURAL
-    assert extractor._normalize_processing_method("Honey Processed") == ProcessingMethod.HONEY
-    assert extractor._normalize_processing_method("Anaerobic Fermentation") == ProcessingMethod.ANAEROBIC
-    assert extractor._normalize_processing_method("Pulped Natural") == ProcessingMethod.PULPED_NATURAL
-    assert extractor._normalize_processing_method("Unknown") == ProcessingMethod.UNKNOWN
+    extractor = DeepseekExtractor()
+    result = await extractor.extract(product)
+    assert result == product

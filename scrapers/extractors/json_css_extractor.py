@@ -10,6 +10,7 @@ from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
 from common.utils import slugify
 from common.models import CoffeeModel, RoastLevel, BeanType, ProcessingMethod
 from common.tag_utils import is_negative_tag
+from common.product_classifier import is_likely_coffee_product
 
 logger = logging.getLogger(__name__)
 
@@ -61,6 +62,7 @@ class JsonCssExtractor:
         schema = self.schemas.get(platform, self.schemas["generic"])
         
         try:
+            extracted_data = None  # Ensure variable is always defined
             # Create crawler instance
             async with AsyncWebCrawler(config=self.browser_config) as crawler:
                 # Configure extraction
@@ -80,10 +82,18 @@ class JsonCssExtractor:
                     
                 # Process extracted content
                 if result.extracted_content:
-                    # Parse the JSON content
                     try:
                         extracted_data = json.loads(result.extracted_content)
                         enhanced_product = self._process_extracted_data(product, extracted_data, platform)
+                        # --- SECONDARY FILTERING PASS ---
+                        if not is_likely_coffee_product(
+                            name=enhanced_product.get("name"),
+                            url=enhanced_product.get("direct_buy_url"),
+                            description=enhanced_product.get("description"),
+                            product_type=enhanced_product.get("product_type")
+                        ):
+                            logger.info(f"Filtered out after extraction: {enhanced_product.get('name')} ({enhanced_product.get('direct_buy_url')})")
+                            return None
                         return enhanced_product
                     except json.JSONDecodeError:
                         logger.warning(f"Failed to parse extracted content as JSON for {product['direct_buy_url']}")
@@ -93,7 +103,8 @@ class JsonCssExtractor:
                     return product
                     
         except Exception as e:
-            logger.error(f"Error extracting product from {product['direct_buy_url']}: {str(e)}")
+            # Robust logging: avoid NameError if extracted_data is not set
+            logger.error(f"Error extracting product from {product.get('direct_buy_url', '<unknown>')}: {str(e)}; extracted_data={repr(extracted_data) if 'extracted_data' in locals() else None}", exc_info=True)
             return product
             
     def _process_extracted_data(self, product: Dict[str, Any], 
@@ -110,46 +121,73 @@ class JsonCssExtractor:
         Returns:
             Enhanced product dict
         """
-        # Handle case when extracted_data is a list
-        if isinstance(extracted_data, list):
-            if not extracted_data:
-                return product
-            # If it's a list of dicts (e.g. variants), merge them
-            merged = {}
-            for d in extracted_data:
-                merged.update(d)
-            extracted_data = merged
-        enhanced = product.copy()
-        enhanced.update(extracted_data)
-        # Always set name/slug
-        if "name" in extracted_data and extracted_data["name"]:
-            enhanced["name"] = extracted_data["name"]
-            enhanced["slug"] = slugify(extracted_data["name"])
-        if "product_description" in extracted_data and extracted_data["product_description"]:
-            enhanced["description"] = self._clean_html(extracted_data["product_description"])
-        if "image_url" in extracted_data and extracted_data["image_url"] and not enhanced.get("image_url"):
-            enhanced["image_url"] = extracted_data["image_url"]
-        # Process prices
-        self._process_prices(enhanced, extracted_data, platform)
-        # Process processing method
-        self._process_processing_method(enhanced, extracted_data)
-        # Process bean type
-        self._process_bean_type(enhanced, extracted_data)
-        # Process origin/region
-        self._process_origin(enhanced, extracted_data)
-        # Process flavor profiles
-        self._process_flavor_profiles(enhanced, extracted_data)
-        # Process availability
-        self._process_availability(enhanced, extracted_data)
-        # Platform-specific post-processing for missing fields
-        if platform == "woocommerce":
-            self._process_woocommerce_attributes(enhanced, extracted_data)
-        elif platform == "generic":
-            self._process_generic_attributes(enhanced, extracted_data)
-        # Store raw extracted data for potential further processing
-        enhanced["_extracted_data"] = extracted_data
-        return enhanced
-        
+        logger.debug(f"_process_extracted_data called with product={product}, extracted_data={extracted_data}, platform={platform}")
+        try:
+            # Handle case when extracted_data is a list
+            if isinstance(extracted_data, list):
+                if not extracted_data:
+                    return product
+                merged = {}
+                for d in extracted_data:
+                    merged.update(d)
+                extracted_data = merged
+            enhanced = product.copy()
+            enhanced.update(extracted_data)
+            # Always set name/slug
+            if "name" in extracted_data and extracted_data["name"]:
+                enhanced["name"] = extracted_data["name"]
+                enhanced["slug"] = slugify(extracted_data["name"])
+            if "product_description" in extracted_data and extracted_data["product_description"]:
+                logger.debug(f"Setting description from product_description: {extracted_data['product_description']}")
+                enhanced["description"] = self._clean_html(extracted_data["product_description"])
+            elif "description" in extracted_data and extracted_data["description"]:
+                logger.debug(f"Setting description from description: {extracted_data['description']}")
+                enhanced["description"] = self._clean_html(extracted_data["description"])
+            if "image_url" in extracted_data and extracted_data["image_url"] and not enhanced.get("image_url"):
+                enhanced["image_url"] = extracted_data["image_url"]
+            # Process prices
+            try:
+                self._process_prices(enhanced, extracted_data, platform)
+            except Exception as e:
+                logger.error(f"Error in _process_prices: {e}")
+            # Process processing method
+            try:
+                self._process_processing_method(enhanced, extracted_data)
+            except Exception as e:
+                logger.error(f"Error in _process_processing_method: {e}")
+            # Process bean type
+            try:
+                self._process_bean_type(enhanced, extracted_data)
+            except Exception as e:
+                logger.error(f"Error in _process_bean_type: {e}")
+            # Process origin/region
+            try:
+                self._process_origin(enhanced, extracted_data)
+            except Exception as e:
+                logger.error(f"Error in _process_origin: {e}")
+            # Process flavor profiles
+            try:
+                self._process_flavor_profiles(enhanced, extracted_data)
+            except Exception as e:
+                logger.error(f"Error in _process_flavor_profiles: {e}")
+            # Process availability
+            try:
+                self._process_availability(enhanced, extracted_data)
+            except Exception as e:
+                logger.error(f"Error in _process_availability: {e}")
+            # Platform-specific post-processing for missing fields
+            try:
+                if platform == "woocommerce":
+                    self._process_woocommerce_attributes(enhanced, extracted_data)
+                elif platform == "generic":
+                    self._process_generic_attributes(enhanced, extracted_data)
+            except Exception as e:
+                logger.error(f"Error in platform-specific post-processing: {e}")
+            return enhanced
+        except Exception as e:
+            logger.error(f"Exception in _process_extracted_data: {e}", exc_info=True)
+            raise
+
     def _process_prices(self, product: Dict[str, Any], extracted_data: Dict[str, Any], platform: str):
         """
         Process and normalize price information.
@@ -162,8 +200,14 @@ class JsonCssExtractor:
         # Handle different price formats across platforms
         if platform == "shopify":
             # Shopify typically has variants with prices
-            if "variants" in extracted_data and isinstance(extracted_data["variants"], list):
-                self._process_shopify_variants(product, extracted_data["variants"])
+            variants = extracted_data.get("variants")
+            if isinstance(variants, str):
+                try:
+                    variants = json.loads(variants)
+                except Exception:
+                    variants = None
+            if isinstance(variants, list):
+                self._process_shopify_variants(product, variants)
         elif platform == "woocommerce":
             # WooCommerce often has price and variations
             if "price" in extracted_data:
@@ -863,6 +907,9 @@ class JsonCssExtractor:
             if mapped_brew:
                 brew_methods.add(mapped_brew)
                 continue
+            # --- SALE TAG DETECTION ---
+            if "sale" in norm or "discount" in norm or "offer" in norm:
+                tags_field.add("sale")
             # If not matched above, treat as flavor profile and also add to tags field
             flavor_profiles.add(tag)
             tags_field.add(tag)
@@ -915,6 +962,13 @@ class JsonCssExtractor:
         Post-process generic/static extracted data to fill missing CoffeeModel fields.
         Scans all available text for bean_type, roast_level, processing_method, region_name, flavor_profiles, brew_methods, is_single_origin, is_seasonal, is_featured, and prices by weight.
         """
+        # --- Directly map info fields if present ---
+        if "roast_level" not in product and "roast_info" in extracted_data:
+            product["roast_level"] = self._normalize_roast_level(str(extracted_data["roast_info"]))
+        if "processing_method" not in product and "process_info" in extracted_data:
+            product["processing_method"] = self._normalize_processing_method(str(extracted_data["process_info"]))
+        if "region_name" not in product and "origin_info" in extracted_data:
+            product["region_name"] = extracted_data["origin_info"]
         # --- Bean Type ---
         if "bean_type" not in product:
             text = self._combine_text_fields(extracted_data, ["specifications", "product_description", "name"])
@@ -946,7 +1000,13 @@ class JsonCssExtractor:
         if not product.get("prices"):
             price_text = extracted_data.get("price_text", "")
             self._process_generic_price(product, price_text)
-
+        # --- Fallback: if price_250g is missing but 'price' is present, set price_250g from price ---
+        if "price_250g" not in product and "price" in extracted_data:
+            try:
+                product["price_250g"] = float(str(extracted_data["price"]).replace(",", "").replace("₹", "").strip())
+            except Exception as e:
+                logger.error(f"Could not parse price for price_250g from 'price': {extracted_data['price']} ({e})")
+        
     def _combine_text_fields(self, data: Dict[str, Any], fields: List[str]) -> str:
         """Combine multiple text fields into a single string for keyword scanning."""
         return " ".join(str(data.get(f, "")) for f in fields if data.get(f)).strip()

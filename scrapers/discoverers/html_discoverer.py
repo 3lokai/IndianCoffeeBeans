@@ -10,6 +10,7 @@ import aiohttp
 from bs4 import BeautifulSoup, Tag
 
 from common.utils import slugify, load_from_cache, save_to_cache
+from common.product_classifier import is_likely_coffee_product
 from config import USER_AGENT, REQUEST_TIMEOUT, CRAWL_DELAY, CACHE_ENABLED, CACHE_EXPIRY
 
 logger = logging.getLogger(__name__)

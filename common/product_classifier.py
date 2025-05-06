@@ -44,6 +44,30 @@ NON_PRODUCT_URL_PATTERNS = [
     '/learn', '/guide', '/recipes', '/events', '/workshops', '/wholesale'
 ]
 
+# --- Combo/Bundle Detection ---
+COMBO_KEYWORDS = [
+    'combo', 'bundle', 'pack', 'assorted', 'sampler', 'variety', 'selection', 'mixed', 'set'
+]
+
+def detect_combo_product(name: Optional[str] = None,
+                        description: Optional[str] = None,
+                        variants: Optional[List[str]] = None) -> bool:
+    """
+    Detect if a product is a combo/bundle/pack based on keywords in name, description, or variants.
+    Returns True if likely a combo/bundle, else False.
+    """
+    fields = []
+    if name:
+        fields.append(name)
+    if description:
+        fields.append(description)
+    if variants:
+        fields.extend(variants)
+    text = ' '.join([str(f).lower() for f in fields if f])
+    for kw in COMBO_KEYWORDS:
+        if re.search(rf'\\b{re.escape(kw)}\\b', text):
+            return True
+    return False
 
 def is_likely_coffee_product(name: Optional[str] = None,
                              url: Optional[str] = None,
@@ -72,6 +96,13 @@ def is_likely_coffee_product(name: Optional[str] = None,
     combined_text = " ".join(text_fields)
 
     url_lower = str(url).lower() if url else ""
+
+    # --- Combo/Bundle Detection ---
+    # If it's a combo/bundle/pack, treat as NOT a coffee product (or adjust logic as needed)
+    # This prevents combos from being included unless you specifically want them
+    if detect_combo_product(name=name, description=description):
+        logger.debug(f"Classifier: Excluding '{name or url}' due to combo/bundle keyword.")
+        return False
 
     # --- Exclusion Checks ---
     # 1. Check for keywords indicating it's NOT a coffee product (e.g., equipment, merch)

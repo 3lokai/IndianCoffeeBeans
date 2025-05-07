@@ -1,9 +1,13 @@
 # scrapers/discoverers/crawl4ai_discoverer.py
+import asyncio
+import json
 import logging
 import re
 from typing import List, Dict, Any, Optional, Set
 from urllib.parse import urljoin, urlparse, unquote
 import hashlib
+
+from bs4 import BeautifulSoup
 from common.utils import slugify, load_from_cache, save_to_cache
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
 from crawl4ai.deep_crawling import BFSDeepCrawlStrategy

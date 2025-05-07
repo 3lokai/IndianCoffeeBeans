@@ -175,11 +175,20 @@ class SupabaseClient:
                 roaster_data['created_at'] = roaster_data['created_at'].isoformat()
             if 'updated_at' in roaster_data and isinstance(roaster_data['updated_at'], datetime):
                 roaster_data['updated_at'] = roaster_data['updated_at'].isoformat()
-            
+
+            # Handle HttpUrl objects
+            for key, value in roaster_data.items():
+                try:
+                    from yarl import URL
+                    if isinstance(value, URL):
+                        roaster_data[key] = str(value)
+                except ImportError:
+                    pass
+
             # Make sure ID is properly formatted
             if 'id' not in roaster_data or not roaster_data['id']:
                 roaster_data['id'] = str(uuid.uuid4())
-            
+
             # Ensure required fields are present
             required_fields = ['name', 'slug', 'website_url']
             for field in required_fields:

@@ -297,7 +297,7 @@ class JsonCssExtractor:
             del self._extracted_bean_type
         
         # Process Shopify tags
-        tags = extracted_data.get("tags", [])
+        tags = self.extracted_data.get("tags", [])
         self._process_shopify_tags(tags, product)
         
     def _extract_brew_methods(self, variants: List[Dict[str, Any]]) -> List[str]:

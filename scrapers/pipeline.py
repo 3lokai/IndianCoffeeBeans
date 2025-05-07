@@ -140,7 +140,7 @@ class Pipeline:
             raise ValueError(f"Roaster info missing required fields: {roaster_info}")
         logger.info(f"Processing roaster: {name} ({website})")
         # Step 1: Extract roaster metadata
-        roaster = await self.roaster_pipeline.process_roaster(roaster_info)
+        roaster = await self.roaster_pipeline.unified_process_roaster(roaster_info)
         logger.info(f"Extracted metadata for {name}")
         # Add verification step
         if self.db_client:

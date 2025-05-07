@@ -448,6 +448,16 @@ class RoasterPipeline:
             return None
         if not website.startswith(("http://", "https://")):
             website = "https://" + website
+
+        # Handle HttpUrl objects in roaster_data
+        for key, value in roaster_data.items():
+            try:
+                from yarl import URL
+                if isinstance(value, URL):
+                    roaster_data[key] = str(value)
+            except ImportError:
+                pass
+
         cache_key = f"roaster_{slugify(name)}"
         if not self.refresh_cache:
             cached_data = load_from_cache(cache_key, "roasters")

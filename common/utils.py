@@ -14,8 +14,14 @@ class CustomJSONEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, datetime):
             return obj.isoformat()
+        try:
+            from yarl import URL
+            if isinstance(obj, URL):
+                return str(obj)
+        except ImportError:
+            pass
         return super().default(obj)
-    
+
 logger = logging.getLogger(__name__)
 
 def setup_logging(level=logging.INFO, log_file=None):

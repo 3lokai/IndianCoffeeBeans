@@ -1,24 +1,6 @@
 {
-  "id": "2245177f-5c78-4619-864f-6e85afa00e03",
+  "id": "cb76076c-d1b8-4aa6-9047-78fdf6716082",
   "name": "Araku Coffee",
   "slug": "araku-coffee",
-  "description": "With flagships in Paris and Bangalore, ARAKU is the first terroir-mapped coffee to also champion the world’s largest certified organic plantation in the Eastern Ghats of India. Araku Valley, in Andhra Pradesh, has proven to be excellent highlands for growing 100% Arabica coffee.",
-  "website_url": "https://www.arakucoffee.in/",
-  "social_links": [
-    "https://facebook.com/arakucoffeein/",
-    "https://twitter.com/arakucoffeein",
-    "https://instagram.com/arakucoffeein/"
-  ],
-  "contact_email": null,
-  "contact_phone": "9539771891",
-  "city": null,
-  "state": null,
-  "founded_year": null,
-  "instagram_handle": "arakucoffeein",
-  "logo_url": "https://www.arakucoffee.in/favicon.ico",
-  "has_subscription": false,
-  "has_physical_store": false,
-  "is_featured": false,
-  "created_at": null,
-  "updated_at": null
-}
+  "description": "It's the first terroir-mapped coffee to also champion the world’s largest certified organic plantation in the Eastern Ghats of India.\nARAKU is India’s first coffee to shape the complete seed-to-cup journey with flagships in Paris and Bangalore.",
+  "website_url": 

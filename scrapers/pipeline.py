@@ -77,16 +77,15 @@ class Pipeline:
     
     async def process_roaster_list(self, roaster_list: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
-        Process a list of roasters.
-        
+        Process a list of roasters in two phases:
+        1. Process and upsert all roasters (metadata only)
+        2. Discover and extract products for all processed roasters
         Args:
             roaster_list: List of roaster info dicts (at minimum, each dict needs 'name' and 'website_url')
-            
         Returns:
             Dictionary with stats, processed roasters, and coffees
         """
-        logger.info(f"Starting to process {len(roaster_list)} roasters")
-        
+        logger.info(f"Starting to process {len(roaster_list)} roasters (metadata phase)")
         # Reset statistics
         self.stats = {
             "roasters_processed": 0,
@@ -98,18 +97,66 @@ class Pipeline:
         }
         processed_roasters = []
         processed_coffees = []
-        
-        # Process each roaster
+        # Phase 1: Process and upsert all roasters (metadata only)
         for roaster_info in roaster_list:
             try:
-                roaster, roaster_coffees = await self.process_roaster(roaster_info, collect_coffees=True)
-                self.stats["roasters_processed"] += 1
+                name = roaster_info.get('name')
+                website = roaster_info.get('website_url')
+                if not name or not website:
+                    raise ValueError(f"Roaster info missing required fields: {roaster_info}")
+                logger.info(f"Processing roaster (metadata only): {name} ({website})")
+                roaster = await self.roaster_pipeline.unified_process_roaster(roaster_info)
+                # Add verification step
+                if self.db_client:
+                    try:
+                        db_roaster = roaster.dict()
+                        for field in ['_platform', 'location']:
+                            if field in db_roaster:
+                                db_roaster.pop(field)
+                        roaster_id = await self.db_client.upsert_roaster(db_roaster)
+                        logger.info(f"Forcibly ensured roaster {name} exists in DB with ID: {roaster_id}")
+                        await asyncio.sleep(1)
+                        if not roaster_id:
+                            logger.error(f"Cannot get roaster ID for {name}, skipping")
+                            self.stats["errors"] += 1
+                            continue
+                        roaster.id = roaster_id
+                    except Exception as e:
+                        logger.error(f"Error ensuring roaster {name} exists in DB: {str(e)}")
+                        self.stats["errors"] += 1
+                        continue
                 processed_roasters.append(roaster)
-                processed_coffees.extend(roaster_coffees)
+                self.stats["roasters_processed"] += 1
                 # Small delay between roasters to avoid overloading
                 await asyncio.sleep(CRAWL_DELAY)
             except Exception as e:
                 logger.error(f"Error processing roaster {roaster_info.get('name')}: {str(e)}")
+                self.stats["errors"] += 1
+                continue
+        logger.info(f"Completed metadata phase for {self.stats['roasters_processed']} roasters")
+        # Phase 2: Discover and extract for all processed roasters
+        logger.info(f"Starting discovery and extraction phase for {len(processed_roasters)} roasters")
+        for roaster in processed_roasters:
+            try:
+                # Step 2: Discover products
+                products = await self.discovery_manager.discover_products(roaster.dict())
+                logger.info(f"Discovered {len(products)} products for {roaster.name}")
+                self.stats["products_discovered"] += len(products)
+                # Step 3: Extract detailed product information
+                extracted_products = []
+                if products:
+                    extracted_products = await self._extract_product_details(products, roaster)
+                    logger.info(f"Extracted details for {len(extracted_products)} products from {roaster.name}")
+                    # Step 4: Upload to database
+                    if self.db_client and extracted_products:
+                        uploaded_count = await self._upload_products(extracted_products, roaster)
+                        logger.info(f"Uploaded {uploaded_count} products from {roaster.name} to database")
+                        self.stats["products_uploaded"] += uploaded_count
+                processed_coffees.extend(extracted_products)
+                # Small delay between roasters to avoid overloading
+                await asyncio.sleep(CRAWL_DELAY)
+            except Exception as e:
+                logger.error(f"Error discovering/extracting for roaster {getattr(roaster, 'name', None)}: {str(e)}")
                 self.stats["errors"] += 1
                 continue
         logger.info(f"Completed processing {self.stats['roasters_processed']} roasters")
@@ -140,7 +187,7 @@ class Pipeline:
             raise ValueError(f"Roaster info missing required fields: {roaster_info}")
         logger.info(f"Processing roaster: {name} ({website})")
         # Step 1: Extract roaster metadata
-        roaster = await self.roaster_pipeline.process_roaster(roaster_info)
+        roaster = await self.roaster_pipeline.unified_process_roaster(roaster_info)
         logger.info(f"Extracted metadata for {name}")
         # Add verification step
         if self.db_client:
